@@ -1,51 +1,81 @@
-# Business — Generative Engine Optimization Map
+# מאור אחזקות — Generative Engine Optimization Map
+
+> A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.
 
 ---
 
 ## Pages
 
 ### בית
-https://example.com
+https://maor-achzakot.zappy5.app
 מאור אחזקות מתמחה באיטום גגות מרוצפים, ביריעות ביטומניות ובזפת חם, עם פתרונות שיפוץ מקיפים לבתים ולתעשייה. הגנה אמיתית על הנכס שלך מתחילה כאן.
 
 ### איטום גגות
-https://example.com/roof-waterproofing
+https://maor-achzakot.zappy5.app/roof-waterproofing
 איטום גגות מרוצפים וגגות בטון בשיטות מתקדמות: ביריעות ביטומניות, זפת חם, פוליאוריתן ואפוקסי. אנחנו מבטיחים גג יבש לשנים — צרו קשר לייעוץ חינם.
 
 ### איטום תעשייתי ומבני
-https://example.com/industrial-waterproofing
+https://maor-achzakot.zappy5.app/industrial-waterproofing
 מפעלים, חניונים ומבני תעשייה מקבלים איטום מקצועי ועמיד לאורך זמן. מאור אחזקות מציעה פתרונות איטום תעשייתי מקיפים — הגנה אמינה על כל מבנה, בכל היקף.
 
 ### שיפוץ ושיקום לאחר שריפה
-https://example.com/renovation-fire-recovery
+https://maor-achzakot.zappy5.app/renovation-fire-recovery
 שיפוץ דירות לאחר שריפה דורש מומחיות, מהירות ורגישות. מאור אחזקות מתמחה בשיקום מלא של נכסים שנפגעו — החל מניקוי עד גמר מושלם. נחזיר לך את הבית שאהבת.
 
 ### צור קשר
-https://example.com/contact
+https://maor-achzakot.zappy5.app/contact
 רוצים לדעת כמה עולה איטום גגות מרוצפים או שיפוץ לאחר שריפה? צרו קשר עם מאור אחזקות עכשיו וקבלו ייעוץ מקצועי והצעת מחיר מותאמת אישית ללא עלות וללא התחייבות.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://maor-achzakot.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://maor-achzakot.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://maor-achzakot.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About Business
+## About מאור אחזקות
+A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.
+
+## Services/Products
+- איטום גגות בזפת חם
+- איטום קירות ושיפוץ לאחר שריפה
+- שיפוץ דירות
+- איטום גגות ביריעות ביטומניות
+- איטום גגות מרוצפים
+- איטום גגות בטון
+- איטום מפעלים
+- איטום גגות בפוליאורטן
+- בידוד גגות
+- יציקת בטקל
+- איטום גגות באפוקסי
+- סיוד גגות
+- איטום חניון
+- איטום מרפסת
+
+## Target Audience
+- בעלי נכסים הזקוקים לשיפוץ
+- משקיעי נדל"ן
+- רוכשי דירות חדשות
+- מנהלי נכסים מסחריים
+- סוכני נדל"ן
+
+## Industry
+בנייה ושיפוץ
+
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://example.com/sitemap.xml
-- **Robots.txt**: https://example.com/robots.txt
+- **Sitemap**: https://maor-achzakot.zappy5.app/sitemap.xml
+- **Robots.txt**: https://maor-achzakot.zappy5.app/robots.txt
