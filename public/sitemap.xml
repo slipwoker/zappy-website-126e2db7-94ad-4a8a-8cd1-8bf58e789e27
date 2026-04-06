@@ -31,15 +31,15 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maor-achzakot.zappy5/contact</loc>
-    <lastmod>2026-04-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://maor-achzakot.zappy5/external-link-1775507275775</loc>
     <lastmod>2026-04-06</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maor-achzakot.zappy5/contact</loc>
+    <lastmod>2026-04-06</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
