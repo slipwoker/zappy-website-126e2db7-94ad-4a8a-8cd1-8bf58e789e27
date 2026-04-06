@@ -1,0 +1,51 @@
+# Business — Generative Engine Optimization Map
+
+---
+
+## Pages
+
+### בית
+https://example.com
+מאור אחזקות מתמחה באיטום גגות מרוצפים, ביריעות ביטומניות ובזפת חם, עם פתרונות שיפוץ מקיפים לבתים ולתעשייה. הגנה אמיתית על הנכס שלך מתחילה כאן.
+
+### איטום גגות
+https://example.com/roof-waterproofing
+איטום גגות מרוצפים וגגות בטון בשיטות מתקדמות: ביריעות ביטומניות, זפת חם, פוליאוריתן ואפוקסי. אנחנו מבטיחים גג יבש לשנים — צרו קשר לייעוץ חינם.
+
+### איטום תעשייתי ומבני
+https://example.com/industrial-waterproofing
+מפעלים, חניונים ומבני תעשייה מקבלים איטום מקצועי ועמיד לאורך זמן. מאור אחזקות מציעה פתרונות איטום תעשייתי מקיפים — הגנה אמינה על כל מבנה, בכל היקף.
+
+### שיפוץ ושיקום לאחר שריפה
+https://example.com/renovation-fire-recovery
+שיפוץ דירות לאחר שריפה דורש מומחיות, מהירות ורגישות. מאור אחזקות מתמחה בשיקום מלא של נכסים שנפגעו — החל מניקוי עד גמר מושלם. נחזיר לך את הבית שאהבת.
+
+### צור קשר
+https://example.com/contact
+רוצים לדעת כמה עולה איטום גגות מרוצפים או שיפוץ לאחר שריפה? צרו קשר עם מאור אחזקות עכשיו וקבלו ייעוץ מקצועי והצעת מחיר מותאמת אישית ללא עלות וללא התחייבות.
+
+## Legal & Policy
+
+### Privacy Policy
+https://example.com/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://example.com/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://example.com/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About Business
+---
+
+# Additional Resources
+
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
