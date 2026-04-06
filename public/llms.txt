@@ -1,6 +1,4 @@
-# מאור אחזקות — Generative Engine Optimization Map
-
-> A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.
+# Business — Generative Engine Optimization Map
 
 ---
 
@@ -44,35 +42,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About מאור אחזקות
-A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.
-
-## Services/Products
-- איטום גגות בזפת חם
-- איטום קירות ושיפוץ לאחר שריפה
-- שיפוץ דירות
-- איטום גגות ביריעות ביטומניות
-- איטום גגות מרוצפים
-- איטום גגות בטון
-- איטום מפעלים
-- איטום גגות בפוליאורטן
-- בידוד גגות
-- יציקת בטקל
-- איטום גגות באפוקסי
-- סיוד גגות
-- איטום חניון
-- איטום מרפסת
-
-## Target Audience
-- בעלי נכסים הזקוקים לשיפוץ
-- משקיעי נדל"ן
-- רוכשי דירות חדשות
-- מנהלי נכסים מסחריים
-- סוכני נדל"ן
-
-## Industry
-בנייה ושיפוץ
-
+## About Business
 ---
 
 # Additional Resources
