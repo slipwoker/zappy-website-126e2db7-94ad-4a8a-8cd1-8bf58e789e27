@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maor-achzakot.zappy5/sitemap.xml
+Sitemap: https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/sitemap.xml
