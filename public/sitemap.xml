@@ -37,15 +37,15 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/external-link-1775507275775</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/contact</loc>
     <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/external-link-1775507275775</loc>
+    <lastmod>2026-04-07</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
