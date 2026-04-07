@@ -5,48 +5,48 @@
 ## Pages
 
 ### איטום מקצועי שמגן על הנכס שלך — מאור אחזקות
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com
+https://maor-ahzakot.co.il
 מאור אחזקות מתמחה באיטום גגות מרוצפים, ביריעות ביטומניות ובזפת חם, עם פתרונות שיפוץ מקיפים לבתים ולתעשייה. הגנה אמיתית על הנכס שלך מתחילה כאן.
 
 ### עוצרים כל דליפה — פתרונות איטום גגות — מאור אחזקות
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/roof-waterproofing
+https://maor-ahzakot.co.il/roof-waterproofing
 איטום גגות מרוצפים וגגות בטון בשיטות מתקדמות: ביריעות ביטומניות, זפת חם, פוליאוריתן ואפוקסי. אנחנו מבטיחים גג יבש לשנים — צרו קשר לייעוץ חינם.
 
 ### איטום תעשייתי בסטנדרט הגבוה ביותר — מאור אחזקות
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/industrial-waterproofing
+https://maor-ahzakot.co.il/industrial-waterproofing
 מפעלים, חניונים ומבני תעשייה מקבלים איטום מקצועי ועמיד לאורך זמן. מאור אחזקות מציעה פתרונות איטום תעשייתי מקיפים — הגנה אמינה על כל מבנה, בכל היקף.
 
 ### מחזירים את הבית לחיים אחרי שריפה — מאור אחזקות
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/renovation-fire-recovery
+https://maor-ahzakot.co.il/renovation-fire-recovery
 שיפוץ דירות לאחר שריפה דורש מומחיות, מהירות ורגישות. מאור אחזקות מתמחה בשיקום מלא של נכסים שנפגעו — החל מניקוי עד גמר מושלם. נחזיר לך את הבית שאהבת.
 
 ### אזורי שירות
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/service-areas
+https://maor-ahzakot.co.il/service-areas
 מאור אחזקות - אזורי שירות
 
 ### מומחים לאיטום גגות בתל אביב
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/roof-waterproofing-tel-aviv
+https://maor-ahzakot.co.il/roof-waterproofing-tel-aviv
 מאור אחזקות - מומחים לאיטום גגות בתל אביב
 
 ### קבלו הצעת מחיר תוך דקות — צרו קשר — מאור אחזקות
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/contact
+https://maor-ahzakot.co.il/contact
 רוצים לדעת כמה עולה איטום גגות מרוצפים או שיפוץ לאחר שריפה? צרו קשר עם מאור אחזקות עכשיו וקבלו ייעוץ מקצועי והצעת מחיר מותאמת אישית ללא עלות וללא התחייבות.
 
 ### Page
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/external-link-1775507275775
+https://maor-ahzakot.co.il/external-link-1775507275775
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/privacy
+https://maor-ahzakot.co.il/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/terms
+https://maor-ahzakot.co.il/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/accessibility
+https://maor-ahzakot.co.il/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -58,5 +58,5 @@ Information about WCAG compliance and accessibility features.
 
 # Additional Resources
 
-- **Sitemap**: https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/sitemap.xml
-- **Robots.txt**: https://zappy-site-126e2db7-94ad-4a8a-8cd1.onrender.com/robots.txt
+- **Sitemap**: https://maor-ahzakot.co.il/sitemap.xml
+- **Robots.txt**: https://maor-ahzakot.co.il/robots.txt
