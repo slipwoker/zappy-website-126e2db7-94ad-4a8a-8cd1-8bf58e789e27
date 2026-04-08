@@ -218,18 +218,18 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png" />
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
@@ -259,8 +259,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -274,13 +274,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &gt; .sub-menu {
+            li:has(.menu-group-title):hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -289,7 +289,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -342,9 +342,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &gt; .sub-menu,
-            nav li:hover &gt; .sub-menu,
-            .navbar li:hover &gt; .sub-menu {
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -382,8 +382,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -397,8 +397,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -439,18 +439,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &gt; .sub-menu,
-              nav li:hover &gt; .sub-menu,
-              .navbar li:hover &gt; .sub-menu {
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &gt; .sub-menu.mobile-expanded,
-              nav li &gt; .sub-menu.mobile-expanded,
-              .navbar li &gt; .sub-menu.mobile-expanded {
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -478,39 +478,39 @@
               }
               
               /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) &gt; a,
-              nav li:has(.sub-menu) &gt; a,
-              .navbar li:has(.sub-menu) &gt; a,
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
                 flex: 1 !important;
                 min-width: 0 !important;
               }
               
               /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
                 padding: 0 !important;
                 line-height: inherit !important;
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
-              nav li:has(.sub-menu) &gt; .sub-menu,
-              .navbar li:has(.sub-menu) &gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -565,10 +565,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &gt; 768) {
+                if (window.innerWidth > 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -591,7 +591,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -651,7 +651,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -695,9 +695,9 @@
         list-style: none;
         pointer-events: none;
       }
-      .nav-menu li:hover &gt; .sub-menu,
-      nav li:hover &gt; .sub-menu,
-      .navbar li:hover &gt; .sub-menu {
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -730,21 +730,21 @@
     </style>
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:url" content="https://maor-ahzakot.co.il/service-areas/roof-waterproofing-netanya">
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="איטום גגות בנתניה" />
-    <meta property="og:description" content="מאור אחזקות - איטום גגות בנתניה" />
-    <meta property="og:image" content="https://maor-ahzakot.co.il/assets/section-intro-service-areas-roof-waterproofing-netanya-intro-image-1-og.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:alt" content="איטום גגות בנתניה" />
-    <meta property="og:locale" content="he_IL" />
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="איטום גגות בנתניה">
+    <meta property="og:description" content="מאור אחזקות - איטום גגות בנתניה">
+    <meta property="og:image" content="https://maor-ahzakot.co.il/assets/section-intro-service-areas-roof-waterproofing-netanya-intro-image-1-og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="איטום גגות בנתניה">
+    <meta property="og:locale" content="he_IL">
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="איטום גגות בנתניה" />
-    <meta name="twitter:description" content="מאור אחזקות - איטום גגות בנתניה" />
-    <meta name="twitter:image" content="https://maor-ahzakot.co.il/assets/section-intro-service-areas-roof-waterproofing-netanya-intro-image-1-og.jpg" />
-    <meta name="twitter:image:alt" content="איטום גגות בנתניה" /><style id="zappy-ai-page-styles">.service-areas-roof-waterproofing-netanya-intro-section {
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="איטום גגות בנתניה">
+    <meta name="twitter:description" content="מאור אחזקות - איטום גגות בנתניה">
+    <meta name="twitter:image" content="https://maor-ahzakot.co.il/assets/section-intro-service-areas-roof-waterproofing-netanya-intro-image-1-og.jpg">
+    <meta name="twitter:image:alt" content="איטום גגות בנתניה"><style id="zappy-ai-page-styles">.service-areas-roof-waterproofing-netanya-intro-section {
   position: relative;
   overflow: visible;
   direction: rtl;
@@ -1554,25 +1554,25 @@
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
     <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
   </button>
 
   <button class="phone-header-btn" data-phone="0559932287" aria-label="Call">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
   </button>
 
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" />
+        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li></ul></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li></ul></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li></ul></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter" class="nav-link">בדיקת גג</a></li><li><a href="/blog/exterior-walls-water-warning-signs" class="nav-link">קירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use" class="nav-link">פוליאוריטני</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture" class="nav-link">שיקום בטון</a></li></ul></li></ul></div>
 
     
 
@@ -1617,12 +1617,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;&amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') && bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;&amp; bgImage !== 'none') {
+      if (bgImage && bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -1635,7 +1635,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;&amp; rgb.length &gt;= 3) {
+    if (rgb && rgb.length >= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -1771,7 +1771,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &lt;= 768;
+      const isMobileViewport = window.innerWidth <= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -1962,7 +1962,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &gt; 0 
+        const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '055-9932287';
         
@@ -1979,7 +1979,7 @@
     const handleWhatsAppVisibility = function() {
       const whatsappBtn = document.querySelector('.whatsapp-float');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth &gt;= 769;
+        const isDesktop = window.innerWidth >= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -2020,14 +2020,14 @@
         <h1 class="intro-heading">איטום גגות בנתניה – <span class="intro-heading-accent">פתרונות מקצועיים</span> לכל סוג מבנה</h1>
         <p class="intro-body">מאור אחזקות מספקת שירותי איטום גגות מקצועיים בנתניה והסביבה לבתים פרטיים, בניינים רב-קומתיים ומפעלים תעשייתיים. עם ניסיון מוכח בעבודות זפת חמה, ממברנות ביטומניות, איטום פוליאוריתן ואפוקסי – אנו מבטיחים עבודה אמינה, חומרים איכותיים ותוצאות עמידות לאורך שנים.</p>
         <div class="intro-meta-row" role="list">
-          <div class="intro-meta-item" role="listitem" style>
+          <div class="intro-meta-item" role="listitem" >
             <i class="fa-solid fa-shield-halved" aria-hidden="true" data-element-type="icon" data-element-id="icon-1775569608681-t2exodxe5" data-icon-type="fontawesome" style="cursor: pointer;"></i>
-            <span style>זפת חם</span>
+            <span >זפת חם</span>
           </div>
           <div class="intro-meta-divider" aria-hidden="true"></div>
-          <div class="intro-meta-item" role="listitem" style>
+          <div class="intro-meta-item" role="listitem" >
             <i class="fa-solid fa-layer-group" aria-hidden="true" data-element-type="icon" data-element-id="icon-1775569608682-glt7i2cun" data-icon-type="fontawesome" style="cursor: pointer;"></i>
-            <span style>יריעות ביטומניות</span>
+            <span >יריעות ביטומניות</span>
           </div>
           <div class="intro-meta-divider" aria-hidden="true"></div>
           <div class="intro-meta-item" role="listitem">
@@ -2042,7 +2042,7 @@
         <div class="intro-image-frame">
           <div class="intro-image-glow" aria-hidden="true"></div>
           <div class="intro-image-wrapper">
-            <div data-zappy-zoom-wrapper="true" data-element-id="img-1775569608684-2supm873a" data-element-type="image" data-zappy-zoom-wrapper-width="454px" data-zappy-zoom-wrapper-height="302px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 454px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 302px !important; display: block !important;"><img data-context="Professional waterproofing team applying bituminous membrane on a flat rooftop in Netanya, Israel. Workers in safety gear using a torch to seal dark membrane sheets. Urban residential buildings visible in the background under a dramatic evening sky. Industrial precision work with glowing torch flame, close-up detail of the membrane application process." width="600" height="400" src="/assets/section-intro-service-areas-roof-waterproofing-netanya-intro-image-1.webp" alt="עבודות איטום גג מקצועיות בנתניה – מאור אחזקות" data-element-type="image" data-element-id="img-1775569608684-2supm873a" style="display: block !important; object-position: 49% 48% !important; margin: 0px !important; left: 0% !important; top: -3.73625% !important; width: 100% !important; height: 107.784% !important; max-width: none !important; max-height: none !important; object-fit: fill !important; position: absolute !important" data-zappy-zoom="0.9" data-zappy-object-position="49% 48%" /></div>
+            <div data-zappy-zoom-wrapper="true" data-element-id="img-1775569608684-2supm873a" data-element-type="image" data-zappy-zoom-wrapper-width="454px" data-zappy-zoom-wrapper-height="302px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 454px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 302px !important; display: block !important;"><img data-context="Professional waterproofing team applying bituminous membrane on a flat rooftop in Netanya, Israel. Workers in safety gear using a torch to seal dark membrane sheets. Urban residential buildings visible in the background under a dramatic evening sky. Industrial precision work with glowing torch flame, close-up detail of the membrane application process." width="600" height="400" src="/assets/section-intro-service-areas-roof-waterproofing-netanya-intro-image-1.webp" alt="עבודות איטום גג מקצועיות בנתניה – מאור אחזקות" data-element-type="image" data-element-id="img-1775569608684-2supm873a" style="display: block !important; object-position: 49% 48% !important; margin: 0px !important; left: 0% !important; top: -3.73625% !important; width: 100% !important; height: 107.784% !important; max-width: none !important; max-height: none !important; object-fit: fill !important; position: absolute !important" data-zappy-zoom="0.9" data-zappy-object-position="49% 48%"></div>
             <div class="intro-image-overlay" aria-hidden="true"></div>
           </div>
         </div>
@@ -2064,7 +2064,7 @@
       <!-- Header Column -->
       <div class="benefits-header-col">
         <div class="benefits-eyebrow">מדוע לבחור בנו</div>
-        <h2 class="benefits-heading">איטום גגות מקצועי<br /><br /><br /><br /><br /><br /><br /><br />בנתניה והסביבה</h2>
+        <h2 class="benefits-heading">איטום גגות מקצועי<br><br><br><br><br><br><br><br>בנתניה והסביבה</h2>
         <p class="benefits-subtext">מאור אחזקות מתמחה בפתרונות איטום מתקדמים לגגות מגורים ותעשייה. אנו מביאים ניסיון של שנים, חומרים איכותיים ועבודה מדוקדקת שמבטיחה הגנה ארוכת טווח על הנכס שלכם.</p>
         <div class="benefits-separator"></div>
       </div>
@@ -2074,31 +2074,31 @@
         <div class="benefits-checklist-label">מה כלול בשירות</div>
         <ul class="benefits-checklist">
           <li class="checklist-item">
-            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg></span>
             <span class="check-text">בדיקת גג מקיפה ללא עלות</span>
           </li>
           <li class="checklist-item">
-            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg></span>
             <span class="check-text">שימוש בחומרי איטום מאושרים ת"י</span>
           </li>
           <li class="checklist-item">
-            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg></span>
             <span class="check-text">אחריות בכתב על כל עבודת איטום</span>
           </li>
           <li class="checklist-item">
-            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg></span>
             <span class="check-text">ניסיון בגגות שטוחים, רעפים ובטון</span>
           </li>
           <li class="checklist-item">
-            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg></span>
             <span class="check-text">זמינות גבוהה ועמידה בלוחות זמנים</span>
           </li>
           <li class="checklist-item">
-            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg></span>
             <span class="check-text">פתרונות לבנייני מגורים ותעשייה</span>
           </li>
           <li class="checklist-item">
-            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="check-icon"><svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="2,8 6,12 14,4" stroke="var(--primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></polyline></svg></span>
             <span class="check-text">ניקיון מלא של אתר העבודה בסיום</span>
           </li>
         </ul>
@@ -2116,10 +2116,10 @@
         <div class="card-inner">
           <div class="card-icon-wrap">
             <svg data-element-type="icon" data-icon-type="svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="20" width="28" height="4" rx="1" stroke="var(--primary)" stroke-width="1.8" fill="none"/>
-              <path d="M4 20 L18 8 L32 20" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-              <line x1="18" y1="24" x2="18" y2="32" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="12" y1="32" x2="24" y2="32" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"/>
+              <rect x="4" y="20" width="28" height="4" rx="1" stroke="var(--primary)" stroke-width="1.8" fill="none"></rect>
+              <path d="M4 20 L18 8 L32 20" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+              <line x1="18" y1="24" x2="18" y2="32" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"></line>
+              <line x1="12" y1="32" x2="24" y2="32" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round"></line>
             </svg>
           </div>
           <h3 class="card-title">ניסיון מוכח בנתניה</h3>
@@ -2132,8 +2132,8 @@
         <div class="card-inner">
           <div class="card-icon-wrap">
             <svg data-element-type="icon" data-icon-type="svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="18" cy="18" r="13" stroke="var(--primary)" stroke-width="1.8" fill="none"/>
-              <path d="M12 18 L16 22 L24 14" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle cx="18" cy="18" r="13" stroke="var(--primary)" stroke-width="1.8" fill="none"></circle>
+              <path d="M12 18 L16 22 L24 14" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
             </svg>
           </div>
           <h3 class="card-title">אחריות ושקיפות מלאה</h3>
@@ -2146,7 +2146,7 @@
         <div class="card-inner">
           <div class="card-icon-wrap">
             <svg data-element-type="icon" data-icon-type="svg" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 4 L20.5 13 L30 13 L22.5 19 L25 28 L18 23 L11 28 L13.5 19 L6 13 L15.5 13 Z" stroke="var(--primary)" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+              <path d="M18 4 L20.5 13 L30 13 L22.5 19 L25 28 L18 23 L11 28 L13.5 19 L6 13 L15.5 13 Z" stroke="var(--primary)" stroke-width="1.8" stroke-linejoin="round" fill="none"></path>
             </svg>
           </div>
           <h3 class="card-title">פתרונות איטום מקיפים</h3>
@@ -2172,15 +2172,15 @@
           <p class="cta-description">צוות מאור אחזקות מתמחה באיטום גגות מקצועי לפרויקטים מגורים ותעשייתיים. פתרונות מוכחים, חומרים איכותיים, ועבודה נקייה עם אחריות מלאה.</p>
           <div class="cta-trust-line">
             <span class="cta-trust-item">
-              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
               ניסיון של שנים בנתניה והסביבה
             </span>
             <span class="cta-trust-item">
-              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
               אחריות מלאה על כל עבודה
             </span>
             <span class="cta-trust-item">
-              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
               הצעת מחיר ללא עלות
             </span>
           </div>
@@ -2204,11 +2204,11 @@
       <p class="roof-article-natanya__subtitle">מדריך מקיף לבעלי נכסים בנתניה: למה איטום גג חיוני, מה הסכנות בהזנחה, ואיך לבחור את החברה הנכונה</p>
       <div class="roof-article-natanya__meta">
         <span class="roof-article-natanya__meta-item">
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-element-type="icon" data-element-id="icon-1775569858997-m9czi95fa" data-icon-type="svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-element-type="icon" data-element-id="icon-1775569858997-m9czi95fa" data-icon-type="svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
           זמן קריאה: 3 דקות
         </span>
         <span class="roof-article-natanya__meta-item">
-          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-element-type="icon" data-element-id="icon-1775569858998-47n3b9axq" data-icon-type="svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-element-type="icon" data-element-id="icon-1775569858998-47n3b9axq" data-icon-type="svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           נתניה והסביבה
         </span>
       </div>
@@ -2221,7 +2221,7 @@
       <article class="roof-article-natanya__content" aria-label="מאמר איטום גגות בנתניה">
 
         <div class="roof-article-natanya__image-wrap roof-article-natanya__image-wrap--mobile">
-          <img src="/assets/image-roof-water-damage-1775574290353-49s08l.webp" alt="עבודות איטום גג מקצועיות בנתניה" data-placeholder="roof-sealing-natanya-hero" data-context="Professional roof waterproofing work in progress in Netanya Israel, workers applying waterproofing membrane on flat rooftop with Mediterranean sea view in background, sunny day" class="roof-article-natanya__img" style />
+          <img src="/assets/image-roof-water-damage-1775574290353-49s08l.webp" alt="עבודות איטום גג מקצועיות בנתניה" data-placeholder="roof-sealing-natanya-hero" data-context="Professional roof waterproofing work in progress in Netanya Israel, workers applying waterproofing membrane on flat rooftop with Mediterranean sea view in background, sunny day" class="roof-article-natanya__img" >
         </div>
 
         <section class="roof-article-natanya__section">
@@ -2232,7 +2232,7 @@
         </section>
 
         <section class="roof-article-natanya__section">
-          <h2 class="roof-article-natanya__section-title" style>סכנות נסתרות של גג לא אטום</h2>
+          <h2 class="roof-article-natanya__section-title" >סכנות נסתרות של גג לא אטום</h2>
           <p class="roof-article-natanya__paragraph">
             רטיבות חודרת היא האויב הגדול ביותר של כל בניין. כאשר מים מצליחים לחדור דרך הגג, הם גורמים לנזקים שמסתתרים מתחת לפני השטח: קורוזיה של ברזל הזיון בבטון, התפתחות עובש ופטריות שמסכנות את בריאות הדיירים, ופגיעה ממשית בערך הנכס. בנתניה, שבה ריכוז מלח האוויר גבוה במיוחד, תהליך הקורוזיה מואץ פי כמה. גג שמוזנח לאורך שנים עלול לדרוש שיפוץ יסודי שעלותו גבוהה פי עשרה מעלות איטום מניעתי פשוט.
           </p>
@@ -2265,13 +2265,13 @@
       <aside class="roof-article-natanya__sidebar" aria-label="מידע נוסף">
 
         <div class="roof-article-natanya__image-wrap roof-article-natanya__image-wrap--desktop">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1775569858999-wjlsqjxms" data-element-type="image" data-zappy-zoom-wrapper-width="337px" data-zappy-zoom-wrapper-height="260px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 337px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 260px !important; display: block !important;"><img src="/assets/image-roof-sealing-natanya-hero-1775570104734-mql13i.webp?v=1775570106785" alt="עבודות איטום גג מקצועיות בנתניה" data-placeholder="roof-sealing-natanya-hero" data-context="Professional roof waterproofing work in progress in Netanya Israel, workers applying waterproofing membrane on flat rooftop with Mediterranean sea view in background, sunny day" class="roof-article-natanya__img" data-element-type="image" data-element-id="img-1775569858999-wjlsqjxms" style="object-fit: fill !important; object-position: 50% 50% !important; margin: 0px !important; left: -15.2323% !important; top: 0% !important; width: 130.465% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important;" data-zappy-zoom="0.9" data-zappy-original-width="336.984375" data-zappy-original-height="259.9921875" data-zappy-object-position="50% 50%" /></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1775569858999-wjlsqjxms" data-element-type="image" data-zappy-zoom-wrapper-width="337px" data-zappy-zoom-wrapper-height="260px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 337px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 260px !important; display: block !important;"><img src="/assets/image-roof-sealing-natanya-hero-1775570104734-mql13i.webp?v=1775570106785" alt="עבודות איטום גג מקצועיות בנתניה" data-placeholder="roof-sealing-natanya-hero" data-context="Professional roof waterproofing work in progress in Netanya Israel, workers applying waterproofing membrane on flat rooftop with Mediterranean sea view in background, sunny day" class="roof-article-natanya__img" data-element-type="image" data-element-id="img-1775569858999-wjlsqjxms" style="object-fit: fill !important; object-position: 50% 50% !important; margin: 0px !important; left: -15.2323% !important; top: 0% !important; width: 130.465% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important;" data-zappy-zoom="0.9" data-zappy-original-width="336.984375" data-zappy-original-height="259.9921875" data-zappy-object-position="50% 50%"></div>
         </div>
 
         <!-- Key Points Card -->
         <div class="roof-article-natanya__card">
           <h3 class="roof-article-natanya__card-title">נקודות מפתח</h3>
-          <ul class="roof-article-natanya__list" aria-label="נקודות עיקריות במאמר" style><li class="roof-article-natanya__list-item" data-grid-item-index="0">
+          <ul class="roof-article-natanya__list" aria-label="נקודות עיקריות במאמר" ><li class="roof-article-natanya__list-item" data-grid-item-index="0">
               <span class="roof-article-natanya__list-icon" aria-hidden="true">✓</span>
               נתניה חשופה ללחות ומלח ים
             </li><li class="roof-article-natanya__list-item" data-grid-item-index="1">
@@ -2303,7 +2303,7 @@
           <div class="roof-article-natanya__stats-grid zappy-preserve-css-grid" id="zappy-auto-grid-1775569859040-vpld3y" data-zappy-auto-grid="true" data-original-item-width="137" data-original-gap="16px" style="--zappy-grid-cols: 136.5px 136.5px; grid-template-columns: 136.5px 136.5px; align-items: stretch !important; display: grid;" data-zappy-explicit-columns="true">
             <div class="roof-article-natanya__stat" data-grid-item-index="0">
               <p><span class="roof-article-natanya__stat-num">500+</span>
-              <span class="roof-article-natanya__stat-label" style>גגות אטומים</span>
+              <span class="roof-article-natanya__stat-label" >גגות אטומים</span>
             </p></div>
             <div class="roof-article-natanya__stat" data-grid-item-index="1">
               <span class="roof-article-natanya__stat-num">15+</span>
@@ -2335,7 +2335,7 @@
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <div class="footer-logo-wrap">
-          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" style />
+          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" >
         </div>
         <p class="footer-tagline">מומחים באיטום, שיפוץ ושיקום מבנים. עבודה מקצועית, אמינות מלאה, תוצאות שמחזיקות לאורך זמן.</p>
         <div class="footer-social">
@@ -2359,13 +2359,13 @@
       <!-- Column 3: Contact Info -->
       <div class="footer-col footer-contact-col">
         <h3 class="footer-heading"><span class="heading-accent"></span>צור קשר</h3>
-        <ul class="footer-contact" style><li>
+        <ul class="footer-contact" ><li>
             <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1775639017054-lxsedrpr3" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="mailto:mwrdrwry@gmail.com">mwrdrwry@gmail.com</a></span>
           </li><li>
             <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1775639017055-3p3y17104" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="tel:055-9932287">055-9932287</a></span>
-          </li><li><a href="/" style><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
+          </li><li><a href="/" ><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
       </div>
 
       <!-- Column 4: CTA / Badge -->

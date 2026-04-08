@@ -218,18 +218,18 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png" />
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
@@ -729,383 +729,485 @@
       }
     </style>
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:url" content="https://maor-achzakot.zappy5.app/blog">
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="הבלוג המקצועי של מאור אחזקות" />
-    <meta property="og:description" content="מאור אחזקות - הבלוג המקצועי של מאור אחזקות" />
-    <meta property="og:image" content="https://maor-achzakot.zappy5.app/assets/section-blog-hero-blog-blog-hero-image-1-og.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:alt" content="הבלוג המקצועי של מאור אחזקות" />
-    <meta property="og:locale" content="he_IL" />
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="הבלוג המקצועי של מאור אחזקות">
+    <meta property="og:description" content="מאור אחזקות - הבלוג המקצועי של מאור אחזקות">
+    
+    <meta property="og:locale" content="he_IL">
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="הבלוג המקצועי של מאור אחזקות" />
-    <meta name="twitter:description" content="מאור אחזקות - הבלוג המקצועי של מאור אחזקות" />
-    <meta name="twitter:image" content="https://maor-achzakot.zappy5.app/assets/section-blog-hero-blog-blog-hero-image-1-og.jpg" />
-    <meta name="twitter:image:alt" content="הבלוג המקצועי של מאור אחזקות" /><style id="zappy-ai-page-styles">.blog-blog-hero-section {
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="הבלוג המקצועי של מאור אחזקות">
+    <meta name="twitter:description" content="מאור אחזקות - הבלוג המקצועי של מאור אחזקות">
+    <style id="zappy-ai-page-styles">.blog-blog-hero-section {
   position: relative;
-  background-color: #0B0E14;
+  overflow: visible;
+  background-color: #090B10;
   background-image:
-    radial-gradient(ellipse 80% 40% at 50% 60%, rgba(0,212,255,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0, 184, 255, 0.07) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 60%),
     linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
   color: var(--text-light);
   direction: rtl;
-  overflow: hidden;
-  padding: 140px 0 80px;
-  min-height: 600px;
+  padding: 130px 0 80px;
+  min-height: 560px;
 }
 
-/* Background decorative layers */
-.blog-blog-hero-section .bbh-bg-layer {
+/* Background layers */
+.blog-blog-hero-section .blog-hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
-.blog-blog-hero-section .bbh-grid-lines {
+.blog-blog-hero-section .blog-hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0, 184, 255, 0.04) 0%, transparent 70%);
+}
+
+.blog-blog-hero-section .blog-hero-horizon-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to top, rgba(0, 184, 255, 0.06) 0%, transparent 100%);
+}
+
+.blog-blog-hero-section .blog-hero-grid-lines {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+    linear-gradient(rgba(0, 184, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 184, 255, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
-}
-
-.blog-blog-hero-section .bbh-glow-horizontal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent 0%, rgba(0,212,255,0.18) 30%, rgba(0,212,255,0.35) 50%, rgba(0,212,255,0.18) 70%, transparent 100%);
-  filter: blur(4px);
 }
 
 /* Container */
-.blog-blog-hero-section .bbh-container {
+.blog-blog-hero-section .blog-hero-container {
   position: relative;
   z-index: 10;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  direction: rtl;
+  gap: 56px;
 }
 
-/* TEXT COLUMN (right side in RTL) */
-.blog-blog-hero-section .bbh-text-col {
+/* Text Block */
+.blog-blog-hero-section .blog-hero-text-block {
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  text-align: right;
+  align-items: flex-start;
+  gap: 0;
 }
 
-.blog-blog-hero-section .bbh-label {
-  display: inline-flex;
+/* Eyebrow */
+.blog-blog-hero-section .blog-hero-eyebrow {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-blog-hero-section .blog-hero-eyebrow-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+  flex-shrink: 0;
+}
+
+.blog-blog-hero-section .blog-hero-eyebrow-label {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--primary);
-  padding: 6px 14px;
-  border: 1px solid rgba(0,212,255,0.3);
-  border-radius: 2px;
-  background: rgba(0,212,255,0.06);
-  width: fit-content;
+  line-height: 1;
 }
 
-.blog-blog-hero-section .bbh-headline {
+/* H1 Title */
+.blog-blog-hero-section .blog-hero-title {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(42px, 5.5vw, 76px);
   font-weight: 900;
   letter-spacing: -0.03em;
-  line-height: 1.05;
+  line-height: 0.97;
   color: var(--text-light);
-  margin: 0;
+  margin: 0 0 22px 0;
+  text-align: right;
 }
 
-.blog-blog-hero-section .bbh-headline-accent {
-  color: var(--primary);
-  -webkit-text-fill-color: var(--primary);
-  display: inline-block;
-  position: relative;
+.blog-blog-hero-section .blog-hero-title-accent {
+  background: linear-gradient(90deg, #00D4FF 0%, #B8FF3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.blog-blog-hero-section .bbh-headline-accent::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  right: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary));
-}
-
-.blog-blog-hero-section .bbh-subtitle {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.375rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: var(--text-light);
-  margin: 0;
-  opacity: 0.9;
-}
-
-.blog-blog-hero-section .bbh-body {
+/* H3 Subtitle */
+.blog-blog-hero-section .blog-hero-subtitle {
   font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-muted);
-  margin: 0;
-  max-width: 480px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-light);
+  opacity: 0.82;
+  margin: 0 0 28px 0;
+  text-align: right;
+  max-width: 500px;
 }
 
-.blog-blog-hero-section .bbh-highlights {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 4px;
-}
-
-.blog-blog-hero-section .bbh-highlight-item {
+/* Tech bar */
+.blog-blog-hero-section .blog-hero-tech-bar {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  margin-bottom: 36px;
+  padding: 10px 16px;
+  border-inline-start: 3px solid var(--primary);
+  background: rgba(0, 212, 255, 0.05);
+  border-radius: 0 4px 4px 0;
+}
+
+.blog-blog-hero-section .blog-hero-tech-item {
   font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-light);
-  letter-spacing: 0.02em;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--primary);
+  text-transform: uppercase;
 }
 
-.blog-blog-hero-section .bbh-highlight-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--primary);
-  flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(0,212,255,0.6);
+.blog-blog-hero-section .blog-hero-tech-sep {
+  color: var(--primary);
+  opacity: 0.35;
+  font-size: 13px;
+  font-weight: 700;
 }
 
-/* VISUAL COLUMN (left side in RTL) */
-.blog-blog-hero-section .bbh-visual-col {
-  position: relative;
+/* CTA Row */
+.blog-blog-hero-section .blog-hero-cta-row {
   display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
 }
 
-.blog-blog-hero-section .bbh-image-frame {
+.blog-blog-hero-section .blog-hero-btn-primary {
+  display: inline-block;
+  background: linear-gradient(90deg, #C8FF00 0%, #B8F500 100%);
+  color: #0B0E14;
+  padding: 14px 30px;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 20px rgba(200,255,0,0.22);
+  transition: all 0.28s ease;
+  white-space: nowrap;
+}
+
+.blog-blog-hero-section .blog-hero-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 12px 28px rgba(200,255,0,0.32);
+}
+
+.blog-blog-hero-section .blog-hero-btn-secondary {
+  display: inline-block;
+  background: rgba(19, 27, 36, 0.92);
+  color: var(--text-light);
+  padding: 14px 30px;
+  border-radius: 0;
+  border: 1px solid #00B8FF;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset;
+  transition: all 0.28s ease;
+  white-space: nowrap;
+}
+
+.blog-blog-hero-section .blog-hero-btn-secondary:hover {
+  background: rgba(0, 184, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(0, 184, 255, 0.22);
+}
+
+/* Image Block */
+.blog-blog-hero-section .blog-hero-image-block {
+  flex: 0 0 auto;
+  width: 46%;
+  max-width: 580px;
+  position: relative;
+}
+
+.blog-blog-hero-section .blog-hero-image-frame {
   position: relative;
   width: 100%;
-  max-width: 560px;
-  border: 1px solid rgba(0,212,255,0.2);
-  box-shadow:
-    0 0 0 1px rgba(0,212,255,0.08),
-    0 24px 60px rgba(0,0,0,0.6),
-    0 0 40px rgba(0,212,255,0.08);
+  border: 1px solid rgba(0, 184, 255, 0.18);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04) inset;
   overflow: hidden;
-  background: #11161D;
 }
 
-.blog-blog-hero-section .bbh-main-image {
+.blog-blog-hero-section .blog-hero-img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 3/2;
   object-fit: cover;
-  filter: brightness(0.85) contrast(1.05);
-  transition: filter 0.4s ease;
+  aspect-ratio: 620 / 480;
 }
 
-.blog-blog-hero-section .bbh-image-frame:hover .bbh-main-image {
-  filter: brightness(0.95) contrast(1.05);
-}
-
-.blog-blog-hero-section .bbh-image-overlay {
+/* Image overlay gradient */
+.blog-blog-hero-section .blog-hero-image-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(9,11,16,0.1) 0%,
-    rgba(9,11,16,0.05) 50%,
-    rgba(9,11,16,0.45) 100%
+    rgba(9, 11, 16, 0.0) 40%,
+    rgba(9, 11, 16, 0.55) 100%
   );
-  z-index: 1;
   pointer-events: none;
+  z-index: 2;
 }
 
-/* Image badge */
-.blog-blog-hero-section .bbh-image-badge {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 5;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  background: rgba(16,21,28,0.88);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(0,212,255,0.25);
-  padding: 8px 14px;
-  border-radius: 2px;
-}
-
-.blog-blog-hero-section .bbh-badge-icon {
-  color: var(--primary);
-  font-size: 14px;
-  line-height: 1;
-}
-
-.blog-blog-hero-section .bbh-badge-text {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  color: var(--text-light);
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-/* Corner accents */
-.blog-blog-hero-section .bbh-corner-accent {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  z-index: 3;
-  pointer-events: none;
-}
-
-.blog-blog-hero-section .bbh-corner-tl {
-  top: -1px;
-  right: -1px;
-  border-top: 2px solid var(--primary);
-  border-right: 2px solid var(--primary);
-}
-
-.blog-blog-hero-section .bbh-corner-br {
-  bottom: -1px;
-  left: -1px;
-  border-bottom: 2px solid var(--primary);
-  border-left: 2px solid var(--primary);
-}
-
-/* Bottom decorative line */
-.blog-blog-hero-section .bbh-bottom-line {
+/* Glow line on image */
+.blog-blog-hero-section .blog-hero-image-glow-line {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(0,212,255,0.3) 30%, rgba(0,212,255,0.5) 50%, rgba(0,212,255,0.3) 70%, transparent 100%);
-  z-index: 2;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #00D4FF 40%, #B8FF3B 70%, transparent 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Corner brackets */
+.blog-blog-hero-section .blog-hero-image-corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.blog-blog-hero-section .blog-hero-corner-tl {
+  top: -1px;
+  inset-inline-start: -1px;
+  border-top: 2px solid var(--primary);
+  border-inline-start: 2px solid var(--primary);
+}
+
+.blog-blog-hero-section .blog-hero-corner-tr {
+  top: -1px;
+  inset-inline-end: -1px;
+  border-top: 2px solid var(--primary);
+  border-inline-end: 2px solid var(--primary);
+}
+
+.blog-blog-hero-section .blog-hero-corner-bl {
+  bottom: -1px;
+  inset-inline-start: -1px;
+  border-bottom: 2px solid var(--primary);
+  border-inline-start: 2px solid var(--primary);
+}
+
+.blog-blog-hero-section .blog-hero-corner-br {
+  bottom: -1px;
+  inset-inline-end: -1px;
+  border-bottom: 2px solid var(--primary);
+  border-inline-end: 2px solid var(--primary);
+}
+
+/* Badge */
+.blog-blog-hero-section .blog-hero-image-badge {
+  position: absolute;
+  bottom: 20px;
+  inset-inline-end: 20px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(9, 11, 16, 0.88);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  backdrop-filter: blur(8px);
+  padding: 12px 16px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.blog-blog-hero-section .blog-hero-badge-num {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  display: block;
+}
+
+.blog-blog-hero-section .blog-hero-badge-label {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  opacity: 0.75;
+  line-height: 1.4;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Bottom divider */
+.blog-blog-hero-section .blog-hero-divider-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.blog-blog-hero-section .blog-hero-divider-wrapper svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* ─── RESPONSIVE ─── */
-@media (max-width: 960px) {
-  .blog-blog-hero-section .bbh-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 0 24px;
+@media (max-width: 900px) {
+  .blog-blog-hero-section .blog-hero-container {
+    flex-direction: column;
+    gap: 36px;
   }
 
-  .blog-blog-hero-section .bbh-text-col {
-    order: 1;
-  }
-
-  .blog-blog-hero-section .bbh-visual-col {
-    order: 2;
-  }
-
-  .blog-blog-hero-section .bbh-body {
+  .blog-blog-hero-section .blog-hero-image-block {
+    width: 100%;
     max-width: 100%;
+  }
+
+  .blog-blog-hero-section .blog-hero-text-block {
+    align-items: flex-start;
   }
 }
 
 @media (max-width: 768px) {
   .blog-blog-hero-section {
-    padding: 110px 0 60px;
-    min-height: auto;
+    padding: 100px 0 70px;
+    min-height: unset;
   }
 
-  .blog-blog-hero-section .bbh-container {
+  .blog-blog-hero-section .blog-hero-container {
     padding: 0 16px;
-    gap: 32px;
+    flex-direction: column;
+    gap: 28px;
   }
 
-  .blog-blog-hero-section .bbh-headline {
-    font-size: 2.2rem;
+  .blog-blog-hero-section .blog-hero-title {
+    font-size: clamp(36px, 9vw, 52px);
+    margin-bottom: 16px;
   }
 
-  .blog-blog-hero-section .bbh-subtitle {
-    font-size: 1.1rem;
+  .blog-blog-hero-section .blog-hero-subtitle {
+    font-size: 16px;
+    max-width: 100%;
+    margin-bottom: 20px;
   }
 
-  .blog-blog-hero-section .bbh-image-badge {
-    bottom: 12px;
-    right: 12px;
-    padding: 6px 10px;
+  .blog-blog-hero-section .blog-hero-tech-bar {
+    gap: 6px;
+    padding: 8px 12px;
+    margin-bottom: 24px;
   }
 
-  .blog-blog-hero-section .bbh-badge-text {
+  .blog-blog-hero-section .blog-hero-tech-item {
     font-size: 11px;
   }
 
-  .blog-blog-hero-section .bbh-highlights {
-    gap: 8px;
+  .blog-blog-hero-section .blog-hero-cta-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .blog-blog-hero-section .blog-hero-btn-primary,
+  .blog-blog-hero-section .blog-hero-btn-secondary {
+    text-align: center;
+    width: 100%;
+    padding: 13px 20px;
+    font-size: 15px;
+  }
+
+  .blog-blog-hero-section .blog-hero-image-block {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .blog-blog-hero-section .blog-hero-image-badge {
+    bottom: 12px;
+    inset-inline-end: 12px;
+    padding: 8px 12px;
+  }
+
+  .blog-blog-hero-section .blog-hero-badge-num {
+    font-size: 22px;
+  }
+
+  .blog-blog-hero-section .blog-hero-badge-label {
+    font-size: 10px;
   }
 }
 
 .blog-blog-grid-section {
-  background-color: var(--bg-light);
-  background-image: linear-gradient(180deg, #F5F7FA 0%, #EEF1F6 100%);
+  background: var(--bg-light);
   color: var(--text-dark);
-  padding: 80px 24px 80px;
-  position: relative;
-  overflow: visible;
+  padding: 80px 20px 80px;
   direction: rtl;
+  position: relative;
 }
 
-/* Container */
 .blog-blog-grid-section .blog-grid-container {
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
 }
 
-/* ── Section Header ── */
+/* ── Header ── */
 .blog-blog-grid-section .blog-grid-header {
-  text-align: center;
+  text-align: right;
   margin-bottom: 52px;
 }
 
 .blog-blog-grid-section .blog-grid-label {
   display: inline-block;
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--primary);
-  background: rgba(0, 212, 255, 0.1);
+  background: rgba(0, 212, 255, 0.08);
   border: 1px solid rgba(0, 212, 255, 0.25);
-  padding: 5px 16px;
-  border-radius: 999px;
+  padding: 4px 14px;
   margin-bottom: 16px;
 }
 
@@ -1116,7 +1218,6 @@
   line-height: 1.3;
   color: var(--text-dark);
   margin: 0 0 14px;
-  max-width: none !important;
 }
 
 .blog-blog-grid-section .blog-grid-subtitle {
@@ -1124,187 +1225,82 @@
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-muted);
-  max-width: 620px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-/* ── Featured Card ── */
-.blog-blog-grid-section .blog-featured-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
-  background: #fff;
-  border: 1px solid var(--border-light);
-  border-top: 3px solid var(--primary);
-  box-shadow: 0 4px 24px rgba(18, 20, 23, 0.07);
-  margin-bottom: 40px;
-  overflow: hidden;
-  direction: rtl;
-}
-
-/* Featured image side */
-.blog-blog-grid-section .blog-featured-image-link {
-  display: block;
-  overflow: hidden;
-}
-
-.blog-blog-grid-section .blog-featured-image-wrap {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 340px;
-  overflow: hidden;
-}
-
-.blog-blog-grid-section .blog-featured-image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.45s ease;
-}
-
-.blog-blog-grid-section .blog-featured-card:hover .blog-featured-image-wrap img {
-  transform: scale(1.04);
-}
-
-.blog-blog-grid-section .blog-featured-image-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0,212,255,0.08) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-/* Featured content side */
-.blog-blog-grid-section .blog-featured-content {
-  padding: 40px 36px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 18px;
-  background: #fff;
-}
-
-.blog-blog-grid-section .blog-featured-meta {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.blog-blog-grid-section .blog-category-badge {
-  display: inline-block;
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #fff;
-  background: var(--primary);
-  padding: 3px 12px;
-  border-radius: 999px;
-}
-
-.blog-blog-grid-section .blog-category-badge--small {
-  font-size: 11px;
-  padding: 2px 10px;
-}
-
-.blog-blog-grid-section .blog-meta-sep {
-  color: var(--border-light);
-  font-size: 14px;
-}
-
-.blog-blog-grid-section .blog-read-time,
-.blog-blog-grid-section .blog-date {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 13px;
-  color: var(--text-muted);
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.blog-blog-grid-section .blog-date--small {
-  font-size: 12px;
-}
-
-.blog-blog-grid-section .blog-featured-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.375rem;
-  font-weight: 700;
-  line-height: 1.4;
-  color: var(--text-dark);
+  max-width: 560px;
   margin: 0;
 }
 
-.blog-blog-grid-section .blog-featured-excerpt {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-muted);
-  margin: 0;
-}
-
-.blog-blog-grid-section .blog-featured-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--primary);
-  text-decoration: none;
-  padding: 10px 0;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.22s ease, gap 0.22s ease;
-  align-self: flex-start;
-}
-
-.blog-blog-grid-section .blog-featured-link:hover {
-  border-bottom-color: var(--primary);
-  gap: 12px;
-}
-
-/* ── Articles Grid ── */
-.blog-blog-grid-section .blog-articles-grid {
+/* ── Layout: Featured + Secondary ── */
+.blog-blog-grid-section .blog-grid-layout {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 28px;
   direction: rtl;
 }
 
-/* ── Article Card ── */
+@media (min-width: 768px) {
+  .blog-blog-grid-section .blog-grid-layout {
+    grid-template-columns: 1.15fr 1fr;
+    align-items: start;
+  }
+}
+
+.blog-blog-grid-section .blog-grid-secondary {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  direction: rtl;
+}
+
+/* ── Card Base ── */
 .blog-blog-grid-section .blog-card {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid var(--border-light);
-  border-top: 3px solid var(--primary);
-  box-shadow: 0 2px 16px rgba(18, 20, 23, 0.06);
+  border-radius: 0;
+  box-shadow: 0 4px 18px rgba(18, 20, 23, 0.07);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.28s ease, transform 0.28s ease;
+  transition: box-shadow 0.28s ease, border-color 0.28s ease;
+  position: relative;
+}
+
+.blog-blog-grid-section .blog-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: transparent;
+  transition: background 0.28s ease;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .blog-blog-grid-section .blog-card:hover {
-  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.13), 0 2px 12px rgba(18,20,23,0.08);
-  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0, 212, 255, 0.13), 0 4px 16px rgba(18, 20, 23, 0.1);
+  border-color: rgba(0, 212, 255, 0.35);
 }
 
-/* Card image */
+.blog-blog-grid-section .blog-card:hover::before {
+  background: linear-gradient(90deg, var(--primary) 0%, rgba(0, 212, 255, 0.4) 100%);
+}
+
+/* ── Card Image ── */
 .blog-blog-grid-section .blog-card-image-link {
   display: block;
   overflow: hidden;
-  flex-shrink: 0;
+  text-decoration: none;
 }
 
 .blog-blog-grid-section .blog-card-image-wrap {
+  margin: 0;
+  padding: 0;
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
+  background: var(--border-light);
 }
 
 .blog-blog-grid-section .blog-card-image-wrap img {
@@ -1312,93 +1308,154 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.42s ease;
+  transition: transform 0.4s ease;
 }
 
 .blog-blog-grid-section .blog-card:hover .blog-card-image-wrap img {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .blog-blog-grid-section .blog-card-image-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(18,20,23,0.12) 100%);
+  background: linear-gradient(180deg, transparent 55%, rgba(18, 20, 23, 0.18) 100%);
   pointer-events: none;
+  z-index: 1;
 }
 
-/* Card content */
-.blog-blog-grid-section .blog-card-content {
-  padding: 24px 22px 22px;
+/* ── Card Body ── */
+.blog-blog-grid-section .blog-card-body {
+  padding: 24px 24px 28px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
   flex: 1;
+  text-align: right;
 }
 
+.blog-blog-grid-section .blog-card--featured .blog-card-body {
+  padding: 28px 28px 32px;
+}
+
+/* ── Meta ── */
 .blog-blog-grid-section .blog-card-meta {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
+  margin-bottom: 12px;
   flex-wrap: wrap;
 }
 
+.blog-blog-grid-section .blog-card-tag {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  padding: 2px 10px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.blog-blog-grid-section .blog-card-meta-sep {
+  color: var(--border-light);
+  font-size: 0.875rem;
+}
+
+.blog-blog-grid-section .blog-card-read-time {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.blog-blog-grid-section .blog-card-read-time i {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ── Title ── */
 .blog-blog-grid-section .blog-card-title {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.375rem;
   font-weight: 700;
   line-height: 1.4;
   color: var(--text-dark);
-  margin: 0;
+  margin: 0 0 12px;
+}
+
+.blog-blog-grid-section .blog-card--featured .blog-card-title {
+  font-size: 1.5rem;
 }
 
 .blog-blog-grid-section .blog-card-title a {
-  color: var(--text-dark);
+  color: inherit;
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: color 0.22s ease;
 }
 
 .blog-blog-grid-section .blog-card-title a:hover {
   color: var(--primary);
 }
 
+/* ── Excerpt ── */
 .blog-blog-grid-section .blog-card-excerpt {
   font-family: 'Inter', 'Heebo', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-muted);
-  margin: 0;
+  margin: 0 0 20px;
   flex: 1;
 }
 
+.blog-blog-grid-section .blog-card--regular .blog-card-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Read More Link ── */
 .blog-blog-grid-section .blog-card-link {
   display: inline-flex;
+  flex-direction: row;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 13px;
+  font-size: 0.875rem;
   font-weight: 700;
   color: var(--primary);
   text-decoration: none;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: color 0.22s ease, border-color 0.22s ease, gap 0.22s ease;
+  align-self: flex-start;
   margin-top: auto;
-  padding-top: 4px;
-  transition: gap 0.2s ease, opacity 0.2s ease;
 }
 
 .blog-blog-grid-section .blog-card-link:hover {
+  color: var(--text-dark);
+  border-color: var(--text-dark);
   gap: 10px;
-  opacity: 0.85;
 }
 
-/* ── Tablet: 2 columns ── */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .blog-blog-grid-section .blog-articles-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.blog-blog-grid-section .blog-card-link i {
+  font-size: 0.8rem;
+  transition: transform 0.22s ease;
+}
+
+.blog-blog-grid-section .blog-card-link:hover i {
+  transform: translateX(-3px);
 }
 
 /* ── Mobile ── */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .blog-blog-grid-section {
     padding: 60px 16px 60px;
   }
@@ -1408,80 +1465,77 @@
   }
 
   .blog-blog-grid-section .blog-grid-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 
-  .blog-blog-grid-section .blog-featured-card {
-    grid-template-columns: 1fr;
-  }
-
-  .blog-blog-grid-section .blog-featured-image-wrap {
-    min-height: 220px;
-  }
-
-  .blog-blog-grid-section .blog-featured-content {
-    padding: 24px 20px;
-    gap: 14px;
-  }
-
-  .blog-blog-grid-section .blog-featured-title {
-    font-size: 1.15rem;
-  }
-
-  .blog-blog-grid-section .blog-articles-grid {
+  .blog-blog-grid-section .blog-grid-layout {
     grid-template-columns: 1fr !important;
     gap: 20px;
   }
 
-  .blog-blog-grid-section .blog-card-content {
-    padding: 18px 16px 16px;
+  .blog-blog-grid-section .blog-grid-secondary {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .blog-blog-grid-section .blog-card-body {
+    padding: 18px 18px 22px;
+  }
+
+  .blog-blog-grid-section .blog-card--featured .blog-card-body {
+    padding: 20px 18px 24px;
+  }
+
+  .blog-blog-grid-section .blog-card-title {
+    font-size: 1.125rem;
+  }
+
+  .blog-blog-grid-section .blog-card--featured .blog-card-title {
+    font-size: 1.25rem;
+  }
+
+  .blog-blog-grid-section .blog-card--regular .blog-card-excerpt {
+    -webkit-line-clamp: 4;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .blog-blog-grid-section .blog-grid-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-blog-grid-section .blog-grid-secondary {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blog-blog-grid-section .blog-card--featured .blog-card-image-wrap {
+    aspect-ratio: 16 / 7;
   }
 }
 
 .blog-cta-section {
   position: relative;
-  overflow: visible;
   background-color: #090B10;
   background-image:
-    radial-gradient(ellipse 60% 80% at 85% 50%, rgba(0, 212, 255, 0.07) 0%, transparent 65%),
+    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0, 212, 255, 0.07) 0%, transparent 70%),
     linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
   color: var(--text-light);
-  padding: 80px 16px;
+  padding: 80px 24px;
+  overflow: hidden;
   direction: rtl;
-}
-
-.blog-cta-section .blog-cta-bg-layer {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(0,212,255,0.04) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
-  z-index: 0;
 }
 
 .blog-cta-section .blog-cta-glow {
   position: absolute;
   top: 50%;
-  inset-inline-end: 0;
-  transform: translateY(-50%);
-  width: 420px;
-  height: 420px;
-  background: radial-gradient(circle, rgba(0,212,255,0.10) 0%, transparent 70%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.13) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
-}
-
-.blog-cta-section .blog-cta-grid-lines {
-  position: absolute;
-  inset-inline-start: 0;
-  top: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(180deg, transparent 0%, rgba(0,212,255,0.25) 40%, rgba(0,212,255,0.25) 60%, transparent 100%);
-  pointer-events: none;
-  z-index: 0;
+  border-radius: 50%;
 }
 
 .blog-cta-section .blog-cta-container {
@@ -1489,37 +1543,42 @@
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
-  border: 1px solid var(--border-dark);
-  border-inline-start: 3px solid rgba(0,212,255,0.35);
-  background: rgba(255,255,255,0.02);
-  padding: 56px 52px;
+}
+
+.blog-cta-section .blog-cta-divider-top {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 255, 0.35) 40%, rgba(0, 212, 255, 0.35) 60%, transparent 100%);
+  margin-bottom: 56px;
+}
+
+.blog-cta-section .blog-cta-divider-bottom {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 255, 0.35) 40%, rgba(0, 212, 255, 0.35) 60%, transparent 100%);
+  margin-top: 56px;
 }
 
 .blog-cta-section .blog-cta-content {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 60px;
-}
-
-.blog-cta-section .blog-cta-text {
-  flex: 1 1 0;
-  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
   text-align: right;
 }
 
-.blog-cta-section .blog-cta-label {
+.blog-cta-section .blog-cta-badge {
   display: inline-block;
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--primary);
-  border: 1px solid rgba(0,212,255,0.3);
-  padding: 4px 14px;
-  margin-bottom: 20px;
-  background: rgba(0,212,255,0.07);
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  padding: 5px 14px;
+  border-radius: 2px;
+  background: rgba(0, 212, 255, 0.06);
 }
 
 .blog-cta-section .blog-cta-heading {
@@ -1528,210 +1587,122 @@
   font-weight: 700;
   line-height: 1.3;
   color: var(--text-light);
-  margin: 0 0 20px 0;
-}
-
-.blog-cta-section .blog-cta-desc {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-muted);
-  margin: 0 0 28px 0;
-  max-width: 480px;
-}
-
-.blog-cta-section .blog-cta-divider {
-  width: 48px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--primary), transparent);
-  margin-bottom: 24px;
-  margin-inline-start: auto;
-}
-
-.blog-cta-section .blog-cta-features {
-  list-style: none;
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.blog-cta-section .blog-cta-features li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 0.875rem;
-  color: var(--text-muted);
+  max-width: 700px;
   text-align: right;
 }
 
-.blog-cta-section .blog-cta-feature-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--primary);
-  flex-shrink: 0;
-  box-shadow: 0 0 6px rgba(0,212,255,0.6);
+.blog-cta-section .blog-cta-text {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 620px;
+  text-align: right;
 }
 
 .blog-cta-section .blog-cta-actions {
-  flex: 0 0 300px;
-  min-width: 260px;
-}
-
-.blog-cta-section .blog-cta-actions-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px;
-  align-items: stretch;
-}
-
-.blog-cta-section .blog-cta-badge {
-  display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 8px;
   align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  border: 1px solid rgba(0,212,255,0.2);
-  background: rgba(0,212,255,0.05);
-  margin-bottom: 4px;
-  justify-content: flex-end;
 }
 
-.blog-cta-section .blog-cta-badge span {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--primary);
-  letter-spacing: 0.05em;
-}
-
-.blog-cta-section .blog-cta-btn-primary {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+.blog-cta-section .blog-cta-btn {
+  display: inline-block;
   text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+}
+
+.blog-cta-section .btn-primary {
   background: linear-gradient(90deg, #C8FF00 0%, #B8F500 100%);
   color: #0B0E14;
   padding: 14px 30px;
   border-radius: 0;
-  border: 1px solid rgba(0,0,0,0.35);
+  border: 1px solid rgba(0, 0, 0, 0.35);
   font-weight: 700;
-  font-size: 1rem;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 20px rgba(200,255,0,0.22);
-  transition: opacity 0.2s, box-shadow 0.2s;
-  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 8px 20px rgba(200, 255, 0, 0.22);
+  text-transform: none;
 }
 
-.blog-cta-section .blog-cta-btn-primary:hover {
-  opacity: 0.9;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 12px 28px rgba(200,255,0,0.32);
+.blog-cta-section .btn-primary:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12) inset, 0 12px 28px rgba(200, 255, 0, 0.32);
 }
 
-.blog-cta-section .blog-cta-btn-secondary {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  text-decoration: none;
-  background: rgba(19,27,36,0.92);
+.blog-cta-section .btn-secondary {
+  background: rgba(19, 27, 36, 0.92);
   color: var(--text-light);
   padding: 14px 30px;
   border-radius: 0;
   border: 1px solid var(--primary);
   font-weight: 700;
-  font-size: 1rem;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset;
-  transition: background 0.2s, box-shadow 0.2s;
-  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
 }
 
-.blog-cta-section .blog-cta-btn-secondary:hover {
-  background: rgba(0,212,255,0.08);
-  box-shadow: 0 0 16px rgba(0,212,255,0.15);
+.blog-cta-section .btn-secondary:hover {
+  background: rgba(0, 212, 255, 0.08);
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.18);
 }
 
-.blog-cta-section .blog-cta-contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding-top: 8px;
-  border-top: 1px solid var(--border-dark);
-}
-
-.blog-cta-section .blog-cta-phone-link,
-.blog-cta-section .blog-cta-email-link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: var(--text-muted);
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 0.875rem;
-  justify-content: flex-end;
-  transition: color 0.2s;
-}
-
-.blog-cta-section .blog-cta-phone-link:hover,
-.blog-cta-section .blog-cta-email-link:hover {
-  color: var(--primary);
-}
-
-.blog-cta-section .blog-cta-phone-link i,
-.blog-cta-section .blog-cta-email-link i {
-  color: var(--primary);
-  font-size: 1rem;
-  opacity: 0.7;
-}
-
-@media (max-width: 900px) {
-  .blog-cta-section .blog-cta-content {
-    flex-direction: column;
-    gap: 40px;
+@media (min-width: 768px) {
+  .blog-cta-section {
+    padding: 100px 48px;
   }
 
-  .blog-cta-section .blog-cta-actions {
-    flex: unset;
-    width: 100%;
-    min-width: 0;
+  .blog-cta-section .blog-cta-heading {
+    font-size: 2rem;
   }
 
-  .blog-cta-section .blog-cta-desc {
-    max-width: 100%;
+  .blog-cta-section .blog-cta-glow {
+    width: 900px;
+    height: 280px;
   }
 }
 
 @media (max-width: 768px) {
   .blog-cta-section {
-    padding: 48px 16px;
+    padding: 60px 16px;
   }
 
-  .blog-cta-section .blog-cta-container {
-    padding: 32px 20px;
+  .blog-cta-section .blog-cta-divider-top {
+    margin-bottom: 36px;
+  }
+
+  .blog-cta-section .blog-cta-divider-bottom {
+    margin-top: 36px;
   }
 
   .blog-cta-section .blog-cta-heading {
     font-size: 1.5rem;
   }
 
-  .blog-cta-section .blog-cta-glow {
-    width: 200px;
-    height: 200px;
+  .blog-cta-section .blog-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
   }
 
-  .blog-cta-section .blog-cta-btn-primary,
-  .blog-cta-section .blog-cta-btn-secondary {
-    font-size: 0.95rem;
-    padding: 12px 20px;
+  .blog-cta-section .blog-cta-btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .blog-cta-section .btn-primary,
+  .blog-cta-section .btn-secondary {
+    font-size: 16px;
+    padding: 13px 20px;
   }
 }</style>
     <link rel="stylesheet" href="/styles.css">
@@ -1775,25 +1746,25 @@
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
     <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
   </button>
 
   <button class="phone-header-btn" data-phone="0559932287" aria-label="Call">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
   </button>
 
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" />
+        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/service-areas" class="nav-link">אזורים</a></li><li><a href="/blog" class="nav-link">בלוג</a></li><li><a href="https://maor-itum.co.il/" target="_blank" rel="noopener noreferrer">איטום גג בנתניה</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li></ul></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li></ul></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter" class="nav-link">בדיקת גג</a></li><li><a href="/blog/exterior-walls-water-warning-signs" class="nav-link">קירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use" class="nav-link">פוליאוריטני</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture" class="nav-link">שיקום בטון</a></li></ul></li></ul></div>
 
     
 
@@ -2232,144 +2203,176 @@
 </script>
   
   <main class="blog-page ai-generated-page"><section class="blog-blog-hero-section" data-layout-spec="הבלוג המקצועי של מאור אחזקות-blog-hero" dir="rtl" data-hero-type="fullscreen-scrim">
-  <!-- Background layer -->
-  <div class="bbh-bg-layer" aria-hidden="true">
-    <div class="bbh-grid-lines" aria-hidden="true"></div>
-    <div class="bbh-glow-horizontal" aria-hidden="true"></div>
+  <!-- Background depth layer -->
+  <div class="blog-hero-bg" aria-hidden="true">
+    <div class="blog-hero-bg-gradient"></div>
+    <div class="blog-hero-horizon-glow"></div>
+    <div class="blog-hero-grid-lines"></div>
   </div>
 
-  <!-- Main content wrapper -->
-  <div class="bbh-container">
+  <div class="blog-hero-container">
+    <!-- Right: Text Block -->
+    <div class="blog-hero-text-block">
+      <div class="blog-hero-eyebrow">
+        <span class="blog-hero-eyebrow-dot" aria-hidden="true"></span>
+        <span class="blog-hero-eyebrow-label">הבלוג המקצועי</span>
+      </div>
 
-    <!-- RIGHT: Text column -->
-    <div class="bbh-text-col">
-      <span class="bbh-label">הבלוג המקצועי</span>
-      <h1 class="bbh-headline">ידע מקצועי<br /><span class="bbh-headline-accent">מהשטח</span></h1>
-      <h3 class="bbh-subtitle">מדריכים, טיפים ותובנות מעולם האיטום, הבנייה והשיפוץ — ישירות מהמומחים של מאור אחזקות</h3>
-      <p class="bbh-body">כאן תמצאו מידע מעמיק על שיטות איטום גגות, בידוד תרמי, שיפוץ דירות ועוד. תוכן שנכתב על ידי אנשי מקצוע שעובדים בשטח כל יום.</p>
-      <div class="bbh-highlights">
-        <div class="bbh-highlight-item">
-          <span class="bbh-highlight-dot" aria-hidden="true"></span>
-          <span>איטום גגות ומרפסות</span>
-        </div>
-        <div class="bbh-highlight-item">
-          <span class="bbh-highlight-dot" aria-hidden="true"></span>
-          <span>שיפוץ לאחר שריפה</span>
-        </div>
-        <div class="bbh-highlight-item">
-          <span class="bbh-highlight-dot" aria-hidden="true"></span>
-          <span>בידוד ופוליאוריתן</span>
-        </div>
+      <h1 class="blog-hero-title">ידע שעובד<br><span class="blog-hero-title-accent">בשטח</span></h1>
+
+      <h3 class="blog-hero-subtitle">מאמרים מקצועיים, טיפים מעשיים ועדכוני תעשייה מעולם האיטום, הבנייה והשיפוץ — ישירות מהמומחים של מאור אחזקות.</h3>
+
+      <div class="blog-hero-tech-bar" aria-hidden="true">
+        <span class="blog-hero-tech-item">איטום גגות</span>
+        <span class="blog-hero-tech-sep">·</span>
+        <span class="blog-hero-tech-item">בידוד תרמי</span>
+        <span class="blog-hero-tech-sep">·</span>
+        <span class="blog-hero-tech-item">שיפוץ תעשייתי</span>
+        <span class="blog-hero-tech-sep">·</span>
+        <span class="blog-hero-tech-item">פוליאוריטן ואפוקסי</span>
+      </div>
+
+      <div class="blog-hero-cta-row">
+        <a href="#blog-posts" class="btn-primary blog-hero-btn-primary">קרא את המאמרים</a>
+        <a href="/contact" class="btn-secondary blog-hero-btn-secondary">דבר עם מומחה</a>
       </div>
     </div>
 
-    <!-- LEFT: Visual column -->
-    <div class="bbh-visual-col">
-      <div class="bbh-image-frame">
-        <div class="bbh-image-overlay" aria-hidden="true"></div>
-        <img data-hero-bg="true" data-context="Professional waterproofing worker applying torch-applied bituminous membrane on a wet rooftop at dusk/evening. The scene is dramatic with warm torch flame glow against a dark blue-grey sky. Worker in safety gear, industrial rooftop environment, puddles of water reflecting the torch light, cinematic and atmospheric mood, dark industrial aesthetic." width="600" height="400" src="/assets/section-blog-hero-blog-blog-hero-image-1.webp" alt="עבודת איטום גג בשעת ערב - מאור אחזקות" class="bbh-main-image" />
-        <div class="bbh-image-badge">
-          <span class="bbh-badge-icon" aria-hidden="true"><i class="fas fa-hard-hat"></i></span>
-          <span class="bbh-badge-text">מומחי איטום מוסמכים</span>
+    <!-- Left: Image Block -->
+    <div class="blog-hero-image-block">
+      <div class="blog-hero-image-frame">
+        <div class="blog-hero-image-corner blog-hero-corner-tl" aria-hidden="true"></div>
+        <div class="blog-hero-image-corner blog-hero-corner-tr" aria-hidden="true"></div>
+        <div class="blog-hero-image-corner blog-hero-corner-bl" aria-hidden="true"></div>
+        <div class="blog-hero-image-corner blog-hero-corner-br" aria-hidden="true"></div>
+        <div class="blog-hero-image-glow-line" aria-hidden="true"></div>
+        <img data-hero-bg="true" data-placeholder="blog-blog-hero-image-1" data-context="Cinematic dark aerial view of professional waterproofing work on a flat industrial rooftop at dusk. Workers applying torch-applied bituminous membrane with glowing embers and orange-blue flame torch. Dark dramatic sky, geometric roof lines, technical industrial atmosphere. High contrast moody photography with deep shadows and warm torch light accents." width="620" height="480" src="" alt="עבודות איטום גג מקצועיות של מאור אחזקות" class="blog-hero-img">
+        <div class="blog-hero-image-overlay" aria-hidden="true"></div>
+        <div class="blog-hero-image-badge">
+          <span class="blog-hero-badge-num">12+</span>
+          <span class="blog-hero-badge-label">שנות ניסיון<br>בתעשייה</span>
         </div>
-        <div class="bbh-corner-accent bbh-corner-tl" aria-hidden="true"></div>
-        <div class="bbh-corner-accent bbh-corner-br" aria-hidden="true"></div>
       </div>
     </div>
-
   </div>
 
-  <!-- Bottom cyan line -->
-  <div class="bbh-bottom-line" aria-hidden="true"></div>
+  <!-- Bottom divider -->
+  <div class="blog-hero-divider-wrapper">
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 L0,32 Q180,14 360,28 T720,18 Q900,10 1080,24 T1440,16 L1440,60 Z" fill="#121417"></path>
+    </svg>
+  </div>
 </section>
 
 <section class="blog-blog-grid-section" data-layout-spec="הבלוג המקצועי של מאור אחזקות-blog-grid" dir="rtl">
   <div class="blog-grid-container">
-
-    <!-- Section Header -->
     <div class="blog-grid-header">
-      <span class="blog-grid-label">המאמרים שלנו</span>
-      <h2 class="blog-grid-title">ידע מקצועי מהשטח</h2>
-      <p class="blog-grid-subtitle">מדריכים, טיפים ותובנות מקצועיות בתחום האיטום, הבנייה והשיפוץ — מניסיון של שנים בפרויקטים מגוונים</p>
+      <span class="blog-grid-label">הבלוג המקצועי</span>
+      <h2 class="blog-grid-title">מאמרים מקצועיים באיטום ושיפוץ</h2>
+      <p class="blog-grid-subtitle">תוכן מקצועי מבוסס ניסיון שטח — כדי שתדעו מה לבדוק, מה לשאול, ומתי להתקשר.</p>
     </div>
 
-    <!-- Featured Article -->
-    
+    <div class="blog-grid-layout">
 
-    <!-- Articles Grid -->
-    <div class="blog-articles-grid">
+      <!-- Featured Article -->
+      <article class="blog-card blog-card--featured">
+        <a href="/blog/roof-inspection-before-winter" class="blog-card-image-link">
+          <figure class="blog-card-image-wrap">
+            <img data-placeholder="blog-blog-grid-image-1" data-context="Professional roofer inspecting a flat concrete roof before winter rain season in Israel, checking drainage pipes, expansion joints, and old waterproofing membrane layers, overcast sky, technical inspection work" width="800" height="500" src="" alt="בדיקת גג שטוח לפני עונת הגשמים">
+            <div class="blog-card-image-overlay"></div>
+          </figure>
+        </a>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-card-tag">בדיקת גג</span>
+            <span class="blog-card-meta-sep">·</span>
+            <span class="blog-card-read-time"><i class="fa-regular fa-clock" aria-hidden="true"></i> 6 דקות קריאה</span>
+          </div>
+          <h3 class="blog-card-title"><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></h3>
+          <p class="blog-card-excerpt">מדריך מקצועי לבדיקת גג שטוח לפני עונת הגשמים: ניקוז, חיבורים, סדקים, שכבות ישנות וסימנים מוקדמים לכשל באיטום.</p>
+          <a href="/blog/roof-inspection-before-winter" class="blog-card-link">לקריאת המאמר <i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>
+        </div>
+      </article>
 
-      <!-- Article 2 -->
-      
+      <!-- Regular Articles Grid -->
+      <div class="blog-grid-secondary">
 
-      <!-- Article 3 -->
-      
+        <article class="blog-card blog-card--regular">
+          <a href="/blog/exterior-walls-water-warning-signs" class="blog-card-image-link">
+            <figure class="blog-card-image-wrap">
+              <img data-placeholder="blog-blog-grid-image-2" data-context="Close-up of exterior building wall in Israel showing water damage warning signs: efflorescence white salt stains, dark moisture patches, peeling paint, and cracks in plaster, urban residential building" width="600" height="375" src="" alt="סימני חדירת מים בקירות חוץ">
+              <div class="blog-card-image-overlay"></div>
+            </figure>
+          </a>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-tag">קירות חוץ</span>
+              <span class="blog-card-meta-sep">·</span>
+              <span class="blog-card-read-time"><i class="fa-regular fa-clock" aria-hidden="true"></i> 5 דקות קריאה</span>
+            </div>
+            <h3 class="blog-card-title"><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></h3>
+            <p class="blog-card-excerpt">איך מבדילים בין פגם קוסמטי רגיל לבין מצב שבו קירות החוץ כבר מאפשרים חדירת מים שדורשת טיפול במעטפת.</p>
+            <a href="/blog/exterior-walls-water-warning-signs" class="blog-card-link">לקריאת המאמר <i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>
+          </div>
+        </article>
 
-      <!-- Article 4 -->
-      
+        <article class="blog-card blog-card--regular">
+          <a href="/blog/polyurethane-waterproofing-when-to-use" class="blog-card-image-link">
+            <figure class="blog-card-image-wrap">
+              <img data-placeholder="blog-blog-grid-image-3" data-context="Worker applying liquid polyurethane waterproofing coating on a rooftop in Israel using a roller, seamless grey coating being spread over concrete surface, professional waterproofing work, industrial setting" width="600" height="375" src="" alt="יישום איטום פוליאוריטני על גג">
+              <div class="blog-card-image-overlay"></div>
+            </figure>
+          </a>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-tag">פוליאוריטני</span>
+              <span class="blog-card-meta-sep">·</span>
+              <span class="blog-card-read-time"><i class="fa-regular fa-clock" aria-hidden="true"></i> 7 דקות קריאה</span>
+            </div>
+            <h3 class="blog-card-title"><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></h3>
+            <p class="blog-card-excerpt">סקירה מקצועית על שימוש במערכות פוליאוריטניות לאיטום, היתרונות שלהן, המגבלות, והמצבים שבהם נכון לבחור בפתרון אחר.</p>
+            <a href="/blog/polyurethane-waterproofing-when-to-use" class="blog-card-link">לקריאת המאמר <i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>
+          </div>
+        </article>
 
+        <article class="blog-card blog-card--regular">
+          <a href="/blog/concrete-repair-after-long-term-moisture" class="blog-card-image-link">
+            <figure class="blog-card-image-wrap">
+              <img data-placeholder="blog-blog-grid-image-4" data-context="Damaged concrete structure showing deep moisture penetration damage: exposed rebar, spalling concrete, rust stains, and deterioration from long-term water infiltration, construction repair site in Israel" width="600" height="375" src="" alt="שיקום בטון פגוע מרטיבות ממושכת">
+              <div class="blog-card-image-overlay"></div>
+            </figure>
+          </a>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <span class="blog-card-tag">שיקום בטון</span>
+              <span class="blog-card-meta-sep">·</span>
+              <span class="blog-card-read-time"><i class="fa-regular fa-clock" aria-hidden="true"></i> 8 דקות קריאה</span>
+            </div>
+            <h3 class="blog-card-title"><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></h3>
+            <p class="blog-card-excerpt">מה קורה לבטון כשמים חודרים לאורך זמן, אילו סימנים מעידים על פגיעה עמוקה, ואיך ניגשים לתהליך שיקום מסודר.</p>
+            <a href="/blog/concrete-repair-after-long-term-moisture" class="blog-card-link">לקריאת המאמר <i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>
+          </div>
+        </article>
+
+      </div>
     </div>
-    <!-- /Articles Grid -->
-
   </div>
 </section>
 
 <section class="blog-cta-section" data-layout-spec="הבלוג המקצועי של מאור אחזקות-cta" dir="rtl">
-  <div class="blog-cta-bg-layer" aria-hidden="true"></div>
   <div class="blog-cta-glow" aria-hidden="true"></div>
-  <div class="blog-cta-grid-lines" aria-hidden="true"></div>
   <div class="blog-cta-container">
+    <div class="blog-cta-divider-top" aria-hidden="true"></div>
     <div class="blog-cta-content">
-      <div class="blog-cta-text">
-        <span class="blog-cta-label">מאור אחזקות</span>
-        <h2 class="blog-cta-heading">מוכנים לפתרון איטום מקצועי?</h2>
-        <p class="blog-cta-desc">צוות המומחים שלנו זמין לייעוץ, הערכת מצב ומתן פתרונות איטום מותאמים אישית — לפרויקטים מגורים ותעשייתיים בכל רחבי הארץ.</p>
-        <div class="blog-cta-divider" aria-hidden="true"></div>
-        <ul class="blog-cta-features">
-          <li>
-            <span class="blog-cta-feature-dot" aria-hidden="true"></span>
-            <span>ניסיון של שנים בתחום האיטום והשיפוץ</span>
-          </li>
-          <li>
-            <span class="blog-cta-feature-dot" aria-hidden="true"></span>
-            <span>מענה מהיר ואמין לכל פנייה</span>
-          </li>
-          <li>
-            <span class="blog-cta-feature-dot" aria-hidden="true"></span>
-            <span>אחריות מלאה על כל עבודה</span>
-          </li>
-        </ul>
-      </div>
+      <div class="blog-cta-badge">מאור אחזקות</div>
+      <h2 class="blog-cta-heading">מוכנים להתחיל את הפרויקט שלכם?</h2>
+      <p class="blog-cta-text">צוות מאור אחזקות מציע פתרונות איטום ושיפוץ מקצועיים לכל סוג מבנה — ממגורים ועד תעשייה. נשמח לתת הערכה מדויקת ולהתאים פתרון לצרכים שלכם.</p>
       <div class="blog-cta-actions">
-        <div class="blog-cta-actions-inner">
-          <div class="blog-cta-badge" aria-hidden="true">
-            <svg data-element-type="icon" data-icon-type="svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <circle cx="14" cy="14" r="13" stroke="var(--primary)" stroke-width="1.5" opacity="0.4"/>
-              <path d="M14 7v7l4 2.5" stroke="var(--primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>זמינים 24/7</span>
-          </div>
-          <a href="/contact" class="blog-cta-btn-primary btn-primary">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <span>צרו קשר עכשיו</span>
-          </a>
-          <a href="/services" class="blog-cta-btn-secondary btn-secondary">
-            <i class="fa fa-list-ul" aria-hidden="true"></i>
-            <span>כל השירותים שלנו</span>
-          </a>
-          <div class="blog-cta-contact-info">
-            <a href="tel:[business_phone]" class="blog-cta-phone-link">
-              <i class="fa fa-phone-square" aria-hidden="true"></i>
-              <span>[business_phone]</span>
-            </a>
-            <a href="mailto:[business_email]" class="blog-cta-email-link">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>[business_email]</span>
-            </a>
-          </div>
-        </div>
+        <a href="/contact" class="btn-primary blog-cta-btn">צרו קשר עכשיו</a>
+        <a href="/services" class="btn-secondary blog-cta-btn">שירותי האיטום שלנו</a>
       </div>
     </div>
+    <div class="blog-cta-divider-bottom" aria-hidden="true"></div>
   </div>
 </section></main>
   
@@ -2380,13 +2383,13 @@
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <div class="footer-logo-wrap">
-          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" />
+          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" >
         </div>
         <p class="footer-tagline">מומחים באיטום, שיפוץ ושיקום מבנים. עבודה מקצועית, אמינות מלאה, תוצאות שמחזיקות לאורך זמן.</p>
         <div class="footer-social">
           <a href="https://facebook.com/#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://instagram.com/#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://wa.me/972559932287" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/#" aria-label="Instagram"><i class="fab fa-instagram" data-element-type="icon" data-element-id="icon-1775639017054-gk94id9g0" data-icon-type="fontawesome"></i></a>
+          <a href="https://wa.me/972559932287" aria-label="WhatsApp"><i class="fab fa-whatsapp" data-element-type="icon" data-element-id="icon-1775639017054-6vorc5jtc" data-icon-type="fontawesome"></i></a>
         </div>
       </div>
 
@@ -2404,28 +2407,23 @@
       <!-- Column 3: Contact Info -->
       <div class="footer-col footer-contact-col">
         <h3 class="footer-heading"><span class="heading-accent"></span>צור קשר</h3>
-        <ul class="footer-contact">
-          <li>
-            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+        <ul class="footer-contact" ><li>
+            <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1775639017054-lxsedrpr3" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="mailto:mwrdrwry@gmail.com">mwrdrwry@gmail.com</a></span>
-          </li>
-          <li>
-            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+          </li><li>
+            <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1775639017055-3p3y17104" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="tel:055-9932287">055-9932287</a></span>
-          </li>
-          <li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
-            <span class="contact-text">תורה ועבודה , ראשון לציון, ישראל</span></a></li>
-        </ul>
+          </li><li><a href="/" ><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
       </div>
 
       <!-- Column 4: CTA / Badge -->
       <div class="footer-col footer-cta-col">
         <h3 class="footer-heading"><span class="heading-accent"></span>זמינים עבורך</h3>
         <div class="footer-cta-box">
-          <div class="cta-icon-wrap"><i class="fas fa-hard-hat"></i></div>
+          <div class="cta-icon-wrap"><i class="fas fa-hard-hat" data-element-type="icon" data-element-id="icon-1775639017055-vdh35m7w4" data-icon-type="fontawesome"></i></div>
           <p class="cta-text">מוכנים לקחת את הפרויקט שלך לשלב הבא?</p>
-          <a href="/contact" class="cta-btn">קבל הצעת מחיר</a>
-        </div>
+          <p><a href="/contact" class="cta-btn" data-element-type="button" data-element-id="btn-1775639017047-prc64la9o" data-native-element="true">קבל הצעת מחיר</a>
+        </p></div>
       </div>
 
     </div>
