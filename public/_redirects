@@ -1,5 +1,5 @@
 # Clean URL redirects for Render static hosting
-# Generated: 2026-04-08T10:52:14.733Z
+# Generated: 2026-04-08T10:53:06.184Z
 # NOTE: Render uses render.yaml for routing, not _redirects (that is Netlify)
 # This file is kept for reference only
 
@@ -16,7 +16,6 @@
 /service-areas/roof-waterproofing-jerusalem  /service-areas/roof-waterproofing-jerusalem.html  200!
 /testimonials  /testimonials.html  200!
 /contact  /contact.html  200!
-/copy  /copy.html  200!
 
 # Legal pages - redirect old .html URLs to friendly URLs
 /privacy.html  /privacy  301
