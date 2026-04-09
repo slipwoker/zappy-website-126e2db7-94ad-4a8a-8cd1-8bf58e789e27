@@ -12340,6 +12340,484 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
+/* Added Component Styles */
+/* =============================================
+   MAOR ARTICLE SECTION — איטום גגות בחיפה
+   ============================================= */
+
+.maor-article-section {
+  background: linear-gradient(160deg, #0a1628 0%, #0d2040 60%, #0a1628 100%);
+  padding: 80px 20px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  color: #e8f4ff;
+}
+
+/* Container */
+.maor-article-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---- HEADER ---- */
+.maor-article-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.maor-article-tag {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a1628;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.maor-article-title {
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.3;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.02em;
+}
+
+.maor-article-meta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: #8ab4d4;
+  flex-wrap: wrap;
+}
+
+.maor-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.maor-meta-item svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.maor-meta-divider {
+  opacity: 0.4;
+}
+
+/* ---- LAYOUT ---- */
+.maor-article-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---- ARTICLE BODY ---- */
+.maor-article-body {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ---- FIGURE / HERO IMAGE ---- */
+.maor-article-figure {
+  margin: 0 0 32px 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.maor-article-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.maor-article-img:hover {
+  transform: scale(1.02);
+}
+
+.maor-article-caption {
+  font-size: 0.8rem;
+  color: #6a9ab8;
+  text-align: center;
+  padding: 10px 0 0 0;
+  font-style: italic;
+}
+
+/* ---- ARTICLE TEXT ---- */
+.maor-article-text {
+  line-height: 1.85;
+  color: #cde4f5;
+}
+
+.maor-article-lead {
+  font-size: 1.12rem;
+  color: #e8f4ff;
+  font-weight: 500;
+  border-right: 4px solid var(--primary, #00D4FF);
+  padding-right: 18px;
+  margin-bottom: 28px;
+  line-height: 1.7;
+}
+
+.maor-article-h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 32px 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.maor-article-h2::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 22px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.maor-article-text p {
+  margin: 0 0 18px 0;
+  font-size: 1rem;
+}
+
+.maor-article-text strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ---- LIST ---- */
+.maor-article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.maor-article-list li {
+  background: rgba(0, 212, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 0.97rem;
+  line-height: 1.6;
+  position: relative;
+  padding-right: 44px;
+  color: #cde4f5;
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.maor-article-list li:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: rgba(0, 212, 255, 0.35);
+}
+
+.maor-article-list li::before {
+  content: '✓';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #C8FF00;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+/* ---- HIGHLIGHT BOX ---- */
+.maor-article-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(200, 255, 0, 0.08) 0%, rgba(138, 230, 0, 0.05) 100%);
+  border: 1px solid rgba(200, 255, 0, 0.3);
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 28px 0 24px 0;
+}
+
+.maor-highlight-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1.4;
+}
+
+.maor-highlight-content {
+  font-size: 0.97rem;
+  color: #d8f0a0;
+  line-height: 1.7;
+}
+
+.maor-highlight-content strong {
+  color: #C8FF00;
+}
+
+/* ---- CTA BUTTONS ---- */
+.maor-article-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(0, 212, 255, 0.15);
+}
+
+.maor-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a1628;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  box-shadow: 0 4px 18px rgba(200, 255, 0, 0.25);
+  white-space: nowrap;
+}
+
+.maor-cta-btn:hover,
+.maor-cta-btn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(200, 255, 0, 0.4);
+  filter: brightness(1.07);
+  outline: none;
+}
+
+.maor-cta-btn:focus-visible {
+  outline: 3px solid #C8FF00;
+  outline-offset: 3px;
+}
+
+.maor-cta-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--primary, #00D4FF);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: 2px solid var(--primary, #00D4FF);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.maor-cta-btn-secondary:hover,
+.maor-cta-btn-secondary:focus-visible {
+  background: rgba(0, 212, 255, 0.12);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.maor-cta-btn-secondary:focus-visible {
+  outline: 3px solid #00D4FF;
+  outline-offset: 3px;
+}
+
+/* ---- SIDEBAR ---- */
+.maor-article-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: sticky;
+  top: 24px;
+}
+
+.maor-sidebar-img-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.35);
+}
+
+.maor-sidebar-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.maor-sidebar-img:hover {
+  transform: scale(1.04);
+}
+
+.maor-sidebar-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.maor-sidebar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 18px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+}
+
+/* Facts list */
+.maor-sidebar-facts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.maor-sidebar-facts li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: #b8d8ee;
+  line-height: 1.5;
+}
+
+.maor-fact-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  line-height: 1.3;
+}
+
+/* Services card */
+.maor-sidebar-services {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 100, 180, 0.05) 100%);
+  border-color: rgba(0, 212, 255, 0.25);
+}
+
+.maor-sidebar-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.maor-sidebar-service-list li {
+  font-size: 0.92rem;
+  color: #b8d8ee;
+  padding: 8px 12px 8px 0;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s ease;
+}
+
+.maor-sidebar-service-list li:last-child {
+  border-bottom: none;
+}
+
+.maor-sidebar-service-list li:hover {
+  color: var(--primary, #00D4FF);
+}
+
+.maor-sidebar-service-list li::before {
+  content: '←';
+  color: var(--primary, #00D4FF);
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* =============================================
+   RESPONSIVE — TABLET
+   ============================================= */
+@media (max-width: 900px) {
+  .maor-article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .maor-article-sidebar {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .maor-sidebar-img-wrap {
+    grid-column: 1 / -1;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE
+   ============================================= */
+@media (max-width: 600px) {
+  .maor-article-section {
+    padding: 50px 14px;
+  }
+
+  .maor-article-body {
+    padding: 24px 18px;
+  }
+
+  .maor-article-img {
+    height: 210px;
+  }
+
+  .maor-article-title {
+    font-size: 1.5rem;
+  }
+
+  .maor-article-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .maor-article-cta {
+    flex-direction: column;
+  }
+
+  .maor-cta-btn,
+  .maor-cta-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .maor-article-meta {
+    gap: 8px;
+    font-size: 0.82rem;
+  }
+
+  .maor-article-h2 {
+    font-size: 1.1rem;
+  }
+
+  .maor-article-lead {
+    font-size: 1rem;
+  }
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
