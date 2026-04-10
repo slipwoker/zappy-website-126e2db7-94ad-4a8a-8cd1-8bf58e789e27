@@ -218,34 +218,18 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    </meta>
-  </meta>
-  
-  </meta>
-  </meta>
-  </meta>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </link>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"></link>
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"></link>
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"></link>
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png"></link>
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png"></link>
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png"></link>
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"></link>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
@@ -275,8 +259,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &amp;amp;gt; li &amp;amp;gt; .menu-group-title,
-            #navMenu &amp;amp;gt; li &amp;amp;gt; .menu-group-title {
+            .nav-menu &gt; li &gt; .menu-group-title,
+            #navMenu &gt; li &gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -290,13 +274,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &amp;amp;gt; li &amp;amp;gt; .menu-group-title:hover,
-            #navMenu &amp;amp;gt; li &amp;amp;gt; .menu-group-title:hover {
+            .nav-menu &gt; li &gt; .menu-group-title:hover,
+            #navMenu &gt; li &gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &amp;amp;gt; .sub-menu {
+            li:has(.menu-group-title):hover &gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -305,7 +289,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &amp;amp;gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -358,9 +342,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &amp;amp;gt; .sub-menu,
-            nav li:hover &amp;amp;gt; .sub-menu,
-            .navbar li:hover &amp;amp;gt; .sub-menu {
+            .nav-menu li:hover &gt; .sub-menu,
+            nav li:hover &gt; .sub-menu,
+            .navbar li:hover &gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -398,8 +382,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &amp;amp;gt; li &amp;amp;gt; .menu-group-title,
-            #navMenu &amp;amp;gt; li &amp;amp;gt; .menu-group-title {
+            .nav-menu &gt; li &gt; .menu-group-title,
+            #navMenu &gt; li &gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -413,8 +397,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &amp;amp;gt; li &amp;amp;gt; .menu-group-title:hover,
-            #navMenu &amp;amp;gt; li &amp;amp;gt; .menu-group-title:hover {
+            .nav-menu &gt; li &gt; .menu-group-title:hover,
+            #navMenu &gt; li &gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -455,18 +439,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &amp;amp;gt; .sub-menu,
-              nav li:hover &amp;amp;gt; .sub-menu,
-              .navbar li:hover &amp;amp;gt; .sub-menu {
+              .nav-menu li:hover &gt; .sub-menu,
+              nav li:hover &gt; .sub-menu,
+              .navbar li:hover &gt; .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &amp;amp;gt; .sub-menu.mobile-expanded,
-              nav li &amp;amp;gt; .sub-menu.mobile-expanded,
-              .navbar li &amp;amp;gt; .sub-menu.mobile-expanded {
+              .nav-menu li &gt; .sub-menu.mobile-expanded,
+              nav li &gt; .sub-menu.mobile-expanded,
+              .navbar li &gt; .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -494,39 +478,39 @@
               }
               
               /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) &amp;amp;gt; a,
-              nav li:has(.sub-menu) &amp;amp;gt; a,
-              .navbar li:has(.sub-menu) &amp;amp;gt; a,
-              .nav-menu &amp;amp;gt; li &amp;amp;gt; .menu-group-title,
-              #navMenu &amp;amp;gt; li &amp;amp;gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) &gt; a,
+              nav li:has(.sub-menu) &gt; a,
+              .navbar li:has(.sub-menu) &gt; a,
+              .nav-menu &gt; li &gt; .menu-group-title,
+              #navMenu &gt; li &gt; .menu-group-title {
                 flex: 1 !important;
                 min-width: 0 !important;
               }
               
               /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu &amp;amp;gt; li &amp;amp;gt; .menu-group-title,
-              #navMenu &amp;amp;gt; li &amp;amp;gt; .menu-group-title {
+              .nav-menu &gt; li &gt; .menu-group-title,
+              #navMenu &gt; li &gt; .menu-group-title {
                 padding: 0 !important;
                 line-height: inherit !important;
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &amp;amp;gt; .sub-menu,
-              nav li:has(.sub-menu) &amp;amp;gt; .sub-menu,
-              .navbar li:has(.sub-menu) &amp;amp;gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
+              nav li:has(.sub-menu) &gt; .sub-menu,
+              .navbar li:has(.sub-menu) &gt; .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &amp;amp;gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &amp;amp;gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &amp;amp;gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &amp;amp;gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &amp;amp;gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &amp;amp;gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &amp;amp;gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &amp;amp;gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
+              nav li:has(.sub-menu) &gt; a [class*="chevron"],
+              nav li:has(.sub-menu) &gt; a [class*="arrow"],
+              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
+              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -581,10 +565,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &amp;amp;gt; 768) {
+                if (window.innerWidth &gt; 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&amp;amp;gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&amp;amp;gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -607,7 +591,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &amp;amp;gt; a') || li.querySelector(':scope &amp;amp;gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -667,7 +651,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;amp;amp;&amp;amp;amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -711,9 +695,9 @@
         list-style: none;
         pointer-events: none;
       }
-      .nav-menu li:hover &amp;amp;gt; .sub-menu,
-      nav li:hover &amp;amp;gt; .sub-menu,
-      .navbar li:hover &amp;amp;gt; .sub-menu {
+      .nav-menu li:hover &gt; .sub-menu,
+      nav li:hover &gt; .sub-menu,
+      .navbar li:hover &gt; .sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -745,15 +729,15 @@
       }
     </style>
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:type" content="article"></meta>
-    <meta property="og:title" content="הבלוג המקצועי של מאור אחזקות"></meta>
-    <meta property="og:description" content="מאור אחזקות - הבלוג המקצועי של מאור אחזקות"></meta>
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="הבלוג המקצועי של מאור אחזקות">
+    <meta property="og:description" content="מאור אחזקות - הבלוג המקצועי של מאור אחזקות">
     
-    <meta property="og:locale" content="he_IL"></meta>
+    <meta property="og:locale" content="he_IL">
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary"></meta>
-    <meta name="twitter:title" content="הבלוג המקצועי של מאור אחזקות"></meta>
-    <meta name="twitter:description" content="מאור אחזקות - הבלוג המקצועי של מאור אחזקות"></meta>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="הבלוג המקצועי של מאור אחזקות">
+    <meta name="twitter:description" content="מאור אחזקות - הבלוג המקצועי של מאור אחזקות">
     <style id="zappy-ai-page-styles">.blog-blog-hero-section {
   position: relative;
   overflow: visible;
@@ -1761,16 +1745,16 @@
 
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-    <svg class="hamburger-icon" width="24" height="24" viewbox="0 0 24 24" fill="none">
+    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
-    <svg class="close-icon" width="24" height="24" viewbox="0 0 24 24" fill="none" style="display: none;">
+    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
       <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
   </button>
 
   <button class="phone-header-btn" data-phone="0559932287" aria-label="Call">
-    <svg width="20" height="20" viewbox="0 0 24 24" fill="currentColor">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
   </button>
@@ -1778,7 +1762,7 @@
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo"></img>
+        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo">
       </a>
     </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan" class="nav-link">שפלה</a></li></ul></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li></ul></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li><a href="/roof-tarring" class="nav-link">זיפות</a></li></ul></div>
 
@@ -1825,12 +1809,12 @@
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;amp;amp;&amp;amp;amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') &amp;&amp; bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;amp;amp;&amp;amp;amp; bgImage !== 'none') {
+      if (bgImage &amp;&amp; bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -1843,7 +1827,7 @@
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;amp;amp;&amp;amp;amp; rgb.length &amp;amp;gt;= 3) {
+    if (rgb &amp;&amp; rgb.length &gt;= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -1979,7 +1963,7 @@
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &amp;amp;lt;= 768;
+      const isMobileViewport = window.innerWidth &lt;= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -2170,7 +2154,7 @@
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &amp;amp;gt; 0 
+        const phoneNumber = phoneLinks.length &gt; 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '055-9932287';
         
@@ -2187,7 +2171,7 @@
     const handleWhatsAppVisibility = function() {
       const whatsappBtn = document.querySelector('.whatsapp-float');
       if (whatsappBtn) {
-        const isDesktop = window.innerWidth &amp;amp;gt;= 769;
+        const isDesktop = window.innerWidth &gt;= 769;
         if (isDesktop) {
           whatsappBtn.style.setProperty('display', 'none', 'important');
           whatsappBtn.style.setProperty('visibility', 'hidden', 'important');
@@ -2218,7 +2202,7 @@
 
 </script>
   
-  <main class="blog-page ai-generated-page"><section class="blog-blog-hero-section" data-layout-spec="הבלוג המקצועי של מאור אחזקות-blog-hero" dir="rtl" data-hero-type="fullscreen-scrim">
+  <main class="blog-page ai-generated-page"><section class="blog-blog-hero-section" data-layout-spec="הבלוג המקצועי של מאור אחזקות-blog-hero" dir="rtl" data-hero-type="fullscreen-scrim" id="zappy-section-0">
   <!-- Background depth layer -->
   <div class="blog-hero-bg" aria-hidden="true">
     <div class="blog-hero-bg-gradient"></div>
@@ -2234,7 +2218,7 @@
         <span class="blog-hero-eyebrow-label">הבלוג המקצועי</span>
       </div>
 
-      <h1 class="blog-hero-title">ידע שעובד<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><span class="blog-hero-title-accent">בשטח</span></h1>
+      <h1 class="blog-hero-title" >ידע&nbsp; שעובד&nbsp;&nbsp;<span class="blog-hero-title-accent">בשטח</span></h1>
 
       <h3 class="blog-hero-subtitle">מאמרים מקצועיים, טיפים מעשיים ועדכוני תעשייה מעולם האיטום, הבנייה והשיפוץ — ישירות מהמומחים של מאור אחזקות.</h3>
 
@@ -2249,8 +2233,8 @@
       </div>
 
       <div class="blog-hero-cta-row">
-        <a href="#blog-posts" class="btn-primary blog-hero-btn-primary">קרא את המאמרים</a>
-        <a href="/contact" class="btn-secondary blog-hero-btn-secondary">דבר עם מומחה</a>
+        <a href="#blog-posts" class="btn-primary blog-hero-btn-primary" data-element-type="button" data-element-id="btn-1775788671988-rra0jyr1z" data-native-element="true">קרא את המאמרים</a>
+        <a href="/contact" class="btn-secondary blog-hero-btn-secondary" data-element-type="button" data-element-id="btn-1775788671988-opp6d98jg" data-native-element="true">דבר עם מומחה</a>
       </div>
     </div>
 
@@ -2262,11 +2246,11 @@
         <div class="blog-hero-image-corner blog-hero-corner-bl" aria-hidden="true"></div>
         <div class="blog-hero-image-corner blog-hero-corner-br" aria-hidden="true"></div>
         <div class="blog-hero-image-glow-line" aria-hidden="true"></div>
-        <img data-hero-bg="true" data-placeholder="blog-blog-hero-image-1" data-context="Cinematic dark aerial view of professional waterproofing work on a flat industrial rooftop at dusk. Workers applying torch-applied bituminous membrane with glowing embers and orange-blue flame torch. Dark dramatic sky, geometric roof lines, technical industrial atmosphere. High contrast moody photography with deep shadows and warm torch light accents." width="620" height="480" src="" alt="עבודות איטום גג מקצועיות של מאור אחזקות" class="blog-hero-img"></img>
+        <img data-hero-bg="true" data-placeholder="blog-blog-hero-image-1" data-context="Cinematic dark aerial view of professional waterproofing work on a flat industrial rooftop at dusk. Workers applying torch-applied bituminous membrane with glowing embers and orange-blue flame torch. Dark dramatic sky, geometric roof lines, technical industrial atmosphere. High contrast moody photography with deep shadows and warm torch light accents." width="620" height="480" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3Eblog-blog-hero-image-1%3C/text%3E%3C/svg%3E" alt="עבודות איטום גג מקצועיות של מאור אחזקות" class="blog-hero-img" data-hero-background="true" data-element-type="image" data-element-id="img-1775788671994-t7ajzcy4t" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px;">
         <div class="blog-hero-image-overlay" aria-hidden="true"></div>
         <div class="blog-hero-image-badge">
           <span class="blog-hero-badge-num">12+</span>
-          <span class="blog-hero-badge-label">שנות ניסיון<br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>בתעשייה</span>
+          <span class="blog-hero-badge-label">שנות ניסיון<br><br><br><br><br><br><br><br>בתעשייה</span>
         </div>
       </div>
     </div>
@@ -2274,8 +2258,8 @@
 
   <!-- Bottom divider -->
   <div class="blog-hero-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewbox="0 0 1440 60" preserveaspectratio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,32 Q180,14 360,28 T720,18 Q900,10 1080,24 T1440,16 L1440,60 Z" fill="#121417"></path>
+    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 L0,32 Q180,14 360,28 T720,18 Q900,10 1080,24 T1440,16 L1440,60 Z" fill="var(--bg-light)"></path>
     </svg>
   </div>
 </section>
@@ -2294,7 +2278,7 @@
       <article class="blog-card blog-card--featured">
         <a href="/blog/roof-inspection-before-winter" class="blog-card-image-link">
           <figure class="blog-card-image-wrap">
-            <img data-placeholder="blog-blog-grid-image-1" data-context="Professional roofer inspecting a flat concrete roof before winter rain season in Israel, checking drainage pipes, expansion joints, and old waterproofing membrane layers, overcast sky, technical inspection work" width="800" height="500" src="" alt="בדיקת גג שטוח לפני עונת הגשמים"></img>
+            <img data-placeholder="blog-blog-grid-image-1" data-context="Professional roofer inspecting a flat concrete roof before winter rain season in Israel, checking drainage pipes, expansion joints, and old waterproofing membrane layers, overcast sky, technical inspection work" width="800" height="500" src="" alt="בדיקת גג שטוח לפני עונת הגשמים">
             <div class="blog-card-image-overlay"></div>
           </figure>
         </a>
@@ -2316,7 +2300,7 @@
         <article class="blog-card blog-card--regular">
           <a href="/blog/exterior-walls-water-warning-signs" class="blog-card-image-link">
             <figure class="blog-card-image-wrap">
-              <img data-placeholder="blog-blog-grid-image-2" data-context="Close-up of exterior building wall in Israel showing water damage warning signs: efflorescence white salt stains, dark moisture patches, peeling paint, and cracks in plaster, urban residential building" width="600" height="375" src="" alt="סימני חדירת מים בקירות חוץ"></img>
+              <img data-placeholder="blog-blog-grid-image-2" data-context="Close-up of exterior building wall in Israel showing water damage warning signs: efflorescence white salt stains, dark moisture patches, peeling paint, and cracks in plaster, urban residential building" width="600" height="375" src="" alt="סימני חדירת מים בקירות חוץ">
               <div class="blog-card-image-overlay"></div>
             </figure>
           </a>
@@ -2335,7 +2319,7 @@
         <article class="blog-card blog-card--regular">
           <a href="/blog/polyurethane-waterproofing-when-to-use" class="blog-card-image-link">
             <figure class="blog-card-image-wrap">
-              <img data-placeholder="blog-blog-grid-image-3" data-context="Worker applying liquid polyurethane waterproofing coating on a rooftop in Israel using a roller, seamless grey coating being spread over concrete surface, professional waterproofing work, industrial setting" width="600" height="375" src="" alt="יישום איטום פוליאוריטני על גג"></img>
+              <img data-placeholder="blog-blog-grid-image-3" data-context="Worker applying liquid polyurethane waterproofing coating on a rooftop in Israel using a roller, seamless grey coating being spread over concrete surface, professional waterproofing work, industrial setting" width="600" height="375" src="" alt="יישום איטום פוליאוריטני על גג">
               <div class="blog-card-image-overlay"></div>
             </figure>
           </a>
@@ -2354,7 +2338,7 @@
         <article class="blog-card blog-card--regular">
           <a href="/blog/concrete-repair-after-long-term-moisture" class="blog-card-image-link">
             <figure class="blog-card-image-wrap">
-              <img data-placeholder="blog-blog-grid-image-4" data-context="Damaged concrete structure showing deep moisture penetration damage: exposed rebar, spalling concrete, rust stains, and deterioration from long-term water infiltration, construction repair site in Israel" width="600" height="375" src="" alt="שיקום בטון פגוע מרטיבות ממושכת"></img>
+              <img data-placeholder="blog-blog-grid-image-4" data-context="Damaged concrete structure showing deep moisture penetration damage: exposed rebar, spalling concrete, rust stains, and deterioration from long-term water infiltration, construction repair site in Israel" width="600" height="375" src="" alt="שיקום בטון פגוע מרטיבות ממושכת">
               <div class="blog-card-image-overlay"></div>
             </figure>
           </a>
@@ -2399,7 +2383,7 @@
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <div class="footer-logo-wrap">
-          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" ></img>
+          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" >
         </div>
         <p class="footer-tagline">מומחים באיטום, שיפוץ ושיקום מבנים. עבודה מקצועית, אמינות מלאה, תוצאות שמחזיקות לאורך זמן.</p>
         <div class="footer-social">
