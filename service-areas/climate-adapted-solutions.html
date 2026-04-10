@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <title>זיפות גגות</title>
-    <meta name="description" content="מאור אחזקות - זיפות גגות">
+    <title>פתרונות איטום מותאמים לאקלים ולאזור המבנה</title>
+    <meta name="description" content="מאור אחזקות - פתרונות איטום מותאמים לאקלים ולאזור המבנה">
     <meta name="keywords" content="">
     
     <!-- Favicons -->
@@ -730,1492 +730,874 @@
     </style>
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="article">
-    <meta property="og:title" content="זיפות גגות">
-    <meta property="og:description" content="מאור אחזקות - זיפות גגות">
+    <meta property="og:title" content="פתרונות איטום מותאמים לאקלים ולאזור המבנה">
+    <meta property="og:description" content="מאור אחזקות - פתרונות איטום מותאמים לאקלים ולאזור המבנה">
     
     <meta property="og:locale" content="he_IL">
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="זיפות גגות">
-    <meta name="twitter:description" content="מאור אחזקות - זיפות גגות">
-    <style id="zappy-ai-page-styles">.roof-tarring-intro-section {
+    <meta name="twitter:title" content="פתרונות איטום מותאמים לאקלים ולאזור המבנה">
+    <meta name="twitter:description" content="מאור אחזקות - פתרונות איטום מותאמים לאקלים ולאזור המבנה">
+    <style id="zappy-ai-page-styles">.service-areas-climate-adapted-solutions-content-section {
   position: relative;
   overflow: visible;
-  background-color: #0B0E14;
+  direction: rtl;
+  background-color: #090B10;
   background-image:
-    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(0, 212, 255, 0.09) 0%, transparent 70%),
+    radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 100% 100%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
     linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
   color: var(--text-light);
-  padding: 140px 0 80px;
-  direction: rtl;
+  padding: 96px 24px 120px;
 }
 
-/* Horizon glow */
-.roof-tarring-intro-section .rti-horizon-glow {
+/* Vignette */
+.service-areas-climate-adapted-solutions-content-section .sacscs-vignette {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 55%;
-  background: radial-gradient(ellipse 70% 60% at 50% 100%, rgba(0, 212, 255, 0.07) 0%, transparent 70%);
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, transparent 40%, rgba(0,0,0,0.55) 100%);
   pointer-events: none;
   z-index: 0;
 }
 
-/* Container */
-.roof-tarring-intro-section .rti-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  position: relative;
-  z-index: 1;
+/* Technical corner linework */
+.service-areas-climate-adapted-solutions-content-section .sacscs-corner {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.18;
+}
+.service-areas-climate-adapted-solutions-content-section .sacscs-corner--tr {
+  inset-block-start: 32px;
+  inset-inline-end: 32px;
+  border-block-start: 1px solid var(--primary);
+  border-inline-end: 1px solid var(--primary);
+}
+.service-areas-climate-adapted-solutions-content-section .sacscs-corner--tl {
+  inset-block-start: 32px;
+  inset-inline-start: 32px;
+  border-block-start: 1px solid var(--primary);
+  border-inline-start: 1px solid var(--primary);
+}
+.service-areas-climate-adapted-solutions-content-section .sacscs-corner--br {
+  inset-block-end: 48px;
+  inset-inline-end: 32px;
+  border-block-end: 1px solid var(--primary);
+  border-inline-end: 1px solid var(--primary);
+}
+.service-areas-climate-adapted-solutions-content-section .sacscs-corner--bl {
+  inset-block-end: 48px;
+  inset-inline-start: 32px;
+  border-block-end: 1px solid var(--primary);
+  border-inline-start: 1px solid var(--primary);
 }
 
-/* Main 2-column grid */
-.roof-tarring-intro-section .rti-main-grid {
+/* Container */
+.service-areas-climate-adapted-solutions-content-section .sacscs-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* 2-column grid: right text 7/12, left image 5/12 */
+.service-areas-climate-adapted-solutions-content-section .sacscs-grid {
   display: grid;
-  grid-template-columns: 5fr 7fr;
+  grid-template-columns: 7fr 5fr;
   gap: 56px;
   align-items: center;
   direction: rtl;
-  margin-bottom: 48px;
 }
 
-/* ── RIGHT COLUMN: Text ── */
-.roof-tarring-intro-section .rti-text-col {
+/* ── TEXT COLUMN ── */
+.service-areas-climate-adapted-solutions-content-section .sacscs-text-col {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
+  gap: 28px;
 }
 
-/* Accent rule */
-.roof-tarring-intro-section .rti-accent-rule {
-  width: 48px;
+/* Thin cyan divider line above H1 */
+.service-areas-climate-adapted-solutions-content-section .sacscs-cyan-rule {
+  width: 56px;
   height: 3px;
   background: var(--primary);
-  margin-bottom: 18px;
-  margin-inline-start: 0;
   box-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
-}
-
-/* Badge */
-.roof-tarring-intro-section .rti-badge {
-  display: inline-block;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--primary);
-  border: 1px solid rgba(0, 212, 255, 0.35);
-  background: rgba(0, 212, 255, 0.07);
-  padding: 5px 14px;
   border-radius: 2px;
-  margin-bottom: 20px;
 }
 
 /* H1 */
-.roof-tarring-intro-section .rti-heading {
+.service-areas-climate-adapted-solutions-content-section .sacscs-heading {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
   font-size: 48px;
   font-weight: 900;
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--text-light);
-  margin: 0 0 20px 0;
+  margin: 0;
   text-align: right;
 }
 
-.roof-tarring-intro-section .rti-heading-accent {
-  color: var(--primary);
-  display: block;
-}
-
-/* Lead paragraph */
-.roof-tarring-intro-section .rti-lead {
+/* Intro paragraph */
+.service-areas-climate-adapted-solutions-content-section .sacscs-intro {
   font-family: 'Inter', 'Heebo', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.75;
-  color: rgba(245, 247, 250, 0.78);
-  margin: 0 0 32px 0;
+  color: var(--text-muted);
+  margin: 0;
   text-align: right;
-  max-width: 440px;
+  max-width: 560px;
 }
 
-/* CTA row */
-.roof-tarring-intro-section .rti-cta-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 36px;
-  flex-wrap: wrap;
-}
-
-/* Button base overrides scoped to this section */
-.roof-tarring-intro-section .rti-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
-  transition: box-shadow 0.22s ease, transform 0.18s ease;
-  white-space: nowrap;
-}
-
-.roof-tarring-intro-section .btn-primary.rti-btn {
-  background: linear-gradient(90deg, #C8FF00 0%, #B8F500 100%);
-  color: #0B0E14;
-  padding: 13px 26px;
-  border-radius: 0;
-  border: 1px solid rgba(0,0,0,0.35);
-  font-weight: 700;
-  font-size: 15px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 20px rgba(200,255,0,0.22);
-}
-
-.roof-tarring-intro-section .btn-primary.rti-btn:hover {
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 12px 28px rgba(200,255,0,0.34);
-  transform: translateY(-2px);
-}
-
-.roof-tarring-intro-section .btn-secondary.rti-btn {
-  background: rgba(19, 27, 36, 0.92);
-  color: var(--text-light);
-  padding: 13px 26px;
-  border-radius: 0;
-  border: 1px solid var(--primary);
-  font-weight: 700;
-  font-size: 15px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset;
-}
-
-.roof-tarring-intro-section .btn-secondary.rti-btn:hover {
-  background: rgba(0, 212, 255, 0.1);
-  box-shadow: 0 0 16px rgba(0, 212, 255, 0.25);
-  transform: translateY(-2px);
-}
-
-.roof-tarring-intro-section .rti-btn-icon {
-  font-size: 13px;
-}
-
-/* Trust row */
-.roof-tarring-intro-section .rti-trust-row {
+/* Trust points row */
+.service-areas-climate-adapted-solutions-content-section .sacscs-trust-row {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0;
   flex-wrap: wrap;
+  margin-block-start: 8px;
 }
 
-.roof-tarring-intro-section .rti-trust-item {
+.service-areas-climate-adapted-solutions-content-section .sacscs-trust-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 7px;
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(245, 247, 250, 0.65);
-  padding: 6px 14px 6px 0;
+  gap: 10px;
+  padding: 0 20px;
 }
-
-.roof-tarring-intro-section .rti-trust-item:first-child {
+.service-areas-climate-adapted-solutions-content-section .sacscs-trust-item:first-child {
   padding-inline-start: 0;
 }
 
-.roof-tarring-intro-section .rti-trust-item .fa {
+.service-areas-climate-adapted-solutions-content-section .sacscs-trust-icon {
   color: var(--primary);
-  font-size: 13px;
+  font-size: 15px;
+  flex-shrink: 0;
+  line-height: 1;
 }
 
-.roof-tarring-intro-section .rti-trust-divider {
-  width: 1px;
-  height: 18px;
-  background: rgba(245, 247, 250, 0.18);
-  margin: 0 14px 0 0;
+.service-areas-climate-adapted-solutions-content-section .sacscs-trust-label {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  white-space: nowrap;
+  text-align: right;
 }
 
-/* ── LEFT COLUMN: Image ── */
-.roof-tarring-intro-section .rti-image-col {
-  position: relative;
-}
-
-.roof-tarring-intro-section .rti-image-frame {
-  position: relative;
-  border: 1px solid rgba(126, 135, 148, 0.35);
-  box-shadow:
-    0 0 0 1px rgba(0, 212, 255, 0.12),
-    0 0 32px rgba(0, 212, 255, 0.1),
-    0 24px 60px rgba(0, 0, 0, 0.55);
-  overflow: hidden;
-  line-height: 0;
-}
-
-.roof-tarring-intro-section .rti-image-glow {
-  position: absolute;
-  inset: -1px;
-  border: 1px solid rgba(0, 212, 255, 0.22);
-  pointer-events: none;
-  z-index: 2;
-  box-shadow: inset 0 0 24px rgba(0, 212, 255, 0.08);
-}
-
-.roof-tarring-intro-section .rti-project-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 700 / 520;
-  position: relative;
-  z-index: 1;
-}
-
-.roof-tarring-intro-section .rti-img-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    transparent 50%,
-    rgba(9, 11, 16, 0.45) 100%
-  );
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* ── Benefits bar ── */
-.roof-tarring-intro-section .rti-benefits-bar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-top: 1px solid rgba(245, 247, 250, 0.08);
-  border-bottom: 1px solid rgba(245, 247, 250, 0.08);
-  padding: 18px 0;
-  gap: 0;
-  flex-wrap: wrap;
-}
-
-.roof-tarring-intro-section .rti-benefit-item {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 20px;
-  min-width: 200px;
-}
-
-.roof-tarring-intro-section .rti-benefit-label {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: rgba(245, 247, 250, 0.6);
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.roof-tarring-intro-section .rti-benefit-sep {
+/* Vertical rule separators between trust items */
+.service-areas-climate-adapted-solutions-content-section .sacscs-trust-divider {
   width: 1px;
   height: 28px;
-  background: rgba(245, 247, 250, 0.15);
+  background: var(--accent);
+  opacity: 0.35;
   flex-shrink: 0;
 }
 
-/* ── Bottom fade divider ── */
-.roof-tarring-intro-section .rti-divider-wrapper {
+/* ── IMAGE COLUMN ── */
+.service-areas-climate-adapted-solutions-content-section .sacscs-image-col {
+  position: relative;
+}
+
+.service-areas-climate-adapted-solutions-content-section .sacscs-image-panel {
+  position: relative;
+  background: #11161D;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 1px rgba(0, 212, 255, 0.08), 0 24px 60px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* Cyan edge glow — top edge */
+.service-areas-climate-adapted-solutions-content-section .sacscs-image-glow {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inset-inline-end: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--primary) 40%, rgba(0, 212, 255, 0.4) 100%);
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.55);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Cyan accent bar — bottom edge */
+.service-areas-climate-adapted-solutions-content-section .sacscs-panel-accent-bar {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  width: 40%;
+  height: 2px;
+  background: var(--primary);
+  opacity: 0.5;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.service-areas-climate-adapted-solutions-content-section .sacscs-image-frame {
+  position: relative;
+  z-index: 1;
+  display: block;
+  line-height: 0;
+}
+
+.service-areas-climate-adapted-solutions-content-section .sacscs-image-frame img {
+  display: block;
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.88) contrast(1.05);
+}
+
+/* ── BOTTOM TRANSITION ── */
+.service-areas-climate-adapted-solutions-content-section .sacscs-bottom-transition {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 32px;
   pointer-events: none;
   z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.roof-tarring-intro-section .rti-bottom-fade {
+.service-areas-climate-adapted-solutions-content-section .sacscs-bottom-rule {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, transparent 0%, rgba(9, 11, 16, 0.6) 100%);
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--primary) 30%, rgba(0, 212, 255, 0.3) 70%, transparent 100%);
+  opacity: 0.45;
 }
 
-/* ══════════════════════════════════════════
-   RESPONSIVE — TABLET
-══════════════════════════════════════════ */
+/* ── RESPONSIVE: TABLET ── */
 @media (max-width: 1024px) {
-  .roof-tarring-intro-section .rti-main-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 36px;
+  .service-areas-climate-adapted-solutions-content-section {
+    padding: 80px 24px 100px;
   }
-
-  .roof-tarring-intro-section .rti-heading {
+  .service-areas-climate-adapted-solutions-content-section .sacscs-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .service-areas-climate-adapted-solutions-content-section .sacscs-heading {
     font-size: 38px;
   }
 }
 
-/* ══════════════════════════════════════════
-   RESPONSIVE — MOBILE
-══════════════════════════════════════════ */
+/* ── RESPONSIVE: MOBILE ── */
 @media (max-width: 768px) {
-  .roof-tarring-intro-section {
-    padding: 100px 0 60px;
+  .service-areas-climate-adapted-solutions-content-section {
+    padding: 100px 16px 80px;
   }
-
-  .roof-tarring-intro-section .rti-container {
-    padding: 0 16px;
-  }
-
-  .roof-tarring-intro-section .rti-main-grid {
+  .service-areas-climate-adapted-solutions-content-section .sacscs-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
-    margin-bottom: 32px;
+    gap: 36px;
+    direction: rtl;
   }
-
-  /* On mobile, image column comes AFTER text (stacked below) */
-  .roof-tarring-intro-section .rti-image-col {
-    order: 2;
-  }
-
-  .roof-tarring-intro-section .rti-text-col {
-    order: 1;
-  }
-
-  .roof-tarring-intro-section .rti-heading {
-    font-size: 32px;
+  .service-areas-climate-adapted-solutions-content-section .sacscs-heading {
+    font-size: 30px;
     line-height: 1.2;
   }
-
-  .roof-tarring-intro-section .rti-lead {
-    font-size: 16px;
+  .service-areas-climate-adapted-solutions-content-section .sacscs-intro {
     max-width: 100%;
   }
-
-  .roof-tarring-intro-section .rti-cta-row {
+  .service-areas-climate-adapted-solutions-content-section .sacscs-trust-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 16px;
   }
-
-  .roof-tarring-intro-section .btn-primary.rti-btn,
-  .roof-tarring-intro-section .btn-secondary.rti-btn {
-    width: 100%;
-    justify-content: center;
-    font-size: 15px;
-    padding: 13px 20px;
+  .service-areas-climate-adapted-solutions-content-section .sacscs-trust-item {
+    padding: 0;
   }
-
-  .roof-tarring-intro-section .rti-trust-row {
-    gap: 0;
-    flex-wrap: wrap;
+  .service-areas-climate-adapted-solutions-content-section .sacscs-trust-divider {
+    display: none;
   }
-
-  .roof-tarring-intro-section .rti-trust-item {
-    font-size: 12px;
+  .service-areas-climate-adapted-solutions-content-section .sacscs-image-frame img {
+    height: 260px;
   }
-
-  .roof-tarring-intro-section .rti-benefits-bar {
-    flex-direction: column;
-    gap: 0;
-    padding: 12px 0;
-  }
-
-  .roof-tarring-intro-section .rti-benefit-item {
-    padding: 10px 16px;
-    min-width: unset;
-    width: 100%;
-  }
-
-  .roof-tarring-intro-section .rti-benefit-sep {
-    width: 60%;
-    height: 1px;
-    background: rgba(245, 247, 250, 0.12);
-  }
-
-  .roof-tarring-intro-section .rti-benefit-label {
-    font-size: 12px;
-  }
-
-  .roof-tarring-intro-section .rti-project-img {
-    aspect-ratio: 4 / 3;
+  .service-areas-climate-adapted-solutions-content-section .sacscs-corner {
+    width: 40px;
+    height: 40px;
   }
 }
 
-.roof-tarring-benefits-section {
-  background-color: var(--bg-light);
-  background-image: linear-gradient(180deg, #EEF1F5 0%, var(--bg-light) 100%);
-  color: var(--text-dark);
-  padding: 80px 24px 90px;
+.service-areas-climate-adapted-solutions-features-section {
   position: relative;
+  background-color: var(--bg-light);
+  background-image: linear-gradient(180deg, #F5F7FA 0%, #EEF1F6 100%);
+  color: var(--text-dark);
+  padding: 88px 24px 96px;
   overflow: visible;
-  border-top: 1px solid var(--border-light);
   direction: rtl;
 }
 
-.roof-tarring-benefits-section .rtb-container {
-  max-width: 1200px;
+.service-areas-climate-adapted-solutions-features-section .sacas-blueprint-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 39px,
+      rgba(0, 212, 255, 0.06) 39px,
+      rgba(0, 212, 255, 0.06) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 39px,
+      rgba(0, 212, 255, 0.06) 39px,
+      rgba(0, 212, 255, 0.06) 40px
+    );
+  background-size: 40px 40px;
+  opacity: 0.6;
+}
+
+.service-areas-climate-adapted-solutions-features-section .sacas-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
   margin: 0 auto;
   width: 100%;
 }
 
-.roof-tarring-benefits-section .rtb-header {
-  text-align: right;
-  margin-bottom: 56px;
-  max-width: 640px;
-  margin-inline-end: 0;
-  margin-inline-start: auto;
-  padding-inline-end: 0;
+.service-areas-climate-adapted-solutions-features-section .sacas-header {
+  max-width: 680px;
+  margin: 0 auto 56px;
+  text-align: center;
 }
 
-.roof-tarring-benefits-section .rtb-eyebrow-line {
-  display: block;
-  width: 48px;
-  height: 3px;
-  background-color: var(--primary);
-  margin-inline-start: auto;
-  margin-bottom: 20px;
-  border-radius: 2px;
+.service-areas-climate-adapted-solutions-features-section .sacas-overline {
+  display: inline-block;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 16px;
+  padding: 5px 14px;
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  background: rgba(0, 212, 255, 0.07);
 }
 
-.roof-tarring-benefits-section .rtb-heading {
+.service-areas-climate-adapted-solutions-features-section .sacas-title {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.3;
   color: var(--text-dark);
-  margin: 0 0 16px 0;
+  margin: 0 0 18px;
   letter-spacing: -0.01em;
+  text-align: center;
+  max-width: none !important;
 }
 
-.roof-tarring-benefits-section .rtb-subheading {
+.service-areas-climate-adapted-solutions-features-section .sacas-subtitle {
   font-family: 'Inter', 'Heebo', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-muted);
   margin: 0;
+  text-align: center;
+  max-width: none !important;
 }
 
-.roof-tarring-benefits-section .rtb-grid {
+.service-areas-climate-adapted-solutions-features-section .sacas-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
   direction: rtl;
 }
 
-.roof-tarring-benefits-section .rtb-card {
-  background: #ffffff;
+.service-areas-climate-adapted-solutions-features-section .sacas-card {
+  background: #FAFBFC;
   border: 1px solid var(--border-light);
   border-radius: 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  padding: 0;
-  position: relative;
+  box-shadow: 0 4px 18px rgba(18, 20, 23, 0.07);
   overflow: hidden;
   transition: box-shadow 0.25s ease, transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-.roof-tarring-benefits-section .rtb-card:hover {
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.11);
+.service-areas-climate-adapted-solutions-features-section .sacas-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.14), 0 2px 8px rgba(18, 20, 23, 0.08);
   transform: translateY(-3px);
 }
 
-.roof-tarring-benefits-section .rtb-card-accent {
+.service-areas-climate-adapted-solutions-features-section .sacas-card-top-rule {
   width: 100%;
   height: 3px;
   background: linear-gradient(90deg, var(--primary) 0%, rgba(0, 212, 255, 0.3) 100%);
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  z-index: 1;
+  flex-shrink: 0;
 }
 
-.roof-tarring-benefits-section .rtb-card-inner {
-  padding: 32px 28px 28px;
+.service-areas-climate-adapted-solutions-features-section .sacas-card-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.roof-tarring-benefits-section .rtb-card-title {
+.service-areas-climate-adapted-solutions-features-section .sacas-card-title {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
   font-size: 1.375rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.4;
   color: var(--text-dark);
-  margin: 0 0 12px 0;
+  margin: 0 0 14px;
   text-align: right;
 }
 
-.roof-tarring-benefits-section .rtb-card-text {
+.service-areas-climate-adapted-solutions-features-section .sacas-card-desc {
   font-family: 'Inter', 'Heebo', sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-muted);
-  margin: 0;
+  margin: 0 0 22px;
   text-align: right;
 }
 
-@media (min-width: 600px) {
-  .roof-tarring-benefits-section .rtb-grid {
-    grid-template-columns: 1fr 1fr;
+.service-areas-climate-adapted-solutions-features-section .sacas-card-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--border-light);
+  flex: 1;
+}
+
+.service-areas-climate-adapted-solutions-features-section .sacas-list-item {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border-light);
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.service-areas-climate-adapted-solutions-features-section .sacas-list-item::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+  order: 1;
+}
+
+.service-areas-climate-adapted-solutions-features-section .sacas-list-item:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 1024px) {
+  .service-areas-climate-adapted-solutions-features-section .sacas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 }
 
-@media (min-width: 768px) {
-  .roof-tarring-benefits-section {
-    padding: 100px 40px 110px;
+@media (max-width: 768px) {
+  .service-areas-climate-adapted-solutions-features-section {
+    padding: 64px 16px 72px;
   }
 
-  .roof-tarring-benefits-section .rtb-header {
-    max-width: 560px;
-    margin-bottom: 64px;
-  }
-
-  .roof-tarring-benefits-section .rtb-heading {
-    font-size: 2rem;
-  }
-
-  .roof-tarring-benefits-section .rtb-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 28px;
-  }
-
-  .roof-tarring-benefits-section .rtb-card-inner {
-    padding: 36px 32px 32px;
-  }
-}
-
-@media (max-width: 599px) {
-  .roof-tarring-benefits-section .rtb-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .roof-tarring-benefits-section {
-    padding: 60px 16px 70px;
-  }
-
-  .roof-tarring-benefits-section .rtb-header {
+  .service-areas-climate-adapted-solutions-features-section .sacas-header {
     margin-bottom: 36px;
   }
 
-  .roof-tarring-benefits-section .rtb-card-inner {
-    padding: 28px 20px 24px;
+  .service-areas-climate-adapted-solutions-features-section .sacas-title {
+    font-size: 1.6rem;
+  }
+
+  .service-areas-climate-adapted-solutions-features-section .sacas-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .service-areas-climate-adapted-solutions-features-section .sacas-card-body {
+    padding: 22px 18px;
+  }
+
+  .service-areas-climate-adapted-solutions-features-section .sacas-blueprint-bg {
+    opacity: 0.4;
   }
 }
 
-.roof-tarring-process-section {
+.service-areas-climate-adapted-solutions-service-area-section {
   position: relative;
   overflow: visible;
   background-color: #090B10;
   background-image:
-    radial-gradient(ellipse at 10% 50%, rgba(0, 212, 255, 0.07) 0%, transparent 55%),
-    radial-gradient(ellipse at 90% 20%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse 80% 40% at 50% 100%, rgba(0,212,255,0.10) 0%, transparent 70%),
     linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
   color: var(--text-light);
-  padding: 80px 0 100px;
+  padding: 88px 24px;
   direction: rtl;
 }
 
-/* Container */
-.roof-tarring-process-section .rtp-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-horizon-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 260px;
+  background: linear-gradient(to top, rgba(0,212,255,0.07) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-container {
   position: relative;
   z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-/* ── Header ── */
-.roof-tarring-process-section .rtp-header {
-  margin-bottom: 40px;
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  direction: rtl;
 }
 
-.roof-tarring-process-section .rtp-header-inner {
-  max-width: 640px;
-  margin-inline-start: 0;
+/* ── RIGHT COLUMN: Text ── */
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.roof-tarring-process-section .rtp-label {
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-eyebrow {
   display: inline-block;
-  font-family: 'Inter', 'Heebo', sans-serif;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: var(--primary);
-  border: 1px solid rgba(0, 212, 255, 0.35);
-  padding: 5px 14px;
-  margin-bottom: 18px;
-  background: rgba(0, 212, 255, 0.06);
+  color: #00D4FF;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  padding: 6px 14px;
+  border: 1px solid rgba(0,212,255,0.3);
+  background: rgba(0,212,255,0.06);
+  width: fit-content;
 }
 
-.roof-tarring-process-section .rtp-title {
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-heading {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: -0.02em;
-  line-height: 1.15;
+  line-height: 1.2;
   color: var(--text-light);
-  margin: 0 0 16px 0;
-}
-
-.roof-tarring-process-section .rtp-title-accent {
-  color: var(--primary);
-  display: block;
-}
-
-.roof-tarring-process-section .rtp-subtitle {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-muted);
-  margin: 0;
-  max-width: 560px;
-}
-
-/* ── Image Strip ── */
-.roof-tarring-process-section .rtp-image-strip {
-  margin-bottom: 48px;
-  position: relative;
-}
-
-.roof-tarring-process-section .rtp-image-strip-inner {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  border: 1px solid var(--border-dark);
-}
-
-.roof-tarring-process-section .rtp-image-strip-inner img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  filter: brightness(0.65) saturate(0.8);
-}
-
-.roof-tarring-process-section .rtp-strip-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(9, 11, 16, 0.2) 0%,
-    rgba(9, 11, 16, 0.55) 100%
-  );
-  pointer-events: none;
-}
-
-.roof-tarring-process-section .rtp-strip-labels {
-  position: absolute;
-  bottom: 0;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  direction: rtl;
-}
-
-.roof-tarring-process-section .rtp-strip-labels span {
-  display: block;
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--primary);
-  text-align: center;
-  padding: 8px 6px;
-  background: rgba(9, 11, 16, 0.72);
-  border-top: 1px solid rgba(0, 212, 255, 0.25);
-  border-inline-end: 1px solid rgba(0, 212, 255, 0.12);
-}
-
-.roof-tarring-process-section .rtp-strip-labels span:last-child {
-  border-inline-end: none;
-}
-
-/* ── Timeline ── */
-.roof-tarring-process-section .rtp-timeline {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
-  direction: rtl;
-  align-items: start;
-}
-
-/* Connector line layer */
-.roof-tarring-process-section .rtp-connector {
-  position: absolute;
-  top: 22px;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  height: 2px;
-  pointer-events: none;
-  z-index: 0;
-  padding: 0 calc(12.5% + 0px);
-  box-sizing: border-box;
-}
-
-.roof-tarring-process-section .rtp-connector-line {
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(
-    to left,
-    rgba(0, 212, 255, 0.0) 0%,
-    rgba(0, 212, 255, 0.6) 15%,
-    rgba(0, 212, 255, 0.6) 85%,
-    rgba(0, 212, 255, 0.0) 100%
-  );
-  box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
-}
-
-/* Step */
-.roof-tarring-process-section .rtp-step {
-  position: relative;
-  z-index: 1;
-  padding: 0 16px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: right;
-}
-
-.roof-tarring-process-section .rtp-step-number-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
-  position: relative;
-}
-
-.roof-tarring-process-section .rtp-step-number {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: var(--primary);
-  margin-bottom: 8px;
-  display: block;
-}
-
-.roof-tarring-process-section .rtp-step-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 12px rgba(0, 212, 255, 0.9), 0 0 24px rgba(0, 212, 255, 0.4);
-  flex-shrink: 0;
-  position: relative;
-  margin-inline-start: 3px;
-}
-
-.roof-tarring-process-section .rtp-step-dot::after {
-  content: '';
-  position: absolute;
-  inset: -4px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 212, 255, 0.35);
-}
-
-/* Step Content Card */
-.roof-tarring-process-section .rtp-step-content {
-  background: #11161D;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: 2px solid rgba(0, 212, 255, 0.4);
-  padding: 20px 18px;
-  width: 100%;
-  box-sizing: border-box;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  position: relative;
-  overflow: hidden;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.roof-tarring-process-section .rtp-step-content::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 80% 0%, rgba(0, 212, 255, 0.04) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-.roof-tarring-process-section .rtp-step:hover .rtp-step-content {
-  border-top-color: var(--primary);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 212, 255, 0.1);
-}
-
-.roof-tarring-process-section .rtp-step-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.125rem;
-  font-weight: 800;
-  line-height: 1.3;
-  color: var(--text-light);
-  margin: 0 0 10px 0;
-  text-align: right;
-}
-
-.roof-tarring-process-section .rtp-step-desc {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 0.875rem;
-  line-height: 1.65;
-  color: var(--text-muted);
   margin: 0;
   text-align: right;
 }
 
-/* ── Bottom Glow ── */
-.roof-tarring-process-section .rtp-bottom-glow {
-  position: absolute;
-  bottom: 0;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  height: 180px;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(245, 247, 250, 0.04) 100%
-  );
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* ── Section Transition Divider ── */
-.roof-tarring-process-section .rtp-divider-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.roof-tarring-process-section .rtp-divider-wrapper svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* ══════════════════════════════════════
-   RESPONSIVE — TABLET
-══════════════════════════════════════ */
-@media (max-width: 1024px) {
-  .roof-tarring-process-section .rtp-timeline {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 24px;
-  }
-
-  .roof-tarring-process-section .rtp-connector {
-    display: none;
-  }
-
-  .roof-tarring-process-section .rtp-strip-labels span {
-    font-size: 10px;
-    padding: 6px 4px;
-  }
-}
-
-/* ══════════════════════════════════════
-   RESPONSIVE — MOBILE
-══════════════════════════════════════ */
-@media (max-width: 768px) {
-  .roof-tarring-process-section {
-    padding: 60px 0 80px;
-  }
-
-  .roof-tarring-process-section .rtp-container {
-    padding: 0 16px;
-  }
-
-  .roof-tarring-process-section .rtp-header {
-    margin-bottom: 28px;
-  }
-
-  .roof-tarring-process-section .rtp-title {
-    font-size: 1.6rem;
-  }
-
-  .roof-tarring-process-section .rtp-image-strip-inner {
-    height: 130px;
-  }
-
-  .roof-tarring-process-section .rtp-strip-labels {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .roof-tarring-process-section .rtp-strip-labels span:nth-child(2) {
-    border-inline-end: none;
-  }
-
-  .roof-tarring-process-section .rtp-timeline {
-    grid-template-columns: 1fr !important;
-    gap: 24px;
-  }
-
-  .roof-tarring-process-section .rtp-connector {
-    display: none;
-  }
-
-  .roof-tarring-process-section .rtp-step {
-    padding: 0;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  .roof-tarring-process-section .rtp-step-number-wrap {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0;
-    flex-shrink: 0;
-    padding-top: 4px;
-  }
-
-  .roof-tarring-process-section .rtp-step-number {
-    font-size: 10px;
-    margin-bottom: 6px;
-    writing-mode: initial;
-  }
-
-  .roof-tarring-process-section .rtp-step-dot {
-    margin-inline-start: 0;
-  }
-
-  .roof-tarring-process-section .rtp-step-content {
-    flex: 1;
-  }
-
-  .roof-tarring-process-section .rtp-step-title {
-    font-size: 1rem;
-  }
-}
-
-.roof-tarring-materials-section {
-  position: relative;
-  overflow: visible;
-  background-color: #F5F7FA;
-  background-image: linear-gradient(180deg, #FFFFFF 0%, #F0F3F7 100%);
-  color: var(--text-dark);
-  padding: 80px 0 60px;
-  direction: rtl;
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-body {
   font-family: 'Inter', 'Heebo', sans-serif;
-}
-
-.roof-tarring-materials-section .rtm-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 32px;
-}
-
-/* ─── TOP ROW: TWO COLUMNS ─── */
-.roof-tarring-materials-section .rtm-top-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: start;
-  margin-bottom: 56px;
-}
-
-/* ─── RIGHT COLUMN: HEADER ─── */
-.roof-tarring-materials-section .rtm-header-col {
-  padding-inline-end: 16px;
-}
-
-.roof-tarring-materials-section .rtm-label {
-  display: inline-block;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--primary);
-  margin-bottom: 18px;
-  padding: 5px 12px;
-  border: 1px solid rgba(0, 212, 255, 0.35);
-  border-radius: 2px;
-  background: rgba(0, 212, 255, 0.06);
-}
-
-.roof-tarring-materials-section .rtm-heading {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--text-dark);
-  margin: 0 0 20px 0;
-  letter-spacing: -0.01em;
-}
-
-.roof-tarring-materials-section .rtm-intro {
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.7;
-  color: var(--text-muted);
-  margin: 0 0 28px 0;
-  max-width: 380px;
+  color: var(--text-light);
+  margin: 0;
+  text-align: right;
+  opacity: 0.85;
 }
 
-.roof-tarring-materials-section .rtm-accent-line {
-  width: 48px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), transparent);
-  border-radius: 2px;
-}
-
-/* ─── LEFT COLUMN: NOTES LIST ─── */
-.roof-tarring-materials-section .rtm-notes-col {
+/* Principles list */
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-principles-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
-}
-
-.roof-tarring-materials-section .rtm-note-item {
-  padding: 24px 0;
-}
-
-.roof-tarring-materials-section .rtm-note-header {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
   gap: 14px;
-  margin-bottom: 10px;
 }
 
-.roof-tarring-materials-section .rtm-note-number {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--primary);
-  opacity: 0.8;
-  flex-shrink: 0;
-  padding-top: 3px;
-}
-
-.roof-tarring-materials-section .rtm-note-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.375rem;
-  font-weight: 600;
-  line-height: 1.4;
-  color: var(--text-dark);
-  margin: 0;
-}
-
-.roof-tarring-materials-section .rtm-note-body {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-muted);
-  margin: 0;
-  padding-inline-start: 0;
-}
-
-.roof-tarring-materials-section .rtm-micro-divider {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(to left, rgba(0, 212, 255, 0.4) 0%, rgba(0, 212, 255, 0.05) 60%, transparent 100%);
-  margin-top: 24px;
-}
-
-/* ─── FULL-WIDTH GUIDANCE PANEL ─── */
-.roof-tarring-materials-section .rtm-guidance-panel {
-  border: 1px solid var(--border-light);
-  border-radius: 4px;
-  background: #FFFFFF;
-  padding: 32px 36px;
-  box-shadow: 0 2px 16px rgba(18, 20, 23, 0.06);
-  position: relative;
-  overflow: hidden;
-}
-
-.roof-tarring-materials-section .rtm-guidance-panel::before {
-  content: '';
-  position: absolute;
-  inset-inline-end: 0;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: linear-gradient(180deg, var(--primary) 0%, rgba(0, 212, 255, 0.2) 100%);
-  border-radius: 0 4px 4px 0;
-}
-
-.roof-tarring-materials-section .rtm-guidance-inner {
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-principle-item {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 20px;
+  gap: 14px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,212,255,0.12);
+  transition: border-color 0.25s ease, background 0.25s ease;
 }
 
-.roof-tarring-materials-section .rtm-guidance-icon {
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-principle-item:hover {
+  border-color: rgba(0,212,255,0.35);
+  background: rgba(0,212,255,0.05);
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-principle-icon {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
-  background: rgba(0, 212, 255, 0.08);
-  border: 1px solid rgba(0, 212, 255, 0.25);
-  border-radius: 50%;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary);
-  margin-top: 2px;
+  background: rgba(0,212,255,0.10);
+  color: #00D4FF;
+  border-radius: 0;
 }
 
-.roof-tarring-materials-section .rtm-guidance-content {
-  flex: 1;
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-principle-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: right;
 }
 
-.roof-tarring-materials-section .rtm-guidance-title {
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-principle-content strong {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.375rem;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-light);
   line-height: 1.4;
-  color: var(--text-dark);
-  margin: 0 0 10px 0;
 }
 
-.roof-tarring-materials-section .rtm-guidance-text {
-  font-size: 16px;
-  line-height: 1.7;
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-principle-content span {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
   color: var(--text-muted);
-  margin: 0;
+  line-height: 1.5;
 }
 
-/* ─── BOTTOM DIVIDER ─── */
-.roof-tarring-materials-section .rtm-divider-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+/* CTA Row */
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-cta-row {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-btn-primary {
+  display: inline-block;
+  background: linear-gradient(90deg, #C8FF00 0%, #B8F500 100%);
+  color: #0B0E14;
+  padding: 13px 28px;
+  border-radius: 0;
+  border: 1px solid rgba(0,0,0,0.35);
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 20px rgba(200,255,0,0.22);
+  text-decoration: none;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-btn-primary:hover {
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 12px 28px rgba(200,255,0,0.38);
+  transform: translateY(-1px);
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-btn-secondary {
+  display: inline-block;
+  background: rgba(19,27,36,0.92);
+  color: var(--text-light);
+  padding: 13px 28px;
+  border-radius: 0;
+  border: 1px solid #00D4FF;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset;
+  text-decoration: none;
+  transition: background 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-btn-secondary:hover {
+  background: rgba(0,212,255,0.10);
+  box-shadow: 0 0 16px rgba(0,212,255,0.25), 0 0 0 1px rgba(255,255,255,0.06) inset;
+  transform: translateY(-1px);
+}
+
+/* ── LEFT COLUMN: Diagram Panel ── */
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-diagram-col {
+  display: flex;
+  align-items: stretch;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-diagram-panel {
   width: 100%;
-  height: 60px;
-  pointer-events: none;
-  z-index: 5;
+  background: rgba(16,21,28,0.68);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0,212,255,0.18);
+  box-shadow: 0 0 40px rgba(0,212,255,0.08), 0 24px 60px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.roof-tarring-materials-section .rtm-divider-wrapper svg {
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-diagram-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(0,212,255,0.12);
+  background: rgba(0,212,255,0.04);
+  direction: rtl;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-diagram-label {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #00D4FF;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-diagram-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(0,212,255,0.8);
+  letter-spacing: 0.04em;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00D4FF;
+  box-shadow: 0 0 8px rgba(0,212,255,0.8);
+  animation: sacsas-pulse 2s ease-in-out infinite;
+}
+
+@keyframes sacsas-pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(0,212,255,0.8); }
+  50% { opacity: 0.5; box-shadow: 0 0 4px rgba(0,212,255,0.4); }
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-svg-wrapper {
+  flex: 1;
+  padding: 12px;
+  background: rgba(9,11,16,0.6);
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-diagram-svg {
+  width: 100%;
+  height: auto;
   display: block;
-  width: 100%;
-  height: 100%;
 }
 
-/* ─── RESPONSIVE: TABLET ─── */
+/* Stats row inside panel */
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-diagram-stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 16px 20px;
+  border-top: 1px solid rgba(0,212,255,0.12);
+  background: rgba(0,212,255,0.03);
+  direction: rtl;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-stat-value {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: #00D4FF;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-stat-label {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.service-areas-climate-adapted-solutions-service-area-section .sacsas-stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(0,212,255,0.15);
+}
+
+/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .roof-tarring-materials-section .rtm-top-row {
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .roof-tarring-materials-section .rtm-header-col {
-    padding-inline-end: 0;
-  }
-
-  .roof-tarring-materials-section .rtm-intro {
-    max-width: 100%;
-  }
-
-  .roof-tarring-materials-section .rtm-accent-line {
-    margin-bottom: 0;
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-diagram-col {
+    order: -1;
   }
 }
 
-/* ─── RESPONSIVE: MOBILE ─── */
 @media (max-width: 768px) {
-  .roof-tarring-materials-section {
-    padding: 60px 0 60px;
+  .service-areas-climate-adapted-solutions-service-area-section {
+    padding: 60px 16px;
   }
 
-  .roof-tarring-materials-section .rtm-container {
-    padding: 0 16px;
-  }
-
-  .roof-tarring-materials-section .rtm-heading {
-    font-size: 1.6rem;
-  }
-
-  .roof-tarring-materials-section .rtm-top-row {
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-grid {
+    grid-template-columns: 1fr !important;
     gap: 32px;
-    margin-bottom: 36px;
   }
 
-  .roof-tarring-materials-section .rtm-note-item {
-    padding: 20px 0;
-  }
-
-  .roof-tarring-materials-section .rtm-note-title {
-    font-size: 1.1rem;
-  }
-
-  .roof-tarring-materials-section .rtm-guidance-panel {
-    padding: 22px 20px;
-  }
-
-  .roof-tarring-materials-section .rtm-guidance-inner {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .roof-tarring-materials-section .rtm-guidance-title {
-    font-size: 1.1rem;
-  }
-
-  .roof-tarring-materials-section .rtm-guidance-panel::before {
-    border-radius: 4px 4px 0 0;
-    inset-inline-end: 0;
-    top: 0;
-    bottom: unset;
-    width: 100%;
-    height: 4px;
-  }
-}
-
-.roof-tarring-cta-section {
-  position: relative;
-  overflow: visible;
-  background-color: #090B10;
-  background-image:
-    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(0, 212, 255, 0.13) 0%, transparent 70%),
-    linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
-  color: var(--text-light);
-  padding: 80px 20px 90px;
-  direction: rtl;
-  font-family: 'Inter', 'Heebo', sans-serif;
-}
-
-.roof-tarring-cta-section .rtc-bg-glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background: radial-gradient(ellipse 60% 40% at 50% 90%, rgba(0, 212, 255, 0.07) 0%, transparent 65%);
-}
-
-.roof-tarring-cta-section .rtc-container {
-  position: relative;
-  z-index: 1;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-.roof-tarring-cta-section .rtc-frame {
-  border: 1px solid rgba(42, 49, 56, 0.85);
-  border-radius: 4px;
-  padding: 52px 52px 44px;
-  background: rgba(18, 22, 28, 0.55);
-  box-shadow:
-    0 0 0 1px rgba(0, 212, 255, 0.06) inset,
-    0 16px 40px rgba(0, 0, 0, 0.38),
-    0 0 60px rgba(0, 212, 255, 0.04);
-  text-align: center;
-  backdrop-filter: blur(4px);
-}
-
-/* Accent rule */
-.roof-tarring-cta-section .rtc-accent-rule {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 28px;
-}
-
-.roof-tarring-cta-section .rtc-rule-line {
-  display: block;
-  width: 60px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--primary), transparent);
-  opacity: 0.7;
-}
-
-.roof-tarring-cta-section .rtc-rule-diamond {
-  display: block;
-  width: 7px;
-  height: 7px;
-  background: var(--primary);
-  transform: rotate(45deg);
-  flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
-}
-
-/* Heading */
-.roof-tarring-cta-section .rtc-heading {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--text-light);
-  margin: 0 0 18px;
-  text-align: center;
-  max-width: none !important;
-  letter-spacing: -0.01em;
-}
-
-/* Body */
-.roof-tarring-cta-section .rtc-body {
-  font-size: 16px;
-  line-height: 1.7;
-  color: rgba(245, 247, 250, 0.72);
-  text-align: center;
-  margin: 0 0 36px;
-  max-width: 560px;
-  margin-inline: auto;
-  margin-bottom: 36px;
-}
-
-/* Actions */
-.roof-tarring-cta-section .rtc-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 32px;
-}
-
-/* Primary button override */
-.roof-tarring-cta-section .rtc-btn-main {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(90deg, #C8FF00 0%, #B8F500 100%);
-  color: #0B0E14;
-  padding: 15px 36px;
-  border-radius: 0;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-  font-weight: 700;
-  font-size: 1rem;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 8px 20px rgba(200, 255, 0, 0.22);
-  text-decoration: none;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-  letter-spacing: 0.01em;
-}
-
-.roof-tarring-cta-section .rtc-btn-main:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12) inset, 0 12px 28px rgba(200, 255, 0, 0.34);
-  filter: brightness(1.05);
-}
-
-.roof-tarring-cta-section .rtc-btn-main i {
-  font-size: 0.9rem;
-}
-
-/* Secondary link */
-.roof-tarring-cta-section .rtc-link-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--primary);
-  font-size: 0.9375rem;
-  font-weight: 600;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  text-decoration: none;
-  transition: opacity 0.2s ease, gap 0.2s ease;
-  letter-spacing: 0.01em;
-}
-
-.roof-tarring-cta-section .rtc-link-secondary:hover {
-  opacity: 0.8;
-  gap: 12px;
-}
-
-.roof-tarring-cta-section .rtc-link-secondary i {
-  font-size: 0.8rem;
-}
-
-/* Lime micro-divider */
-.roof-tarring-cta-section .rtc-lime-divider {
-  width: 48px;
-  height: 2px;
-  background: var(--secondary);
-  margin: 0 auto 28px;
-  opacity: 0.7;
-  border-radius: 1px;
-}
-
-/* Trust row */
-.roof-tarring-cta-section .rtc-trust-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-}
-
-.roof-tarring-cta-section .rtc-trust-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  color: rgba(245, 247, 250, 0.55);
-  font-size: 0.875rem;
-  line-height: 1.6;
-  font-family: 'Inter', 'Heebo', sans-serif;
-  white-space: nowrap;
-}
-
-.roof-tarring-cta-section .rtc-trust-item i {
-  color: var(--primary);
-  font-size: 0.85rem;
-  opacity: 0.8;
-  flex-shrink: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .roof-tarring-cta-section {
-    padding: 60px 16px 70px;
-  }
-
-  .roof-tarring-cta-section .rtc-frame {
-    padding: 36px 24px 32px;
-  }
-
-  .roof-tarring-cta-section .rtc-heading {
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-heading {
     font-size: 1.6rem;
   }
 
-  .roof-tarring-cta-section .rtc-body {
-    font-size: 16px;
-    margin-bottom: 28px;
-  }
-
-  .roof-tarring-cta-section .rtc-actions {
-    gap: 14px;
-  }
-
-  .roof-tarring-cta-section .rtc-btn-main {
-    padding: 14px 28px;
-    font-size: 0.9375rem;
-    width: 100%;
-    justify-content: center;
-  }
-
-  .roof-tarring-cta-section .rtc-trust-row {
-    gap: 16px;
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-cta-row {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    gap: 10px;
   }
 
-  .roof-tarring-cta-section .rtc-trust-item {
-    white-space: normal;
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-btn-primary,
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-btn-secondary {
+    width: 100%;
     text-align: center;
-    justify-content: center;
-  }
-}
-
-@media (min-width: 769px) {
-  .roof-tarring-cta-section .rtc-actions {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
+    font-size: 14px;
+    padding: 12px 20px;
   }
 
-  .roof-tarring-cta-section .rtc-heading {
-    font-size: 2rem;
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-diagram-stats {
+    padding: 12px 14px;
+  }
+
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-stat-value {
+    font-size: 18px;
+  }
+
+  .service-areas-climate-adapted-solutions-service-area-section .sacsas-principle-item {
+    padding: 12px 12px;
   }
 }</style>
     <link rel="stylesheet" href="/styles.css">
@@ -2715,475 +2097,302 @@
 
 </script>
   
-  <main class="blog-page ai-generated-page"><section class="roof-tarring-intro-section" data-layout-spec="זיפות גגות-intro" dir="rtl" id="zappy-section-0">
-  <!-- Horizon glow background element -->
-  <div class="rti-horizon-glow" aria-hidden="true"></div>
+  <main class="blog-page ai-generated-page"><section class="service-areas-climate-adapted-solutions-content-section" data-layout-spec="פתרונות איטום מותאמים לאקלים ולאזור המבנה-content" dir="rtl">
+  <!-- Technical linework corners -->
+  <div class="sacscs-corner sacscs-corner--tr" aria-hidden="true"></div>
+  <div class="sacscs-corner sacscs-corner--tl" aria-hidden="true"></div>
+  <div class="sacscs-corner sacscs-corner--br" aria-hidden="true"></div>
+  <div class="sacscs-corner sacscs-corner--bl" aria-hidden="true"></div>
 
-  <div class="rti-container">
-    <!-- Main 2-column grid -->
-    <div class="rti-main-grid">
+  <!-- Vignette overlay -->
+  <div class="sacscs-vignette" aria-hidden="true"></div>
 
-      <!-- Right column: text stack -->
-      <div class="rti-text-col">
-        <!-- Accent rule -->
-        <div class="rti-accent-rule" aria-hidden="true"></div>
+  <div class="sacscs-container">
+    <div class="sacscs-grid">
 
-        <!-- Badge label -->
-        <p><span class="rti-badge">זיפות גגות מקצועית</span>
+      <!-- Right column: Text content (7/12) -->
+      <div class="sacscs-text-col">
+        <div class="sacscs-cyan-rule" aria-hidden="true"></div>
 
-        </p><h1 class="rti-heading" style>זיפות גגות<br><br><span class="rti-heading-accent">בסטנדרט תעשייתי</span></h1>
+        <h1 class="sacscs-heading">פתרונות איטום מותאמים<br>לאקלים ולאזור המבנה</h1>
 
-        <p class="rti-lead">מאור אחזקות מתמחה בזיפות גגות עם זפת חמה, ממברנות ביטומניות ואיטום פוליאוריתן — פתרונות עמידים לגגות מגורים ומבני תעשייה. אנו מביאים ניסיון של שנים, ציוד מקצועי ואחריות מלאה על כל פרויקט.
-        </p>
+        <p class="sacscs-intro">כל מבנה חשוף לאתגרים שונים — לחות ים, קרינת UV עזה, טמפרטורות קיצוניות וגשמים כבדים. ב־מאור אחזקות אנו מאתרים את הסיכונים הספציפיים לאזורכם ומתאימים את שיטת האיטום, את חומרי הגלם ואת עובי השכבות בהתאם — כדי להבטיח הגנה מלאה לשנים ארוכות.</p>
 
-        <!-- CTA buttons -->
-        <div class="rti-cta-row">
-          <a href="/contact" class="btn-primary rti-btn" data-element-type="button" data-element-id="btn-1775719966142-tidh9w5dr" data-native-element="true">לפרטים ותיאום
-            <i class="fa fa-arrow-left rti-btn-icon" aria-hidden="true"></i>
-          </a>
-          <a href="tel:[business_phone]" class="btn-secondary rti-btn" data-element-type="button" data-element-id="btn-1775719966142-xe6uyssv7" data-native-element="true">התקשרו עכשיו</a>
-        </div>
-
-        <!-- Trust cues -->
-        <div class="rti-trust-row">
-          <div class="rti-trust-item">
-            <i class="fa fa-shield" aria-hidden="true" data-element-type="icon" data-element-id="icon-1775719966147-4jk55o2hw" data-icon-type="fontawesome"></i>
-            <span>אחריות מלאה</span>
+        <!-- Trust points row -->
+        <div class="sacscs-trust-row">
+          <div class="sacscs-trust-item">
+            <span class="sacscs-trust-icon" aria-hidden="true"><i class="fa fa-shield"></i></span>
+            <span class="sacscs-trust-label">ניסיון של מעל 15 שנה</span>
           </div>
-          <div class="rti-trust-divider" aria-hidden="true"></div>
-          <div class="rti-trust-item">
-            <i class="fa fa-star" aria-hidden="true" data-element-type="icon" data-element-id="icon-1775719966147-nb7g8kjzn" data-icon-type="fontawesome"></i>
-            <span>ניסיון 15+ שנה</span>
+          <div class="sacscs-trust-divider" aria-hidden="true"></div>
+          <div class="sacscs-trust-item">
+            <span class="sacscs-trust-icon" aria-hidden="true"><i class="fa fa-map-marker"></i></span>
+            <span class="sacscs-trust-label">פריסה ארצית מלאה</span>
           </div>
-          <div class="rti-trust-divider" aria-hidden="true"></div>
-          <div class="rti-trust-item">
-            <i class="fa fa-check-circle" aria-hidden="true" data-element-type="icon" data-element-id="icon-1775719966147-71rog7qax" data-icon-type="fontawesome"></i>
-            <span>פרויקטים מוכחים</span>
+          <div class="sacscs-trust-divider" aria-hidden="true"></div>
+          <div class="sacscs-trust-item">
+            <span class="sacscs-trust-icon" aria-hidden="true"><i class="fa fa-check-circle"></i></span>
+            <span class="sacscs-trust-label">אחריות בכתב לכל עבודה</span>
           </div>
         </div>
       </div>
 
-      <!-- Left column: cinematic image -->
-      <div class="rti-image-col">
-        <div class="rti-image-frame">
-          <div class="rti-image-glow" aria-hidden="true"></div>
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1775719966149-vx05p79f4" data-element-type="image" data-zappy-zoom-wrapper-width="600px" data-zappy-zoom-wrapper-height="446px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 600px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 446px !important; display: block !important;"><img data-placeholder="roof-tarring-intro-image-1" data-context="Cinematic close-up of a professional waterproofing worker applying hot tar membrane on a flat industrial rooftop at dusk. The scene shows a torch-applied bituminous membrane being melted and rolled, with dramatic orange flame glow against a dark sky. The worker wears safety gear, the roof surface shows precise sealing lines, and the atmosphere is moody and industrial with warm torch light contrasting against cool evening light." width="700" height="520" src="/assets/image-roof-tarring-intro-image-1-1775720067416-eimapo.webp?v=1775720069400" alt="זיפות גג מקצועית עם ממברנה ביטומנית על גג תעשייתי" class="rti-project-img" data-element-type="image" data-element-id="img-1775719966149-vx05p79f4" style="min-width: 200px; min-height: 150px; border-radius: 8px; object-fit: cover !important; display: block !important; object-position: 50% 50% !important; width: 133.035% !important; height: 100% !important; max-width: none !important; margin: 0px !important; position: absolute !important; left: -16.5175% !important; top: 0% !important; max-height: none !important;" data-zappy-object-position="50% 50%" data-zappy-zoom="1" data-zappy-original-width="600" data-zappy-original-height="446"></div>
-          <!-- Image overlay gradient -->
-          <div class="rti-img-overlay" aria-hidden="true"></div>
+      <!-- Left column: Image panel (5/12) -->
+      <div class="sacscs-image-col">
+        <div class="sacscs-image-panel">
+          <div class="sacscs-image-glow" aria-hidden="true"></div>
+          <div class="sacscs-image-frame">
+            <img data-placeholder="service-areas-climate-adapted-solutions-content-image-1" data-context="Close-up professional photograph of waterproofing membrane installation on a flat rooftop in Israel — dark bituminous membrane being applied with a torch, showing moisture-resistant layers, coastal exposure conditions, and precision sealing lines. Dramatic cinematic lighting with a dark industrial atmosphere, slight steam or heat haze rising from the membrane. Premium waterproofing and construction work context." width="600" height="440" src alt="עבודת איטום גג מקצועית — הנחת ממברנה ביטומינית בתנאי חשיפה חופיים">
+          </div>
+          <!-- Cyan edge glow bar -->
+          <div class="sacscs-panel-accent-bar" aria-hidden="true"></div>
         </div>
       </div>
 
-    </div>
-
-    <!-- Benefits bar -->
-    <div class="rti-benefits-bar">
-      <div class="rti-benefit-item">
-        <span class="rti-benefit-label">זפת חמה וממברנות ביטומניות</span>
-      </div>
-      <div class="rti-benefit-sep" aria-hidden="true"></div>
-      <div class="rti-benefit-item">
-        <span class="rti-benefit-label">איטום פוליאוריתן ואפוקסי</span>
-      </div>
-      <div class="rti-benefit-sep" aria-hidden="true"></div>
-      <div class="rti-benefit-item">
-        <span class="rti-benefit-label">גגות בטון, רעפים ותעשייה</span>
-      </div>
     </div>
   </div>
 
-  <!-- Bottom fade divider -->
-  <div class="rti-divider-wrapper" aria-hidden="true">
-    <div class="rti-bottom-fade"></div>
+  <!-- Bottom transition: off-white break with thin cyan rule -->
+  <div class="sacscs-bottom-transition" aria-hidden="true">
+    <div class="sacscs-bottom-rule"></div>
   </div>
 </section>
 
-<section class="roof-tarring-benefits-section" data-layout-spec="זיפות גגות-benefits" dir="rtl">
-  <div class="rtb-container">
-    <div class="rtb-header">
-      <span class="rtb-eyebrow-line"></span>
-      <h2 class="rtb-heading">למה לבחור בזיפות גגות מקצועית?</h2>
-      <p class="rtb-subheading">שיטות הזיפות שלנו מעניקות הגנה מלאה ועמידה לגג שלכם לשנים רבות, תוך שימוש בחומרים מהמחלקה הראשונה ומומחיות מוכחת בשטח.</p>
+<section class="service-areas-climate-adapted-solutions-features-section" data-layout-spec="פתרונות איטום מותאמים לאקלים ולאזור המבנה-features" dir="rtl">
+  <div class="sacas-blueprint-bg" aria-hidden="true"></div>
+  <div class="sacas-container">
+    <div class="sacas-header">
+      <span class="sacas-overline">פתרונות מותאמים אקלים</span>
+      <h2 class="sacas-title">איטום מדויק לכל אזור ותנאי מזג אוויר</h2>
+      <p class="sacas-subtitle">כל מבנה חשוף לאתגרים סביבתיים שונים. הפתרונות שלנו מותאמים לתנאי האקלים, הגיאוגרפיה והשימוש — כדי להבטיח הגנה מרבית לאורך שנים.</p>
     </div>
-    <div class="rtb-grid">
-      <article class="rtb-card">
-        <div class="rtb-card-accent"></div>
-        <div class="rtb-card-inner">
-          <h3 class="rtb-card-title">עמידות לטווח ארוך</h3>
-          <p class="rtb-card-text">זיפות גגות בשיטת זפת חמה מספקת שכבת הגנה עמידה במיוחד, עם אורך חיים של עשרות שנים כאשר מבוצעת כהלכה על ידי אנשי מקצוע מנוסים.</p>
-        </div>
-      </article>
-      <article class="rtb-card">
-        <div class="rtb-card-accent"></div>
-        <div class="rtb-card-inner">
-          <h3 class="rtb-card-title">אטימה מושלמת למים</h3>
-          <p class="rtb-card-text">הממברנות הביטומניות שאנו משתמשים בהן יוצרות חסם רציף ואטום לחלוטין, שמונע חדירת מים ולחות גם בתנאי גשם קיצוניים ומזג אוויר קשה.</p>
-        </div>
-      </article>
-      <article class="rtb-card">
-        <div class="rtb-card-accent"></div>
-        <div class="rtb-card-inner">
-          <h3 class="rtb-card-title">חיסכון משמעותי בעלויות</h3>
-          <p class="rtb-card-text">טיפול מונע בזמן חוסך עלויות תיקון יקרות בעתיד. גג מזופת כראוי מגן על המבנה כולו ומפחית נזקי לחות ועובש שעלולים להסתכם בסכומים גבוהים.</p>
-        </div>
-      </article>
-      <article class="rtb-card">
-        <div class="rtb-card-accent"></div>
-        <div class="rtb-card-inner">
-          <h3 class="rtb-card-title">פתרונות לכל סוגי הגגות</h3>
-          <p class="rtb-card-text">אנו מתמחים בזיפות גגות שטוחים, גגות רעפים, בטון וקרמיקה, מבני תעשייה וחניונים — פתרון מותאם אישית לכל מבנה ולכל צורך.</p>
-        </div>
-      </article>
-      <article class="rtb-card">
-        <div class="rtb-card-accent"></div>
-        <div class="rtb-card-inner">
-          <h3 class="rtb-card-title">בידוד תרמי משולב</h3>
-          <p class="rtb-card-text">עבודות הזיפות שלנו משולבות לעיתים קרובות עם פתרונות בידוד תרמי, המשפרים את יעילות האנרגיה של הבניין ומפחיתים עלויות מיזוג ואוורור.</p>
-        </div>
-      </article>
-      <article class="rtb-card">
-        <div class="rtb-card-accent"></div>
-        <div class="rtb-card-inner">
-          <h3 class="rtb-card-title">צוות מוסמך ומנוסה</h3>
-          <p class="rtb-card-text">הצוות שלנו מורכב מאנשי מקצוע מוסמכים בעלי ניסיון רב שנים בביצוע עבודות זיפות ואטימה, עם אחריות מלאה על כל עבודה שאנו מבצעים.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="roof-tarring-process-section" data-layout-spec="זיפות גגות-process" dir="rtl" id="zappy-section-2">
-  <div class="rtp-container">
-
-    <!-- Header -->
-    <div class="rtp-header">
-      <div class="rtp-header-inner">
-        <p><span class="rtp-label">שיטת העבודה שלנו</span>
-        </p><h2 class="rtp-title" style>תהליך זיפות הגג<br><br><span class="rtp-title-accent">בארבעה שלבים מקצועיים</span></h2>
-        <p class="rtp-subtitle">כל פרויקט זיפות מתבצע לפי פרוטוקול עבודה מדויק — מניקוי מקדים ועד ציפוי הגנה סופי. כך מבטיחים אנחנו עמידות מרבית ואיטום מושלם לשנים.</p>
-      </div>
-    </div>
-
-    <!-- Image Strip -->
-    <div class="rtp-image-strip">
-      <div class="rtp-image-strip-inner">
-        <div data-zappy-zoom-wrapper="true" data-element-id="img-1775720206305-5hk5lq9ug" data-element-type="image" data-zappy-zoom-wrapper-width="600px" data-zappy-zoom-wrapper-height="450px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 600px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 450px !important; display: block !important;"><img data-placeholder="roof-tarring-process-image-1" data-context="Close-up sequence of professional roof waterproofing work in Israel: a worker cleaning a concrete rooftop with a brush, then applying bituminous membrane with a torch, hot tar being spread across the surface with a squeegee, and a final protective coating being rolled on. Dark night-time industrial atmosphere with glowing torch flame and reflective sealant surface." width="1200" height="220" src="/assets/image-roof-tarring-process-image-1-1775720279579-qsctqd.webp?v=1775720281549" alt="תהליך זיפות גג מקצועי — ניקוי, טיפול בסדקים, הנחת קרן ביטומנית וציפוי הגנה" data-element-type="image" data-element-id="img-1775720206305-5hk5lq9ug" style="min-width: 200px; min-height: 150px; border-radius: 8px; display: block !important; object-position: 50% 49% !important; object-fit: fill !important; width: 127.383% !important; height: 100% !important; max-width: none !important; margin: 0px !important; left: -13.6913% !important; top: 0% !important; max-height: none !important; position: absolute !important;" data-zappy-object-position="50% 49%" data-zappy-zoom="0.9"></div>
-        <div class="rtp-strip-overlay"></div>
-        <div class="rtp-strip-labels zappy-preserve-css-grid" id="zappy-auto-grid-1775720206344-wkt2z4" data-zappy-auto-grid="true" data-original-item-width="288" data-original-gap="normal" style="display: grid; --zappy-grid-cols: 287.5px 287.5px 287.5px 287.5px; grid-template-columns: 287.5px 287.5px 287.5px 287.5px; align-items: stretch !important;" data-zappy-explicit-columns="true">
-          <span data-grid-item-index="0">ניקוי הגג</span>
-          <span data-grid-item-index="1">טיפול בסדקים</span>
-          <span data-grid-item-index="2">הנחת קרן חמה</span>
-          <span data-grid-item-index="3">ציפוי הגנה</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Steps Timeline -->
-    <div class="rtp-timeline zappy-preserve-css-grid" id="zappy-auto-grid-1775720206353-et0bgb" data-zappy-auto-grid="true" data-zappy-grid-align="start" data-original-item-width="1152" data-original-gap="0px" style="display: grid; --zappy-grid-cols: repeat(4, minmax(0, 1fr)); grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
-      <!-- Connecting Line -->
-      <div class="rtp-connector">
-        <div class="rtp-connector-line"></div>
-      </div>
-
-      <!-- Step 1 -->
-      <article class="rtp-step" data-grid-item-index="1">
-        <div class="rtp-step-number-wrap">
-          <p><span class="rtp-step-number">01</span>
-          </p><div class="rtp-step-dot"></div>
-        </div>
-        <div class="rtp-step-content">
-          <h3 class="rtp-step-title">ניקוי והכנת המשטח</h3>
-          <p class="rtp-step-desc">מסירים לכלוך, שאריות ציפויים ישנים ואבק מהגג. שלב זה קריטי להצמדות מיטבית של חומרי האיטום ולמניעת בועות מתחת לממברנה.</p>
-        </div>
-      </article>
-
-      <!-- Step 2 -->
-      <article class="rtp-step" data-grid-item-index="2">
-        <div class="rtp-step-number-wrap">
-          <p><span class="rtp-step-number">02</span>
-          </p><div class="rtp-step-dot"></div>
-        </div>
-        <div class="rtp-step-content">
-          <h3 class="rtp-step-title">טיפול בסדקים ופגמים</h3>
-          <p class="rtp-step-desc">סוגרים סדקים, פגמי בטון ונקודות חולשה בחומר אטימה מיוחד לפני הנחת שכבת הזיפות — כך מבטיחים שלמות מבנית ואיטום רציף.</p>
-        </div>
-      </article>
-
-      <!-- Step 3 -->
-      <article class="rtp-step" data-grid-item-index="3">
-        <div class="rtp-step-number-wrap">
-          <p><span class="rtp-step-number">03</span>
-          </p><div class="rtp-step-dot"></div>
-        </div>
-        <div class="rtp-step-content">
-          <h3 class="rtp-step-title" style>הנחת זפת&nbsp; ביטומנית חמה</h3>
-          <p class="rtp-step-desc">מניחים ממברנה ביטומנית באמצעות להבה ישירה — שיטת הזיפות הוותיקה והאמינה ביותר, המבטיחה הצמדות מלאה ועמידות בתנאי מזג אוויר קיצוניים.</p>
-        </div>
-      </article>
-
-      <!-- Step 4 -->
-      <article class="rtp-step" data-grid-item-index="4">
-        <div class="rtp-step-number-wrap">
-          <p><span class="rtp-step-number">04</span>
-          </p><div class="rtp-step-dot"></div>
-        </div>
-        <div class="rtp-step-content">
-          <h3 class="rtp-step-title">ציפוי הגנה סופי ובדיקה</h3>
-          <p class="rtp-step-desc">מוסיפים שכבת ציפוי מגן כנגד קרני UV וחום קיצוני, ומבצעים בדיקת אטימות מקיפה. העבודה מסתיימת רק לאחר אישור איכות מלא.</p>
-        </div>
-      </article>
-    </div>
-
-  </div>
-
-  <!-- Bottom Glow -->
-  <div class="rtp-bottom-glow" aria-hidden="true"></div>
-
-  <!-- Section Transition Divider -->
-  <div class="rtp-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,28 Q80,18 160,26 T320,20 Q400,26 480,18 T640,22 Q720,18 800,24 T960,18 Q1040,24 1120,18 T1200,24 L1200,60 Z" fill="var(--bg-light)"/>
-    </svg>
-  </div>
-
-</section>
-
-<section class="roof-tarring-materials-section" data-layout-spec="זיפות גגות-materials" dir="rtl" id="zappy-section-3">
-  <div class="rtm-container">
-
-    <!-- Two-column top row -->
-    <div class="rtm-top-row">
-
-      <!-- Right column: section header -->
-      <div class="rtm-header-col">
-        <p><span class="rtm-label">חומרים ושיטות</span>
-        </p><h2 class="rtm-heading" style>הידע שמאחורי<br><br>כל ציפוי גג</h2>
-        <p class="rtm-intro">אנו עובדים אך ורק עם חומרי גלם מאושרים ומוכחים, המותאמים לתנאי האקלים הישראלי. הבחירה הנכונה בחומר היא הבסיס לאיטום אמין, עמיד ומתמשך — לשנים רבות קדימה.</p>
-        <div class="rtm-accent-line"></div>
-      </div>
-
-      <!-- Left column: material notes list -->
-      <div class="rtm-notes-col">
-
-        <div class="rtm-note-item" data-grid-item-index="0">
-          <div class="rtm-note-header">
-            <p><span class="rtm-note-number">01</span>
-            </p><h3 class="rtm-note-title">ממברנות ביטומניות</h3>
-          </div>
-          <p class="rtm-note-body">יריעות זפת מחוזקות בסיבי פוליאסטר או זכוכית, המיושמות בלפיד אש ישיר. עמידות גבוהה בפני קרינת UV, התרחבות תרמית ומים עומדים — הפתרון הנפוץ ביותר לגגות שטוחים בישראל.</p>
-          <div class="rtm-micro-divider"></div>
-        </div>
-
-        <div class="rtm-note-item" data-grid-item-index="1">
-          <div class="rtm-note-header">
-            <p><span class="rtm-note-number">02</span>
-            </p><h3 class="rtm-note-title">פוליאוריאה ופוליאוריתן</h3>
-          </div>
-          <p class="rtm-note-body">ציפוי נוזלי המוחל בריסוס ויוצר שכבה אלסטית ורציפה ללא תפרים. מתאים במיוחד לגגות עם גיאומטריה מורכבת, מרפסות, ומשטחים הדורשים גמישות מרבית.</p>
-          <div class="rtm-micro-divider"></div>
-        </div>
-
-        <div class="rtm-note-item" data-grid-item-index="2">
-          <div class="rtm-note-header">
-            <p><span class="rtm-note-number">03</span>
-            </p><h3 class="rtm-note-title">אפוקסי ואיטום בטון</h3>
-          </div>
-          <p class="rtm-note-body">מערכות שרף דו-רכיביות המחדירות לתוך הבטון ומגנות על המבנה מבפנים. מיועדות למגרשי חניה, מפעלים, מחסנים ומשטחים תעשייתיים הנחשפים לעומסים מכניים כבדים.</p>
-          <div class="rtm-micro-divider"></div>
-        </div>
-
-        <div class="rtm-note-item" data-grid-item-index="3">
-          <div class="rtm-note-header">
-            <p><span class="rtm-note-number">04</span>
-            </p><h3 class="rtm-note-title" style>בטקל וחיפויים קרמיים</h3>
-          </div>
-          <p class="rtm-note-body" style>יציקת בטקל מאפשרת יצירת שיפועים מדויקים להסדרת ניקוז מים. בשילוב עם ריצוף קרמי ואיטום תפרים, מתקבלת מרפסת או גג ייצוגי ועמיד לאורך זמן.</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Full-width note panel -->
-    <div class="rtm-guidance-panel">
-      <div class="rtm-guidance-inner">
-        <div class="rtm-guidance-icon">
-          <svg data-element-type="icon" data-icon-type="svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="8" x2="12" y2="12"/>
-            <line x1="12" y1="16" x2="12.01" y2="16"/>
-          </svg>
-        </div>
-        <div class="rtm-guidance-content">
-          <h3 class="rtm-guidance-title">המלצה מקצועית: תחזוקה ורענון עונתי</h3>
-          <p class="rtm-guidance-text">גם האיטום האיכותי ביותר מצריך בדיקה תקופתית — במיוחד לאחר חורף קשה עם גשמים עזים. אנו ממליצים לבצע סיור בדיקה שנתי לפני עונת הגשמים, לאתר סדקים, תפיחות או נקודות חלשות בשכבת הציפוי. טיפול מוקדם קטן חוסך פרויקט שיקום יקר בעתיד. שירות הבדיקה שלנו כולל דוח מצב מפורט ללא עלות נוספת ללקוחות קיימים.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Bottom divider -->
-  <div class="rtm-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,28 Q150,18 300,26 T600,20 Q750,14 900,24 T1200,18 L1200,60 Z" fill="var(--bg-light)"/>
-    </svg>
-  </div>
-
-</section>
-
-<section class="roof-article-section" dir="rtl" lang="he" data-zappy-component="true" id="ai-section-1775720550065-5wi6d4r">
-  <div class="roof-article-container">
-
-    <!-- Article Header -->
-    <header class="roof-article-header">
-      <span class="roof-article-tag">מדריך מקצועי</span>
-      <h1 class="roof-article-title">זיפות גגות — כל מה שצריך לדעת</h1>
-      <p class="roof-article-subtitle">מדריך מקיף לאיטום גגות מקצועי שישמור על הנכס שלך לשנים ארוכות</p>
-      <div class="roof-article-meta">
-        <span class="roof-meta-item">
-          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-element-type="icon" data-element-id="icon-1775720552570-iee9he33o" data-icon-type="svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          זמן קריאה: 3 דקות
-        </span>
-        <span class="roof-meta-item">
-          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" data-element-type="icon" data-element-id="icon-1775720552570-mgf8bg92g" data-icon-type="svg"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          מאור אחזקות
-        </span>
-      </div>
-    </header>
-
-    <!-- Article Layout -->
-    <div class="roof-article-layout">
-
-      <!-- Main Content -->
-      <article class="roof-article-body" aria-label="מאמר על זיפות גגות">
-
-        <!-- Hero Image -->
-        <figure class="roof-article-figure">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1775720552574-rgc8szkvp" data-element-type="image" data-zappy-zoom-wrapper-width="400px" data-zappy-zoom-wrapper-height="300px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 400px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 300px !important; display: block !important;"><img src="/assets/image-1775720649248-kdf7vn.webp?v=1775720651184" alt="עבודת זיפות גג מקצועית — פועל מבצע איטום גג שטוח" class="roof-hero-img" data-placeholder="roof-article-hero" data-context="Professional roofer applying bitumen waterproofing membrane on flat rooftop in Israel, close-up of torch-applied waterproofing work, sunny day, urban building" data-element-type="image" data-element-id="img-1775720552574-rgc8szkvp" data-zappy-object-position="50% 50%" data-zappy-zoom="1" style="object-position: 50% 50% !important; object-fit: cover !important; width: 100% !important; height: 179.372% !important; max-width: none !important; display: block !important; border-radius: 8px; margin: 0px !important; position: absolute !important; left: 0% !important; top: -39.6861% !important; max-height: none !important"></div>
-          <figcaption class="roof-figure-caption">עבודת זיפות מקצועית על גג שטוח — מאור אחזקות</figcaption>
-        </figure>
-
-        <!-- Article Text -->
-        <div class="roof-article-text">
-
-          <h2 class="roof-section-heading">מהי זיפות גגות?</h2>
-          <p>זיפות גגות היא תהליך איטום מקצועי שמטרתו למנוע חדירת מים לתוך מבנה הגג ולהגן על הנכס מפני נזקי רטיבות. השם "זיפות" נגזר מחומר הזפת (ביטומן), שהיה החומר המסורתי לביצוע עבודות אלו. כיום, עם התפתחות הטכנולוגיה, קיימים חומרים מתקדמים רבים שמציעים ביצועים עדיפים ועמידות ארוכת טווח.</p>
-
-          <h2 class="roof-section-heading">שיטות זיפות נפוצות</h2>
-          <p>ישנן מספר שיטות עיקריות לזיפות גגות, כל אחת מתאימה לסוג גג שונה ולצרכים ספציפיים:</p>
-          <ul class="roof-article-list">
-            <li data-grid-item-index="0"><strong>ביטומן מגולגל (גלון):</strong> שיטה קלאסית המשתמשת בגלילי ביטומן המחוממים ומודבקים לפני השטח. מתאימה לגגות שטוחים ומספקת איטום אמין ועמיד.</li>
-            <li data-grid-item-index="1"><strong>ממברנות אקרילי ופוליאוריאה:</strong> חומרים נוזליים המוגלים ישירות על הגג ויוצרים שכבה אחידה וחלקה ללא תפרים. מצוינים לגגות בעלי צורות מורכבות.</li>
-            <li data-grid-item-index="2"><strong>רעפי ביטומן:</strong> מתאים לגגות משופעים ומספק הגנה אסתטית ופונקציונלית כאחד.</li>
-            <li data-grid-item-index="3"><strong>ציפוי אלסטומרי:</strong> מתאים במיוחד לאזורים עם תנודות טמפרטורה חריפות, מכיוון שהחומר גמיש ועמיד לסדקים.</li>
-          </ul>
-
-          <h2 class="roof-section-heading">מתי כדאי לבצע זיפות?</h2>
-          <p>מומלץ לבצע בדיקת גג תקופתית אחת לשנה, ובמיוחד לפני עונת הגשמים. סימנים לכך שנדרשת זיפות כוללים: כתמי רטיבות בתקרה, התנפחות של שכבת הזיפות הקיימת, סדקים נראים לעין, או גיל הזיפות העולה על 10–15 שנה.</p>
-
-          <h2 class="roof-section-heading">חשיבות הביצוע המקצועי</h2>
-          <p>זיפות גגות היא עבודה הדורשת ידע מקצועי, ניסיון ושימוש בחומרים איכותיים. ביצוע לקוי עלול לגרום לנזקים חמורים לנכס ולעלויות תיקון גבוהות בהרבה. חברת מאור אחזקות מתמחה בזיפות גגות מקצועית עם ערבות לעבודה, תוך שימוש בחומרים מהמובילים בשוק.</p>
-
-          <div class="roof-article-cta-box" role="complementary" aria-label="קריאה לפעולה">
-            <p class="roof-cta-text">מעוניינים בהצעת מחיר לזיפות הגג שלכם?</p>
-            <p class="zappy-editable"><a href="tel:+972" class="roof-cta-btn" aria-label="צרו קשר עם מאור אחזקות לקבלת הצעת מחיר" data-element-type="button" data-element-id="btn-1775720552553-olau3eg2y" data-native-element="true">
-              צרו קשר עכשיו
-              <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
-            </a>
-          </p></div>
-
-        </div>
-      </article>
-
-      <!-- Sidebar -->
-      <aside class="roof-article-sidebar" aria-label="מידע נוסף">
-
-        <!-- Key Facts Card -->
-        <div class="roof-sidebar-card">
-          <h3 class="roof-sidebar-title">עובדות מפתח</h3>
-          <ul class="roof-facts-list" aria-label="עובדות על זיפות גגות">
-            <li class="roof-fact-item" data-grid-item-index="0">
-              <span class="roof-fact-icon" aria-hidden="true">🏠</span>
-              <span>עמידות ממוצעת: 10–20 שנה</span>
-            </li>
-            <li class="roof-fact-item" data-grid-item-index="1">
-              <span class="roof-fact-icon" aria-hidden="true">💧</span>
-              <span>מונעת 95% מנזקי רטיבות</span>
-            </li>
-            <li class="roof-fact-item" data-grid-item-index="2">
-              <span class="roof-fact-icon" aria-hidden="true">🌡️</span>
-              <span>מפחיתה עלויות חימום/קירור</span>
-            </li>
-            <li class="roof-fact-item" data-grid-item-index="3">
-              <span class="roof-fact-icon" aria-hidden="true">📋</span>
-              <span>מומלץ לבדוק אחת לשנה</span>
-            </li>
-            <li class="roof-fact-item" data-grid-item-index="4">
-              <span class="roof-fact-icon" aria-hidden="true">✅</span>
-              <span>ניתן לביצוע בכל עונה</span>
-            </li>
+    <div class="sacas-grid">
+      <article class="sacas-card">
+        <div class="sacas-card-top-rule"></div>
+        <div class="sacas-card-body">
+          <h3 class="sacas-card-title">אזורי חוף ולחות גבוהה</h3>
+          <p class="sacas-card-desc">מבנים בסמוך לים חשופים לרוחות מלוחות, לחות מתמשכת ולחדירת מים אגרסיבית. מערכות האיטום שלנו עמידות בפני קורוזיה מלחים ומותאמות לסביבה הימית.</p>
+          <ul class="sacas-card-list">
+            <li class="sacas-list-item">ממברנות ביטומניות עמידות בלחות גבוהה</li>
+            <li class="sacas-list-item">ציפויי פוליאוריתן נגד חדירת מי ים</li>
+            <li class="sacas-list-item">איטום מרפסות ומשטחים חשופים לגשם</li>
           </ul>
         </div>
-
-        <!-- Sidebar Image -->
-        <div class="roof-sidebar-img-wrap">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1775720552574-vnhpyzyix" data-element-type="image" data-zappy-zoom-wrapper-width="298px" data-zappy-zoom-wrapper-height="183px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 298px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 183px !important; display: block !important;"><img src="/assets/image-roof-sidebar-materials-1775720726015-da79nk.webp?v=1775720728200" alt="חומרי זיפות ביטומן מקצועיים" class="roof-sidebar-img" data-placeholder="roof-sidebar-materials" data-context="Close-up of professional bitumen waterproofing rolls and tools laid out on rooftop, construction materials, Israel" data-element-type="image" data-element-id="img-1775720552574-vnhpyzyix" style="display: block; object-fit: cover; object-position: 50% 50% !important; margin: 0px !important; left: -2% !important; top: -13.5082% !important; width: 104% !important; height: 127.016% !important; max-width: none !important; max-height: none !important;" data-zappy-zoom="1.04" data-zappy-original-width="298" data-zappy-original-height="183" data-zappy-object-position="50% 50%"></div>
-        </div>
-
-        <!-- Warning Signs Card -->
-        <div class="roof-sidebar-card roof-sidebar-card--accent">
-          <h3 class="roof-sidebar-title">סימני אזהרה</h3>
-          <ul class="roof-warning-list" aria-label="סימנים שמצביעים על צורך בזיפות">
-            <li data-grid-item-index="0">כתמי רטיבות בתקרה</li>
-            <li data-grid-item-index="1">עובש או ריח לחות</li>
-            <li data-grid-item-index="2">התנפחות בשכבת הזיפות</li>
-            <li data-grid-item-index="3">סדקים נראים לעין</li>
-            <li data-grid-item-index="4">גיל מעל 10 שנה</li>
+      </article>
+      <article class="sacas-card">
+        <div class="sacas-card-top-rule"></div>
+        <div class="sacas-card-body">
+          <h3 class="sacas-card-title">אזורים קרים ורמות גבוהות</h3>
+          <p class="sacas-card-desc">בגבהים ובאזורים קרים, שינויי טמפרטורה קיצוניים גורמים להתכווצות והתפשטות של חומרי הגג. מערכות הבידוד והאיטום שלנו מתמודדות עם קפיאה, הפשרה ועומסי שלג.</p>
+          <ul class="sacas-card-list">
+            <li class="sacas-list-item">בידוד תרמי משולב עם שכבות איטום</li>
+            <li class="sacas-list-item">זפת חמה עמידה בטמפרטורות קיצוניות</li>
+            <li class="sacas-list-item">מניעת נזקי קפיאה בחדירות מים</li>
           </ul>
         </div>
-
-      </aside>
+      </article>
+      <article class="sacas-card">
+        <div class="sacas-card-top-rule"></div>
+        <div class="sacas-card-body">
+          <h3 class="sacas-card-title">גגות עירוניים בחום קיצוני</h3>
+          <p class="sacas-card-desc">גגות בסביבה עירונית סופגים קרינת UV אינטנסיבית ועומסי חום גבוהים. ציפויים מחזירי אור ואיטום אפוקסי מגנים על המבנה ומפחיתים עלויות קירור.</p>
+          <ul class="sacas-card-list">
+            <li class="sacas-list-item">ציפויי אפוקסי וסיליקון עמידי UV</li>
+            <li class="sacas-list-item">פתרונות גג קריר להפחתת עומס חום</li>
+            <li class="sacas-list-item">איטום בטון וגגות רעפים לסביבה עירונית</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
+<section class="service-areas-climate-adapted-solutions-service-area-section" data-layout-spec="פתרונות איטום מותאמים לאקלים ולאזור המבנה-service-area" dir="rtl">
+  <!-- Horizon glow -->
+  <div class="sacsas-horizon-glow" aria-hidden="true"></div>
 
+  <div class="sacsas-container">
+    <div class="sacsas-grid">
 
-<section class="roof-tarring-cta-section" data-layout-spec="זיפות גגות-cta" dir="rtl">
-  <div class="rtc-bg-glow" aria-hidden="true"></div>
-  <div class="rtc-container">
-    <div class="rtc-frame">
-      <div class="rtc-accent-rule" aria-hidden="true">
-        <span class="rtc-rule-line"></span>
-        <span class="rtc-rule-diamond"></span>
-        <span class="rtc-rule-line"></span>
-      </div>
-      <h2 class="rtc-heading">מוכנים לאטום את הגג שלכם אחת ולתמיד?</h2>
-      <p class="rtc-body">אנחנו מתמחים בזיפות גגות ואיטום מקצועי לבניינים מגורים ותעשייתיים. עם שנות ניסיון בשטח ומגוון רחב של פתרונות איטום — מזפת חמה ועד ממברנות ביטומניות — אנחנו נבטיח שהגג שלכם יעמוד בכל מזג אוויר.</p>
-      <div class="rtc-actions">
-        <a href="#contact" class="btn-primary rtc-btn-main">
-          <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
-          צרו קשר לייעוץ חינם
-        </a>
-        <a href="tel:[business_phone]" class="rtc-link-secondary">
-          <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-          התקשרו עכשיו
-        </a>
-      </div>
-      <div class="rtc-lime-divider" aria-hidden="true"></div>
-      <div class="rtc-trust-row">
-        <div class="rtc-trust-item">
-          <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-          <span>אחריות מלאה על העבודה</span>
+      <!-- RIGHT COLUMN: Text content -->
+      <div class="sacsas-text-col">
+        <span class="sacsas-eyebrow">כיסוי ארצי · התאמה לאקלים</span>
+        <h2 class="sacsas-heading">פתרונות איטום מותאמים לאקלים ולאזור המבנה</h2>
+        <p class="sacsas-body">כל מבנה ניצב בפני אתגרים ייחודיים — טמפרטורות קיצוניות, לחות גבוהה, קרינת UV עזה, ורוחות חזקות. מאור אחזקות מתכננת כל פתרון איטום בהתאם לתנאי האקלים המקומיים ולמאפייני המבנה הספציפיים, ומספקת שירות מקצועי ברמה הגבוהה ביותר בכל רחבי הארץ.</p>
+
+        <ul class="sacsas-principles-list">
+          <li class="sacsas-principle-item">
+            <span class="sacsas-principle-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M10 5v5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <div class="sacsas-principle-content">
+              <strong>אבחון תנאי סביבה</strong>
+              <span>בדיקת חשיפה לשמש, גשם ולחות לפני כל פרויקט</span>
+            </div>
+          </li>
+          <li class="sacsas-principle-item">
+            <span class="sacsas-principle-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 10h14M10 3l7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div class="sacsas-principle-content">
+              <strong>בחירת חומרים מותאמת</strong>
+              <span>פוליאוריתן, ביטומן, אפוקסי — לפי דרישות אקלים המבנה</span>
+            </div>
+          </li>
+          <li class="sacsas-principle-item">
+            <span class="sacsas-principle-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <div class="sacsas-principle-content">
+              <strong>ביצוע בתקנים מחמירים</strong>
+              <span>עמידה בדרישות תקן ישראלי ובינלאומי לאיטום גגות</span>
+            </div>
+          </li>
+          <li class="sacsas-principle-item">
+            <span class="sacsas-principle-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 2L2 7v6c0 3.31 3.58 6.41 8 7 4.42-.59 8-3.69 8-7V7L10 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </span>
+            <div class="sacsas-principle-content">
+              <strong>אחריות ומעקב לאורך זמן</strong>
+              <span>ליווי מקצועי לאחר הביצוע עם אחריות מלאה על העבודה</span>
+            </div>
+          </li>
+          <li class="sacsas-principle-item">
+            <span class="sacsas-principle-icon" aria-hidden="true">
+              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </span>
+            <div class="sacsas-principle-content">
+              <strong>פריסה ארצית מלאה</strong>
+              <span>זמינות מהירה לפרויקטים מגוונים בכל אזורי הארץ</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="sacsas-cta-row">
+          <a href="/contact" class="btn-primary sacsas-btn-primary">צור קשר עכשיו</a>
+          <a href="/service-areas" class="btn-secondary sacsas-btn-secondary">אזורי שירות</a>
         </div>
-        <div class="rtc-trust-item">
-          <i class="fa-solid fa-clock" aria-hidden="true"></i>
-          <span>מענה מהיר תוך 24 שעות</span>
-        </div>
-        <div class="rtc-trust-item">
-          <i class="fa-solid fa-star" aria-hidden="true"></i>
-          <span>ניסיון של שנים בתחום</span>
+      </div>
+
+      <!-- LEFT COLUMN: Technical diagram panel -->
+      <div class="sacsas-diagram-col">
+        <div class="sacsas-diagram-panel card-glassmorphism">
+          <div class="sacsas-diagram-header">
+            <span class="sacsas-diagram-label">מפת כיסוי טכנית</span>
+            <span class="sacsas-diagram-status"><span class="sacsas-status-dot"></span>פעיל ארצית</span>
+          </div>
+
+          <!-- SVG Technical Coverage Diagram -->
+          <div class="sacsas-svg-wrapper">
+            <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 480 340" fill="none" xmlns="http://www.w3.org/2000/svg" class="sacsas-diagram-svg" aria-label="דיאגרמת כיסוי טכנית">
+              <!-- Contour lines background -->
+              <ellipse cx="240" cy="170" rx="210" ry="145" stroke="rgba(0,212,255,0.08)" stroke-width="1"/>
+              <ellipse cx="240" cy="170" rx="175" ry="118" stroke="rgba(0,212,255,0.10)" stroke-width="1"/>
+              <ellipse cx="240" cy="170" rx="140" ry="92" stroke="rgba(0,212,255,0.12)" stroke-width="1"/>
+              <ellipse cx="240" cy="170" rx="105" ry="68" stroke="rgba(0,212,255,0.14)" stroke-width="1"/>
+              <ellipse cx="240" cy="170" rx="70" ry="44" stroke="rgba(0,212,255,0.18)" stroke-width="1"/>
+              <ellipse cx="240" cy="170" rx="35" ry="22" stroke="rgba(0,212,255,0.24)" stroke-width="1"/>
+
+              <!-- Grid lines -->
+              <line x1="30" y1="85" x2="450" y2="85" stroke="rgba(0,212,255,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="30" y1="130" x2="450" y2="130" stroke="rgba(0,212,255,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="30" y1="170" x2="450" y2="170" stroke="rgba(0,212,255,0.08)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="30" y1="210" x2="450" y2="210" stroke="rgba(0,212,255,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="30" y1="255" x2="450" y2="255" stroke="rgba(0,212,255,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="120" y1="25" x2="120" y2="315" stroke="rgba(0,212,255,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="200" y1="25" x2="200" y2="315" stroke="rgba(0,212,255,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="280" y1="25" x2="280" y2="315" stroke="rgba(0,212,255,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
+              <line x1="360" y1="25" x2="360" y2="315" stroke="rgba(0,212,255,0.06)" stroke-width="1" stroke-dasharray="4 6"/>
+
+              <!-- Connection strokes -->
+              <line x1="240" y1="170" x2="340" y2="80" stroke="rgba(0,212,255,0.35)" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <line x1="240" y1="170" x2="130" y2="90" stroke="rgba(0,212,255,0.35)" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <line x1="240" y1="170" x2="380" y2="200" stroke="rgba(0,212,255,0.35)" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <line x1="240" y1="170" x2="100" y2="220" stroke="rgba(0,212,255,0.35)" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <line x1="240" y1="170" x2="240" y2="290" stroke="rgba(0,212,255,0.30)" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <line x1="240" y1="170" x2="160" y2="270" stroke="rgba(0,212,255,0.28)" stroke-width="1.5" stroke-dasharray="5 4"/>
+              <line x1="240" y1="170" x2="320" y2="265" stroke="rgba(0,212,255,0.28)" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+              <!-- Region nodes -->
+              <!-- Center node (main) -->
+              <circle cx="240" cy="170" r="10" fill="rgba(0,212,255,0.25)" stroke="#00D4FF" stroke-width="2"/>
+              <circle cx="240" cy="170" r="4" fill="#00D4FF"/>
+
+              <!-- Node: North -->
+              <circle cx="340" cy="80" r="7" fill="rgba(0,212,255,0.15)" stroke="#00D4FF" stroke-width="1.5"/>
+              <circle cx="340" cy="80" r="3" fill="#00D4FF"/>
+              <text x="355" y="76" fill="#00D4FF" font-size="11" font-family="Space Grotesk, Assistant, sans-serif" font-weight="600" text-anchor="start">צפון</text>
+
+              <!-- Node: North-West -->
+              <circle cx="130" cy="90" r="7" fill="rgba(0,212,255,0.15)" stroke="#00D4FF" stroke-width="1.5"/>
+              <circle cx="130" cy="90" r="3" fill="#00D4FF"/>
+              <text x="115" y="86" fill="#00D4FF" font-size="11" font-family="Space Grotesk, Assistant, sans-serif" font-weight="600" text-anchor="end">שרון</text>
+
+              <!-- Node: East -->
+              <circle cx="380" cy="200" r="7" fill="rgba(0,212,255,0.15)" stroke="#00D4FF" stroke-width="1.5"/>
+              <circle cx="380" cy="200" r="3" fill="#00D4FF"/>
+              <text x="395" y="196" fill="#00D4FF" font-size="11" font-family="Space Grotesk, Assistant, sans-serif" font-weight="600" text-anchor="start">מרכז</text>
+
+              <!-- Node: West -->
+              <circle cx="100" cy="220" r="7" fill="rgba(0,212,255,0.15)" stroke="#00D4FF" stroke-width="1.5"/>
+              <circle cx="100" cy="220" r="3" fill="#00D4FF"/>
+              <text x="85" y="216" fill="#00D4FF" font-size="11" font-family="Space Grotesk, Assistant, sans-serif" font-weight="600" text-anchor="end">שפלה</text>
+
+              <!-- Node: South -->
+              <circle cx="240" cy="290" r="7" fill="rgba(0,212,255,0.15)" stroke="#00D4FF" stroke-width="1.5"/>
+              <circle cx="240" cy="290" r="3" fill="#00D4FF"/>
+              <text x="240" y="308" fill="#00D4FF" font-size="11" font-family="Space Grotesk, Assistant, sans-serif" font-weight="600" text-anchor="middle">דרום</text>
+
+              <!-- Node: South-West -->
+              <circle cx="160" cy="270" r="6" fill="rgba(0,212,255,0.12)" stroke="rgba(0,212,255,0.7)" stroke-width="1.5"/>
+              <circle cx="160" cy="270" r="2.5" fill="rgba(0,212,255,0.8)"/>
+              <text x="145" y="266" fill="rgba(0,212,255,0.8)" font-size="10" font-family="Space Grotesk, Assistant, sans-serif" font-weight="500" text-anchor="end">נגב</text>
+
+              <!-- Node: South-East -->
+              <circle cx="320" cy="265" r="6" fill="rgba(0,212,255,0.12)" stroke="rgba(0,212,255,0.7)" stroke-width="1.5"/>
+              <circle cx="320" cy="265" r="2.5" fill="rgba(0,212,255,0.8)"/>
+              <text x="335" y="261" fill="rgba(0,212,255,0.8)" font-size="10" font-family="Space Grotesk, Assistant, sans-serif" font-weight="500" text-anchor="start">ירושלים</text>
+
+              <!-- Center label -->
+              <text x="240" y="158" fill="#F5F7FA" font-size="10" font-family="Space Grotesk, Assistant, sans-serif" font-weight="700" text-anchor="middle" letter-spacing="0.05em">מאור אחזקות</text>
+
+              <!-- Scan line animation hint -->
+              <rect x="30" y="25" width="420" height="290" rx="4" fill="none" stroke="rgba(0,212,255,0.12)" stroke-width="1"/>
+
+              <!-- Corner brackets -->
+              <path d="M30 55 L30 25 L60 25" stroke="rgba(0,212,255,0.5)" stroke-width="1.5" fill="none"/>
+              <path d="M450 55 L450 25 L420 25" stroke="rgba(0,212,255,0.5)" stroke-width="1.5" fill="none"/>
+              <path d="M30 285 L30 315 L60 315" stroke="rgba(0,212,255,0.5)" stroke-width="1.5" fill="none"/>
+              <path d="M450 285 L450 315 L420 315" stroke="rgba(0,212,255,0.5)" stroke-width="1.5" fill="none"/>
+
+              <!-- Technical data labels -->
+              <text x="42" y="42" fill="rgba(0,212,255,0.4)" font-size="9" font-family="Inter, Heebo, sans-serif" font-weight="400">SYS:ACTIVE</text>
+              <text x="42" y="54" fill="rgba(0,212,255,0.4)" font-size="9" font-family="Inter, Heebo, sans-serif" font-weight="400">NODES:07</text>
+              <text x="380" y="42" fill="rgba(0,212,255,0.4)" font-size="9" font-family="Inter, Heebo, sans-serif" font-weight="400" text-anchor="end">IL·COVERAGE</text>
+              <text x="380" y="54" fill="rgba(0,212,255,0.4)" font-size="9" font-family="Inter, Heebo, sans-serif" font-weight="400" text-anchor="end">v2.4.1</text>
+            </svg>
+          </div>
+
+          <!-- Stats row inside diagram panel -->
+          <div class="sacsas-diagram-stats">
+            <div class="sacsas-stat">
+              <span class="sacsas-stat-value">15+</span>
+              <span class="sacsas-stat-label">שנות ניסיון</span>
+            </div>
+            <div class="sacsas-stat-divider"></div>
+            <div class="sacsas-stat">
+              <span class="sacsas-stat-value">500+</span>
+              <span class="sacsas-stat-label">פרויקטים</span>
+            </div>
+            <div class="sacsas-stat-divider"></div>
+            <div class="sacsas-stat">
+              <span class="sacsas-stat-value">100%</span>
+              <span class="sacsas-stat-label">כיסוי ארצי</span>
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </section></main>
@@ -3443,121 +2652,6 @@
       if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileLangMenu); }
       else { initMobileLangMenu(); }
       window.addEventListener('resize', function() { clearTimeout(window._mlrt); window._mlrt = setTimeout(initMobileLangMenu, 250); });
-    })();
-    </script>
-
-    <script>
-    (function(){
-      var _applied=false;
-      function _isHeroBg(w){var img=w.querySelector('img');if(img&&(img.getAttribute('data-hero-bg')==='true'||img.getAttribute('data-hero-background')==='true'))return true;var p=(w.style.position||'').replace(/\s*!important\s*/g,'').trim();var ww=(w.style.width||'').replace(/\s*!important\s*/g,'').trim();var hh=(w.style.height||'').replace(/\s*!important\s*/g,'').trim();return p==='absolute'&&ww==='100%'&&hh==='100%';}
-      function fixDesktopWrappers(){
-        // No-op: desktop wrapper restoration is handled by ZAPPY_PUBLISHED_ZOOM_WRAPPER_RUNTIME
-        // in script.js (restoreWrapperDimensions). The old inflation logic here was expanding
-        // small wrappers (e.g. 139px logo wrappers) to their parent width, conflicting with
-        // the correct stored dimensions.
-      }
-      function applyMobile(){
-        if(_applied)return;_applied=true;
-        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
-          var cw=w.style.getPropertyValue('width');
-          if(!cw||cw==='100%')return;
-          if(!w._zappyDesktop)w._zappyDesktop={wStyle:w.getAttribute('style')};
-          var img=w.querySelector('img');
-          if(!img)return;
-          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
-          var mobileZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
-          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
-          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
-          var parentOvf=w.parentElement?((w.parentElement.style.overflow||'')+(window.getComputedStyle(w.parentElement).overflow||'')).trim():'';
-          var inConstrainedParent=parentOvf.indexOf('hidden')!==-1||parentOvf.indexOf('clip')!==-1;
-          if(inConstrainedParent){
-            w.style.setProperty('max-width','100%','important');
-          }else{
-            w.style.setProperty('width','100%','important');
-            w.style.setProperty('max-width','100%','important');
-          }
-          if(mobileSrc)img.src=mobileSrc;
-          var pos=mobilePos||img.style.getPropertyValue('object-position')||'50% 50%';
-          if(mobileZoom>1){
-            var wH=w.getAttribute('data-zappy-zoom-wrapper-height');
-            w.style.setProperty('height',wH||'200px','important');
-            img.style.setProperty('position','relative','important');
-            img.style.setProperty('width','100%','important');
-            img.style.setProperty('height','auto','important');
-            img.style.setProperty('min-height','100%','important');
-            img.style.setProperty('max-width','none','important');
-            img.style.setProperty('max-height','none','important');
-            img.style.setProperty('object-fit','cover','important');
-            img.style.setProperty('left','0','important');
-            img.style.setProperty('top','0','important');
-            img.style.setProperty('object-position',pos,'important');
-            img.style.setProperty('transform','scale('+mobileZoom+')','important');
-            img.style.setProperty('transform-origin',pos,'important');
-          }else{
-            if(!inConstrainedParent)w.style.setProperty('height','auto','important');
-            img.style.setProperty('position','relative','important');
-            img.style.setProperty('width','100%','important');
-            img.style.setProperty('height','auto','important');
-            img.style.setProperty('max-width','100%','important');
-            img.style.setProperty('max-height',inConstrainedParent?'none':'400px','important');
-            img.style.setProperty('object-fit','cover','important');
-            img.style.setProperty('left','0','important');
-            img.style.setProperty('top','0','important');
-            img.style.setProperty('transform','none','important');
-            if(mobilePos)img.style.setProperty('object-position',pos,'important');
-          }
-        });
-        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
-          var zw=img.closest('[data-zappy-zoom-wrapper="true"]');
-          if(zw&&!_isHeroBg(zw))return;
-          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
-          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
-          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
-          var mobileZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
-          if(mobileSrc)img.src=mobileSrc;
-          if(mobilePos)img.style.setProperty('object-position',mobilePos,'important');
-          if(mobileZoom>1){
-            img.style.setProperty('transform','scale('+mobileZoom+')','important');
-            img.style.setProperty('transform-origin',mobilePos||'50% 50%','important');
-            var p=img.parentElement;
-            if(p)p.style.setProperty('overflow','hidden','important');
-          }
-        });
-      }
-      function revertDesktop(){
-        if(!_applied)return;_applied=false;
-        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
-          if(w._zappyDesktop&&w._zappyDesktop.wStyle!=null){w.setAttribute('style',w._zappyDesktop.wStyle);}
-          var img=w.querySelector('img');
-          if(img&&img._zappyDesktop){
-            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
-            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
-            else img.removeAttribute('style');
-          }
-        });
-        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
-          var zw=img.closest('[data-zappy-zoom-wrapper="true"]');
-          if(zw&&!_isHeroBg(zw))return;
-          if(img._zappyDesktop){
-            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
-            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
-            else img.removeAttribute('style');
-          }
-        });
-        _fixHeroBgWrappers();
-        fixDesktopWrappers();
-      }
-      function _fixHeroBgWrappers(){var isMob=window.innerWidth<=768;document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){if(!_isHeroBg(w))return;w.style.setProperty('position','absolute','important');w.style.setProperty('top','0','important');w.style.setProperty('left','0','important');w.style.setProperty('width','100%','important');w.style.setProperty('height','100%','important');w.style.setProperty('max-width','none','important');w.style.setProperty('overflow','hidden','important');w.setAttribute('data-zappy-zoom-wrapper-width-mode','full');var img=w.querySelector('img');if(img){img.style.setProperty('width','100%','important');img.style.setProperty('height','100%','important');img.style.setProperty('object-fit','cover','important');img.style.setProperty('position','relative','important');img.style.setProperty('top','0','important');img.style.setProperty('left','0','important');img.style.setProperty('max-width','none','important');img.style.setProperty('max-height','none','important');img.style.setProperty('display','block','important');if(isMob){var mSrc=img.getAttribute('data-zappy-mobile-src');var mPos=img.getAttribute('data-zappy-mobile-object-position');var mZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));if(mSrc){if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};img.src=mSrc;}if(mPos)img.style.setProperty('object-position',mPos,'important');if(mZoom>1){img.style.setProperty('transform','scale('+mZoom+')','important');img.style.setProperty('transform-origin',mPos||'50% 50%','important');}}}});}
-      function init(){
-        _fixHeroBgWrappers();
-        var mq=window.matchMedia('(max-width:768px)');
-        function onChange(e){if(e.matches)applyMobile();else revertDesktop();}
-        if(mq.matches)applyMobile();
-        else fixDesktopWrappers();
-        try{mq.addEventListener('change',onChange);}catch(e){mq.addListener(onChange);}
-      }
-      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
-      else setTimeout(init,50);
     })();
     </script>
 </body>
