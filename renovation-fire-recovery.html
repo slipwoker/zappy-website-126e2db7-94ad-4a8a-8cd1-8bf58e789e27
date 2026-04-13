@@ -738,54 +738,62 @@
         right: 0;
       }
     </style>
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .renovation-fire-recovery-intro-section {
   position: relative;
-  overflow: visible;
-  background-color: #090B10;
+  background-color: #0B0E14;
   background-image:
-    radial-gradient(circle at 15% 20%, rgba(0,212,255,0.07) 0%, transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(184,255,59,0.05) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 10%, rgba(0, 212, 255, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 10% 90%, rgba(184, 255, 59, 0.06) 0%, transparent 50%),
     linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
   color: var(--text-light);
-  padding: 140px 0 80px;
+  padding: 140px 24px 80px;
+  overflow: visible;
   direction: rtl;
 }
 
-/* Background decorative glows */
-.renovation-fire-recovery-intro-section .rfri-bg-glow {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-}
-.renovation-fire-recovery-intro-section .rfri-bg-glow--1 {
-  width: 500px;
-  height: 500px;
-  top: -80px;
-  inset-inline-end: -100px;
-  background: radial-gradient(circle, rgba(0,212,255,0.06) 0%, transparent 70%);
-}
-.renovation-fire-recovery-intro-section .rfri-bg-glow--2 {
-  width: 400px;
-  height: 400px;
-  bottom: 60px;
-  inset-inline-start: -80px;
-  background: radial-gradient(circle, rgba(184,255,59,0.04) 0%, transparent 70%);
-}
-
-/* Subtle grid lines overlay */
-.renovation-fire-recovery-intro-section .rfri-grid-lines {
+/* Background decorative layer */
+.renovation-fire-recovery-intro-section .rfri-bg-layer {
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  overflow: hidden;
+}
+
+.renovation-fire-recovery-intro-section .rfri-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+}
+
+.renovation-fire-recovery-intro-section .rfri-glow-1 {
+  width: 500px;
+  height: 500px;
+  background: rgba(0, 212, 255, 0.07);
+  top: -100px;
+  inset-inline-start: -100px;
+}
+
+.renovation-fire-recovery-intro-section .rfri-glow-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(184, 255, 59, 0.05);
+  bottom: 0;
+  inset-inline-end: 10%;
+}
+
+.renovation-fire-recovery-intro-section .rfri-grid-pattern {
+  position: absolute;
+  inset: 0;
   background-image:
     linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-  background-size: 60px 60px;
-  opacity: 0.5;
+  background-size: 48px 48px;
+  opacity: 0.6;
 }
 
 /* Container */
@@ -794,114 +802,105 @@
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;
 }
 
 /* Badge row */
 .renovation-fire-recovery-intro-section .rfri-badge-row {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
+
 .renovation-fire-recovery-intro-section .rfri-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0,212,255,0.1);
-  border: 1px solid rgba(0,212,255,0.3);
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
   color: var(--primary);
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 7px 16px;
+  letter-spacing: 0.04em;
+  padding: 6px 14px;
   border-radius: 2px;
-}
-.renovation-fire-recovery-intro-section .rfri-badge i {
-  color: var(--primary);
-  font-size: 13px;
+  text-transform: uppercase;
 }
 
 /* Main grid */
 .renovation-fire-recovery-intro-section .rfri-main-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-  direction: rtl;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 60px;
 }
 
-/* Content column (right) */
+/* Content column */
 .renovation-fire-recovery-intro-section .rfri-content-col {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 0;
 }
 
-/* Heading */
 .renovation-fire-recovery-intro-section .rfri-heading {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: clamp(32px, 4vw, 54px);
+  font-size: clamp(32px, 4vw, 52px);
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--text-light);
-  margin: 0;
-  text-align: right;
+  margin: 0 0 24px;
+  text-align: start;
 }
+
 .renovation-fire-recovery-intro-section .rfri-heading br {
   display: block;
 }
 
-/* Body text */
 .renovation-fire-recovery-intro-section .rfri-body-text {
   font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 16px !important;
+  font-size: 16px;
   line-height: 1.75;
-  color: var(--text-muted);
-  margin: 0;
-  text-align: right;
+  color: rgba(245, 247, 250, 0.78);
+  margin: 0 0 32px;
+  text-align: start;
   max-width: 520px;
 }
 
-/* Features list */
-.renovation-fire-recovery-intro-section .rfri-features-list {
+/* Feature list */
+.renovation-fire-recovery-intro-section .rfri-feature-list {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0 0 36px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
+
 .renovation-fire-recovery-intro-section .rfri-feature-item {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 14px;
-  direction: rtl;
-}
-.renovation-fire-recovery-intro-section .rfri-feature-icon {
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0,212,255,0.08);
-  border: 1px solid rgba(0,212,255,0.2);
-  border-radius: 2px;
-  color: var(--primary);
-  font-size: 14px;
-  margin-top: 2px;
-}
-.renovation-fire-recovery-intro-section .rfri-feature-text {
+  gap: 12px;
   font-family: 'Inter', 'Heebo', sans-serif;
   font-size: 15px;
   line-height: 1.6;
-  color: var(--text-light);
-  text-align: right;
-  flex: 1;
+  color: rgba(245, 247, 250, 0.85);
+  text-align: start;
+}
+
+.renovation-fire-recovery-intro-section .rfri-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  background: rgba(184, 255, 59, 0.12);
+  border: 1px solid rgba(184, 255, 59, 0.3);
+  color: var(--secondary);
+  margin-top: 1px;
 }
 
 /* CTA row */
@@ -909,220 +908,241 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  align-items: center;
   flex-wrap: wrap;
-  margin-top: 8px;
-  direction: rtl;
 }
+
 .renovation-fire-recovery-intro-section .rfri-btn-primary {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(90deg, #C8FF00 0%, #B8F500 100%);
   color: #0B0E14;
-  padding: 14px 30px;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 28px;
   border-radius: 0;
   border: 1px solid rgba(0,0,0,0.35);
-  font-weight: 700;
-  font-size: 16px;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 20px rgba(200,255,0,0.22);
   text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 20px rgba(200,255,0,0.22);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
 }
+
 .renovation-fire-recovery-intro-section .rfri-btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 12px 28px rgba(200,255,0,0.35);
-  color: #0B0E14;
 }
+
 .renovation-fire-recovery-intro-section .rfri-btn-secondary {
-  display: inline-block;
-  background: rgba(19,27,36,0.92);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(19, 27, 36, 0.92);
   color: var(--text-light);
-  padding: 14px 30px;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 14px 28px;
   border-radius: 0;
   border: 1px solid var(--primary);
-  font-weight: 700;
-  font-size: 16px;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset;
   text-decoration: none;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset;
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
 }
+
 .renovation-fire-recovery-intro-section .rfri-btn-secondary:hover {
   transform: translateY(-2px);
-  background: rgba(0,212,255,0.1);
-  box-shadow: 0 0 16px rgba(0,212,255,0.2);
-  color: var(--text-light);
+  background: rgba(0, 212, 255, 0.1);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 24px rgba(0,212,255,0.18);
 }
 
-/* Image column (left) */
+/* Image column */
 .renovation-fire-recovery-intro-section .rfri-image-col {
   position: relative;
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center;
+  align-items: center;
 }
+
 .renovation-fire-recovery-intro-section .rfri-image-frame {
   position: relative;
-  border-radius: 2px;
-  overflow: hidden;
+  width: 100%;
+  max-width: 540px;
 }
-.renovation-fire-recovery-intro-section .rfri-image-border-accent {
+
+.renovation-fire-recovery-intro-section .rfri-image-accent-border {
   position: absolute;
-  inset: 0;
-  border: 1px solid rgba(0,212,255,0.2);
-  z-index: 3;
+  inset-inline-end: -12px;
+  top: -12px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(0, 212, 255, 0.25);
+  z-index: 0;
   pointer-events: none;
-  border-radius: 2px;
 }
+
 .renovation-fire-recovery-intro-section .rfri-main-image {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 420px;
   object-fit: cover;
   display: block;
-  border-radius: 2px;
-  filter: brightness(0.88) contrast(1.05);
+  filter: brightness(0.9) contrast(1.05);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
 }
 
-/* Stats overlay */
-.renovation-fire-recovery-intro-section .rfri-stats-overlay {
+/* Certified badge on image */
+.renovation-fire-recovery-intro-section .rfri-certified-badge {
   position: absolute;
-  bottom: 0;
-  inset-inline-start: 0;
-  inset-inline-end: 0;
-  z-index: 4;
-  background: rgba(9,11,16,0.82);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(0,212,255,0.2);
+  bottom: -18px;
+  inset-inline-start: -18px;
+  z-index: 10;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  padding: 16px 20px;
-  direction: rtl;
+  gap: 8px;
+  background: rgba(16, 21, 28, 0.95);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 10px 16px;
+  color: var(--primary);
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  white-space: nowrap;
 }
+
+/* Stats bar */
+.renovation-fire-recovery-intro-section .rfri-stats-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  background: rgba(16, 21, 28, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 28px 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
 .renovation-fire-recovery-intro-section .rfri-stat-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
+  flex: 1;
   text-align: center;
 }
+
 .renovation-fire-recovery-intro-section .rfri-stat-number {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 26px;
+  font-size: 36px;
   font-weight: 900;
-  color: var(--primary);
   line-height: 1;
+  color: var(--primary);
   letter-spacing: -0.02em;
 }
+
 .renovation-fire-recovery-intro-section .rfri-stat-label {
   font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 11px;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(245, 247, 250, 0.6);
   text-align: center;
+  letter-spacing: 0.02em;
 }
+
 .renovation-fire-recovery-intro-section .rfri-stat-divider {
   width: 1px;
-  height: 36px;
-  background: rgba(255,255,255,0.12);
+  height: 50px;
+  background: rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
 }
 
-/* Certified badge */
-.renovation-fire-recovery-intro-section .rfri-certified-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(16,21,28,0.68);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(184,255,59,0.25);
-  border-radius: 2px;
-  padding: 10px 18px;
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--secondary);
-  align-self: flex-start;
-  direction: rtl;
-}
-.renovation-fire-recovery-intro-section .rfri-certified-badge i {
-  color: var(--secondary);
-  font-size: 15px;
-}
-
-/* Bottom divider */
-.renovation-fire-recovery-intro-section .rfri-divider-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  pointer-events: none;
-  z-index: 5;
-}
-.renovation-fire-recovery-intro-section .rfri-divider-wrapper svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* ── Responsive ── */
-@media (max-width: 900px) {
+/* ─── RESPONSIVE ─── */
+@media (max-width: 960px) {
   .renovation-fire-recovery-intro-section .rfri-main-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 48px;
   }
-  /* On mobile, image column goes below content (DOM order: content first = right/top) */
-  .renovation-fire-recovery-intro-section .rfri-content-col {
-    order: 1;
-  }
+
   .renovation-fire-recovery-intro-section .rfri-image-col {
-    order: 2;
+    order: -1;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-main-image {
+    height: 320px;
   }
 }
 
 @media (max-width: 768px) {
   .renovation-fire-recovery-intro-section {
-    padding: 110px 0 70px;
+    padding: 110px 16px 60px;
   }
-  .renovation-fire-recovery-intro-section .rfri-container {
-    padding: 0 16px;
+
+  .renovation-fire-recovery-intro-section .rfri-main-grid {
+    grid-template-columns: 1fr !important;
+    gap: 36px;
   }
+
   .renovation-fire-recovery-intro-section .rfri-heading {
-    font-size: 28px;
+    font-size: 30px;
   }
+
+  .renovation-fire-recovery-intro-section .rfri-body-text {
+    max-width: 100%;
+  }
+
   .renovation-fire-recovery-intro-section .rfri-main-image {
-    height: 280px;
+    height: 260px;
   }
-  .renovation-fire-recovery-intro-section .rfri-stats-overlay {
-    padding: 12px 10px;
-  }
-  .renovation-fire-recovery-intro-section .rfri-stat-number {
-    font-size: 20px;
-  }
-  .renovation-fire-recovery-intro-section .rfri-stat-label {
-    font-size: 10px;
-  }
-  .renovation-fire-recovery-intro-section .rfri-cta-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .renovation-fire-recovery-intro-section .rfri-btn-primary,
-  .renovation-fire-recovery-intro-section .rfri-btn-secondary {
-    text-align: center;
-    width: 100%;
-  }
-  .renovation-fire-recovery-intro-section .rfri-bg-glow--1,
-  .renovation-fire-recovery-intro-section .rfri-bg-glow--2 {
+
+  .renovation-fire-recovery-intro-section .rfri-image-accent-border {
     display: none;
   }
+
   .renovation-fire-recovery-intro-section .rfri-certified-badge {
-    align-self: stretch;
+    position: static;
+    margin-top: 12px;
+    align-self: flex-start;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-image-frame {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-stats-bar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 20px;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-stat-divider {
+    width: 60px;
+    height: 1px;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-cta-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-btn-primary,
+  .renovation-fire-recovery-intro-section .rfri-btn-secondary {
+    width: 100%;
     justify-content: center;
+    font-size: 15px;
+    padding: 13px 20px;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-stat-number {
+    font-size: 30px;
   }
 }
 </style>
@@ -1624,116 +1644,103 @@
 </script>
   
   <main>
-    <section class="renovation-fire-recovery-intro-section" data-layout-spec="שיפוץ ושיקום לאחר שריפה-intro" dir="rtl" id="zappy-section-0">
-  <div class="rfr-intro-container">
-    <div class="rfr-intro-grid">
+    <section class="renovation-fire-recovery-intro-section" data-layout-spec="שיפוץ ושיקום לאחר שריפה-intro" dir="rtl" data-zappy-section="true" id="zappy-section-0">
+  <!-- Background decorative elements -->
+  <div class="rfri-bg-layer" aria-hidden="true">
+    <div class="rfri-glow rfri-glow-1"></div>
+    <div class="rfri-glow rfri-glow-2"></div>
+    <div class="rfri-grid-pattern"></div>
+  </div>
 
-      <!-- Content Side (START / RIGHT in RTL) -->
-      <div class="rfr-intro-content">
-        <div class="rfr-intro-eyebrow">
-          <span class="rfr-eyebrow-line"></span>
-          <span class="rfr-eyebrow-text">שיפוץ ושיקום מקצועי</span>
-        </div>
+  <div class="rfri-container">
+    <!-- Top badge -->
+    <div class="rfri-badge-row">
+      <span class="rfri-badge">
+        <svg data-element-type="icon" data-icon-type="svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+        שיפוץ ושיקום מקצועי
+      </span>
+    </div>
 
-        <h1 class="rfr-intro-heading" >
-          שיפוץ לאחר שריפה —<br><br><span class="rfr-heading-accent">תכנון, איטום,</span><br><br>ושיקום מלא
-        </h1>
+    <!-- Main grid: text left, image right -->
+    <div class="rfri-main-grid">
+      <!-- Content column -->
+      <div class="rfri-content-col">
+        <h1 class="rfri-heading">שיפוץ לאחר שריפה —<br>תכנון, איטום,<br>ושיקום מלא</h1>
 
-        <p class="rfr-intro-lead">
-          מאור אחזקות מתמחה בשיפוץ דירות ומבנים לאחר נזקי שריפה, עם ניסיון רב בטיפול במשטחים פגועים, תיקון ליקויי לחות ואיטום, וביצוע שכבות גמר מקצועיות — הכול תחת אחריות אחת ותהליך ביצוע אחד.
-        </p>
+        <p class="rfri-body-text">מאור אחזקות מתמחה בשיפוץ דירות ומבנים לאחר נזקי שריפה, עם ניסיון רב בטיפול במשטחים פגועים, תיקון ליקויי לחות ואיטום, וביצוע שכבות גמר מקצועיות — הכול תחת אחריות אחת ותהליך ביצוע אחד.</p>
 
-        <ul class="rfr-intro-features">
-          <li class="rfr-feature-item" data-grid-item-index="0">
-            <span class="rfr-feature-icon">
-              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2L12.09 7.26L18 7.27L13.45 10.74L15.18 16L10 12.77L4.82 16L6.55 10.74L2 7.27L7.91 7.26L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
-              </svg>
+        <!-- Feature list -->
+        <ul class="rfri-feature-list">
+          <li class="rfri-feature-item">
+            <span class="rfri-feature-icon">
+              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </span>
-            <span class="rfr-feature-text">טיפול מלא במשטחים שרופים ופגועי חום</span>
+            <span>טיפול מלא במשטחים שרופים ופגועי חום</span>
           </li>
-          <li class="rfr-feature-item" data-grid-item-index="1">
-            <span class="rfr-feature-icon">
-              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2L12.09 7.26L18 7.27L13.45 10.74L15.18 16L10 12.77L4.82 16L6.55 10.74L2 7.27L7.91 7.26L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
-              </svg>
+          <li class="rfri-feature-item">
+            <span class="rfri-feature-icon">
+              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </span>
-            <span class="rfr-feature-text">איטום גגות ביריעות ביטומניות ופוליאורתן לאחר שריפה</span>
+            <span>איטום גגות ביריעות ביטומניות ופוליאורתן לאחר שריפה</span>
           </li>
-          <li class="rfr-feature-item" data-grid-item-index="2">
-            <span class="rfr-feature-icon">
-              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2L12.09 7.26L18 7.27L13.45 10.74L15.18 16L10 12.77L4.82 16L6.55 10.74L2 7.27L7.91 7.26L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
-              </svg>
+          <li class="rfri-feature-item">
+            <span class="rfri-feature-icon">
+              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </span>
-            <span class="rfr-feature-text">תיקון נזקי עשן, פיח ולחות בקירות ותקרות</span>
+            <span>תיקון נזקי עשן, פיח ולחות בקירות ותקרות</span>
           </li>
-          <li class="rfr-feature-item" data-grid-item-index="3">
-            <span class="rfr-feature-icon">
-              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2L12.09 7.26L18 7.27L13.45 10.74L15.18 16L10 12.77L4.82 16L6.55 10.74L2 7.27L7.91 7.26L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
-              </svg>
+          <li class="rfri-feature-item">
+            <span class="rfri-feature-icon">
+              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </span>
-            <span class="rfr-feature-text">יציקת בטקל, סיוד וגמר שיפוץ דירות מלא</span>
+            <span>יציקת בטקל, סיוד וגמר שיפוץ דירות מלא</span>
           </li>
-          <li class="rfr-feature-item" data-grid-item-index="4">
-            <span class="rfr-feature-icon">
-              <svg data-element-type="icon" data-icon-type="svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 2L12.09 7.26L18 7.27L13.45 10.74L15.18 16L10 12.77L4.82 16L6.55 10.74L2 7.27L7.91 7.26L10 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
-              </svg>
+          <li class="rfri-feature-item">
+            <span class="rfri-feature-icon">
+              <svg data-element-type="icon" data-icon-type="svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
             </span>
-            <span class="rfr-feature-text">ביצוע אחיד ואחריות מלאה מהאבחון ועד הגמר</span>
+            <span>ביצוע אחיד ואחריות מלאה מהאבחון ועד הגמר</span>
           </li>
         </ul>
 
-        <div class="rfr-intro-ctas">
-          <a href="/contact" class="btn-primary rfr-cta-primary" data-element-type="button" data-element-id="btn-1775709716093-sqwiilio9" data-native-element="true">לקבלת הצעת מחיר</a>
-          <a href="/contact" class="btn-secondary rfr-cta-secondary" data-element-type="button" data-element-id="btn-1775709716093-3krb0331s" data-native-element="true">דברו איתנו</a>
-        </div>
-
-        <div class="rfr-intro-trust">
-          <div class="rfr-trust-item">
-            <span class="rfr-trust-number">15+</span>
-            <span class="rfr-trust-label">שנות ניסיון</span>
-          </div>
-          <div class="rfr-trust-divider"></div>
-          <div class="rfr-trust-item">
-            <span class="rfr-trust-number">500+</span>
-            <span class="rfr-trust-label">פרויקטים בוצעו</span>
-          </div>
-          <div class="rfr-trust-divider"></div>
-          <div class="rfr-trust-item">
-            <span class="rfr-trust-number">100%</span>
-            <span class="rfr-trust-label">אחריות על הביצוע</span>
-          </div>
+        <!-- CTA Buttons -->
+        <div class="rfri-cta-row">
+          <a href="/contact" class="rfri-btn-primary">לקבלת הצעת מחיר</a>
+          <a href="/contact" class="rfri-btn-secondary">דברו איתנו</a>
         </div>
       </div>
 
-      <!-- Image Side (END / Left in RTL) -->
-      <div class="rfr-intro-image-col">
-        <div class="rfr-image-frame">
-          <div class="rfr-image-glow-top"></div>
-          <div class="rfr-image-glow-side"></div>
-          <img data-placeholder="renovation-fire-recovery-intro-image-1" data-context="Post-fire apartment renovation in Israel — a professional worker in protective gear applying fresh plaster or sealant to a repaired interior wall, with evidence of fire damage restoration in the background. Dramatic controlled lighting, muted tones with subtle cyan edge light, dark premium atmosphere, conveying expert craftsmanship and recovery. Cinematic industrial photography style." width="600" height="720" src="/assets/site-renovation-fire-recovery-intro-image-1.webp" alt="שיפוץ ושיקום דירה לאחר שריפה — עבודת מקצוענים" class="rfr-main-image" data-element-type="image" data-element-id="img-1775709716103-pppmaiza5" >
-          <div class="rfr-image-badge">
-            <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path>
-            </svg>
+      <!-- Image column -->
+      <div class="rfri-image-col">
+        <div class="rfri-image-frame">
+          <div class="rfri-image-accent-border"></div>
+          <img alt="שיפוץ ושיקום דירה לאחר שריפה — עבודת מקצוענים" class="rfri-main-image" src="/assets/site-renovation-fire-recovery-intro-image-1.webp" data-placeholder="renovation-fire-recovery-intro-image-1" data-context="Post-fire apartment renovation in Israel — a professional worker in protective gear applying fresh plaster or sealant to a repaired interior wall, with evidence of fire damage restoration in the background. Dramatic controlled lighting, muted tones with subtle cyan edge light, dark premium atmosphere, conveying expert craftsmanship and recovery. Cinematic industrial photography style." style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+          <!-- Floating certified badge -->
+          <div class="rfri-certified-badge">
+            <svg data-element-type="icon" data-icon-type="svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             <span>שיקום מוסמך ומבוטח</span>
           </div>
-          <div class="rfr-image-corner-tl"></div>
-          <div class="rfr-image-corner-br"></div>
         </div>
       </div>
-
     </div>
-  </div>
 
-  <!-- Bottom divider: dark to light geometric -->
-  <div class="rfr-intro-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="0,60 0,28 360,12 720,36 1080,8 1440,30 1440,60" fill="var(--bg-light)"></polygon>
-    </svg>
+    <!-- Stats bar -->
+    <div class="rfri-stats-bar">
+      <div class="rfri-stat-item">
+        <span class="rfri-stat-number">15+</span>
+        <span class="rfri-stat-label">שנות ניסיון</span>
+      </div>
+      <div class="rfri-stat-divider" aria-hidden="true"></div>
+      <div class="rfri-stat-item">
+        <span class="rfri-stat-number">500+</span>
+        <span class="rfri-stat-label">פרויקטים בוצעו</span>
+      </div>
+      <div class="rfri-stat-divider" aria-hidden="true"></div>
+      <div class="rfri-stat-item">
+        <span class="rfri-stat-number">100%</span>
+        <span class="rfri-stat-label">אחריות על הביצוע</span>
+      </div>
+    </div>
   </div>
 </section><section class="renovation-fire-recovery-intro-section" data-layout-spec="שיפוץ ושיקום לאחר שריפה-intro" dir="rtl" data-zappy-section="true" id="zappy-section-0-dup-1776101071579">
   <!-- Background decorative elements -->
