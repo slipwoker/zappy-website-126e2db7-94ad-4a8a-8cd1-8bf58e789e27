@@ -740,22 +740,23 @@
     </style>
 
 
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .renovation-fire-recovery-intro-section {
   position: relative;
-  background-color: #0B0E14;
+  background-color: #090B10;
   background-image:
-    radial-gradient(ellipse at 80% 10%, rgba(0, 212, 255, 0.08) 0%, transparent 55%),
-    radial-gradient(ellipse at 10% 90%, rgba(184, 255, 59, 0.06) 0%, transparent 50%),
+    radial-gradient(circle at 15% 50%, rgba(0, 184, 255, 0.07) 0%, transparent 55%),
+    radial-gradient(circle at 85% 20%, rgba(200, 255, 0, 0.05) 0%, transparent 45%),
     linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
   color: var(--text-light);
-  padding: 140px 24px 80px;
+  padding: 140px 0 80px;
   overflow: visible;
   direction: rtl;
 }
 
-/* Background decorative layer */
 .renovation-fire-recovery-intro-section .rfri-bg-layer {
   position: absolute;
   inset: 0;
@@ -768,22 +769,23 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
+  opacity: 0.18;
 }
 
 .renovation-fire-recovery-intro-section .rfri-glow-1 {
   width: 500px;
   height: 500px;
-  background: rgba(0, 212, 255, 0.07);
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.6) 0%, transparent 70%);
   top: -100px;
-  inset-inline-start: -100px;
+  inset-inline-end: 10%;
 }
 
 .renovation-fire-recovery-intro-section .rfri-glow-2 {
   width: 400px;
   height: 400px;
-  background: rgba(184, 255, 59, 0.05);
+  background: radial-gradient(circle, rgba(200, 255, 0, 0.5) 0%, transparent 70%);
   bottom: 0;
-  inset-inline-end: 10%;
+  inset-inline-start: 5%;
 }
 
 .renovation-fire-recovery-intro-section .rfri-grid-pattern {
@@ -796,133 +798,178 @@
   opacity: 0.6;
 }
 
-/* Container */
 .renovation-fire-recovery-intro-section .rfri-container {
   position: relative;
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
-}
-
-/* Badge row */
-.renovation-fire-recovery-intro-section .rfri-badge-row {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 28px;
+  padding: 0 24px;
 }
 
 .renovation-fire-recovery-intro-section .rfri-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0, 212, 255, 0.1);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  color: var(--primary);
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 999px;
+  padding: 6px 16px 6px 12px;
+  margin-bottom: 40px;
   font-size: 13px;
+  font-family: 'Inter', 'Heebo', sans-serif;
   font-weight: 600;
+  color: var(--primary);
   letter-spacing: 0.04em;
-  padding: 6px 14px;
-  border-radius: 2px;
   text-transform: uppercase;
 }
 
-/* Main grid */
-.renovation-fire-recovery-intro-section .rfri-main-grid {
+.renovation-fire-recovery-intro-section .rfri-badge-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.8);
+  animation: rfri-pulse 2s ease-in-out infinite;
+}
+
+@keyframes rfri-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+
+.renovation-fire-recovery-intro-section .rfri-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
-  margin-bottom: 60px;
+  direction: rtl;
 }
 
-/* Content column */
-.renovation-fire-recovery-intro-section .rfri-content-col {
+.renovation-fire-recovery-intro-section .rfri-content {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
+.renovation-fire-recovery-intro-section .rfri-eyebrow {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 16px;
+  text-align: right;
+}
+
 .renovation-fire-recovery-intro-section .rfri-heading {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: clamp(32px, 4vw, 52px);
+  font-size: 48px;
   font-weight: 900;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--text-light);
   margin: 0 0 24px;
-  text-align: start;
+  text-align: right;
 }
 
-.renovation-fire-recovery-intro-section .rfri-heading br {
-  display: block;
+.renovation-fire-recovery-intro-section .rfri-heading-accent {
+  background: linear-gradient(90deg, #00D4FF 0%, #B8FF3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.renovation-fire-recovery-intro-section .rfri-body-text {
+.renovation-fire-recovery-intro-section .rfri-lead {
   font-family: 'Inter', 'Heebo', sans-serif;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.75;
-  color: rgba(245, 247, 250, 0.78);
-  margin: 0 0 32px;
-  text-align: start;
-  max-width: 520px;
+  color: var(--text-light);
+  margin: 0 0 16px;
+  text-align: right;
+  opacity: 0.9;
 }
 
-/* Feature list */
-.renovation-fire-recovery-intro-section .rfri-feature-list {
-  list-style: none;
-  padding: 0;
+.renovation-fire-recovery-intro-section .rfri-body {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-muted);
   margin: 0 0 36px;
+  text-align: right;
+}
+
+.renovation-fire-recovery-intro-section .rfri-features {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  margin-bottom: 40px;
 }
 
 .renovation-fire-recovery-intro-section .rfri-feature-item {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 16px;
   align-items: flex-start;
-  gap: 12px;
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
-  color: rgba(245, 247, 250, 0.85);
-  text-align: start;
+  direction: rtl;
 }
 
 .renovation-fire-recovery-intro-section .rfri-feature-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 0;
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--primary);
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  background: rgba(184, 255, 59, 0.12);
-  border: 1px solid rgba(184, 255, 59, 0.3);
-  color: var(--secondary);
-  margin-top: 1px;
 }
 
-/* CTA row */
-.renovation-fire-recovery-intro-section .rfri-cta-row {
+.renovation-fire-recovery-intro-section .rfri-feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: right;
+}
+
+.renovation-fire-recovery-intro-section .rfri-feature-text strong {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-light);
+}
+
+.renovation-fire-recovery-intro-section .rfri-feature-text span {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.renovation-fire-recovery-intro-section .rfri-ctas {
   display: flex;
   flex-direction: row;
   gap: 16px;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .renovation-fire-recovery-intro-section .rfri-btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   background: linear-gradient(90deg, #C8FF00 0%, #B8F500 100%);
   color: #0B0E14;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 0;
   border: 1px solid rgba(0,0,0,0.35);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
   text-decoration: none;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 20px rgba(200,255,0,0.22);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -935,17 +982,15 @@
 }
 
 .renovation-fire-recovery-intro-section .rfri-btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   background: rgba(19, 27, 36, 0.92);
   color: var(--text-light);
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  padding: 14px 28px;
+  padding: 14px 30px;
   border-radius: 0;
   border: 1px solid var(--primary);
+  font-weight: 700;
+  font-size: 16px;
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
   text-decoration: none;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset;
   transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
@@ -953,95 +998,67 @@
 }
 
 .renovation-fire-recovery-intro-section .rfri-btn-secondary:hover {
-  transform: translateY(-2px);
   background: rgba(0, 212, 255, 0.1);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 24px rgba(0,212,255,0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.2);
 }
 
-/* Image column */
-.renovation-fire-recovery-intro-section .rfri-image-col {
+/* Visual column */
+.renovation-fire-recovery-intro-section .rfri-visual {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .renovation-fire-recovery-intro-section .rfri-image-frame {
   position: relative;
   width: 100%;
-  max-width: 540px;
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+  background: #11161D;
 }
 
-.renovation-fire-recovery-intro-section .rfri-image-accent-border {
-  position: absolute;
-  inset-inline-end: -12px;
-  top: -12px;
-  width: 100%;
-  height: 100%;
-  border: 2px solid rgba(0, 212, 255, 0.25);
-  z-index: 0;
-  pointer-events: none;
-}
-
-.renovation-fire-recovery-intro-section .rfri-main-image {
-  position: relative;
-  z-index: 1;
+.renovation-fire-recovery-intro-section .rfri-image-frame img {
+  display: block;
   width: 100%;
   height: 420px;
   object-fit: cover;
-  display: block;
-  filter: brightness(0.9) contrast(1.05);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+  object-position: center;
+  transition: transform 0.4s ease;
 }
 
-/* Certified badge on image */
-.renovation-fire-recovery-intro-section .rfri-certified-badge {
+.renovation-fire-recovery-intro-section .rfri-image-frame:hover img {
+  transform: scale(1.03);
+}
+
+.renovation-fire-recovery-intro-section .rfri-image-overlay {
   position: absolute;
-  bottom: -18px;
-  inset-inline-start: -18px;
-  z-index: 10;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  background: rgba(16, 21, 28, 0.95);
-  border: 1px solid rgba(0, 212, 255, 0.4);
-  backdrop-filter: blur(8px);
-  padding: 10px 16px;
-  color: var(--primary);
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 13px;
-  font-weight: 600;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  white-space: nowrap;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(9,11,16,0.75) 100%);
+  pointer-events: none;
+  z-index: 1;
 }
 
-/* Stats bar */
-.renovation-fire-recovery-intro-section .rfri-stats-bar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0;
-  background: rgba(16, 21, 28, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.renovation-fire-recovery-intro-section .rfri-image-badge {
+  position: absolute;
+  bottom: 20px;
+  inset-inline-end: 20px;
+  z-index: 2;
+  background: rgba(9, 11, 16, 0.88);
   backdrop-filter: blur(8px);
-  padding: 28px 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.renovation-fire-recovery-intro-section .rfri-stat-item {
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  padding: 14px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  flex: 1;
+  gap: 2px;
   text-align: center;
 }
 
 .renovation-fire-recovery-intro-section .rfri-stat-number {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 900;
   line-height: 1;
   color: var(--primary);
@@ -1050,101 +1067,88 @@
 
 .renovation-fire-recovery-intro-section .rfri-stat-label {
   font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(245, 247, 250, 0.6);
-  text-align: center;
-  letter-spacing: 0.02em;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
-.renovation-fire-recovery-intro-section .rfri-stat-divider {
-  width: 1px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.12);
-  flex-shrink: 0;
+.renovation-fire-recovery-intro-section .rfri-accent-bar {
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+  margin-top: 0;
+  box-shadow: 0 0 16px rgba(0, 212, 255, 0.4);
 }
 
-/* ─── RESPONSIVE ─── */
-@media (max-width: 960px) {
-  .renovation-fire-recovery-intro-section .rfri-main-grid {
+/* Responsive */
+@media (max-width: 900px) {
+  .renovation-fire-recovery-intro-section .rfri-layout {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
 
-  .renovation-fire-recovery-intro-section .rfri-image-col {
-    order: -1;
+  .renovation-fire-recovery-intro-section .rfri-visual {
+    
   }
 
-  .renovation-fire-recovery-intro-section .rfri-main-image {
-    height: 320px;
+  .renovation-fire-recovery-intro-section .rfri-image-frame img {
+    height: 300px;
   }
 }
 
 @media (max-width: 768px) {
   .renovation-fire-recovery-intro-section {
-    padding: 110px 16px 60px;
+    padding: 100px 0 60px;
   }
 
-  .renovation-fire-recovery-intro-section .rfri-main-grid {
-    grid-template-columns: 1fr !important;
-    gap: 36px;
+  .renovation-fire-recovery-intro-section .rfri-container {
+    padding: 0 16px;
   }
 
   .renovation-fire-recovery-intro-section .rfri-heading {
-    font-size: 30px;
+    font-size: 32px;
   }
 
-  .renovation-fire-recovery-intro-section .rfri-body-text {
-    max-width: 100%;
+  .renovation-fire-recovery-intro-section .rfri-layout {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
   }
 
-  .renovation-fire-recovery-intro-section .rfri-main-image {
-    height: 260px;
-  }
-
-  .renovation-fire-recovery-intro-section .rfri-image-accent-border {
-    display: none;
-  }
-
-  .renovation-fire-recovery-intro-section .rfri-certified-badge {
-    position: static;
-    margin-top: 12px;
-    align-self: flex-start;
-  }
-
-  .renovation-fire-recovery-intro-section .rfri-image-frame {
-    display: flex;
+  .renovation-fire-recovery-intro-section .rfri-ctas {
     flex-direction: column;
-  }
-
-  .renovation-fire-recovery-intro-section .rfri-stats-bar {
-    flex-direction: column;
-    gap: 20px;
-    padding: 24px 20px;
-  }
-
-  .renovation-fire-recovery-intro-section .rfri-stat-divider {
-    width: 60px;
-    height: 1px;
-  }
-
-  .renovation-fire-recovery-intro-section .rfri-cta-row {
-    flex-direction: column;
-    gap: 12px;
+    align-items: stretch;
   }
 
   .renovation-fire-recovery-intro-section .rfri-btn-primary,
   .renovation-fire-recovery-intro-section .rfri-btn-secondary {
+    text-align: center;
     width: 100%;
-    justify-content: center;
-    font-size: 15px;
-    padding: 13px 20px;
   }
 
-  .renovation-fire-recovery-intro-section .rfri-stat-number {
-    font-size: 30px;
+  .renovation-fire-recovery-intro-section .rfri-image-frame img {
+    height: 240px;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-image-badge {
+    position: static;
+    width: fit-content;
+    margin-top: 12px;
+    align-self: flex-end;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-image-overlay {
+    display: none;
+  }
+
+  .renovation-fire-recovery-intro-section .rfri-glow-1,
+  .renovation-fire-recovery-intro-section .rfri-glow-2 {
+    display: none;
   }
 }
+/* ZAPPY_POSTGEN_GUARD_RTL_ORDER:שיפוץ ושיקום לאחר שריפה-intro — stripped 1 order declaration(s) conflicting with RTL grid */
+
 </style>
     <link rel="stylesheet" href="/styles.css">
 
@@ -1737,74 +1741,64 @@
     </div>
   </div>
 </section><section class="renovation-fire-recovery-intro-section" data-layout-spec="שיפוץ ושיקום לאחר שריפה-intro" dir="rtl" data-zappy-section="true" id="zappy-section-0-dup-1776101071579">
-  <!-- Background decorative elements -->
-  <div class="rfri-bg-glow rfri-bg-glow--1" aria-hidden="true"></div>
-  <div class="rfri-bg-glow rfri-bg-glow--2" aria-hidden="true"></div>
-  <div class="rfri-grid-lines" aria-hidden="true"></div>
+  <div class="rfri-bg-layer" aria-hidden="true">
+    <div class="rfri-glow rfri-glow-1"></div>
+    <div class="rfri-glow rfri-glow-2"></div>
+    <div class="rfri-grid-pattern"></div>
+  </div>
 
   <div class="rfri-container">
-    <!-- Top badge -->
-    <div class="rfri-badge-row" >
-      <span class="rfri-badge">
-        <i class="fa-solid fa-fire-flame-curved" aria-hidden="true" style="cursor: pointer;"></i>
-        שיפוץ ושיקום מקצועי
-      </span>
+    <div class="rfri-badge">
+      <span class="rfri-badge-dot"></span>
+      <span>שיקום מוסמך ומבוטח</span>
     </div>
 
-    <!-- Main grid: content + image -->
-    <div class="rfri-main-grid">
+    <div class="rfri-layout">
+      <div class="rfri-content">
+        <div class="rfri-eyebrow">שיפוץ ושיקום לאחר שריפה</div>
+        <h1 class="rfri-heading">מחזירים את הנכס <span class="rfri-heading-accent">לחיים</span> — מהר, מקצועי ומוסמך</h1>
+        <p class="rfri-lead">שריפה משאירה מאחוריה נזקים מבניים, עשן, פיח ולחות חודרת. מאור אחזקות מתמחה בשיקום מלא של דירות, בניינים ומבנים תעשייתיים לאחר שריפה — כולל ניקוי, שיפוץ, איטום ושיקום מבני מלא.</p>
+        <p class="rfri-body">הצוות שלנו פועל במהירות ובמקצועיות, עם ליווי מלא מול חברות הביטוח ועמידה בכל תקני הבנייה. אנחנו לא רק מתקנים — אנחנו מחזירים את הנכס שלכם לרמה גבוהה יותר ממה שהייתה לפני.</p>
 
-      <!-- LEFT: Image column -->
-      <div class="rfri-image-col">
-        <div class="rfri-image-frame">
-          <div class="rfri-image-border-accent" aria-hidden="true"></div>
-          
-          <!-- Stats overlay -->
-          <div class="rfri-stats-overlay">
-            <div class="rfri-stat-item" >
-              <span class="rfri-stat-number" >&nbsp;</span>
-              <span class="rfri-stat-label">&nbsp; &nbsp;</span>
+        <div class="rfri-features">
+          <div class="rfri-feature-item">
+            <div class="rfri-feature-icon">
+              <svg data-element-type="icon" data-icon-type="svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             </div>
-            <div class="rfri-stat-divider" aria-hidden="true"></div>
-            <div class="rfri-stat-item" >
-              
-              <span class="rfri-stat-label" >&nbsp;</span>
+            <div class="rfri-feature-text">
+              <strong>עבודה מול ביטוח</strong>
+              <span>ליווי מלא מול חברת הביטוח וכיסוי התביעה</span>
             </div>
-            <div class="rfri-stat-divider" aria-hidden="true"></div>
-            <div class="rfri-stat-item" >
-              <span class="rfri-stat-number">&nbsp;</span>
-              <span class="rfri-stat-label">&nbsp;</span>
+          </div>
+          <div class="rfri-feature-item">
+            <div class="rfri-feature-icon">
+              <svg data-element-type="icon" data-icon-type="svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="rfri-feature-text">
+              <strong>זמן תגובה מהיר</strong>
+              <span>הגעה לשטח תוך 24 שעות מרגע הפנייה</span>
             </div>
           </div>
         </div>
-        <!-- Certified badge -->
-        <div class="rfri-certified-badge">
-          <i class="fa-solid fa-shield-halved" aria-hidden="true" data-element-type="icon" data-element-id="icon-1776102886484-m88dm83s6" data-icon-type="fontawesome"></i>
-          <span>שיקום מוסמך ומבוטח</span>
+
+        <div class="rfri-ctas">
+          <a href="/contact" class="rfri-btn-primary">לקבלת הצעת מחיר</a>
+          <a href="/contact" class="rfri-btn-secondary">דברו איתנו</a>
         </div>
       </div>
 
-      <!-- RIGHT: Content column -->
-      <div class="rfri-content-col">
-        
-
-        
-
-        <ul class="rfri-features-list" ></ul>
-
-        <div class="rfri-cta-row">
-          <a href="/contact" class="rfri-btn-primary btn-primary" data-element-type="button" data-element-id="btn-1776102886477-3mxj51tr7" data-native-element="true">לקבלת הצעת מחיר</a>
-          <a href="/contact" class="rfri-btn-secondary btn-secondary" data-element-type="button" data-element-id="btn-1776102886477-exa87xv2m" data-native-element="true">דברו איתנו</a>
+      <div class="rfri-visual">
+        <div class="rfri-image-frame">
+          <img data-placeholder="renovation-fire-recovery-intro-image-1" data-context="Professional renovation team working inside a fire-damaged apartment in Israel, showing before/after contrast — one side scorched walls and charred ceiling, the other freshly plastered and painted white. Workers in safety gear applying plaster, waterproofing membranes visible. Industrial lighting, cinematic dark mood with glowing work lights." width="600" height="480" src="" alt="שיקום דירה לאחר שריפה על ידי מאור אחזקות" style="object-fit: cover; object-position: center;">
+          <div class="rfri-image-overlay" aria-hidden="true"></div>
+          <div class="rfri-image-badge">
+            <span class="rfri-stat-number">15+</span>
+            <span class="rfri-stat-label">שנות ניסיון</span>
+          </div>
         </div>
+        <div class="rfri-accent-bar" aria-hidden="true"></div>
       </div>
     </div>
-  </div>
-
-  <!-- Bottom divider -->
-  <div class="rfri-divider-wrapper">
-    <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,30 Q100,20 200,28 T400,22 Q500,28 600,20 T800,26 Q900,18 1000,24 T1200,20 L1200,60 Z" fill="var(--bg-light)"></path>
-    </svg>
   </div>
 </section>
 
