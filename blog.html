@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -223,1494 +223,59 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="הבלוג המקצועי של מאור אחזקות">
     <meta name="twitter:description" content="מאור אחזקות - הבלוג המקצועי של מאור אחזקות">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-    <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
-    <!-- Mickidum Accessibility Toolbar -->
-    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-
-          <style id="zappy-cta-mobile-style">
-            /* Hide CTA list item on desktop (tablets and up) */
-            @media (min-width: 769px) {
-              .nav-cta-item-mobile {
-                display: none !important;
-              }
-            }
-            /* Show CTA list item on mobile */
-            @media (max-width: 768px) {
-              .nav-cta-item-mobile {
-                display: list-item !important;
-              }
-            }
-          </style>
-        
-          <style id="zappy-nested-menu-style">
-            /* Desktop only: vertically center nav items */
-            @media (min-width: 769px) {
-              .nav-menu,
-              #navMenu {
-                align-items: center !important;
-              }
-            }
-            
-            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
-              display: inline-block !important;
-              padding: 0.5rem 1rem !important;
-              color: var(--nav-color) !important;
-              font-weight: 500 !important;
-              line-height: 1.7 !important;
-              cursor: default !important;
-              user-select: none !important;
-              vertical-align: middle !important;
-              text-decoration: none !important;
-              margin: 0 !important;
-              transition: color 0.3s ease !important;
-            }
-            
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
-              color: var(--nav-hover-color) !important;
-            }
-            
-            /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover > .sub-menu {
-              opacity: 1 !important;
-              visibility: visible !important;
-              transform: translateY(0) !important;
-              pointer-events: auto !important; /* Enable interaction when hovering */
-            }
-            
-            /* Hide menu items marked as hidden (overrides hover states) */
-            .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
-              display: none !important;
-              opacity: 0 !important;
-              visibility: hidden !important;
-              pointer-events: none !important;
-            }
-            
-            /* Keep submenu visible when hovering over the submenu itself */
-            .sub-menu:hover {
-              opacity: 1 !important;
-              visibility: visible !important;
-              pointer-events: auto !important;
-            }
-            
-            /* Nested dropdown menu styles - using more specific selectors */
-            .nav-menu .sub-menu,
-            nav .sub-menu,
-            .navbar .sub-menu {
-              display: block !important; /* Ensure submenu is in the DOM */
-              position: absolute !important;
-              top: 100%;
-              left: 0;
-              right: auto;
-              min-width: 200px;
-              background: white;
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-              border-radius: 8px;
-              padding: 8px 0;
-              margin-top: 0px; /* Remove gap to prevent hover loss */
-              opacity: 0 !important;
-              visibility: hidden !important;
-              transform: translateY(-10px);
-              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
-              z-index: 1000;
-              list-style: none;
-              pointer-events: none; /* Prevent interaction when hidden */
-            }
-            
-            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
-            [dir="rtl"] .nav-menu .sub-menu,
-            [dir="rtl"] nav .sub-menu,
-            [dir="rtl"] .navbar .sub-menu,
-            html[lang="he"] .nav-menu .sub-menu,
-            html[lang="he"] nav .sub-menu,
-            html[lang="he"] .navbar .sub-menu,
-            html[lang="ar"] .nav-menu .sub-menu,
-            html[lang="ar"] nav .sub-menu,
-            html[lang="ar"] .navbar .sub-menu {
-              left: auto;
-              right: 0;
-            }
-            
-            /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover > .sub-menu,
-            nav li:hover > .sub-menu,
-            .navbar li:hover > .sub-menu {
-              opacity: 1 !important;
-              visibility: visible !important;
-              transform: translateY(0) !important;
-              pointer-events: auto !important; /* Enable interaction when visible */
-            }
-            
-            /* Parent item must be relatively positioned */
-            .nav-menu li:has(.sub-menu),
-            nav li:has(.sub-menu),
-            .navbar li:has(.sub-menu) {
-              position: relative;
-            }
-            
-            /* Style for submenu items */
-            .sub-menu li {
-              list-style: none;
-              margin: 0;
-              padding: 0;
-            }
-            
-            .sub-menu a,
-            .sub-menu .menu-group-title {
-              display: block !important;
-              padding: 10px 12px !important;
-              color: #333 !important;
-              font-weight: 600 !important;
-              text-decoration: none;
-              transition: background-color 0.2s;
-              white-space: nowrap;
-              cursor: default;
-            }
-            
-            .sub-menu a:hover {
-              background-color: #f5f5f5;
-            }
-            
-            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu > li > .menu-group-title,
-            #navMenu > li > .menu-group-title {
-              display: inline-block !important;
-              padding: 0.5rem 1rem !important;
-              color: var(--nav-color) !important;
-              font-weight: 500 !important;
-              line-height: 1.7 !important;
-              cursor: default !important;
-              user-select: none !important;
-              vertical-align: middle !important;
-              text-decoration: none !important;
-              margin: 0 !important;
-              transition: color 0.3s ease !important;
-            }
-            
-            .nav-menu > li > .menu-group-title:hover,
-            #navMenu > li > .menu-group-title:hover {
-              color: var(--nav-hover-color) !important;
-              background-color: transparent !important;
-            }
-            
-            /* On mobile, show nested menus as expandable accordion */
-            @media (max-width: 768px) {
-              /* Mobile submenu styling */
-              .nav-menu .sub-menu,
-              nav .sub-menu,
-              .navbar .sub-menu {
-                position: static !important;
-                transform: none !important;
-                box-shadow: none !important;
-                background: transparent !important;
-                margin-top: 0 !important;
-                max-height: 0;
-                overflow: hidden;
-                opacity: 0;
-                visibility: hidden;
-                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
-                padding: 0 !important;
-                border-radius: 0 !important;
-              }
-              
-              /* Expanded state */
-              .sub-menu.mobile-expanded {
-                max-height: 500px !important;
-                opacity: 1 !important;
-                visibility: visible !important;
-                padding: 8px 0 8px 16px !important;
-              }
-              
-              /* RTL padding adjustment */
-              [dir="rtl"] .sub-menu.mobile-expanded,
-              html[lang="he"] .sub-menu.mobile-expanded,
-              html[lang="ar"] .sub-menu.mobile-expanded {
-                padding: 8px 16px 8px 0 !important;
-              }
-              
-              /* Disable hover behavior on mobile */
-              .nav-menu li:hover > .sub-menu,
-              nav li:hover > .sub-menu,
-              .navbar li:hover > .sub-menu {
-                opacity: 0;
-                visibility: hidden;
-                pointer-events: none;
-              }
-              
-              /* Enable visibility for expanded submenus */
-              .nav-menu li > .sub-menu.mobile-expanded,
-              nav li > .sub-menu.mobile-expanded,
-              .navbar li > .sub-menu.mobile-expanded {
-                opacity: 1 !important;
-                visibility: visible !important;
-                pointer-events: auto !important;
-              }
-              
-              .sub-menu a {
-                padding: 10px 0 !important;
-                display: block !important;
-                font-size: 14px !important;
-              }
-              
-              .sub-menu a:hover {
-                background-color: transparent !important;
-              }
-              
-              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
-              .nav-menu li:has(.sub-menu),
-              nav li:has(.sub-menu),
-              .navbar li:has(.sub-menu) {
-                display: flex !important;
-                flex-wrap: wrap !important;
-                align-items: center !important;
-                position: relative !important;
-                min-height: 44px !important;
-              }
-              
-              /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) > a,
-              nav li:has(.sub-menu) > a,
-              .navbar li:has(.sub-menu) > a,
-              .nav-menu > li > .menu-group-title,
-              #navMenu > li > .menu-group-title {
-                flex: 1 !important;
-                min-width: 0 !important;
-              }
-              
-              /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu > li > .menu-group-title,
-              #navMenu > li > .menu-group-title {
-                padding: 0 !important;
-                line-height: inherit !important;
-              }
-              
-              /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) > .sub-menu,
-              nav li:has(.sub-menu) > .sub-menu,
-              .navbar li:has(.sub-menu) > .sub-menu {
-                flex-basis: 100% !important;
-                width: 100% !important;
-              }
-              
-              /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
-              nav li:has(.sub-menu) > a [class*="chevron"],
-              nav li:has(.sub-menu) > a [class*="arrow"],
-              #navMenu li:has(.sub-menu) > a [class*="chevron"],
-              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
-                display: none !important;
-                visibility: hidden !important;
-              }
-              
-              /* Toggle arrow button - flex child that stretches to match nav-link height */
-              .mobile-submenu-toggle {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                width: 44px !important;
-                height: auto !important;
-                background: transparent !important;
-                border: none !important;
-                cursor: pointer !important;
-                padding: 0 !important;
-                margin: 0 !important;
-                position: static !important;
-                flex-shrink: 0 !important;
-                align-self: stretch !important;
-                z-index: 2 !important;
-                -webkit-tap-highlight-color: transparent;
-              }
-              
-              .mobile-submenu-toggle::after {
-                content: '' !important;
-                display: block !important;
-                width: 0 !important;
-                height: 0 !important;
-                border-left: 6px solid transparent !important;
-                border-right: 6px solid transparent !important;
-                border-top: 7px solid currentColor !important;
-                transition: transform 0.3s ease !important;
-              }
-              
-              /* Rotate arrow when expanded */
-              .mobile-submenu-toggle.expanded::after {
-                transform: rotate(180deg) !important;
-              }
-            }
-            
-            /* Hide toggle button on desktop */
-            @media (min-width: 769px) {
-              .mobile-submenu-toggle {
-                display: none !important;
-              }
-            }
-          </style>
-          
-          <script id="zappy-mobile-menu-script">
-            // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
-            (function() {
-              function initMobileMenuToggles() {
-                // Only run on mobile
-                if (window.innerWidth > 768) {
-                  // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
-                    menu.classList.remove('mobile-expanded');
-                  });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
-                  return;
-                }
-                
-                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
-                
-                // Find all parent menu items (items with .sub-menu)
-                const menuItemsWithSubmenus = document.querySelectorAll(
-                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
-                );
-                
-                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
-                
-                menuItemsWithSubmenus.forEach(function(li) {
-                  // Skip if already has toggle button
-                  if (li.querySelector('.mobile-submenu-toggle')) {
-                    return;
-                  }
-                  
-                  const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
-                  
-                  if (!submenu || !parentLink) return;
-                  
-                  // Create toggle button
-                  const toggleBtn = document.createElement('button');
-                  toggleBtn.className = 'mobile-submenu-toggle';
-                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
-                  toggleBtn.setAttribute('type', 'button');
-
-                  // Insert toggle button after the link
-                  parentLink.insertAdjacentElement('afterend', toggleBtn);
-                  
-                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
-                  
-                  // Handle toggle button click - only toggles submenu
-                  toggleBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const isExpanded = submenu.classList.contains('mobile-expanded');
-                    
-                    // Close all other submenus first
-                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
-                      if (menu !== submenu) {
-                        menu.classList.remove('mobile-expanded');
-                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
-                        if (otherToggle) otherToggle.classList.remove('expanded');
-                      }
-                    });
-                    
-                    // Toggle this submenu
-                    submenu.classList.toggle('mobile-expanded');
-                    toggleBtn.classList.toggle('expanded');
-                    
-                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
-                  });
-                  
-                  // Parent link navigates normally - no preventDefault
-                });
-              }
-              
-              // Initialize on DOM load
-              if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
-              } else {
-                initMobileMenuToggles();
-              }
-              
-              // Re-initialize on window resize (but use debounce to avoid too many calls)
-              let resizeTimer;
-              window.addEventListener('resize', function() {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(initMobileMenuToggles, 250);
-              });
-              
-              // Also initialize when mobile menu becomes visible
-              // This handles cases where the mobile menu is hidden initially
-              const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                    const target = mutation.target;
-                    if (target.classList.contains('active') || target.style.display !== 'none') {
-                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
-                      setTimeout(initMobileMenuToggles, 100);
-                    }
-                  }
-                });
-              });
-              
-              // Observe mobile menu containers
-              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
-              mobileMenus.forEach(function(menu) {
-                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
-              });
-            })();
-          </script>
-        <style>
-      /* Dropdown sub-menu styles (AI-generated page) */
-      .nav-menu li:has(.sub-menu),
-      nav li:has(.sub-menu),
-      .navbar li:has(.sub-menu) {
-        position: relative;
-      }
-      .nav-menu .sub-menu,
-      nav .sub-menu,
-      .navbar .sub-menu {
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        min-width: 220px;
-        background: white;
-        border-radius: 8px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        padding: 8px 0;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(10px);
-        transition: all 0.3s ease;
-        z-index: 1000;
-        list-style: none;
-        pointer-events: none;
-      }
-      .nav-menu li:hover > .sub-menu,
-      nav li:hover > .sub-menu,
-      .navbar li:hover > .sub-menu {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-      }
-      .sub-menu li {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      .sub-menu a {
-        display: block;
-        padding: 10px 16px;
-        color: #333;
-        font-weight: 500;
-        text-decoration: none;
-        white-space: nowrap;
-        transition: background-color 0.2s;
-      }
-      .sub-menu a:hover {
-        background-color: #f5f5f5;
-      }
-      /* RTL dropdown positioning */
-      [dir="rtl"] .sub-menu,
-      html[lang="he"] .sub-menu,
-      html[lang="ar"] .sub-menu {
-        left: auto;
-        right: 0;
-      }
-    </style>
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:type" content="article">
     
-    
-    
-    <meta property="og:locale" content="he_IL">
-    <!-- Twitter Card Meta Tags -->
-    
-    
-    
-    <style id="zappy-ai-page-styles">.blog-blog-hero-section {
-  position: relative;
-  overflow: visible;
-  background-color: #090B10;
-  background-image:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(0, 184, 255, 0.07) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 40% at 20% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 60%),
-    linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
-  color: var(--text-light);
-  direction: rtl;
-  padding: 130px 0 80px;
-  min-height: 560px;
-}
-
-/* Background layers */
-.blog-blog-hero-section .blog-hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.blog-blog-hero-section .blog-hero-bg-gradient {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0, 184, 255, 0.04) 0%, transparent 70%);
-}
-
-.blog-blog-hero-section .blog-hero-horizon-glow {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 200px;
-  background: linear-gradient(to top, rgba(0, 184, 255, 0.06) 0%, transparent 100%);
-}
-
-.blog-blog-hero-section .blog-hero-grid-lines {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 184, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 184, 255, 0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-
-/* Container */
-.blog-blog-hero-section .blog-hero-container {
-  position: relative;
-  z-index: 10;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 56px;
-}
-
-/* Text Block */
-.blog-blog-hero-section .blog-hero-text-block {
-  flex: 1 1 0;
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-}
-
-/* Eyebrow */
-.blog-blog-hero-section .blog-hero-eyebrow {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.blog-blog-hero-section .blog-hero-eyebrow-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
-  flex-shrink: 0;
-}
-
-.blog-blog-hero-section .blog-hero-eyebrow-label {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--primary);
-  line-height: 1;
-}
-
-/* H1 Title */
-.blog-blog-hero-section .blog-hero-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: clamp(42px, 5.5vw, 76px);
-  font-weight: 900;
-  letter-spacing: -0.03em;
-  line-height: 0.97;
-  color: var(--text-light);
-  margin: 0 0 22px 0;
-  text-align: right;
-}
-
-.blog-blog-hero-section .blog-hero-title-accent {
-  background: linear-gradient(90deg, #00D4FF 0%, #B8FF3B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* H3 Subtitle */
-.blog-blog-hero-section .blog-hero-subtitle {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.65;
-  color: var(--text-light);
-  opacity: 0.82;
-  margin: 0 0 28px 0;
-  text-align: right;
-  max-width: 500px;
-}
-
-/* Tech bar */
-.blog-blog-hero-section .blog-hero-tech-bar {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 36px;
-  padding: 10px 16px;
-  border-inline-start: 3px solid var(--primary);
-  background: rgba(0, 212, 255, 0.05);
-  border-radius: 0 4px 4px 0;
-}
-
-.blog-blog-hero-section .blog-hero-tech-item {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  color: var(--primary);
-  text-transform: uppercase;
-}
-
-.blog-blog-hero-section .blog-hero-tech-sep {
-  color: var(--primary);
-  opacity: 0.35;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-/* CTA Row */
-.blog-blog-hero-section .blog-hero-cta-row {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.blog-blog-hero-section .blog-hero-btn-primary {
-  display: inline-block;
-  background: linear-gradient(90deg, #C8FF00 0%, #B8F500 100%);
-  color: #0B0E14;
-  padding: 14px 30px;
-  border-radius: 0;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  text-decoration: none;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.08) inset, 0 8px 20px rgba(200,255,0,0.22);
-  transition: all 0.28s ease;
-  white-space: nowrap;
-}
-
-.blog-blog-hero-section .blog-hero-btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.12) inset, 0 12px 28px rgba(200,255,0,0.32);
-}
-
-.blog-blog-hero-section .blog-hero-btn-secondary {
-  display: inline-block;
-  background: rgba(19, 27, 36, 0.92);
-  color: var(--text-light);
-  padding: 14px 30px;
-  border-radius: 0;
-  border: 1px solid #00B8FF;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  text-decoration: none;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset;
-  transition: all 0.28s ease;
-  white-space: nowrap;
-}
-
-.blog-blog-hero-section .blog-hero-btn-secondary:hover {
-  background: rgba(0, 184, 255, 0.1);
-  transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(0, 184, 255, 0.22);
-}
-
-/* Image Block */
-.blog-blog-hero-section .blog-hero-image-block {
-  flex: 0 0 auto;
-  width: 46%;
-  max-width: 580px;
-  position: relative;
-}
-
-.blog-blog-hero-section .blog-hero-image-frame {
-  position: relative;
-  width: 100%;
-  border: 1px solid rgba(0, 184, 255, 0.18);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.04) inset;
-  overflow: hidden;
-}
-
-.blog-blog-hero-section .blog-hero-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  aspect-ratio: 620 / 480;
-}
-
-/* Image overlay gradient */
-.blog-blog-hero-section .blog-hero-image-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(9, 11, 16, 0.0) 40%,
-    rgba(9, 11, 16, 0.55) 100%
-  );
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* Glow line on image */
-.blog-blog-hero-section .blog-hero-image-glow-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent 0%, #00D4FF 40%, #B8FF3B 70%, transparent 100%);
-  z-index: 3;
-  pointer-events: none;
-}
-
-/* Corner brackets */
-.blog-blog-hero-section .blog-hero-image-corner {
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  z-index: 4;
-  pointer-events: none;
-}
-
-.blog-blog-hero-section .blog-hero-corner-tl {
-  top: -1px;
-  inset-inline-start: -1px;
-  border-top: 2px solid var(--primary);
-  border-inline-start: 2px solid var(--primary);
-}
-
-.blog-blog-hero-section .blog-hero-corner-tr {
-  top: -1px;
-  inset-inline-end: -1px;
-  border-top: 2px solid var(--primary);
-  border-inline-end: 2px solid var(--primary);
-}
-
-.blog-blog-hero-section .blog-hero-corner-bl {
-  bottom: -1px;
-  inset-inline-start: -1px;
-  border-bottom: 2px solid var(--primary);
-  border-inline-start: 2px solid var(--primary);
-}
-
-.blog-blog-hero-section .blog-hero-corner-br {
-  bottom: -1px;
-  inset-inline-end: -1px;
-  border-bottom: 2px solid var(--primary);
-  border-inline-end: 2px solid var(--primary);
-}
-
-/* Badge */
-.blog-blog-hero-section .blog-hero-image-badge {
-  position: absolute;
-  bottom: 20px;
-  inset-inline-end: 20px;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(9, 11, 16, 0.88);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  backdrop-filter: blur(8px);
-  padding: 12px 16px;
-  text-align: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-}
-
-.blog-blog-hero-section .blog-hero-badge-num {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 28px;
-  font-weight: 900;
-  color: var(--primary);
-  letter-spacing: -0.02em;
-  line-height: 1;
-  display: block;
-}
-
-.blog-blog-hero-section .blog-hero-badge-label {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  opacity: 0.75;
-  line-height: 1.4;
-  margin-top: 4px;
-  display: block;
-}
-
-/* Bottom divider */
-.blog-blog-hero-section .blog-hero-divider-wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;
-  pointer-events: none;
-  z-index: 5;
-}
-
-.blog-blog-hero-section .blog-hero-divider-wrapper svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-/* ─── RESPONSIVE ─── */
-@media (max-width: 900px) {
-  .blog-blog-hero-section .blog-hero-container {
-    flex-direction: column;
-    gap: 36px;
-  }
-
-  .blog-blog-hero-section .blog-hero-image-block {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .blog-blog-hero-section .blog-hero-text-block {
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 768px) {
-  .blog-blog-hero-section {
-    padding: 100px 0 70px;
-    min-height: unset;
-  }
-
-  .blog-blog-hero-section .blog-hero-container {
-    padding: 0 16px;
-    flex-direction: column;
-    gap: 28px;
-  }
-
-  .blog-blog-hero-section .blog-hero-title {
-    font-size: clamp(36px, 9vw, 52px);
-    margin-bottom: 16px;
-  }
-
-  .blog-blog-hero-section .blog-hero-subtitle {
-    font-size: 16px;
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .blog-blog-hero-section .blog-hero-tech-bar {
-    gap: 6px;
-    padding: 8px 12px;
-    margin-bottom: 24px;
-  }
-
-  .blog-blog-hero-section .blog-hero-tech-item {
-    font-size: 11px;
-  }
-
-  .blog-blog-hero-section .blog-hero-cta-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-
-  .blog-blog-hero-section .blog-hero-btn-primary,
-  .blog-blog-hero-section .blog-hero-btn-secondary {
-    text-align: center;
-    width: 100%;
-    padding: 13px 20px;
-    font-size: 15px;
-  }
-
-  .blog-blog-hero-section .blog-hero-image-block {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .blog-blog-hero-section .blog-hero-image-badge {
-    bottom: 12px;
-    inset-inline-end: 12px;
-    padding: 8px 12px;
-  }
-
-  .blog-blog-hero-section .blog-hero-badge-num {
-    font-size: 22px;
-  }
-
-  .blog-blog-hero-section .blog-hero-badge-label {
-    font-size: 10px;
-  }
-}
-
-.blog-blog-grid-section {
-  background: var(--bg-light);
-  color: var(--text-dark);
-  padding: 80px 20px 80px;
-  direction: rtl;
-  position: relative;
-}
-
-.blog-blog-grid-section .blog-grid-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* ── Header ── */
-.blog-blog-grid-section .blog-grid-header {
-  text-align: right;
-  margin-bottom: 52px;
-}
-
-.blog-blog-grid-section .blog-grid-label {
-  display: inline-block;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--primary);
-  background: rgba(0, 212, 255, 0.08);
-  border: 1px solid rgba(0, 212, 255, 0.25);
-  padding: 4px 14px;
-  margin-bottom: 16px;
-}
-
-.blog-blog-grid-section .blog-grid-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--text-dark);
-  margin: 0 0 14px;
-}
-
-.blog-blog-grid-section .blog-grid-subtitle {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-muted);
-  max-width: 560px;
-  margin: 0;
-}
-
-/* ── Layout: Featured + Secondary ── */
-.blog-blog-grid-section .blog-grid-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
-  direction: rtl;
-}
-
-@media (min-width: 768px) {
-  .blog-blog-grid-section .blog-grid-layout {
-    grid-template-columns: 1.15fr 1fr;
-    align-items: start;
-  }
-}
-
-.blog-blog-grid-section .blog-grid-secondary {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  direction: rtl;
-}
-
-/* ── Card Base ── */
-.blog-blog-grid-section .blog-card {
-  background: #ffffff;
-  border: 1px solid var(--border-light);
-  border-radius: 0;
-  box-shadow: 0 4px 18px rgba(18, 20, 23, 0.07);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  transition: box-shadow 0.28s ease, border-color 0.28s ease;
-  position: relative;
-}
-
-.blog-blog-grid-section .blog-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 3px;
-  background: transparent;
-  transition: background 0.28s ease;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.blog-blog-grid-section .blog-card:hover {
-  box-shadow: 0 12px 36px rgba(0, 212, 255, 0.13), 0 4px 16px rgba(18, 20, 23, 0.1);
-  border-color: rgba(0, 212, 255, 0.35);
-}
-
-.blog-blog-grid-section .blog-card:hover::before {
-  background: linear-gradient(90deg, var(--primary) 0%, rgba(0, 212, 255, 0.4) 100%);
-}
-
-/* ── Card Image ── */
-.blog-blog-grid-section .blog-card-image-link {
-  display: block;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.blog-blog-grid-section .blog-card-image-wrap {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-  background: var(--border-light);
-}
-
-.blog-blog-grid-section .blog-card-image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.blog-blog-grid-section .blog-card:hover .blog-card-image-wrap img {
-  transform: scale(1.04);
-}
-
-.blog-blog-grid-section .blog-card-image-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 55%, rgba(18, 20, 23, 0.18) 100%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* ── Card Body ── */
-.blog-blog-grid-section .blog-card-body {
-  padding: 24px 24px 28px;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  text-align: right;
-}
-
-.blog-blog-grid-section .blog-card--featured .blog-card-body {
-  padding: 28px 28px 32px;
-}
-
-/* ── Meta ── */
-.blog-blog-grid-section .blog-card-meta {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-  flex-wrap: wrap;
-}
-
-.blog-blog-grid-section .blog-card-tag {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  color: var(--primary);
-  background: rgba(0, 212, 255, 0.08);
-  border: 1px solid rgba(0, 212, 255, 0.2);
-  padding: 2px 10px;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.blog-blog-grid-section .blog-card-meta-sep {
-  color: var(--border-light);
-  font-size: 0.875rem;
-}
-
-.blog-blog-grid-section .blog-card-read-time {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 5px;
-}
-
-.blog-blog-grid-section .blog-card-read-time i {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
-/* ── Title ── */
-.blog-blog-grid-section .blog-card-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.375rem;
-  font-weight: 700;
-  line-height: 1.4;
-  color: var(--text-dark);
-  margin: 0 0 12px;
-}
-
-.blog-blog-grid-section .blog-card--featured .blog-card-title {
-  font-size: 1.5rem;
-}
-
-.blog-blog-grid-section .blog-card-title a {
-  color: inherit;
-  text-decoration: none;
-  transition: color 0.22s ease;
-}
-
-.blog-blog-grid-section .blog-card-title a:hover {
-  color: var(--primary);
-}
-
-/* ── Excerpt ── */
-.blog-blog-grid-section .blog-card-excerpt {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: var(--text-muted);
-  margin: 0 0 20px;
-  flex: 1;
-}
-
-.blog-blog-grid-section .blog-card--regular .blog-card-excerpt {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* ── Read More Link ── */
-.blog-blog-grid-section .blog-card-link {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 7px;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 0.875rem;
-  font-weight: 700;
-  color: var(--primary);
-  text-decoration: none;
-  letter-spacing: 0.02em;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-  transition: color 0.22s ease, border-color 0.22s ease, gap 0.22s ease;
-  align-self: flex-start;
-  margin-top: auto;
-}
-
-.blog-blog-grid-section .blog-card-link:hover {
-  color: var(--text-dark);
-  border-color: var(--text-dark);
-  gap: 10px;
-}
-
-.blog-blog-grid-section .blog-card-link i {
-  font-size: 0.8rem;
-  transition: transform 0.22s ease;
-}
-
-.blog-blog-grid-section .blog-card-link:hover i {
-  transform: translateX(-3px);
-}
-
-/* ── Mobile ── */
-@media (max-width: 767px) {
-  .blog-blog-grid-section {
-    padding: 60px 16px 60px;
-  }
-
-  .blog-blog-grid-section .blog-grid-header {
-    margin-bottom: 36px;
-  }
-
-  .blog-blog-grid-section .blog-grid-title {
-    font-size: 1.5rem;
-  }
-
-  .blog-blog-grid-section .blog-grid-layout {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-  }
-
-  .blog-blog-grid-section .blog-grid-secondary {
-    grid-template-columns: 1fr !important;
-    gap: 20px;
-  }
-
-  .blog-blog-grid-section .blog-card-body {
-    padding: 18px 18px 22px;
-  }
-
-  .blog-blog-grid-section .blog-card--featured .blog-card-body {
-    padding: 20px 18px 24px;
-  }
-
-  .blog-blog-grid-section .blog-card-title {
-    font-size: 1.125rem;
-  }
-
-  .blog-blog-grid-section .blog-card--featured .blog-card-title {
-    font-size: 1.25rem;
-  }
-
-  .blog-blog-grid-section .blog-card--regular .blog-card-excerpt {
-    -webkit-line-clamp: 4;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .blog-blog-grid-section .blog-grid-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .blog-blog-grid-section .blog-grid-secondary {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .blog-blog-grid-section .blog-card--featured .blog-card-image-wrap {
-    aspect-ratio: 16 / 7;
-  }
-}
-
-.blog-cta-section {
-  position: relative;
-  background-color: #090B10;
-  background-image:
-    radial-gradient(ellipse 70% 60% at 50% 50%, rgba(0, 212, 255, 0.07) 0%, transparent 70%),
-    linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
-  color: var(--text-light);
-  padding: 80px 24px;
-  overflow: hidden;
-  direction: rtl;
-}
-
-.blog-cta-section .blog-cta-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 200px;
-  background: radial-gradient(ellipse at center, rgba(0, 212, 255, 0.13) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-  border-radius: 50%;
-}
-
-.blog-cta-section .blog-cta-container {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.blog-cta-section .blog-cta-divider-top {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 255, 0.35) 40%, rgba(0, 212, 255, 0.35) 60%, transparent 100%);
-  margin-bottom: 56px;
-}
-
-.blog-cta-section .blog-cta-divider-bottom {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(0, 212, 255, 0.35) 40%, rgba(0, 212, 255, 0.35) 60%, transparent 100%);
-  margin-top: 56px;
-}
-
-.blog-cta-section .blog-cta-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  text-align: right;
-}
-
-.blog-cta-section .blog-cta-badge {
-  display: inline-block;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--primary);
-  border: 1px solid rgba(0, 212, 255, 0.35);
-  padding: 5px 14px;
-  border-radius: 2px;
-  background: rgba(0, 212, 255, 0.06);
-}
-
-.blog-cta-section .blog-cta-heading {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--text-light);
-  margin: 0;
-  max-width: 700px;
-  text-align: right;
-}
-
-.blog-cta-section .blog-cta-text {
-  font-family: 'Inter', 'Heebo', sans-serif;
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-muted);
-  margin: 0;
-  max-width: 620px;
-  text-align: right;
-}
-
-.blog-cta-section .blog-cta-actions {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-  align-items: center;
-}
-
-.blog-cta-section .blog-cta-btn {
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-  transition: opacity 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-  white-space: nowrap;
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-}
-
-.blog-cta-section .btn-primary {
-  background: linear-gradient(90deg, #C8FF00 0%, #B8F500 100%);
-  color: #0B0E14;
-  padding: 14px 30px;
-  border-radius: 0;
-  border: 1px solid rgba(0, 0, 0, 0.35);
-  font-weight: 700;
-  font-size: 18px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 8px 20px rgba(200, 255, 0, 0.22);
-  text-transform: none;
-}
-
-.blog-cta-section .btn-primary:hover {
-  opacity: 0.92;
-  transform: translateY(-2px);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12) inset, 0 12px 28px rgba(200, 255, 0, 0.32);
-}
-
-.blog-cta-section .btn-secondary {
-  background: rgba(19, 27, 36, 0.92);
-  color: var(--text-light);
-  padding: 14px 30px;
-  border-radius: 0;
-  border: 1px solid var(--primary);
-  font-weight: 700;
-  font-size: 18px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
-}
-
-.blog-cta-section .btn-secondary:hover {
-  background: rgba(0, 212, 255, 0.08);
-  transform: translateY(-2px);
-  box-shadow: 0 0 16px rgba(0, 212, 255, 0.18);
-}
-
-@media (min-width: 768px) {
-  .blog-cta-section {
-    padding: 100px 48px;
-  }
-
-  .blog-cta-section .blog-cta-heading {
-    font-size: 2rem;
-  }
-
-  .blog-cta-section .blog-cta-glow {
-    width: 900px;
-    height: 280px;
-  }
-}
-
-@media (max-width: 768px) {
-  .blog-cta-section {
-    padding: 60px 16px;
-  }
-
-  .blog-cta-section .blog-cta-divider-top {
-    margin-bottom: 36px;
-  }
-
-  .blog-cta-section .blog-cta-divider-bottom {
-    margin-top: 36px;
-  }
-
-  .blog-cta-section .blog-cta-heading {
-    font-size: 1.5rem;
-  }
-
-  .blog-cta-section .blog-cta-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .blog-cta-section .blog-cta-btn {
-    text-align: center;
-    width: 100%;
-  }
-
-  .blog-cta-section .btn-primary,
-  .blog-cta-section .btn-secondary {
-    font-size: 16px;
-    padding: 13px 20px;
-  }
-}</style>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: var(--text-dark, #333) !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu .zappy-nav-child > a { padding-left: 28px !important; font-size: 0.9em !important; opacity: 0.85 !important; }
+      [dir="rtl"] .sub-menu .zappy-nav-child > a, html[lang="he"] .sub-menu .zappy-nav-child > a, html[lang="ar"] .sub-menu .zappy-nav-child > a { padding-left: 10px !important; padding-right: 28px !important; }
+      .sub-menu .zappy-nav-parent > a { font-weight: 600 !important; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus (exclude catalog sub-menus that use <a> children instead of <li>) */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))):not(:has(> a)), .sub-menu:not(:has(li)):not(:has(> a)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
+      @media (max-width: 768px) {
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .navbar .sub-menu.mobile-expanded, .nav-menu .sub-menu.mobile-expanded, #navMenu .sub-menu.mobile-expanded { max-height: none !important; overflow-y: visible !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; position: relative !important; min-height: 44px !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; min-width: 0 !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; min-width: 0 !important; padding: 0 !important; line-height: inherit !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: auto !important; background: transparent !important; border: none !important; cursor: pointer !important; color: var(--text-light) !important; position: static !important; flex-shrink: 0 !important; align-self: stretch !important; z-index: 2 !important; padding: 0 !important; margin: 0 !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
+        .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; color: var(--text-light) !important; white-space: normal !important; }
+        .sub-menu .zappy-nav-child > a { padding-left: 28px !important; font-size: 0.9em !important; opacity: 0.85 !important; }
+        [dir="rtl"] .sub-menu .zappy-nav-child > a, html[lang="he"] .sub-menu .zappy-nav-child > a, html[lang="ar"] .sub-menu .zappy-nav-child > a { padding-left: 0 !important; padding-right: 28px !important; }
+        .sub-menu .zappy-nav-parent > a { font-weight: 600 !important; }
+        .nav-menu.active, #navMenu.active { max-width: 100vw !important; overflow-x: hidden !important; box-sizing: border-box !important; }
+        .navbar .sub-menu li a, nav.navbar .sub-menu li a, .zappy-products-dropdown .sub-menu a { color: var(--text-light) !important; }
+      }
+      @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
+    </style>
 
     <style id="mobile-lang-menu-deployed-css">
     @media (max-width: 768px) {
@@ -1751,16 +316,16 @@
   <nav class="navbar" dir="rtl">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
     <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
     <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
     </svg>
   </button>
 
   <button class="phone-header-btn" data-phone="0559932287" aria-label="Call">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
     </svg>
   </button>
 
@@ -1769,7 +334,7 @@
       <a href="/" class="logo-link">
         <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan">איטום גגות בשפלה ובדרום גוש דן</a></li><li><a href="/service-areas/roof-waterproofing-eilat">איטום לגג באילת</a></li><li><a href="/service-areas/roof-waterproofing-beer-sheva">איטום גגות בבאר שבע</a></li></ul></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li></ul></li><li><a href="/roof-tarring" class="nav-link">זיפות</a></li><li><a href="/thank-you">Thank You | Maor Holdings</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li></ul></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan">איטום גגות בשפלה ובדרום גוש דן</a></li><li><a href="/service-areas/roof-waterproofing-eilat">איטום לגג באילת</a></li><li><a href="/service-areas/roof-waterproofing-beer-sheva">איטום גגות בבאר שבע</a></li></ul></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li><li><a href="/blog/roof-waterproofing-yatzata-tzadik" class="nav-link">יצאת צדיק</a></li></ul></li><li><a href="/roof-tarring" class="nav-link">זיפות</a></li><li><a href="/thank-you">Thank You | Maor Holdings</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li></ul></div>
 
     
 
@@ -2223,7 +788,7 @@
         <span class="blog-hero-eyebrow-label">הבלוג המקצועי</span>
       </div>
 
-      <h1 class="blog-hero-title" style>ידע&nbsp; שעובד&nbsp;&nbsp;<span class="blog-hero-title-accent">בשטח</span></h1>
+      <h1 class="blog-hero-title" >ידע&nbsp; שעובד&nbsp;&nbsp;<span class="blog-hero-title-accent">בשטח</span></h1>
 
       <h3 class="blog-hero-subtitle">מאמרים מקצועיים, טיפים מעשיים ועדכוני תעשייה מעולם האיטום, הבנייה והשיפוץ — ישירות מהמומחים של מאור אחזקות.</h3>
 
@@ -2251,7 +816,7 @@
         <div class="blog-hero-image-corner blog-hero-corner-bl" aria-hidden="true"></div>
         <div class="blog-hero-image-corner blog-hero-corner-br" aria-hidden="true"></div>
         <div class="blog-hero-image-glow-line" aria-hidden="true"></div>
-        <img data-hero-bg="true" data-placeholder="blog-blog-hero-image-1" data-context="Cinematic dark aerial view of professional waterproofing work on a flat industrial rooftop at dusk. Workers applying torch-applied bituminous membrane with glowing embers and orange-blue flame torch. Dark dramatic sky, geometric roof lines, technical industrial atmosphere. High contrast moody photography with deep shadows and warm torch light accents." width="620" height="480" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23FF0083;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23FF008320;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial, sans-serif' font-size='18' fill='white' text-anchor='middle' dy='.3em' font-weight='500'%3Eblog-blog-hero-image-1%3C/text%3E%3C/svg%3E" alt="עבודות איטום גג מקצועיות של מאור אחזקות" class="blog-hero-img" data-hero-background="true" data-element-type="image" data-element-id="img-1775788671994-t7ajzcy4t" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px;">
+        <img data-hero-bg="true" data-context="Cinematic dark aerial view of professional waterproofing work on a flat industrial rooftop at dusk. Workers applying torch-applied bituminous membrane with glowing embers and orange-blue flame torch. Dark dramatic sky, geometric roof lines, technical industrial atmosphere. High contrast moody photography with deep shadows and warm torch light accents." width="620" height="480" src="/assets/business-general-section-blog-grid-card-blog-blog-hero-image-1.webp" alt="עבודות איטום גג מקצועיות של מאור אחזקות" class="blog-hero-img" data-hero-background="true" data-element-type="image" data-element-id="img-1775788671994-t7ajzcy4t" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px;">
         <div class="blog-hero-image-overlay" aria-hidden="true"></div>
         <div class="blog-hero-image-badge">
           <span class="blog-hero-badge-num">12+</span>
@@ -2264,7 +829,7 @@
   <!-- Bottom divider -->
   <div class="blog-hero-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,32 Q180,14 360,28 T720,18 Q900,10 1080,24 T1440,16 L1440,60 Z" fill="var(--bg-light)"/>
+      <path d="M0,60 L0,32 Q180,14 360,28 T720,18 Q900,10 1080,24 T1440,16 L1440,60 Z" fill="var(--bg-light)"></path>
     </svg>
   </div>
 </section>
@@ -2283,7 +848,7 @@
       <article class="blog-card blog-card--featured">
         <a href="/blog/roof-inspection-before-winter" class="blog-card-image-link">
           </a><figure class="blog-card-image-wrap"><a href="/blog/roof-inspection-before-winter" class="blog-card-image-link">
-            </a><a data-zappy-click-action="link" href="/blog/roof-inspection-before-winter" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1775788671994-pqp85wbyg" data-element-type="image" data-zappy-zoom-wrapper-width="1200px" data-zappy-zoom-wrapper-height="780px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1200px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 780px !important; display: block !important; cursor: pointer;" data-zappy-click-action="link"><img data-placeholder="blog-blog-grid-image-1" data-context="Professional roofer inspecting a flat concrete roof before winter rain season in Israel, checking drainage pipes, expansion joints, and old waterproofing membrane layers, overcast sky, technical inspection work" width="800" height="500" src="/assets/image-blog-blog-grid-image-1-1775788854561-cnwpqr.webp?v=1775788856411" alt="בדיקת גג שטוח לפני עונת הגשמים" data-element-type="image" data-element-id="img-1775788671994-pqp85wbyg" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px; object-position: 88% 78% !important; margin: 0px !important; left: -86.8739% !important; top: 0% !important; width: 198.72% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.9" data-zappy-original-width="1200" data-zappy-original-height="780" data-zappy-object-position="88% 78%" data-zappy-click-action="link"></div></a>
+            </a><a data-zappy-click-action="link" href="/blog/roof-inspection-before-winter" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1775788671994-pqp85wbyg" data-element-type="image" data-zappy-zoom-wrapper-width="1200px" data-zappy-zoom-wrapper-height="780px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1200px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 780px !important; display: block !important; cursor: pointer;" data-zappy-click-action="link"><img data-context="Professional roofer inspecting a flat concrete roof before winter rain season in Israel, checking drainage pipes, expansion joints, and old waterproofing membrane layers, overcast sky, technical inspection work" width="800" height="500" src="/assets/business-general-section-blog-grid-card-blog-blog-grid-image-1.webp" alt="בדיקת גג שטוח לפני עונת הגשמים" data-element-type="image" data-element-id="img-1775788671994-pqp85wbyg" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px; object-position: 88% 78% !important; margin: 0px !important; left: -86.8739% !important; top: 0% !important; width: 198.72% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important;" data-zappy-zoom="0.9" data-zappy-original-width="1200" data-zappy-original-height="780" data-zappy-object-position="88% 78%" data-zappy-click-action="link"></div></a>
             <div class="blog-card-image-overlay"></div>
           </figure>
         
@@ -2305,7 +870,7 @@
         <article class="blog-card blog-card--regular">
           <a href="/blog/exterior-walls-water-warning-signs" class="blog-card-image-link">
             </a><figure class="blog-card-image-wrap"><a href="/blog/exterior-walls-water-warning-signs" class="blog-card-image-link">
-              </a><a data-zappy-click-action="link" href="/blog/exterior-walls-water-warning-signs" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1775788671994-pcz6mn3rp" data-element-type="image" data-zappy-zoom-wrapper-width="1200px" data-zappy-zoom-wrapper-height="764px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1200px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 764px !important; display: block !important; cursor: pointer;" data-zappy-click-action="link"><img data-placeholder="blog-blog-grid-image-2" data-context="Close-up of exterior building wall in Israel showing water damage warning signs: efflorescence white salt stains, dark moisture patches, peeling paint, and cracks in plaster, urban residential building" width="600" height="375" src="/assets/image-blog-blog-grid-image-2-1775788978907-91bojw.webp?v=1775788980819" alt="סימני חדירת מים בקירות חוץ" data-element-type="image" data-element-id="img-1775788671994-pcz6mn3rp" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px; object-position: 50% 50% !important; display: block; object-fit: cover; margin: 0px !important; left: -2% !important; top: -11.2193% !important; width: 104% !important; height: 122.439% !important; max-width: none !important; max-height: none !important;" data-zappy-zoom="1.04" data-zappy-original-width="1200" data-zappy-original-height="764" data-zappy-object-position="50% 50%" data-zappy-click-action="link"></div></a>
+              </a><a data-zappy-click-action="link" href="/blog/exterior-walls-water-warning-signs" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1775788671994-pcz6mn3rp" data-element-type="image" data-zappy-zoom-wrapper-width="1200px" data-zappy-zoom-wrapper-height="764px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1200px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 764px !important; display: block !important; cursor: pointer;" data-zappy-click-action="link"><img data-context="Close-up of exterior building wall in Israel showing water damage warning signs: efflorescence white salt stains, dark moisture patches, peeling paint, and cracks in plaster, urban residential building" width="600" height="375" src="/assets/business-general-section-blog-grid-card-blog-blog-grid-image-2.webp" alt="סימני חדירת מים בקירות חוץ" data-element-type="image" data-element-id="img-1775788671994-pcz6mn3rp" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px; object-position: 50% 50% !important; display: block; object-fit: cover; margin: 0px !important; left: -2% !important; top: -11.2193% !important; width: 104% !important; height: 122.439% !important; max-width: none !important; max-height: none !important;" data-zappy-zoom="1.04" data-zappy-original-width="1200" data-zappy-original-height="764" data-zappy-object-position="50% 50%" data-zappy-click-action="link"></div></a>
               <div class="blog-card-image-overlay"></div>
             </figure>
           
@@ -2324,7 +889,7 @@
         <article class="blog-card blog-card--regular">
           <a href="/blog/polyurethane-waterproofing-when-to-use" class="blog-card-image-link">
             </a><figure class="blog-card-image-wrap"><a href="/blog/polyurethane-waterproofing-when-to-use" class="blog-card-image-link">
-              </a><a data-zappy-click-action="link" href="/blog/polyurethane-waterproofing-when-to-use" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1775788671995-2j9by528z" data-element-type="image" data-zappy-zoom-wrapper-width="1200px" data-zappy-zoom-wrapper-height="764px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1200px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 764px !important; display: block !important; cursor: pointer;" data-zappy-click-action="link"><img data-placeholder="blog-blog-grid-image-3" data-context="Worker applying liquid polyurethane waterproofing coating on a rooftop in Israel using a roller, seamless grey coating being spread over concrete surface, professional waterproofing work, industrial setting" width="600" height="375" src="/assets/image-blog-blog-grid-image-3-1775788813208-jvsnls.webp?v=1775788815145" alt="יישום איטום פוליאוריטני על גג" data-element-type="image" data-element-id="img-1775788671995-2j9by528z" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px; object-position: 50% 50% !important; margin: 0px !important; left: -80.912% !important; top: -2% !important; width: 261.824% !important; height: 104% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important;" data-zappy-zoom="1.04" data-zappy-original-width="1200" data-zappy-original-height="764" data-zappy-object-position="50% 50%" data-zappy-click-action="link"></div></a>
+              </a><a data-zappy-click-action="link" href="/blog/polyurethane-waterproofing-when-to-use" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1775788671995-2j9by528z" data-element-type="image" data-zappy-zoom-wrapper-width="1200px" data-zappy-zoom-wrapper-height="764px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1200px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 764px !important; display: block !important; cursor: pointer;" data-zappy-click-action="link"><img data-context="Worker applying liquid polyurethane waterproofing coating on a rooftop in Israel using a roller, seamless grey coating being spread over concrete surface, professional waterproofing work, industrial setting" width="600" height="375" src="/assets/business-general-section-blog-grid-card-blog-blog-grid-image-3.webp" alt="יישום איטום פוליאוריטני על גג" data-element-type="image" data-element-id="img-1775788671995-2j9by528z" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px; object-position: 50% 50% !important; margin: 0px !important; left: -80.912% !important; top: -2% !important; width: 261.824% !important; height: 104% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important;" data-zappy-zoom="1.04" data-zappy-original-width="1200" data-zappy-original-height="764" data-zappy-object-position="50% 50%" data-zappy-click-action="link"></div></a>
               <div class="blog-card-image-overlay"></div>
             </figure>
           
@@ -2343,7 +908,7 @@
         <article class="blog-card blog-card--regular">
           <a href="/blog/concrete-repair-after-long-term-moisture" class="blog-card-image-link">
             </a><figure class="blog-card-image-wrap"><a href="/blog/concrete-repair-after-long-term-moisture" class="blog-card-image-link">
-              </a><a data-zappy-click-action="link" href="/blog/concrete-repair-after-long-term-moisture" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1775788671995-iiacuk5ip" data-element-type="image" data-zappy-zoom-wrapper-width="1200px" data-zappy-zoom-wrapper-height="767px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1200px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 767px !important; display: block !important; cursor: pointer;" data-zappy-click-action="link"><img data-placeholder="blog-blog-grid-image-4" data-context="Damaged concrete structure showing deep moisture penetration damage: exposed rebar, spalling concrete, rust stains, and deterioration from long-term water infiltration, construction repair site in Israel" width="600" height="375" src="/assets/image-blog-blog-grid-image-4-1775788752187-azun5d.webp?v=1775788753913" alt="שיקום בטון פגוע מרטיבות ממושכת" data-element-type="image" data-element-id="img-1775788671995-iiacuk5ip" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px; object-position: 50% 50% !important; margin: 0px !important; left: -81.426% !important; top: -2% !important; width: 262.852% !important; height: 104% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important;" data-zappy-zoom="1.04" data-zappy-original-width="1200" data-zappy-original-height="767" data-zappy-object-position="50% 50%" data-zappy-click-action="link"></div></a>
+              </a><a data-zappy-click-action="link" href="/blog/concrete-repair-after-long-term-moisture" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1775788671995-iiacuk5ip" data-element-type="image" data-zappy-zoom-wrapper-width="1200px" data-zappy-zoom-wrapper-height="767px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1200px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 767px !important; display: block !important; cursor: pointer;" data-zappy-click-action="link"><img data-context="Damaged concrete structure showing deep moisture penetration damage: exposed rebar, spalling concrete, rust stains, and deterioration from long-term water infiltration, construction repair site in Israel" width="600" height="375" src="/assets/business-general-section-blog-grid-card-blog-blog-grid-image-4.webp" alt="שיקום בטון פגוע מרטיבות ממושכת" data-element-type="image" data-element-id="img-1775788671995-iiacuk5ip" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px; object-position: 50% 50% !important; margin: 0px !important; left: -81.426% !important; top: -2% !important; width: 262.852% !important; height: 104% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important;" data-zappy-zoom="1.04" data-zappy-original-width="1200" data-zappy-original-height="767" data-zappy-object-position="50% 50%" data-zappy-click-action="link"></div></a>
               <div class="blog-card-image-overlay"></div>
             </figure>
           
@@ -2359,7 +924,7 @@
           </p></div>
         </article>
 
-      </div>
+      <article class="blog-card blog-card--regular">          <a href="/blog/roof-waterproofing-yatzata-tzadik" class="blog-card-image-link">            </a><figure class="blog-card-image-wrap"><a href="/blog/roof-waterproofing-yatzata-tzadik" class="blog-card-image-link">              </a><a data-zappy-click-action="link" href="/blog/roof-waterproofing-yatzata-tzadik" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-type="image" data-zappy-zoom-wrapper-width="1200px" data-zappy-zoom-wrapper-height="764px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: relative !important; overflow: hidden !important; width: 1200px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 764px !important; display: block !important; cursor: pointer;" data-zappy-click-action="link"><img width="600" height="375" src="/assets/business-general-section-blog-grid-card-blog-blog-grid-image-new.webp" alt="איטום גגות - איך בוחרים קבלן אמין ומקצועי" data-element-type="image" style="min-width: 200px; min-height: 150px; cursor: pointer; border-radius: 8px; object-position: 50% 50% !important; display: block; object-fit: cover; margin: 0px !important; left: -2% !important; top: -11.2193% !important; width: 104% !important; height: 122.439% !important; max-width: none !important; max-height: none !important;" data-zappy-zoom="1.04" data-zappy-original-width="1200" data-zappy-original-height="764" data-zappy-object-position="50% 50%" data-zappy-click-action="link" data-context="איטום גגות - איך בוחרים קבלן אמין ומקצועי"></div></a>              <div class="blog-card-image-overlay"></div>            </figure>          <div class="blog-card-body">            <div class="blog-card-meta">              <span class="blog-card-tag">איטום גגות</span>              <span class="blog-card-meta-sep">·</span>              <span class="blog-card-read-time"><i class="fa-regular fa-clock" aria-hidden="true" data-element-type="icon" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i> 6 דקות קריאה</span>            </div>            <h3 class="blog-card-title">איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי</h3>            <p class="blog-card-excerpt">מאור אחזקות - איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי</p>            <p class="zappy-editable"><a href="/blog/roof-waterproofing-yatzata-tzadik" class="blog-card-link">לקריאת המאמר <i class="fa-solid fa-arrow-left" aria-hidden="true"></i></a>          </p></div>        </article></div>
     </div>
   </div>
 </section>
@@ -2388,7 +953,7 @@
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <div class="footer-logo-wrap">
-          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" style>
+          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" >
         </div>
         <p class="footer-tagline">מומחים באיטום, שיפוץ ושיקום מבנים. עבודה מקצועית, אמינות מלאה, תוצאות שמחזיקות לאורך זמן.</p>
         <div class="footer-social">
@@ -2403,7 +968,7 @@
         <h3 class="footer-heading"><span class="heading-accent"></span>שירותים</h3>
         <ul class="footer-links">
           <li><a href="/roof-waterproofing"><i class="fas fa-chevron-left footer-link-icon"></i>איטום גגות</a></li>
-          <li><a href="/industrial-waterproofing" style><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>איטום תעשייתי ומבני</a></li>
+          <li><a href="/industrial-waterproofing" ><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>איטום תעשייתי ומבני</a></li>
           <li><a href="/renovation-fire-recovery"><i class="fas fa-chevron-left footer-link-icon"></i>שיפוץ ושיקום לאחר שריפה</a></li>
           <li><a href="/contact"><i class="fas fa-chevron-left footer-link-icon"></i>צור קשר</a></li>
         </ul>
@@ -2412,13 +977,13 @@
       <!-- Column 3: Contact Info -->
       <div class="footer-col footer-contact-col">
         <h3 class="footer-heading"><span class="heading-accent"></span>צור קשר</h3>
-        <ul class="footer-contact" style><li>
+        <ul class="footer-contact" ><li>
             <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1775639017054-lxsedrpr3" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="mailto:mwrdrwry@gmail.com">mwrdrwry@gmail.com</a></span>
           </li><li>
             <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1775639017055-3p3y17104" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="tel:055-9932287">055-9932287</a></span>
-          </li><li><a href="/" style><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
+          </li><li><a href="/" ><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
       </div>
 
       <!-- Column 4: CTA / Badge -->
@@ -2448,7 +1013,7 @@
         <span class="legal-sep"></span>
         <a href="/accessibility">נגישות</a>
         <span class="legal-sep"></span>
-        <a href="https://zappy5.com" target="_blank" class="zappy-attribution" style>נוצר באמצעות Zappy</a>
+        <a href="https://zappy5.com" target="_blank" class="zappy-attribution" >נוצר באמצעות Zappy</a>
       </div>
     </div>
 
@@ -2459,7 +1024,9 @@
     <i class="fab fa-whatsapp"></i>
   </a>
   
-  <div data-integration="accessibility:toolbar"></div>
+  <script src="/script.js"></script>
+
+    <div data-integration="accessibility:toolbar"></div>
 
     <script src="/script.js"></script>
 
