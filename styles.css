@@ -16711,6 +16711,301 @@ body.accessibility-widget-visible ._access-menu {
     font-size: 0.93rem;
   }
 }
+
+/* Added Component Styles */
+/* ===== FAQ Section — מאור אחזקות ===== */
+.faq-maor-section {
+  background: linear-gradient(160deg, #0a1628 0%, #0d1f3c 60%, #0a1628 100%);
+  padding: 90px 20px 80px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-maor-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.faq-maor-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(200, 255, 0, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Container */
+.faq-maor-container {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.faq-maor-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.faq-maor-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #C8FF00 0%, #8AE600 100%);
+  color: #0a1628;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.faq-maor-title {
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+.faq-maor-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* FAQ List */
+.faq-maor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* FAQ Item — Card */
+.faq-maor-item {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.faq-maor-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(0, 212, 255, 0.12);
+  border-color: rgba(0, 212, 255, 0.45);
+}
+
+.faq-maor-item.active {
+  border-color: rgba(200, 255, 0, 0.45);
+  box-shadow: 0 6px 32px rgba(200, 255, 0, 0.1);
+}
+
+/* Question Button */
+.faq-maor-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px;
+  text-align: right;
+  direction: rtl;
+  font-family: system-ui, sans-serif;
+  transition: background 0.2s ease;
+}
+
+.faq-maor-question:hover {
+  background: rgba(0, 212, 255, 0.06);
+}
+
+.faq-maor-item.active .faq-maor-question {
+  background: rgba(200, 255, 0, 0.05);
+}
+
+.faq-maor-question:focus-visible {
+  outline: 2px solid var(--primary, #00D4FF);
+  outline-offset: -2px;
+  border-radius: 14px;
+}
+
+.faq-maor-question-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* Chevron */
+.faq-maor-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--primary, #00D4FF);
+  transition: transform 0.35s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.faq-maor-item.active .faq-maor-chevron {
+  transform: rotate(180deg);
+  background: rgba(200, 255, 0, 0.15);
+  color: #C8FF00;
+}
+
+/* Answer — Collapsed */
+.faq-maor-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.38s ease, opacity 0.28s ease, padding 0.28s ease;
+  padding: 0 24px;
+}
+
+/* Answer — Expanded */
+.faq-maor-item.active .faq-maor-answer {
+  max-height: 500px;
+  opacity: 1;
+  padding-top: 0;
+  padding-bottom: 22px;
+}
+
+/* Answer Inner */
+.faq-maor-answer-inner {
+  border-right: 3px solid var(--primary, #00D4FF);
+  padding: 14px 18px 14px 0;
+  font-size: 0.97rem;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.faq-maor-item.active .faq-maor-answer-inner {
+  border-right-color: #C8FF00;
+}
+
+/* CTA */
+.faq-maor-cta-wrap {
+  text-align: center;
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.faq-maor-cta-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.70);
+  margin: 0;
+}
+
+.faq-maor-cta-btn {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a1628;
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding: 16px 44px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 24px rgba(200, 255, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.faq-maor-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 36px rgba(200, 255, 0, 0.45);
+  filter: brightness(1.08);
+}
+
+.faq-maor-cta-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .faq-maor-section {
+    padding: 60px 16px 56px;
+  }
+
+  .faq-maor-header {
+    margin-bottom: 40px;
+  }
+
+  .faq-maor-title {
+    font-size: 1.55rem;
+  }
+
+  .faq-maor-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .faq-maor-question {
+    padding: 17px 18px;
+  }
+
+  .faq-maor-question-text {
+    font-size: 0.97rem;
+  }
+
+  .faq-maor-answer {
+    padding: 0 18px;
+  }
+
+  .faq-maor-item.active .faq-maor-answer {
+    padding-bottom: 18px;
+  }
+
+  .faq-maor-answer-inner {
+    font-size: 0.93rem;
+    padding: 12px 14px 12px 0;
+  }
+
+  .faq-maor-cta-btn {
+    padding: 14px 32px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-maor-section {
+    padding: 48px 12px 44px;
+  }
+
+  .faq-maor-list {
+    gap: 12px;
+  }
+
+  .faq-maor-chevron {
+    width: 28px;
+    height: 28px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

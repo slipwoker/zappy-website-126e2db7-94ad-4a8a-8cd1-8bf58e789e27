@@ -985,6 +985,41 @@ window.onload = function() {
   });
 })();
 
+/* Added Component Script */
+(function () {
+  'use strict';
+
+  const faqItems = document.querySelectorAll('.faq-maor-item');
+
+  faqItems.forEach(function (item) {
+    const btn = item.querySelector('.faq-maor-question');
+
+    btn.addEventListener('click', function () {
+      const isActive = item.classList.contains('active');
+
+      // Close all open items
+      faqItems.forEach(function (otherItem) {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherBtn = otherItem.querySelector('.faq-maor-question');
+          if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current
+      if (isActive) {
+        item.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // Keyboard: allow Enter and Space to toggle (already native for buttons)
+  });
+})();
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
