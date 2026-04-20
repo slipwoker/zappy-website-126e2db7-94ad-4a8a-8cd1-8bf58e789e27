@@ -16409,6 +16409,308 @@ body.accessibility-widget-visible ._access-menu {
     font-size: 0.97rem;
   }
 }
+
+/* Added Component Styles */
+/* ===== FAQ SECTION — MAOR ACHZAKOT ===== */
+.faq-maor-section {
+  background: linear-gradient(160deg, #0a1628 0%, #0d1f3c 50%, #0a1628 100%);
+  padding: 90px 20px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-maor-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.faq-maor-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(200, 255, 0, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Container */
+.faq-maor-container {
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== HEADER ===== */
+.faq-maor-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.faq-maor-badge {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a1628;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.faq-maor-title {
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.faq-maor-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  line-height: 1.6;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+/* ===== FAQ LIST ===== */
+.faq-maor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== FAQ ITEM CARD ===== */
+.faq-maor-item {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.25s ease, border-color 0.3s ease;
+}
+
+.faq-maor-item:hover {
+  box-shadow: 0 6px 28px rgba(0, 212, 255, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+.faq-maor-item.active {
+  border-color: rgba(200, 255, 0, 0.45);
+  box-shadow: 0 6px 30px rgba(200, 255, 0, 0.1);
+}
+
+/* ===== QUESTION BUTTON ===== */
+.faq-maor-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  text-align: right;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  transition: background 0.25s ease;
+}
+
+.faq-maor-question:hover {
+  background: rgba(0, 212, 255, 0.07);
+}
+
+.faq-maor-question:focus-visible {
+  outline: 2px solid var(--primary, #00D4FF);
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+
+.faq-maor-question-text {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+  flex: 1;
+}
+
+/* ===== CHEVRON ===== */
+.faq-maor-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 212, 255, 0.12);
+  border-radius: 50%;
+  color: var(--primary, #00D4FF);
+  transition: transform 0.35s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.faq-maor-item.active .faq-maor-chevron {
+  transform: rotate(180deg);
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a1628;
+}
+
+/* ===== ANSWER PANEL ===== */
+.faq-maor-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding-bottom: 0;
+  transition: max-height 0.38s ease, opacity 0.28s ease, padding 0.28s ease;
+}
+
+.faq-maor-item.active .faq-maor-answer {
+  max-height: 500px;
+  opacity: 1;
+  padding-bottom: 20px;
+}
+
+/* ===== ANSWER INNER ===== */
+.faq-maor-answer-inner {
+  margin: 0 24px;
+  padding: 16px 18px;
+  border-right: 3px solid var(--primary, #00D4FF);
+  background: rgba(0, 212, 255, 0.05);
+  border-radius: 0 8px 8px 0;
+  font-size: 0.97rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.75;
+}
+
+/* ===== CTA BLOCK ===== */
+.faq-maor-cta {
+  margin-top: 56px;
+  text-align: center;
+  padding: 40px 32px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 255, 0, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.faq-maor-cta-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 0 20px 0;
+  font-weight: 500;
+}
+
+.faq-maor-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a1628;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  box-shadow: 0 4px 18px rgba(200, 255, 0, 0.3);
+  direction: rtl;
+}
+
+.faq-maor-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(200, 255, 0, 0.45);
+  filter: brightness(1.05);
+}
+
+.faq-maor-cta-btn:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.faq-maor-cta-btn svg {
+  transform: rotate(180deg);
+  flex-shrink: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .faq-maor-section {
+    padding: 64px 16px;
+  }
+
+  .faq-maor-header {
+    margin-bottom: 40px;
+  }
+
+  .faq-maor-title {
+    font-size: 1.55rem;
+  }
+
+  .faq-maor-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .faq-maor-question {
+    padding: 18px 18px;
+  }
+
+  .faq-maor-question-text {
+    font-size: 0.97rem;
+  }
+
+  .faq-maor-answer-inner {
+    margin: 0 16px;
+    font-size: 0.93rem;
+    padding: 14px 14px;
+  }
+
+  .faq-maor-cta {
+    padding: 28px 20px;
+    margin-top: 40px;
+  }
+
+  .faq-maor-cta-btn {
+    font-size: 0.95rem;
+    padding: 13px 26px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .faq-maor-list {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq-maor-title {
+    font-size: 1.35rem;
+  }
+
+  .faq-maor-chevron {
+    width: 30px;
+    height: 30px;
+  }
+
+  .faq-maor-question-text {
+    font-size: 0.93rem;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

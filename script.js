@@ -938,6 +938,53 @@ window.onload = function() {
   });
 })();
 
+/* Added Component Script */
+(function () {
+  'use strict';
+
+  const items = document.querySelectorAll('.faq-maor-item');
+
+  items.forEach(function (item) {
+    const btn = item.querySelector('.faq-maor-question');
+    if (!btn) return;
+
+    btn.addEventListener('click', function () {
+      const isActive = item.classList.contains('active');
+
+      // Close all open items
+      items.forEach(function (el) {
+        el.classList.remove('active');
+        const elBtn = el.querySelector('.faq-maor-question');
+        if (elBtn) elBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle clicked item
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+
+        // Smooth scroll into view if needed
+        setTimeout(function () {
+          const rect = item.getBoundingClientRect();
+          const scrollY = window.scrollY || window.pageYOffset;
+          const offset = rect.top + scrollY - 100;
+          if (rect.top < 80) {
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          }
+        }, 50);
+      }
+    });
+
+    // Keyboard: allow Enter and Space
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+})();
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
