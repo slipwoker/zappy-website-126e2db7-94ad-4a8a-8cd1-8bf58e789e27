@@ -18568,6 +18568,266 @@ body.accessibility-widget-visible ._access-menu {
     gap: 10px;
   }
 }
+
+/* Added Component Styles */
+/* ===== FEATURES SECTION — מאור אחזקות ===== */
+.feat-maor-section {
+  background: #0a0e1a;
+  padding: 90px 20px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  text-align: right;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background decoration */
+.feat-maor-section::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.feat-maor-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(200, 255, 0, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* Container */
+.feat-maor-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header */
+.feat-maor-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.feat-maor-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(200, 255, 0, 0.15) 0%, rgba(138, 230, 0, 0.15) 100%);
+  border: 1px solid rgba(200, 255, 0, 0.4);
+  color: #C8FF00;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.feat-maor-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.feat-maor-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Grid */
+.feat-maor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+/* Card */
+.feat-maor-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 16px;
+  padding: 36px 28px 32px;
+  overflow: hidden;
+  cursor: default;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.feat-maor-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.12), 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Accent line at bottom of card */
+.feat-maor-card-accent {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  border-radius: 0 0 16px 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feat-maor-card:hover .feat-maor-card-accent {
+  opacity: 1;
+}
+
+/* Icon wrapper */
+.feat-maor-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(200, 255, 0, 0.1) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  margin-bottom: 22px;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.feat-maor-card:hover .feat-maor-icon-wrap {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.25) 0%, rgba(200, 255, 0, 0.18) 100%);
+  border-color: rgba(0, 212, 255, 0.5);
+  transform: scale(1.08);
+}
+
+.feat-maor-icon {
+  width: 32px;
+  height: 32px;
+  color: var(--primary, #00D4FF);
+  transition: color 0.3s ease;
+}
+
+.feat-maor-card:hover .feat-maor-icon {
+  color: #C8FF00;
+}
+
+/* Card title */
+.feat-maor-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+/* Card description */
+.feat-maor-card-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* CTA */
+.feat-maor-cta-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.feat-maor-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a0e1a;
+  font-family: system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  box-shadow: 0 4px 20px rgba(200, 255, 0, 0.3);
+}
+
+.feat-maor-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(200, 255, 0, 0.45);
+  filter: brightness(1.07);
+}
+
+.feat-maor-cta:focus-visible {
+  outline: 3px solid #C8FF00;
+  outline-offset: 4px;
+}
+
+.feat-maor-cta-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.feat-maor-cta:hover .feat-maor-cta-arrow {
+  transform: translateX(-4px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .feat-maor-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .feat-maor-section {
+    padding: 60px 16px;
+  }
+
+  .feat-maor-header {
+    margin-bottom: 40px;
+  }
+
+  .feat-maor-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feat-maor-card {
+    padding: 28px 22px 26px;
+  }
+
+  .feat-maor-icon-wrap {
+    width: 54px;
+    height: 54px;
+  }
+
+  .feat-maor-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .feat-maor-cta {
+    font-size: 0.97rem;
+    padding: 14px 28px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
