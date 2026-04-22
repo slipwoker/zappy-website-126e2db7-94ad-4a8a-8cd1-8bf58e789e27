@@ -1053,6 +1053,35 @@ window.onload = function() {
   });
 })();
 
+/* Added Component Script */
+(function () {
+  const faqItems = document.querySelectorAll('.bath-seal-faq-item');
+
+  faqItems.forEach(function (item) {
+    const btn = item.querySelector('.bath-seal-faq-question');
+    const answer = item.querySelector('.bath-seal-faq-answer');
+
+    if (!btn || !answer) return;
+
+    btn.addEventListener('click', function () {
+      const isActive = item.classList.contains('active');
+
+      // Close all
+      faqItems.forEach(function (el) {
+        el.classList.remove('active');
+        const b = el.querySelector('.bath-seal-faq-question');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+
+      // Open clicked if it was closed
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
