@@ -18102,6 +18102,472 @@ body.accessibility-widget-visible ._access-menu {
     padding: 14px 28px;
   }
 }
+
+/* Added Component Styles */
+/* ===========================
+   מאור אחזקות – מאמר איטום גגות
+   =========================== */
+
+.maor-roof-article {
+  background: #0d1a2a;
+  padding: 80px 20px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  color: #e8f0fe;
+}
+
+.maor-roof-article__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+.maor-roof-article__header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.maor-roof-article__tag {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0d1a2a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 16px;
+  border-radius: 30px;
+  margin-bottom: 16px;
+}
+
+.maor-roof-article__title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.25;
+}
+
+.maor-roof-article__subtitle {
+  font-size: 1.1rem;
+  color: #a0b8d8;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+}
+
+.maor-roof-article__meta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.maor-roof-article__meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: #7a9bbf;
+}
+
+.maor-roof-article__meta-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: var(--primary, #00D4FF);
+}
+
+/* ---- Intro Grid ---- */
+.maor-roof-article__intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 52px;
+}
+
+.maor-roof-article__lead {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: #c8daf0;
+  margin: 0 0 16px 0;
+  font-weight: 500;
+}
+
+.maor-roof-article__paragraph {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: #a0b8d8;
+  margin: 0 0 16px 0;
+}
+
+.maor-roof-article__intro-image-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.15);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.maor-roof-article__intro-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.maor-roof-article__intro-image:hover {
+  transform: scale(1.03);
+}
+
+/* ---- Article Body ---- */
+.maor-roof-article__body {
+  margin-bottom: 52px;
+}
+
+/* ---- Section ---- */
+.maor-roof-article__section {
+  margin-bottom: 44px;
+}
+
+.maor-roof-article__section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  line-height: 1.3;
+}
+
+.maor-roof-article__section-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0d1a2a;
+  font-size: 0.85rem;
+  font-weight: 800;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+/* ---- Highlight Box ---- */
+.maor-roof-article__highlight {
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.35);
+  border-right: 4px solid var(--primary, #00D4FF);
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin: 0 0 44px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.maor-roof-article__highlight-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--primary, #00D4FF);
+  margin-top: 2px;
+}
+
+.maor-roof-article__highlight p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #c8daf0;
+  font-weight: 500;
+}
+
+/* ---- Methods Grid ---- */
+.maor-roof-article__methods-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.maor-roof-article__method-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 14px;
+  padding: 24px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.maor-roof-article__method-card:hover {
+  transform: translateY(-4px);
+  background: rgba(0, 212, 255, 0.08);
+  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.15);
+}
+
+.maor-roof-article__method-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.maor-roof-article__method-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.maor-roof-article__method-desc {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #a0b8d8;
+  margin: 0;
+}
+
+/* ---- Center Image ---- */
+.maor-roof-article__image-center-wrap {
+  margin: 0 0 44px 0;
+  text-align: center;
+}
+
+.maor-roof-article__image-center {
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  border-radius: 16px;
+  display: inline-block;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.maor-roof-article__image-center:hover {
+  transform: scale(1.01);
+}
+
+.maor-roof-article__image-caption {
+  margin: 12px 0 0 0;
+  font-size: 0.85rem;
+  color: #5a7a9a;
+  font-style: italic;
+}
+
+/* ---- Steps ---- */
+.maor-roof-article__steps {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: 32px 0 44px 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.maor-roof-article__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 140px;
+  max-width: 180px;
+}
+
+.maor-roof-article__step-num {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0d1a2a;
+  font-size: 1.3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(200, 255, 0, 0.25);
+}
+
+.maor-roof-article__step-content {
+  flex: 1;
+}
+
+.maor-roof-article__step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+}
+
+.maor-roof-article__step-desc {
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #7a9bbf;
+  margin: 0;
+}
+
+.maor-roof-article__step-arrow {
+  font-size: 1.5rem;
+  color: rgba(0, 212, 255, 0.4);
+  align-self: center;
+  margin-top: -30px;
+  flex-shrink: 0;
+}
+
+/* ---- CTA ---- */
+.maor-roof-article__cta {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(200, 255, 0, 0.08) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 20px;
+  padding: 52px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.maor-roof-article__cta::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.maor-roof-article__cta-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+}
+
+.maor-roof-article__cta-text {
+  font-size: 1rem;
+  color: #a0b8d8;
+  margin: 0 0 32px 0;
+  line-height: 1.6;
+}
+
+.maor-roof-article__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0d1a2a;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 16px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  box-shadow: 0 8px 30px rgba(200, 255, 0, 0.3);
+}
+
+.maor-roof-article__cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(200, 255, 0, 0.45);
+  filter: brightness(1.08);
+}
+
+.maor-roof-article__cta-btn:focus-visible {
+  outline: 3px solid var(--primary, #00D4FF);
+  outline-offset: 3px;
+}
+
+.maor-roof-article__cta-btn-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ===========================
+   Responsive – Tablet
+   =========================== */
+@media (max-width: 768px) {
+  .maor-roof-article {
+    padding: 60px 16px;
+  }
+
+  .maor-roof-article__intro-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .maor-roof-article__intro-image-wrap {
+    order: -1;
+  }
+
+  .maor-roof-article__methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .maor-roof-article__steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .maor-roof-article__step {
+    max-width: 100%;
+    flex-direction: row;
+    text-align: right;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .maor-roof-article__step-num {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .maor-roof-article__step-arrow {
+    transform: rotate(90deg);
+    margin: 0;
+    align-self: center;
+  }
+
+  .maor-roof-article__cta {
+    padding: 40px 20px;
+  }
+
+  .maor-roof-article__section-title {
+    font-size: 1.25rem;
+  }
+
+  .maor-roof-article__highlight {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ===========================
+   Responsive – Mobile
+   =========================== */
+@media (max-width: 480px) {
+  .maor-roof-article__title {
+    font-size: 1.6rem;
+  }
+
+  .maor-roof-article__method-card {
+    padding: 18px 16px;
+  }
+
+  .maor-roof-article__cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 24px;
+  }
+
+  .maor-roof-article__meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
