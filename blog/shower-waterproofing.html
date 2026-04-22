@@ -2085,79 +2085,540 @@
         <div class="bw-faq-answer">
           <div class="bw-faq-answer-inner">מאור אחזקות מעניקה אחריות מלאה על עבודות האיטום. משך האחריות נקבע בהתא</div></div></div></div></div></div></section>
 
-<section class="maor-article-section" dir="rtl" lang="he" data-zappy-component="true" id="ai-section-1776878140219-lohxbzs">
-  <div class="maor-article-container">
+<section style="width:100%;max-width:100%;box-sizing:border-box;position:relative;overflow:hidden;background:var(--bg-dark);direction:rtl;font-family:system-ui,sans-serif;" data-zappy-section="true" class="section" id="ai-section-1776878140219-lohxbzs">
+<style>
+  .guide-hero {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background: var(--gradient-dark-section);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 140px 24px 80px;
+    overflow: hidden;
+  }
 
-    <!-- Article Header -->
-    <header class="maor-article-header">
-      <div class="maor-article-badge">מדריך מקצועי</div>
-      <h1 class="maor-article-title">איטום מקלחת – המדריך המקיף</h1>
-      <p class="maor-article-subtitle" >כל מה שצריך לדעת על איטום נכון, מניעת נזקי רטיבות ושמירה על הבית שלכם</p>
-      <div class="maor-article-meta">
-        <span class="maor-meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-element-type="icon" data-element-id="icon-1776878144952-iyqk7eyuf" data-icon-type="svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          זמן קריאה: 5 דקות
-        </span>
-        <span class="maor-meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-element-type="icon" data-element-id="icon-1776878144952-tdzd2b3qf" data-icon-type="svg"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-          מאור אחזקות
-        </span>
-      </div>
-    </header>
+  /* Animated background grid */
+  .guide-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,212,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,212,255,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: 0;
+    animation: gridPulse 8s ease-in-out infinite;
+  }
 
-    <!-- Article Layout: Content + Sidebar -->
-    <aside class="maor-article-sidebar" aria-label="מידע נוסף">
+  @keyframes gridPulse {
+    0%,100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
 
-        <!-- Sidebar Image -->
-        <div class="maor-sidebar-img-wrap">
-          
-        </div>
+  /* Glowing orbs */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.18;
+    z-index: 0;
+    animation: orbFloat 12s ease-in-out infinite;
+  }
+  .orb-1 {
+    width: 500px; height: 500px;
+    background: var(--primary);
+    top: -150px; right: -100px;
+    animation-delay: 0s;
+  }
+  .orb-2 {
+    width: 400px; height: 400px;
+    background: var(--secondary);
+    bottom: -100px; left: -80px;
+    animation-delay: -4s;
+  }
+  .orb-3 {
+    width: 300px; height: 300px;
+    background: #006DFF;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    animation-delay: -8s;
+  }
 
-        <!-- Quick Tips Card -->
-        <div class="maor-sidebar-card" role="note" aria-label="טיפים מהירים">
-          <h3 class="maor-sidebar-card-title">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" data-element-type="icon" data-element-id="icon-1776878144952-7xf61pc4q" data-icon-type="svg"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
-            טיפים מהירים
-          </h3>
-          <ul class="maor-sidebar-tips" role="list">
-            <li>אווררו את חדר האמבטיה לאחר כל מקלחת</li>
-            <li>בדקו פוגות וסיליקון אחת לשנה</li>
-            <li>הימנעו מחומרי ניקוי חומציים</li>
-            <li>טפלו בסדקים קטנים מיד כשמופיעים</li>
-            <li>השתמשו רק בחומרי איטום מוסמכים</li>
-          </ul>
-        </div>
+  @keyframes orbFloat {
+    0%,100% { transform: translateY(0) scale(1); }
+    33% { transform: translateY(-30px) scale(1.05); }
+    66% { transform: translateY(20px) scale(0.95); }
+  }
 
-        <!-- Stats Card -->
-        <div class="maor-sidebar-stats" role="note" aria-label="נתוני שירות">
-          <div class="maor-stat-item">
-            <span class="maor-stat-num">15+</span>
-            <span class="maor-stat-label">שנות ניסיון</span>
-          </div>
-          <div class="maor-stat-divider" aria-hidden="true"></div>
-          <div class="maor-stat-item">
-            <span class="maor-stat-num">500+</span>
-            <span class="maor-stat-label">פרויקטי איטום</span>
-          </div>
-          <div class="maor-stat-divider" aria-hidden="true"></div>
-          <div class="maor-stat-item">
-            <span class="maor-stat-num">100%</span>
-            <span class="maor-stat-label">אחריות על העבודה</span>
-          </div>
-        </div>
+  .guide-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,212,255,0.12);
+    border: 1px solid rgba(0,212,255,0.3);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 10;
+    animation: fadeSlideDown 0.8s ease forwards;
+  }
 
-        <!-- Contact Card -->
-        <div class="maor-sidebar-contact" role="complementary" aria-label="פרטי יצירת קשר">
-          <h3 class="maor-sidebar-contact-title">מאור אחזקות</h3>
-          <p class="maor-sidebar-contact-text">מומחים לאיטום, שיפוץ ואחזקת מבנים. זמינים לכל שאלה ועבודה.</p>
-          <p class="zappy-editable"><a href="/contact" class="maor-sidebar-contact-btn btn btn-primary" aria-label="התקשרו למאור אחזקות" data-element-type="button" data-element-id="btn-1776878144946-g35kdx3zb" data-native-element="true" style="outline: none; border-color: transparent !important; color: rgb(255, 255, 255) !important; background-color: transparent !important; background-image: linear-gradient(135deg, rgb(200, 255, 0), rgb(138, 230, 0)) !important;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            התקשרו עכשיו
-          </a>
-        </p></div>
+  @keyframes fadeSlideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
-      </aside>
+  .guide-h1 {
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    font-weight: 900;
+    color: var(--text-light);
+    text-align: center;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    position: relative;
+    z-index: 10;
+    animation: fadeSlideUp 0.9s 0.1s ease both;
+  }
+
+  .guide-h1 span {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .guide-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-muted);
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.7;
+    margin: 0 auto 48px;
+    position: relative;
+    z-index: 10;
+    animation: fadeSlideUp 0.9s 0.2s ease both;
+  }
+
+  /* Stats strip */
+  .stats-strip {
+    display: flex;
+    gap: 0;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 56px;
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+    overflow: hidden;
+    animation: fadeSlideUp 0.9s 0.3s ease both;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(12px);
+  }
+
+  .stat-item {
+    padding: 28px 40px;
+    text-align: center;
+    border-left: 1px solid var(--border-dark);
+    position: relative;
+    transition: var(--transition-hover);
+    min-width: 140px;
+  }
+
+  .stat-item:last-child { border-left: none; }
+
+  .stat-item:hover {
+    background: rgba(0,212,255,0.06);
+  }
+
+  .stat-number {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1;
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 6px;
+    display: block;
+    letter-spacing: 0.5px;
+  }
+
+  /* Main content area */
+  .guide-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 32px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    animation: fadeSlideUp 0.9s 0.4s ease both;
+  }
+
+  /* Tips card */
+  .tips-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+    padding: 40px;
+    backdrop-filter: blur(8px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tips-card::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+  }
+
+  .tips-card-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--text-light);
+    margin: 0 0 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .tips-card-title-icon {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--primary), #006DFF);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .tips-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .tips-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding: 14px 16px;
+    border-radius: 2px;
+    transition: var(--transition-hover);
+    background: rgba(255,255,255,0.02);
+    border: 1px solid transparent;
+  }
+
+  .tips-list li:hover {
+    background: rgba(0,212,255,0.06);
+    border-color: rgba(0,212,255,0.15);
+    color: var(--text-light);
+    transform: translateX(-4px);
+  }
+
+  .tip-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--secondary);
+    flex-shrink: 0;
+    margin-top: 7px;
+    box-shadow: 0 0 8px rgba(184,255,59,0.5);
+  }
+
+  /* CTA card */
+  .cta-card {
+    background: linear-gradient(135deg, rgba(0,212,255,0.1) 0%, rgba(0,109,255,0.08) 100%);
+    border: 1px solid rgba(0,212,255,0.25);
+    border-radius: 4px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-card::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(0,212,255,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: ctaPulse 4s ease-in-out infinite;
+  }
+
+  @keyframes ctaPulse {
+    0%,100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.6; }
+  }
+
+  .cta-brand-name {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--text-light);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-brand-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Icon row */
+  .cta-icons-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-icon-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-dark);
+    border-radius: 2px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    transition: var(--transition-hover);
+  }
+
+  .cta-icon-chip:hover {
+    background: rgba(0,212,255,0.08);
+    border-color: rgba(0,212,255,0.2);
+    color: var(--text-light);
+  }
+
+  .cta-icon-chip svg {
+    flex-shrink: 0;
+    color: var(--primary);
+  }
+
+  .btn-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(90deg, var(--primary), #006DFF);
+    color: #000;
+    font-size: 1.05rem;
+    font-weight: 800;
+    padding: 18px 32px;
+    border-radius: 3px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    transition: var(--transition-hover);
+    box-shadow: 0 0 0 rgba(0,212,255,0);
+    overflow: hidden;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-btn-hover);
+  }
+
+  .btn-primary:hover::before {
+    transform: translateX(100%);
+  }
+
+  /* Divider */
+  .guide-divider-wrapper {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 70px;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  @media (max-width: 900px) {
+    .guide-content-grid {
+      grid-template-columns: 1fr;
+    }
+    .stats-strip {
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      padding: 20px 24px;
+      min-width: 100px;
+      flex: 1 1 120px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .guide-hero {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+    .guide-h1 {
+      font-size: 2rem;
+    }
+    .tips-card, .cta-card {
+      padding: 28px 20px;
+    }
+    .cta-icons-row {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="guide-hero">
+  <!-- Background orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Badge -->
+  <div class="guide-badge">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+    מדריך מקצועי
   </div>
+
+  <!-- Heading -->
+  <h1 class="guide-h1">איטום מקלחת – <span>המדריך המקיף</span></h1>
+  <p class="guide-subtitle">כל מה שצריך לדעת על איטום נכון, מניעת נזקי רטיבות ושמירה על הבית שלכם</p>
+
+  <!-- Stats -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-number">15+</span>
+      <span class="stat-label">שנות ניסיון</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">500+</span>
+      <span class="stat-label">פרויקטי איטום</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number">100%</span>
+      <span class="stat-label">אחריות על העבודה</span>
+    </div>
+  </div>
+
+  <!-- Main grid -->
+  <div class="guide-content-grid">
+
+    <!-- Tips card -->
+    <div class="tips-card">
+      <h3 class="tips-card-title">
+        <div class="tips-card-title-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        </div>
+        טיפים מהירים
+      </h3>
+      <ul class="tips-list">
+        <li>
+          <span class="tip-dot"></span>
+          אווררו את חדר האמבטיה לאחר כל מקלחת
+        </li>
+        <li>
+          <span class="tip-dot"></span>
+          בדקו פוגות וסיליקון אחת לשנה
+        </li>
+        <li>
+          <span class="tip-dot"></span>
+          הימנעו מחומרי ניקוי חומציים
+        </li>
+        <li>
+          <span class="tip-dot"></span>
+          טפלו בסדקים קטנים מיד כשמופיעים
+        </li>
+        <li>
+          <span class="tip-dot"></span>
+          השתמשו רק בחומרי איטום מוסמכים
+        </li>
+      </ul>
+    </div>
+
+    <!-- CTA card -->
+    <div class="cta-card">
+      <h3 class="cta-brand-name">מאור אחזקות</h3>
+      <p class="cta-brand-desc">מומחים לאיטום, שיפוץ ואחזקת מבנים. זמינים לכל שאלה ועבודה.</p>
+
+      <!-- Icons row -->
+      <div class="cta-icons-row">
+        <div class="cta-icon-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          מוסמך ומורשה
+        </div>
+        <div class="cta-icon-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          אחריות מלאה
+        </div>
+        <div class="cta-icon-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          זמינות מהירה
+        </div>
+        <div class="cta-icon-chip">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          צוות מקצועי
+        </div>
+      </div>
+
+      <a href="/contact" class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.95-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16.92z"></path></svg>
+        התקשרו עכשיו
+      </a>
+    </div>
+  </div>
+
+  <!-- Bottom divider -->
+  <div class="guide-divider-wrapper">
+    <svg viewBox="0 0 1200 70" preserveAspectRatio="none" style="display:block;width:100%;height:100%;">
+      <path d="M0,70 L0,40 Q300,0 600,35 Q900,70 1200,25 L1200,70 Z" fill="var(--bg-light)" opacity="0.8"></path>
+      <path d="M0,70 L0,55 Q400,20 700,50 Q950,70 1200,45 L1200,70 Z" fill="var(--bg-light)"></path>
+    </svg>
+  </div>
+</div>
 </section>
 
 
