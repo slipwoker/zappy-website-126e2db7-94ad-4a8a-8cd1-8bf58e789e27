@@ -19909,6 +19909,607 @@ body.accessibility-widget-visible ._access-menu {
     gap: 14px;
   }
 }
+
+/* Added Component Styles */
+/* =========================================
+   MAOR EXTERIOR PAINTING SECTION
+   ========================================= */
+
+.maor-exterior-section {
+  position: relative;
+  background: linear-gradient(160deg, #0a1628 0%, #0d1f3c 50%, #0a2240 100%);
+  padding: 90px 20px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  overflow: hidden;
+}
+
+.maor-exterior-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 10%, rgba(0, 212, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 30% at 80% 80%, rgba(200, 255, 0, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.maor-exterior-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ---- Header ---- */
+.maor-exterior-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.maor-exterior-badge {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a1628;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 6px 18px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.maor-exterior-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 18px 0;
+  line-height: 1.25;
+}
+
+.maor-exterior-subtitle {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ---- Hero Row ---- */
+.maor-exterior-hero-row {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 30px;
+  margin-bottom: 70px;
+  align-items: stretch;
+}
+
+.maor-exterior-hero-image-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.maor-exterior-hero-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.maor-exterior-hero-image-wrap:hover .maor-exterior-hero-img {
+  transform: scale(1.03);
+}
+
+.maor-exterior-hero-badge-float {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(10, 22, 40, 0.92);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  backdrop-filter: blur(8px);
+}
+
+.maor-exterior-hero-badge-icon {
+  font-size: 18px;
+}
+
+/* ---- Stats Column ---- */
+.maor-exterior-stats-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.maor-exterior-stat-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 14px;
+  padding: 18px 20px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.maor-exterior-stat-card:hover {
+  background: rgba(0, 212, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.15);
+}
+
+.maor-exterior-stat-highlight {
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  border-color: transparent;
+}
+
+.maor-exterior-stat-highlight:hover {
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  box-shadow: 0 8px 30px rgba(200, 255, 0, 0.3);
+}
+
+.maor-exterior-stat-highlight .maor-exterior-stat-num,
+.maor-exterior-stat-highlight .maor-exterior-stat-label {
+  color: #0a1628;
+}
+
+.maor-exterior-stat-num {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary, #00D4FF);
+  display: block;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.maor-exterior-stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  display: block;
+}
+
+/* ---- Services Grid ---- */
+.maor-exterior-services-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.maor-exterior-services-title h3 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+.maor-exterior-services-title h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  border-radius: 2px;
+}
+
+.maor-exterior-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 70px;
+}
+
+.maor-exterior-service-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.maor-exterior-service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 212, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.maor-exterior-service-img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.maor-exterior-service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.maor-exterior-service-card:hover .maor-exterior-service-img {
+  transform: scale(1.06);
+}
+
+.maor-exterior-service-icon {
+  font-size: 2rem;
+  margin: 20px 20px 8px 20px;
+  display: block;
+}
+
+.maor-exterior-service-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 20px 10px 20px;
+}
+
+.maor-exterior-service-desc {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 20px 14px 20px;
+  line-height: 1.65;
+  flex: 1;
+}
+
+.maor-exterior-service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 20px 24px 20px;
+}
+
+.maor-exterior-service-list li {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.maor-exterior-service-list li::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ---- Process Steps ---- */
+.maor-exterior-process {
+  margin-bottom: 70px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 24px;
+  padding: 50px 40px;
+}
+
+.maor-exterior-process-title {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 40px 0;
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.maor-exterior-process-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  border-radius: 2px;
+}
+
+.maor-exterior-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.maor-exterior-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  min-width: 160px;
+  max-width: 220px;
+  padding: 0 10px;
+}
+
+.maor-exterior-step-num {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a1628;
+  font-size: 1.4rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(200, 255, 0, 0.3);
+}
+
+.maor-exterior-step-content h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.maor-exterior-step-content p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.maor-exterior-step-divider {
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.5), rgba(200, 255, 0, 0.5));
+  margin-top: 27px;
+  flex-shrink: 0;
+  border-radius: 1px;
+}
+
+/* ---- CTA ---- */
+.maor-exterior-cta {
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  border-radius: 24px;
+  padding: 56px 40px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(200, 255, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.maor-exterior-cta::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.maor-exterior-cta::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: -30px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.maor-exterior-cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.maor-exterior-cta-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  color: #0a1628;
+  margin: 0 0 12px 0;
+}
+
+.maor-exterior-cta-sub {
+  font-size: 1.05rem;
+  color: rgba(10, 22, 40, 0.75);
+  margin: 0 0 32px 0;
+  font-weight: 500;
+}
+
+.maor-exterior-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.maor-exterior-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0a1628;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 20px rgba(10, 22, 40, 0.35);
+}
+
+.maor-exterior-btn-primary:hover {
+  background: #0d1f3c;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(10, 22, 40, 0.5);
+}
+
+.maor-exterior-btn-primary:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+.maor-exterior-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(10, 22, 40, 0.12);
+  color: #0a1628;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 16px 34px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid rgba(10, 22, 40, 0.4);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.maor-exterior-btn-secondary:hover {
+  background: rgba(10, 22, 40, 0.22);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(10, 22, 40, 0.2);
+}
+
+.maor-exterior-btn-secondary:focus-visible {
+  outline: 3px solid #0a1628;
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1024px) {
+  .maor-exterior-hero-row {
+    grid-template-columns: 1fr;
+  }
+
+  .maor-exterior-hero-img {
+    height: 300px;
+  }
+
+  .maor-exterior-stats-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .maor-exterior-stat-card {
+    flex: 1 1 calc(50% - 7px);
+    min-width: 120px;
+  }
+
+  .maor-exterior-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .maor-exterior-section {
+    padding: 60px 16px;
+  }
+
+  .maor-exterior-header {
+    margin-bottom: 40px;
+  }
+
+  .maor-exterior-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .maor-exterior-process {
+    padding: 36px 20px;
+  }
+
+  .maor-exterior-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .maor-exterior-step {
+    max-width: 100%;
+    width: 100%;
+    flex-direction: row;
+    text-align: right;
+    gap: 16px;
+    padding: 0;
+  }
+
+  .maor-exterior-step-num {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .maor-exterior-step-content {
+    text-align: right;
+  }
+
+  .maor-exterior-step-divider {
+    width: 2px;
+    height: 30px;
+    margin-top: 0;
+    background: linear-gradient(180deg, rgba(0, 212, 255, 0.5), rgba(200, 255, 0, 0.5));
+    margin-right: 27px;
+  }
+
+  .maor-exterior-cta {
+    padding: 40px 24px;
+  }
+
+  .maor-exterior-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .maor-exterior-btn-primary,
+  .maor-exterior-btn-secondary {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .maor-exterior-hero-row {
+    margin-bottom: 40px;
+  }
+
+  .maor-exterior-stat-card {
+    flex: 1 1 calc(50% - 7px);
+  }
+}
+
+@media (max-width: 480px) {
+  .maor-exterior-stat-card {
+    flex: 1 1 100%;
+  }
+
+  .maor-exterior-title {
+    font-size: 1.6rem;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
