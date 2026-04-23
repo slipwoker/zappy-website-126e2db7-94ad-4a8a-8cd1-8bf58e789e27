@@ -1082,6 +1082,55 @@ window.onload = function() {
   });
 })();
 
+/* Added Component Script */
+(function () {
+  const modal = document.getElementById('vgalModal');
+  const backdrop = modal ? modal.querySelector('.vgal-modal-backdrop') : null;
+  const closeBtn = modal ? modal.querySelector('.vgal-modal-close') : null;
+  const items = document.querySelectorAll('.vgal-item');
+
+  function openModal() {
+    if (!modal) return;
+    modal.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    if (!modal) return;
+    modal.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+  }
+
+  items.forEach(function (item) {
+    // Click
+    item.addEventListener('click', openModal);
+
+    // Keyboard: Enter or Space
+    item.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal();
+      }
+    });
+  });
+
+  if (backdrop) {
+    backdrop.addEventListener('click', closeModal);
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  // Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal && !modal.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
+})();
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
