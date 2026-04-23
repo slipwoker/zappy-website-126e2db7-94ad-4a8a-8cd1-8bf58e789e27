@@ -1183,6 +1183,20 @@ window.onload = function() {
   });
 })();
 
+/* Added Component Script */
+/* Optional: Keyboard accessibility for gallery items */
+document.querySelectorAll('.gallery-item').forEach(function(item) {
+  item.setAttribute('tabindex', '0');
+  item.setAttribute('role', 'img');
+
+  item.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      item.click();
+    }
+  });
+});
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
