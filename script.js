@@ -1131,6 +1131,58 @@ window.onload = function() {
   });
 })();
 
+/* Added Component Script */
+(function () {
+  'use strict';
+
+  const modal = document.getElementById('vgModal');
+  const modalOverlay = document.getElementById('vgModalOverlay');
+  const modalClose = document.getElementById('vgModalClose');
+  const cards = document.querySelectorAll('.vg-card');
+  const playBtns = document.querySelectorAll('.vg-play-btn');
+
+  function openModal() {
+    modal.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    modalClose.focus();
+  }
+
+  function closeModal() {
+    modal.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+  }
+
+  // Open on card click or play button click
+  cards.forEach(function (card) {
+    card.addEventListener('click', openModal);
+    card.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        openModal();
+      }
+    });
+  });
+
+  // Stop play button click from double-firing card click
+  playBtns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      openModal();
+    });
+  });
+
+  // Close on overlay or close button
+  if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal && !modal.hasAttribute('hidden')) {
+      closeModal();
+    }
+  });
+})();
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
