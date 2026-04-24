@@ -1,5 +1,5 @@
 # Clean URL redirects for Render static hosting
-# Generated: 2026-04-23T21:15:10.000Z
+# Generated: 2026-04-24T09:33:54.813Z
 # NOTE: Render uses render.yaml for routing, not _redirects (that is Netlify)
 # This file is kept for reference only
 
@@ -26,13 +26,13 @@
 /service-areas/roof-waterproofing-eilat  /service-areas/roof-waterproofing-eilat.html  200!
 /service-areas/roof-waterproofing-beer-sheva  /service-areas/roof-waterproofing-beer-sheva.html  200!
 /exterior-building-renovation  /exterior-building-renovation.html  200!
-/thank-you  /thank-you.html  200!
 /blog/roof-waterproofing-yatzata-tzadik  /blog/roof-waterproofing-yatzata-tzadik.html  200!
 /blog/balcony-roof-waterproofing-without-demolition  /blog/balcony-roof-waterproofing-without-demolition.html  200!
 /blog/balcony-roof-waterproofing-with-demolition  /blog/balcony-roof-waterproofing-with-demolition.html  200!
 /blog/mold-and-condensation-treatment  /blog/mold-and-condensation-treatment.html  200!
 /blog/roof-waterproofing-price-guide  /blog/roof-waterproofing-price-guide.html  200!
 /blog/shower-waterproofing  /blog/shower-waterproofing.html  200!
+/thank-you  /thank-you.html  200!
 /contact  /contact.html  200!
 
 # Legal pages - redirect old .html URLs to friendly URLs
