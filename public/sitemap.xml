@@ -19,7 +19,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://maor-ahzakot.co.il/roof-tarring</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://maor-ahzakot.co.il/renovation-fire-recovery</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maor-ahzakot.co.il/testimonials</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -61,7 +73,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maor-ahzakot.co.il/testimonials</loc>
+    <loc>https://maor-ahzakot.co.il/service-areas/roof-waterproofing-shefela-south-gush-dan</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maor-ahzakot.co.il/service-areas/roof-waterproofing-eilat</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maor-ahzakot.co.il/service-areas/roof-waterproofing-beer-sheva</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -94,30 +118,6 @@
     <loc>https://maor-ahzakot.co.il/blog/concrete-repair-after-long-term-moisture</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://maor-ahzakot.co.il/service-areas/roof-waterproofing-shefela-south-gush-dan</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://maor-ahzakot.co.il/roof-tarring</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://maor-ahzakot.co.il/service-areas/roof-waterproofing-eilat</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://maor-ahzakot.co.il/service-areas/roof-waterproofing-beer-sheva</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -169,12 +169,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://maor-ahzakot.co.il/contact</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://maor-ahzakot.co.il/blog/roof-tarring-yatzata-tzadik-quality-check</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>daily</changefreq>
@@ -190,6 +184,12 @@
     <loc>https://maor-ahzakot.co.il/polyurethane-roof-waterproofing</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://maor-ahzakot.co.il/contact</loc>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>

@@ -1,30 +1,30 @@
 # Clean URL redirects for Render static hosting
-# Generated: 2026-04-27T15:11:53.315Z
+# Generated: 2026-04-27T15:13:38.034Z
 # NOTE: Render uses render.yaml for routing, not _redirects (that is Netlify)
 # This file is kept for reference only
 
 /roof-waterproofing  /roof-waterproofing.html  200!
 /industrial-waterproofing  /industrial-waterproofing.html  200!
+/roof-tarring  /roof-tarring.html  200!
 /renovation-fire-recovery  /renovation-fire-recovery.html  200!
 /privacy  /privacy.html  200!
 /accessibility  /accessibility.html  200!
 /terms  /terms.html  200!
+/testimonials  /testimonials.html  200!
 /service-areas  /service-areas.html  200!
 /roof-waterproofing-tel-aviv  /roof-waterproofing-tel-aviv.html  200!
 /service-areas/roof-waterproofing-netanya  /service-areas/roof-waterproofing-netanya.html  200!
 /roof-waterproofing-services  /roof-waterproofing-services.html  200!
 /service-areas/roof-waterproofing-jerusalem  /service-areas/roof-waterproofing-jerusalem.html  200!
 /service-areas/roof-waterproofing-haifa-krayot  /service-areas/roof-waterproofing-haifa-krayot.html  200!
-/testimonials  /testimonials.html  200!
+/service-areas/roof-waterproofing-shefela-south-gush-dan  /service-areas/roof-waterproofing-shefela-south-gush-dan.html  200!
+/service-areas/roof-waterproofing-eilat  /service-areas/roof-waterproofing-eilat.html  200!
+/service-areas/roof-waterproofing-beer-sheva  /service-areas/roof-waterproofing-beer-sheva.html  200!
 /blog  /blog.html  200!
 /blog/roof-inspection-before-winter  /blog/roof-inspection-before-winter.html  200!
 /blog/exterior-walls-water-warning-signs  /blog/exterior-walls-water-warning-signs.html  200!
 /blog/polyurethane-waterproofing-when-to-use  /blog/polyurethane-waterproofing-when-to-use.html  200!
 /blog/concrete-repair-after-long-term-moisture  /blog/concrete-repair-after-long-term-moisture.html  200!
-/service-areas/roof-waterproofing-shefela-south-gush-dan  /service-areas/roof-waterproofing-shefela-south-gush-dan.html  200!
-/roof-tarring  /roof-tarring.html  200!
-/service-areas/roof-waterproofing-eilat  /service-areas/roof-waterproofing-eilat.html  200!
-/service-areas/roof-waterproofing-beer-sheva  /service-areas/roof-waterproofing-beer-sheva.html  200!
 /exterior-building-renovation  /exterior-building-renovation.html  200!
 /blog/roof-waterproofing-yatzata-tzadik  /blog/roof-waterproofing-yatzata-tzadik.html  200!
 /blog/balcony-roof-waterproofing-without-demolition  /blog/balcony-roof-waterproofing-without-demolition.html  200!
@@ -33,10 +33,10 @@
 /blog/roof-waterproofing-price-guide  /blog/roof-waterproofing-price-guide.html  200!
 /blog/shower-waterproofing  /blog/shower-waterproofing.html  200!
 /thank-you  /thank-you.html  200!
-/contact  /contact.html  200!
 /blog/roof-tarring-yatzata-tzadik-quality-check  /blog/roof-tarring-yatzata-tzadik-quality-check.html  200!
 /blog/stairwell-renovation-after-fire  /blog/stairwell-renovation-after-fire.html  200!
 /polyurethane-roof-waterproofing  /polyurethane-roof-waterproofing.html  200!
+/contact  /contact.html  200!
 
 # Legal pages - redirect old .html URLs to friendly URLs
 /privacy.html  /privacy  301
