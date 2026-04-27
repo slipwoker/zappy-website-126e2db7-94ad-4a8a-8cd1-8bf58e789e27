@@ -21433,6 +21433,256 @@ body.accessibility-widget-visible ._access-menu {
     border-radius: 8px;
   }
 }
+
+.navbar .phone-header-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: static !important;
+  transform: none !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  border: 2px solid var(--primary) !important;
+  background: transparent !important;
+  color: var(--nav-text, #F5F7FA) !important;
+  cursor: pointer !important;
+  padding: 8px !important;
+}
+
+.navbar .phone-header-btn:hover {
+  background: var(--primary) !important;
+  color: var(--text-dark) !important;
+}
+
+.navbar .phone-header-btn svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+.navbar .nav-menu > li > a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-menu > .nav-item > a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-link {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .navbar-nav .nav-link {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar a:not(.nav-cta-btn) {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .navbar-brand {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .navbar-brand a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .dropdown-toggle {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .mobile-hamburger-btn {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .mobile-close-btn {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .dropdown-menu li a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .sub-menu a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .sub-menu li a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-menu .sub-menu a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-menu .sub-menu li a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .zappy-products-dropdown .sub-menu a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+nav.navbar .sub-menu li a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .mobile-submenu-toggle {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-search-input {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-search-box .nav-search-input {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-search-input::placeholder {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-search-result-name {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-search-result-item a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-search-result-price {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-search-no-results {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .search-no-results {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .cart-link.nav-cart {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .login-link.nav-login {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-search-toggle {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .search-toggle {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .cart-link.nav-cart svg {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .login-link.nav-login svg {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .nav-search-toggle svg {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar .search-toggle svg {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled ~ .zappy-catalog-menu .catalog-menu-item {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled ~ .zappy-catalog-menu .catalog-menu-all {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled ~ #zappy-catalog-menu .catalog-menu-item {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled ~ #zappy-catalog-menu .catalog-menu-all {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .nav-menu > li > a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .nav-menu > .nav-item > a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled a:not(.nav-cta-btn) {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .navbar-brand {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .navbar-brand a {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .dropdown-toggle {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .mobile-hamburger-btn {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .mobile-close-btn {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .phone-header-btn {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .mobile-toggle {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .mobile-toggle svg {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .nav-search-btn {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .cart-link.nav-cart {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .login-link.nav-login {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .nav-search-toggle {
+  color: var(--nav-text, #F5F7FA) !important;
+}
+
+.navbar.scrolled .search-toggle {
+  color: var(--nav-text, #F5F7FA) !important;
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
@@ -21807,17 +22057,17 @@ nav .sub-menu.zappy-empty-submenu,
     min-width: 0 !important;
   }
   
-  /* CRITICAL: Constrain zoom wrappers on mobile - they often have fixed pixel widths */
+  /* CRITICAL: Constrain zoom wrappers on mobile without breaking saved crop geometry */
   [data-zappy-zoom-wrapper="true"] {
     width: 100% !important;
     max-width: 100% !important;
     min-width: 0 !important;
-    height: auto !important;
+    overflow: hidden !important;
+    position: relative !important;
   }
   
-  /* Fix zoom wrapper images on mobile - make responsive */
-  /* Exclude images with mobile overrides — those are handled by JS to honor user settings */
-  [data-zappy-zoom-wrapper="true"] img:not([data-zappy-mobile-object-position]):not([data-zappy-mobile-zoom]) {
+  /* Legacy zoom wrappers without saved crop data can still fall back to responsive images. */
+  [data-zappy-zoom-wrapper="true"]:not([data-zappy-zoom-wrapper-width]) img:not([data-zappy-mobile-object-position]):not([data-zappy-mobile-zoom]) {
     position: relative !important;
     width: 100% !important;
     height: auto !important;
