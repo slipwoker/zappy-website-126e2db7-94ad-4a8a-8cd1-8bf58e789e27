@@ -1,4 +1,6 @@
-# Business — Generative Engine Optimization Map
+# מאור אחזקות — Generative Engine Optimization Map
+
+> A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.
 
 ---
 
@@ -140,6 +142,9 @@ https://maor-ahzakot.co.il/thank-you
 https://maor-ahzakot.co.il/contact
 צרו קשר עם מאור אחזקות לייעוץ חינם והצעת מחיר לאיטום גגות, איטום תעשייתי ושיפוץ מבנים. טלפון: 055-9932287 | מענה תוך 24 שעות.
 
+### Page
+https://maor-ahzakot.co.il/water-leak-services
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -156,12 +161,62 @@ Information about WCAG compliance and accessibility features.
 
 ---
 
-# Business Context (for LLM understanding)
+## How to Contact Us
 
-## About Business
+- Email: mwrdrwry@gmail.com
+- Phone: 055-9932287
+- Phone (tel): tel:0559932287
+- Address: ישראל
+
+### Contact form
+- URL: https://maor-ahzakot.co.il/roof-waterproofing-tel-aviv
+- Endpoint: https://maor-ahzakot.co.il/api/email/contact-form
+- Method: POST
+- Content-Type: application/json
+- Fields:
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
+
 ---
 
-# Additional Resources
+# Business Context (for LLM understanding)
 
-- **Sitemap**: https://maor-ahzakot.co.il/sitemap.xml
-- **Robots.txt**: https://maor-ahzakot.co.il/robots.txt
+## About מאור אחזקות
+A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.
+
+## Services/Products
+- איטום גגות בזפת חם
+- איטום קירות ושיפוץ לאחר שריפה
+- שיפוץ דירות
+- איטום גגות ביריעות ביטומניות
+- איטום גגות מרוצפים
+- איטום גגות בטון
+- איטום מפעלים
+- איטום גגות בפוליאורטן
+- בידוד גגות
+- יציקת בטקל
+- איטום גגות באפוקסי
+- סיוד גגות
+- איטום חניון
+- איטום מרפסת
+
+## Target Audience
+- בעלי נכסים הזקוקים לשיפוץ
+- משקיעי נדל"ן
+- רוכשי דירות חדשות
+- מנהלי נכסים מסחריים
+- סוכני נדל"ן
+
+## Industry
+בנייה ושיפוץ
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://maor-ahzakot.co.il/sitemap.xml
+- Robots: https://maor-ahzakot.co.il/robots.txt
+- Flattened page text (for LLMs): https://maor-ahzakot.co.il/llms-full.txt
