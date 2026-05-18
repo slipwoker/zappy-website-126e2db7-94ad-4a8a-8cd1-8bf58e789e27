@@ -1010,6 +1010,36 @@ document.querySelectorAll('.gallery-item').forEach(function(item) {
 })();
 
 
+/* Added Component Script */
+(function () {
+  const faqItems = document.querySelectorAll('.maor-faq-item');
+
+  faqItems.forEach(function (item) {
+    const btn = item.querySelector('.maor-faq-question');
+    const answer = item.querySelector('.maor-faq-answer');
+
+    if (!btn || !answer) return;
+
+    btn.addEventListener('click', function () {
+      const isActive = item.classList.contains('active');
+
+      // Close all open items
+      faqItems.forEach(function (otherItem) {
+        otherItem.classList.remove('active');
+        const otherBtn = otherItem.querySelector('.maor-faq-question');
+        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+      });
+
+      // Toggle clicked item
+      if (!isActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+
+
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
   try {

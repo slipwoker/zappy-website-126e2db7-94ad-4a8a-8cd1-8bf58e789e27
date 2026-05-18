@@ -22079,6 +22079,432 @@ nav.navbar .sub-menu li a {
 
 
 
+
+/* Added Component Styles */
+/* ===== MAOR BATHROOM ARTICLE SECTION ===== */
+.maor-bathroom-article {
+  background: #0d1117;
+  padding: 70px 20px 80px;
+  font-family: system-ui, sans-serif;
+  direction: rtl;
+  color: #e8eaf0;
+}
+
+.maor-article-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+.maor-article-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.maor-article-tag {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0d1117;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+
+.maor-article-title {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.35;
+  margin: 0 0 14px;
+}
+
+.maor-article-subtitle {
+  font-size: 1.05rem;
+  color: #a0aab8;
+  margin: 0 0 18px;
+  line-height: 1.6;
+}
+
+.maor-article-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.maor-meta-item {
+  font-size: 14px;
+  color: #6b7a8d;
+}
+
+.maor-meta-divider {
+  color: #3a4050;
+  font-size: 14px;
+}
+
+/* --- Hero Image --- */
+.maor-article-hero-img-wrap {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+.maor-article-hero-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.maor-article-hero-img:hover {
+  transform: scale(1.02);
+}
+
+/* --- Article Body --- */
+.maor-article-body {
+  margin-bottom: 56px;
+}
+
+.maor-article-body p {
+  font-size: 1.02rem;
+  line-height: 1.85;
+  color: #c8d0dc;
+  margin-bottom: 20px;
+}
+
+.maor-section-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary, #00D4FF);
+  margin: 36px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+}
+
+.maor-article-list {
+  padding-right: 22px;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.maor-article-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #c8d0dc;
+  margin-bottom: 10px;
+}
+
+.maor-article-list li strong {
+  color: #ffffff;
+}
+
+/* --- Side Image --- */
+.maor-article-side-img-wrap {
+  float: left;
+  margin: 0 0 20px 24px;
+  width: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+}
+
+.maor-article-side-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.35s ease;
+}
+
+.maor-article-side-img:hover {
+  transform: scale(1.03);
+}
+
+.maor-img-caption {
+  font-size: 13px !important;
+  color: #6b7a8d !important;
+  text-align: center;
+  padding: 8px 10px !important;
+  margin: 0 !important;
+  background: rgba(255,255,255,0.04);
+  line-height: 1.4 !important;
+}
+
+/* --- Tip Box --- */
+.maor-tip-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: rgba(0, 212, 255, 0.07);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-right: 4px solid var(--primary, #00D4FF);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 28px 0;
+  color: #d0dce8;
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.maor-tip-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.maor-tip-box strong {
+  color: var(--primary, #00D4FF);
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ===== FAQ SECTION ===== */
+.maor-faq-section {
+  margin-bottom: 56px;
+}
+
+.maor-faq-title {
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.maor-faq-subtitle {
+  text-align: center;
+  color: #7a8899;
+  font-size: 0.97rem;
+  margin-bottom: 36px;
+}
+
+.maor-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- FAQ Item Card --- */
+.maor-faq-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  border-radius: 13px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.25s ease, border-color 0.3s ease;
+}
+
+.maor-faq-item:hover {
+  box-shadow: 0 6px 28px rgba(0, 212, 255, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+.maor-faq-item.active {
+  border-color: rgba(0, 212, 255, 0.55);
+  box-shadow: 0 6px 32px rgba(0, 212, 255, 0.18);
+}
+
+/* --- FAQ Question Button --- */
+.maor-faq-question {
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  text-align: right;
+  font-family: system-ui, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #e8eaf0;
+  gap: 16px;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.maor-faq-question:hover {
+  background: rgba(0, 212, 255, 0.07);
+  color: #ffffff;
+}
+
+.maor-faq-item.active .maor-faq-question {
+  color: var(--primary, #00D4FF);
+  background: rgba(0, 212, 255, 0.06);
+}
+
+.maor-faq-question:focus-visible {
+  outline: 2px solid var(--primary, #00D4FF);
+  outline-offset: -2px;
+}
+
+/* --- Chevron --- */
+.maor-faq-chevron {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--primary, #00D4FF);
+  flex-shrink: 0;
+  display: inline-block;
+  transform: rotate(-90deg);
+  transition: transform 0.35s ease;
+  line-height: 1;
+}
+
+.maor-faq-item.active .maor-faq-chevron {
+  transform: rotate(90deg);
+}
+
+/* --- FAQ Answer --- */
+.maor-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.38s ease, opacity 0.28s ease, padding 0.28s ease;
+}
+
+.maor-faq-item.active .maor-faq-answer {
+  max-height: 500px;
+  opacity: 1;
+  padding-bottom: 20px;
+}
+
+.maor-faq-answer-inner {
+  border-right: 3px solid var(--primary, #00D4FF);
+  margin: 0 24px;
+  padding: 14px 18px;
+  font-size: 0.97rem;
+  line-height: 1.78;
+  color: #b0bac8;
+  background: rgba(0, 212, 255, 0.04);
+  border-radius: 0 8px 8px 0;
+}
+
+/* ===== CTA BLOCK ===== */
+.maor-article-cta {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(200, 255, 0, 0.07) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 18px;
+  padding: 44px 32px;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+}
+
+.maor-cta-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.maor-cta-text {
+  font-size: 1rem;
+  color: #a0aab8;
+  margin: 0 0 28px;
+  line-height: 1.6;
+}
+
+.maor-cta-btn {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0d1117;
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: 15px 38px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+  box-shadow: 0 4px 20px rgba(200, 255, 0, 0.25);
+  letter-spacing: 0.3px;
+}
+
+.maor-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(200, 255, 0, 0.4);
+  opacity: 0.92;
+}
+
+.maor-cta-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .maor-bathroom-article {
+    padding: 48px 16px 60px;
+  }
+
+  .maor-article-hero-img {
+    height: 220px;
+  }
+
+  .maor-article-side-img-wrap {
+    float: none;
+    width: 100%;
+    margin: 0 0 24px 0;
+  }
+
+  .maor-article-side-img {
+    height: 200px;
+  }
+
+  .maor-faq-question {
+    padding: 16px 18px;
+    font-size: 0.97rem;
+  }
+
+  .maor-faq-answer-inner {
+    margin: 0 14px;
+    padding: 12px 14px;
+    font-size: 0.93rem;
+  }
+
+  .maor-article-cta {
+    padding: 32px 20px;
+  }
+
+  .maor-cta-title {
+    font-size: 1.25rem;
+  }
+
+  .maor-cta-btn {
+    padding: 13px 28px;
+    font-size: 0.98rem;
+  }
+
+  .maor-tip-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .maor-article-title {
+    font-size: 1.3rem;
+  }
+
+  .maor-section-heading {
+    font-size: 1.15rem;
+  }
+
+  .maor-faq-title {
+    font-size: 1.2rem;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
