@@ -290,8 +290,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu &amp;gt; li &amp;gt; .menu-group-title,
+            #navMenu &amp;gt; li &amp;gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -305,13 +305,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu &amp;gt; li &amp;gt; .menu-group-title:hover,
+            #navMenu &amp;gt; li &amp;gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &gt; .sub-menu {
+            li:has(.menu-group-title):hover &amp;gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -320,7 +320,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover &amp;gt; .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -373,9 +373,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &gt; .sub-menu,
-            nav li:hover &gt; .sub-menu,
-            .navbar li:hover &gt; .sub-menu {
+            .nav-menu li:hover &amp;gt; .sub-menu,
+            nav li:hover &amp;gt; .sub-menu,
+            .navbar li:hover &amp;gt; .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -413,8 +413,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu &amp;gt; li &amp;gt; .menu-group-title,
+            #navMenu &amp;gt; li &amp;gt; .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -428,8 +428,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu &amp;gt; li &amp;gt; .menu-group-title:hover,
+            #navMenu &amp;gt; li &amp;gt; .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -470,18 +470,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &gt; .sub-menu,
-              nav li:hover &gt; .sub-menu,
-              .navbar li:hover &gt; .sub-menu {
+              .nav-menu li:hover &amp;gt; .sub-menu,
+              nav li:hover &amp;gt; .sub-menu,
+              .navbar li:hover &amp;gt; .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &gt; .sub-menu.mobile-expanded,
-              nav li &gt; .sub-menu.mobile-expanded,
-              .navbar li &gt; .sub-menu.mobile-expanded {
+              .nav-menu li &amp;gt; .sub-menu.mobile-expanded,
+              nav li &amp;gt; .sub-menu.mobile-expanded,
+              .navbar li &amp;gt; .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -509,39 +509,39 @@
               }
               
               /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) &gt; a,
-              nav li:has(.sub-menu) &gt; a,
-              .navbar li:has(.sub-menu) &gt; a,
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) &amp;gt; a,
+              nav li:has(.sub-menu) &amp;gt; a,
+              .navbar li:has(.sub-menu) &amp;gt; a,
+              .nav-menu &amp;gt; li &amp;gt; .menu-group-title,
+              #navMenu &amp;gt; li &amp;gt; .menu-group-title {
                 flex: 1 !important;
                 min-width: 0 !important;
               }
               
               /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu &amp;gt; li &amp;gt; .menu-group-title,
+              #navMenu &amp;gt; li &amp;gt; .menu-group-title {
                 padding: 0 !important;
                 line-height: inherit !important;
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
-              nav li:has(.sub-menu) &gt; .sub-menu,
-              .navbar li:has(.sub-menu) &gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) &amp;gt; .sub-menu,
+              nav li:has(.sub-menu) &amp;gt; .sub-menu,
+              .navbar li:has(.sub-menu) &amp;gt; .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) &amp;gt; a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) &amp;gt; a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) &amp;gt; a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) &amp;gt; a [class*="arrow"],
+              nav li:has(.sub-menu) &amp;gt; a [class*="chevron"],
+              nav li:has(.sub-menu) &amp;gt; a [class*="arrow"],
+              #navMenu li:has(.sub-menu) &amp;gt; a [class*="chevron"],
+              #navMenu li:has(.sub-menu) &amp;gt; a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -596,10 +596,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &gt; 768) {
+                if (window.innerWidth &amp;gt; 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&amp;gt; btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&amp;gt; {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -622,7 +622,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope &amp;gt; a') || li.querySelector(':scope &amp;gt; .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -682,7 +682,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' &amp;amp;&amp;amp; mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -726,9 +726,9 @@
         list-style: none;
         pointer-events: none;
       }
-      .nav-menu li:hover &gt; .sub-menu,
-      nav li:hover &gt; .sub-menu,
-      .navbar li:hover &gt; .sub-menu {
+      .nav-menu li:hover &amp;gt; .sub-menu,
+      nav li:hover &amp;gt; .sub-menu,
+      .navbar li:hover &amp;gt; .sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -774,7 +774,7 @@ gtag('consent', 'default', {
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;amp;l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','AW-17733353102');</script>
 <!-- ZAPPY_INTEGRATION_END analytics:add_google_tag_manager -->
@@ -843,7 +843,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       <a href="/" class="logo-link">
         <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo"></img>
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/roof-tarring" class="nav-link">זיפות</a></li><li><a href="/polyurethane-roof-waterproofing" class="nav-link">איטום פוליאוריטני</a></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan">איטום גגות בשפלה ובדרום גוש דן</a></li><li><a href="/service-areas/roof-waterproofing-eilat">איטום לגג באילת</a></li><li><a href="/service-areas/roof-waterproofing-beer-sheva">איטום גגות בבאר שבע</a></li></ul></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li><li><a href="/blog/roof-waterproofing-yatzata-tzadik">איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי</a></li><li><a href="/blog/balcony-roof-waterproofing-without-demolition">איטום גג מרפסת ללא פירוק: מתי זה אפשרי ומה חייבים לבדוק לפני</a></li><li><a href="/blog/balcony-roof-waterproofing-with-demolition">איטום גג מרפסת עם פירוק: מתי זה נדרש ואיך מבצעים נכון</a></li><li><a href="/blog/mold-and-condensation-treatment">טיפול בעובש ועיבוי: איך מזהים את מקור הבעיה ומה באמת פותר אותה</a></li><li><a href="/blog/roof-waterproofing-price-guide">מחירון איטום גגות: מה משפיע על המחיר ואיך משווים נכון בין הצעות</a></li><li><a href="/blog/shower-waterproofing">איטום מקלחת: מה חייבים לבצע נכון כדי למנוע רטיבות ונזקים נסתרים</a></li><li><a href="/blog/roof-tarring-yatzata-tzadik-quality-check">זיפות גגות "יצאת צדיק": איך לבדוק אם עבודת הזיפות באמת בוצעה נכון</a></li><li><a href="/blog/stairwell-renovation-after-fire">שיפוץ חדר מדרגות לאחר שריפה: סדר הפעולות הנכון לחזרה בטוחה לשימוש</a></li><li><a href="/water-leak-services" class="nav-link">דליפת מים בבית - סיבות, סימנים ואיך מטפלים בזה</a></li><li><a href="/roofing-and-waterproofing" class="nav-link">זיפות גגות  שיטות ועליות</a></li><li><a href="/blog/basement-wall-waterproofing" class="nav-link">איטום מרתף</a></li><li><a href="/blog/roof-penetrations-waterproofing" class="nav-link">מעברי צנרת</a></li><li><a href="/blog/parapet-and-roof-joint-waterproofing" class="nav-link">חיבורי גג</a></li><li><a href="/blog/smoke-soot-odor-removal-after-fire" class="nav-link">ריח עשן</a></li><li><a href="/blog/bituminous-membranes-warranty-years" class="nav-link">אחריות יריעות</a></li><li><a href="/blog/first-steps-after-apartment-fire" class="nav-link">אחרי שריפה</a></li><li><a href="/blog/old-tar-roof-upgrade-to-bituminous-membranes" class="nav-link">זיפות ישן</a></li></ul></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/exterior-building-renovation" class="nav-link">שיפוץ חוץ</a><ul class="sub-menu"><li><a href="/mold-removal-from-walls" class="nav-link">עובש</a></li><li><a href="/balcony-waterproofing">איטום מרפסות</a></li></ul></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li><a href="/copy">מומחים לאיטום גגות בתל אביב (copy)</a></li></ul></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/roof-tarring" class="nav-link">זיפות</a></li><li><a href="/polyurethane-roof-waterproofing" class="nav-link">איטום פוליאוריטני</a></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan">איטום גגות בשפלה ובדרום גוש דן</a></li><li><a href="/service-areas/roof-waterproofing-eilat">איטום לגג באילת</a></li><li><a href="/service-areas/roof-waterproofing-beer-sheva">איטום גגות בבאר שבע</a></li></ul></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li><li><a href="/blog/roof-waterproofing-yatzata-tzadik">איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי</a></li><li><a href="/blog/balcony-roof-waterproofing-without-demolition">איטום גג מרפסת ללא פירוק: מתי זה אפשרי ומה חייבים לבדוק לפני</a></li><li><a href="/blog/balcony-roof-waterproofing-with-demolition">איטום גג מרפסת עם פירוק: מתי זה נדרש ואיך מבצעים נכון</a></li><li><a href="/blog/mold-and-condensation-treatment">טיפול בעובש ועיבוי: איך מזהים את מקור הבעיה ומה באמת פותר אותה</a></li><li><a href="/blog/roof-waterproofing-price-guide">מחירון איטום גגות: מה משפיע על המחיר ואיך משווים נכון בין הצעות</a></li><li><a href="/blog/shower-waterproofing">איטום מקלחת: מה חייבים לבצע נכון כדי למנוע רטיבות ונזקים נסתרים</a></li><li><a href="/blog/roof-tarring-yatzata-tzadik-quality-check">זיפות גגות "יצאת צדיק": איך לבדוק אם עבודת הזיפות באמת בוצעה נכון</a></li><li><a href="/blog/stairwell-renovation-after-fire">שיפוץ חדר מדרגות לאחר שריפה: סדר הפעולות הנכון לחזרה בטוחה לשימוש</a></li><li><a href="/water-leak-services" class="nav-link">דליפת מים בבית - סיבות, סימנים ואיך מטפלים בזה</a></li><li><a href="/roofing-and-waterproofing" class="nav-link">זיפות גגות  שיטות ועליות</a></li><li><a href="/blog/basement-wall-waterproofing" class="nav-link">איטום מרתף</a></li><li><a href="/blog/roof-penetrations-waterproofing" class="nav-link">מעברי צנרת</a></li><li><a href="/blog/parapet-and-roof-joint-waterproofing" class="nav-link">חיבורי גג</a></li><li><a href="/blog/smoke-soot-odor-removal-after-fire" class="nav-link">ריח עשן</a></li><li><a href="/blog/bituminous-membranes-warranty-years" class="nav-link">אחריות יריעות</a></li><li><a href="/blog/first-steps-after-apartment-fire" class="nav-link">אחרי שריפה</a></li><li><a href="/blog/old-tar-roof-upgrade-to-bituminous-membranes" class="nav-link">זיפות ישן</a></li></ul></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/exterior-building-renovation" class="nav-link">שיפוץ חוץ</a><ul class="sub-menu"><li><a href="/mold-removal-from-walls" class="nav-link">עובש</a></li><li><a href="/balcony-waterproofing">איטום מרפסות</a></li></ul></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li><a href="/copy">מומחים לאיטום גגות בתל אביב (copy)</a></li><li><a href="/copy-2">מומחים לאיטום גגות בתל אביב (copy 2)</a></li></ul></div>
 
     
 
@@ -888,12 +888,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;&amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') &amp;amp;&amp;amp; bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;&amp; bgImage !== 'none') {
+      if (bgImage &amp;amp;&amp;amp; bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -906,7 +906,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;&amp; rgb.length &gt;= 3) {
+    if (rgb &amp;amp;&amp;amp; rgb.length &amp;gt;= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -1042,7 +1042,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &lt;= 768;
+      const isMobileViewport = window.innerWidth &amp;lt;= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -1233,7 +1233,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &gt; 0 
+        const phoneNumber = phoneLinks.length &amp;gt; 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '055-9932287';
         
@@ -1274,17 +1274,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       </div>
 
       <!-- Main Headline -->
-      <h1 class="index-hero-h1" >איטום גגות ושיפוץ<br></br><span class="index-hero-h1-accent">לכל מבנה — בכל קנה מידה</span></h1>
+      <h1 class="index-hero-h1" >איטום גגות ושיפוץ<br></br><br></br><span class="index-hero-h1-accent">לכל מבנה — בכל קנה מידה</span></h1>
 
       <!-- Subtitle -->
-      <h3 class="index-hero-h3" >ביצוע מקצועי לפרויקטים מגורים ותעשייתיים — מגגות ביטומניים ועד שיפוץ לאחר שריפה&amp;nbsp; &amp;nbsp;<u ><i > 0559932287</i></u></h3>
+      <h3 class="index-hero-h3" >ביצוע מקצועי לפרויקטים מגורים ותעשייתיים — מגגות ביטומניים ועד שיפוץ לאחר שריפה&amp;amp;nbsp; &amp;amp;nbsp;<u ><i > 0559932287</i></u></h3>
 
       <!-- Supporting Paragraph -->
       <p class="index-hero-body" ><font color="#f5f5dc">זפת חם · יריעות ביטומניות · פוליאוריתן · אפוקסי · גגות מרוצפים ובטון · איטום חניון ומפעל · איטום מרפסת · בידוד תרמי · יציקת בטקל · סיוד · שיפוץ דירות ולאחר שריפה</font></p>
 
       <!-- CTAs -->
       <div class="index-hero-ctas" style="text-align: center !important; display: flex !important; justify-content: center !important; align-items: flex-start !important; width: 100% !important;">
-        <a href="/contact" class="index-hero-btn-primary btn btn-primary" data-element-type="button" data-element-id="zappy-drop-naryo6f5e" data-native-element="true" style="outline: none; color: var(--text-color, #1a1a1a) !important; border-color: transparent !important; background-color: transparent !important; background-image: linear-gradient(135deg, rgb(200, 255, 59), rgb(170, 238, 32)) !important;" data-text-color="dark">לבדיקת&amp;nbsp; &amp;nbsp;וייעוץ חינם</a>
+        <a href="/contact" class="index-hero-btn-primary btn btn-primary" data-element-type="button" data-element-id="zappy-drop-naryo6f5e" data-native-element="true" style="outline: none; color: var(--text-color, #1a1a1a) !important; border-color: transparent !important; background-color: transparent !important; background-image: linear-gradient(135deg, rgb(200, 255, 59), rgb(170, 238, 32)) !important;" data-text-color="dark">לבדיקת&amp;amp;nbsp; &amp;amp;nbsp;וייעוץ חינם</a>
         <a href="/roof-waterproofing" class="index-hero-btn-secondary btn btn-primary" data-element-type="button" data-element-id="zappy-drop-uxptsa3og" data-native-element="true" style="outline: none; border-color: var(--primary-color, var(--primary, #8B0000)) !important; color: rgb(255, 255, 255) !important; background-color: var(--primary-color, var(--primary, #8B0000)) !important; background-image: none !important;">כל השירותים שלנו</a>
       </div>
 
@@ -1481,7 +1481,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     <!-- Narrative Block (START / RIGHT) -->
     <div class="index-stats-narrative">
       <p><span class="index-stats-eyebrow">הוכחה בשטח</span>
-      </p><h2 class="index-stats-heading" >ניסיון שנצבר<br></br>פרויקט אחר פרויקט</h2>
+      </p><h2 class="index-stats-heading" >ניסיון שנצבר<br></br><br></br>פרויקט אחר פרויקט</h2>
       <div class="index-stats-divider-line" aria-hidden="true"></div>
       <p class="index-stats-body" >אנחנו מביאים ידע טכני עמוק ומענה מקצועי לכל פרויקט — מ<a href="https://maor-ahzakot.co.il/roof-waterproofing" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">איטום גגות</a> מרוצפים ויריעות ביטומניות ועד שיפוץ דירות לאחר שריפה. כל עבודה מתבצעת עם מחויבות מלאה לאיכות, לדיוק ולעמידות לאורך שנים.</p>
       <p class="index-stats-body">הפעילות שלנו משתרעת על פני מגזרי מגורים ותעשייה — ממרפסות ועד מפעלים, מחניונים ועד גגות בטון — עם יכולת תגובה מהירה לכל מצב חירום.</p>
@@ -1546,7 +1546,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     <!-- Intro Block -->
     <div class="index-portfolio-intro">
       <p><span class="index-portfolio-label">פרויקטים נבחרים</span>
-      </p><h2 class="index-portfolio-heading" >עבודות שמדברות<br></br>בעד עצמן</h2>
+      </p><h2 class="index-portfolio-heading" >עבודות שמדברות<br></br><br></br>בעד עצמן</h2>
       <p class="index-portfolio-subtext">כל פרויקט מייצג אתגר אמיתי, פתרון מדויק ותוצאה שעומדת במבחן הזמן. מגגות מגורים ועד מפעלים תעשייתיים — אנחנו מביאים את אותה רמת דיוק לכל עבודה.</p>
       <div class="index-portfolio-intro-line"></div>
     </div>
@@ -1785,7 +1785,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
   
   <div data-integration="accessibility:toolbar"></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script id="free_accessibility_plugin_script" src="https://accessibility.f-static.com/site/free-accessibility-plugin/accessibility.min.js?lan=he&amp;amp;place=bottom-right&amp;amp;distance=50" crossorigin="anonymous"></script>
+<script id="free_accessibility_plugin_script" src="https://accessibility.f-static.com/site/free-accessibility-plugin/accessibility.min.js?lan=he&amp;amp;amp;place=bottom-right&amp;amp;amp;distance=50" crossorigin="anonymous"></script>
 
     <script src="/script.js"></script>
 
