@@ -190,6 +190,9 @@ https://maor-ahzakot.co.il/service-areas/occupied-buildings-work-coordination
 ### TEST GEO - EchoAi
 https://maor-ahzakot.co.il/test-geo-echoai
 
+### Page
+https://maor-ahzakot.co.il/test-geo-echoai-copy
+
 ## Legal & Policy
 
 ### Privacy Policy
