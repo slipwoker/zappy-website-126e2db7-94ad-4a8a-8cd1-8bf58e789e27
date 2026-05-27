@@ -109,7 +109,7 @@ Description: מאור אחזקות – מומחים לאיטום גגות ביר
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -840,7 +840,7 @@ Description: שירות איטום גגות מקצועי: ביריעות ביט�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -1580,7 +1580,7 @@ Description: איטום תעשייתי מקצועי לחניונים תת-קרק
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -2309,7 +2309,7 @@ Description: שירות זיפות גגות מקצועי בזפת חם לגגו�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -3249,7 +3249,7 @@ Description: מאור אחזקות - איטום גג בחומר פוליאורי
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -4127,7 +4127,7 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -4431,7 +4431,7 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -4744,7 +4744,7 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -5108,7 +5108,7 @@ Description: קראו מה אומרים הלקוחות שלנו על שירות�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -5714,7 +5714,7 @@ Description: מאור אחזקות פועלת בכל רחבי ישראל: תל �
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -6389,7 +6389,7 @@ Description: מומחים לאיטום גגות בתל אביב והסביבה �
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -7058,7 +7058,7 @@ Description: איטום גגות בנתניה והסביבה — פתרונות 
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -7601,7 +7601,7 @@ Description: מאור אחזקות - איטום ואחזקת מעטפת למבנ
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -8153,7 +8153,7 @@ Description: איטום גגות בירושלים והסביבה — פתרונ�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -8777,7 +8777,7 @@ Description: איטום גגות בחיפה והקריות — שירות מקצ
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -9360,7 +9360,7 @@ Description: איטום גגות בשפלה ובדרום גוש דן — פתר�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -9727,7 +9727,7 @@ Description: איטום גגות באילת — פתרונות עמידים לת
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -10531,7 +10531,7 @@ Description: איטום גגות בבאר שבע והנגב — פתרונות �
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -11015,7 +11015,7 @@ Description: מאמרים ומדריכים מקצועיים על איטום גג
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -11512,7 +11512,7 @@ Description: שיקום מלא של דירות ומבנים לאחר נזקי ש
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -12505,7 +12505,7 @@ Description: מדריך מקצועי לבדיקת גג שטוח לפני עונ�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -12843,7 +12843,7 @@ Description: איך מבדילים בין פגם קוסמטי רגיל לבין 
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -13193,7 +13193,7 @@ Description: סקירה מקצועית על שימוש במערכות פוליא
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -13537,7 +13537,7 @@ Description: מה קורה לבטון כשמים חודרים לאורך זמן,
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -13883,7 +13883,7 @@ Description: מאור אחזקות - שיפוץ בניין חיצוני, צבי�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -14737,7 +14737,7 @@ Description: מאור אחזקות - ניקוי עובש והורדת עובש �
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -15482,7 +15482,7 @@ Description: מאור אחזקות - איטום מרפסות
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -16314,7 +16314,7 @@ Description: מאור אחזקות - איטום גגות "יצאת צדיק": א
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -16650,7 +16650,7 @@ Description: מאור אחזקות - איטום גג מרפסת ללא פירו�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -17013,7 +17013,7 @@ Description: מאור אחזקות - איטום גג מרפסת עם פירוק:
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -17375,7 +17375,7 @@ Description: מאור אחזקות - טיפול בעובש ועיבוי: איך 
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -17714,7 +17714,7 @@ Description: מאור אחזקות - מחירון איטום גגות: מה מש
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -18065,7 +18065,7 @@ Description: מאור אחזקות - איטום מקלחת: מה חייבים ל
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -18778,7 +18778,7 @@ Description: מאור אחזקות - זיפות גגות "יצאת צדיק": א
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -19125,7 +19125,7 @@ Description: מאור אחזקות - שיפוץ חדר מדרגות לאחר ש�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -19448,7 +19448,7 @@ Thank You | Maor Holdings
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -19770,7 +19770,7 @@ Description: צרו קשר עם מאור אחזקות לייעוץ חינם וה
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -20225,7 +20225,7 @@ URL: https://maor-ahzakot.co.il/water-leak-services
 - צור קשר
 - דליפת מים בבית - סיבות, סימנים ואיך מטפלים בזה
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -20442,7 +20442,7 @@ URL: https://maor-ahzakot.co.il/roofing-and-waterproofing
 - צור קשר
 - זיפות גגות שיטות ועליות
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -20680,7 +20680,7 @@ Description: מאור אחזקות - איטום קירות מרתף: איך מו
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -21023,7 +21023,7 @@ Description: מאור אחזקות - איטום סביב דודי שמש, מזג
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -21358,7 +21358,7 @@ Description: מאור אחזקות - איטום חיבורי קיר-גג ומע�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -21695,7 +21695,7 @@ Description: מאור אחזקות - איך נפתרים מריח של עשן ו
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -22069,7 +22069,7 @@ Description: מאור אחזקות - האם חברת איטום נותנת אח�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -22413,7 +22413,7 @@ Description: מאור אחזקות - מה עושים קודם כל מיד לאח
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -22757,7 +22757,7 @@ Description: מאור אחזקות - גג עם זיפות ישן: מתי עדי�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -23113,7 +23113,7 @@ URL: https://maor-ahzakot.co.il/copy
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -23642,7 +23642,7 @@ Description: מאור אחזקות - שירותי איטום ושיקום לפי
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -24195,7 +24195,7 @@ Description: מאור אחזקות - עבודה בבניינים מאוכלסי�
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
@@ -24513,11 +24513,11 @@ Description: מאור אחזקות - עבודה בבניינים מאוכלסי�
 
 ---
 
-## TEST GEO - EchoAi  2
+## TEST GEO - EchoAi
 
-URL: https://maor-ahzakot.co.il/test-geo-echoai-2
+URL: https://maor-ahzakot.co.il/test-geo-echoai
 
-TEST GEO - EchoAi  2
+TEST GEO - EchoAi
 
 
 
@@ -24631,13 +24631,14 @@ TEST GEO - EchoAi  2
 - איטום מרפסות
 - צור קשר
 - מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi 2
+- TEST GEO - EchoAi
 
 
 
 
 
 צור קשר
+
 
 
 
@@ -24751,6 +24752,7 @@ TEST GEO - EchoAi  2
 
 
 שתף:
+
 
 
 
