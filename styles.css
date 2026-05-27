@@ -22851,6 +22851,8 @@ nav.navbar .sub-menu li a {
     font-size: 1.7rem;
   }
 }
+/* Batch: Move accessibility widget to bottom-left */
+.site-footer ~ * [id*='INDmenu'], .site-footer ~ * [class*='INDmenu'], body > [id*='INDmenu'], body > [class*='INDmenu'], body > [id*='userway'], body > [class*='userway'], body > [id*='uw-'], body > [class*='uw-'], #INDmenu-btn, .IND-menu-btn { bottom: 50px !important; left: 12px !important; right: auto !important; top: auto !important; }
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
