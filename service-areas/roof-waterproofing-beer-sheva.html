@@ -274,8 +274,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -289,13 +289,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &gt; .sub-menu {
+            li:has(.menu-group-title):hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -304,7 +304,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -357,9 +357,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &gt; .sub-menu,
-            nav li:hover &gt; .sub-menu,
-            .navbar li:hover &gt; .sub-menu {
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -397,8 +397,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -412,8 +412,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -454,18 +454,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &gt; .sub-menu,
-              nav li:hover &gt; .sub-menu,
-              .navbar li:hover &gt; .sub-menu {
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &gt; .sub-menu.mobile-expanded,
-              nav li &gt; .sub-menu.mobile-expanded,
-              .navbar li &gt; .sub-menu.mobile-expanded {
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -493,39 +493,39 @@
               }
               
               /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) &gt; a,
-              nav li:has(.sub-menu) &gt; a,
-              .navbar li:has(.sub-menu) &gt; a,
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
                 flex: 1 !important;
                 min-width: 0 !important;
               }
               
               /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
                 padding: 0 !important;
                 line-height: inherit !important;
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
-              nav li:has(.sub-menu) &gt; .sub-menu,
-              .navbar li:has(.sub-menu) &gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -580,10 +580,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &gt; 768) {
+                if (window.innerWidth > 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -606,7 +606,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -666,7 +666,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -710,9 +710,9 @@
         list-style: none;
         pointer-events: none;
       }
-      .nav-menu li:hover &gt; .sub-menu,
-      nav li:hover &gt; .sub-menu,
-      .navbar li:hover &gt; .sub-menu {
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -1671,7 +1671,7 @@ gtag('consent', 'default', {
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','AW-17733353102');</script>
 <!-- ZAPPY_INTEGRATION_END analytics:add_google_tag_manager -->
@@ -1785,12 +1785,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;&amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') && bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;&amp; bgImage !== 'none') {
+      if (bgImage && bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -1803,7 +1803,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;&amp; rgb.length &gt;= 3) {
+    if (rgb && rgb.length >= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -1939,7 +1939,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &lt;= 768;
+      const isMobileViewport = window.innerWidth <= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -2130,7 +2130,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &gt; 0 
+        const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '055-9932287';
         
@@ -2252,7 +2252,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
   </div>
 </section>
 
-<section class="service-areas-roof-waterproofing-beer-sheva-service-area-section" data-layout-spec="איטום גגות בבאר שבע-service-area" dir="rtl">
+<section class="service-areas-roof-waterproofing-beer-sheva-service-area-section" data-layout-spec="איטום גגות בבאר שבע-service-area" dir="rtl" id="service-areas-roof-waterproofing-beer-sheva-service-area-section">
   <!-- Background decorative linework -->
   <div class="sa-bg-linework" aria-hidden="true">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" class="sa-linework-svg">
@@ -2297,18 +2297,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
   <div class="sa-horizon-glow" aria-hidden="true"></div>
 
   <div class="sa-container">
-    <div class="sa-grid">
+    <div class="sa-grid zappy-preserve-css-grid" data-zappy-grid-align="start" data-original-item-width="576" data-original-gap="48px" style="--zappy-grid-cols: repeat(2, minmax(0, 1fr)); grid-template-columns: repeat(2, minmax(0, 1fr)); display: grid; align-items: stretch !important;" data-zappy-explicit-columns="true">
       <!-- Main content: right 8 columns -->
-      <div class="sa-main-content">
+      <div class="sa-main-content zappy-grid-item-no-stretch" data-grid-item-index="0">
         <div class="sa-eyebrow">
           <span class="sa-eyebrow-dot"></span>
           <span>אזורי שירות</span>
         </div>
-        <h2 class="sa-heading">איטום גגות בבאר שבע<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>ובאזורים הסמוכים</h2>
-        <p class="sa-description">מאור אחזקות מספקת שירותי איטום גגות מקצועיים לכלל אזורי באר שבע והנגב. אנו מתמחים בפרויקטים מגוונים — ממבנים פרטיים ועד מתחמים תעשייתיים — עם מענה מהיר, חומרים מובחרים וביצוע ללא פשרות.</p>
+        <h2 class="sa-heading" >איטום גגות בבאר שבע<br><br></h2>
+        <p class="sa-description" >מאור אחזקות מספקת שירותי איטום גגות מקצועיים לכלל אזורי באר שבע והנגב. אנו מתמחים בפרויקטים מגוונים — ממבנים פרטיים ועד מתחמים תעשייתיים — עם מענה מהיר, חומרים מובחרים וביצוע ללא פשרות.</p>
 
-        <div class="sa-areas-grid">
-          <div class="sa-areas-column">
+        <div class="sa-areas-grid zappy-preserve-css-grid" id="zappy-auto-grid-1779883250414-xn6rir" data-zappy-auto-grid="true" data-original-item-width="272" data-original-gap="24px 32px" style="display: grid; --zappy-grid-cols: repeat(2, minmax(0, 1fr)); grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
+          <div class="sa-areas-column" data-grid-item-index="0">
             <h3 class="sa-areas-col-title">שכונות ואזורי עיר</h3>
             <ul class="sa-areas-list">
               <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>ישראל</span></li>
@@ -2320,15 +2320,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
               <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>ישראל</span></li>
             </ul>
           </div>
-          <div class="sa-areas-column">
+          <div class="sa-areas-column" data-grid-item-index="1">
             <h3 class="sa-areas-col-title">סוגי נכסים ומבנים</h3>
             <ul class="sa-areas-list">
               <li><i class="fa-solid fa-building" aria-hidden="true"></i><span>בתים פרטיים</span></li>
               <li><i class="fa-solid fa-building" aria-hidden="true"></i><span>בנייני מגורים משותפים</span></li>
-              <li><i class="fa-solid fa-warehouse" aria-hidden="true"></i><span>גגות מסחריים ותעשייתיים</span></li>
-              <li><i class="fa-solid fa-industry" aria-hidden="true"></i><span>מחסנים ומפעלים</span></li>
-              <li><i class="fa-solid fa-car" aria-hidden="true"></i><span>חניונים ומגרשי חנייה</span></li>
-              <li><i class="fa-solid fa-landmark" aria-hidden="true"></i><span>מבנים ציבוריים</span></li>
+              <li><i class="fa-solid fa-warehouse" aria-hidden="true" data-element-type="icon" data-element-id="icon-1779883250312-mo7f655a2" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i><span>גגות מסחריים ותעשייתיים</span></li>
+              <li><i class="fa-solid fa-industry" aria-hidden="true" data-element-type="icon" data-element-id="icon-1779883250312-aai5toh5b" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i><span>מחסנים ומפעלים</span></li>
+              <li><i class="fa-solid fa-car" aria-hidden="true" data-element-type="icon" data-element-id="icon-1779883250312-sjlz0t0if" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i><span>חניונים ומגרשי חנייה</span></li>
+              <li><i class="fa-solid fa-landmark" aria-hidden="true" data-element-type="icon" data-element-id="icon-1779883250312-pj215gmzs" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i><span>מבנים ציבוריים</span></li>
               <li><i class="fa-solid fa-map-marker-alt" aria-hidden="true"></i><span>ישראל</span></li>
             </ul>
           </div>
@@ -2336,7 +2336,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       </div>
 
       <!-- Info panel: left 4 columns -->
-      <div class="sa-info-panel">
+      <div class="sa-info-panel" data-grid-item-index="1">
         <div class="sa-panel-glow-line" aria-hidden="true"></div>
         <div class="sa-panel-inner">
           <div class="sa-panel-header">
@@ -2346,13 +2346,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
                 <path d="M12 28V22H20V28" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
               </svg>
             </div>
-            <span class="sa-panel-title">למה לבחור בנו?</span>
-          </div>
+            <p><span class="sa-panel-title">למה לבחור בנו?</span>
+          </p></div>
 
           <ul class="sa-assurances">
             <li class="sa-assurance-item">
               <div class="sa-assurance-icon">
-                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <i class="fa-solid fa-shield-halved" aria-hidden="true" data-element-type="icon" data-element-id="icon-1779883250312-51eneusjw" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
               </div>
               <div class="sa-assurance-content">
                 <strong>אחריות מלאה על העבודה</strong>
@@ -2361,7 +2361,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
             </li>
             <li class="sa-assurance-item">
               <div class="sa-assurance-icon">
-                <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                <i class="fa-solid fa-clock" aria-hidden="true" data-element-type="icon" data-element-id="icon-1779883250312-ao90uhuiw" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
               </div>
               <div class="sa-assurance-content">
                 <strong>זמינות ומענה מהיר</strong>
@@ -2370,7 +2370,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
             </li>
             <li class="sa-assurance-item">
               <div class="sa-assurance-icon">
-                <i class="fa-solid fa-certificate" aria-hidden="true"></i>
+                <i class="fa-solid fa-certificate" aria-hidden="true" data-element-type="icon" data-element-id="icon-1779883250312-rbjvyjtvr" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
               </div>
               <div class="sa-assurance-content">
                 <strong>חומרים מוסמכים ומובחרים</strong>
@@ -2386,11 +2386,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
             <span class="sa-meta-value">באר שבע והנגב</span>
           </div>
 
-          <a href="/contact" class="btn-primary sa-cta-btn">
+          <p><a href="/contact" class="btn-primary sa-cta-btn" data-element-type="button" data-element-id="btn-1779883250307-4gp98dq3u" data-native-element="true">
             <span>לקבלת הצעת מחיר</span>
-            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            <i class="fa-solid fa-arrow-left" aria-hidden="true" data-element-type="icon" data-icon-type="fontawesome" data-element-id="icon-1779883251239-pcrmdwhhu" style="pointer-events: auto; cursor: pointer;"></i>
           </a>
-        </div>
+        </p></div>
       </div>
     </div>
   </div>
