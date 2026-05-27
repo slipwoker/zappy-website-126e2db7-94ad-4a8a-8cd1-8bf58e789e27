@@ -190,9 +190,6 @@ https://maor-ahzakot.co.il/service-areas/building-types-coverage
 https://maor-ahzakot.co.il/service-areas/occupied-buildings-work-coordination
 מאור אחזקות - עבודה בבניינים מאוכלסים באזורי השירות
 
-### Page
-https://maor-ahzakot.co.il/copy-3
-
 ## Legal & Policy
 
 ### Privacy Policy
@@ -225,7 +222,7 @@ Information about WCAG compliance and accessibility features.
   - `name` (text, required)
   - `email` (email, required)
   - `phone` (tel, required)
-  - `message` (textarea, required)
+  - `message` (textarea)
   - `privacy_consent` (checkbox, required)
 
 ---
