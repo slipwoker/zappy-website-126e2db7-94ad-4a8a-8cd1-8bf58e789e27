@@ -214,13 +214,16 @@ Information about WCAG compliance and accessibility features.
 - Address: ישראל
 
 ### Contact form
-- URL: https://maor-ahzakot.co.il
+- URL: https://maor-ahzakot.co.il/roof-waterproofing-tel-aviv
 - Endpoint: https://maor-ahzakot.co.il/api/email/contact-form
 - Method: POST
 - Content-Type: application/json
 - Fields:
   - `name` (text, required)
+  - `email` (email, required)
   - `phone` (tel, required)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
