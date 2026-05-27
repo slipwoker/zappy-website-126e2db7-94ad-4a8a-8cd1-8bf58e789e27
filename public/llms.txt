@@ -176,6 +176,9 @@ https://maor-ahzakot.co.il/blog/first-steps-after-apartment-fire
 https://maor-ahzakot.co.il/blog/old-tar-roof-upgrade-to-bituminous-membranes
 מאור אחזקות - גג עם זיפות ישן: מתי עדיף לעבור ליריעות ביטומניות ומתי לא
 
+### Page
+https://maor-ahzakot.co.il/copy
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -205,11 +208,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text)
-  - `email` (email)
-  - `phone` (tel)
-  - `message` (textarea)
-  - `privacy_consent` (checkbox)
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel, required)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
