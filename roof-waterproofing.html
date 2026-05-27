@@ -660,8 +660,8 @@
             }
             
             /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -675,13 +675,13 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
             }
             
             /* Desktop: show submenu on Menu Group hover */
-            li:has(.menu-group-title):hover &gt; .sub-menu {
+            li:has(.menu-group-title):hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -690,7 +690,7 @@
             
             /* Hide menu items marked as hidden (overrides hover states) */
             .zappy-hidden-menu-item,
-            li:has(.menu-group-title):hover &gt; .sub-menu .zappy-hidden-menu-item {
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
               display: none !important;
               opacity: 0 !important;
               visibility: hidden !important;
@@ -743,9 +743,9 @@
             }
             
             /* Show submenu on parent hover - more specific selectors */
-            .nav-menu li:hover &gt; .sub-menu,
-            nav li:hover &gt; .sub-menu,
-            .navbar li:hover &gt; .sub-menu {
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
               opacity: 1 !important;
               visibility: visible !important;
               transform: translateY(0) !important;
@@ -783,8 +783,8 @@
             }
             
             /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
-            .nav-menu &gt; li &gt; .menu-group-title,
-            #navMenu &gt; li &gt; .menu-group-title {
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
               display: inline-block !important;
               padding: 0.5rem 1rem !important;
               color: var(--nav-color) !important;
@@ -798,8 +798,8 @@
               transition: color 0.3s ease !important;
             }
             
-            .nav-menu &gt; li &gt; .menu-group-title:hover,
-            #navMenu &gt; li &gt; .menu-group-title:hover {
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
               color: var(--nav-hover-color) !important;
               background-color: transparent !important;
             }
@@ -840,18 +840,18 @@
               }
               
               /* Disable hover behavior on mobile */
-              .nav-menu li:hover &gt; .sub-menu,
-              nav li:hover &gt; .sub-menu,
-              .navbar li:hover &gt; .sub-menu {
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
                 opacity: 0;
                 visibility: hidden;
                 pointer-events: none;
               }
               
               /* Enable visibility for expanded submenus */
-              .nav-menu li &gt; .sub-menu.mobile-expanded,
-              nav li &gt; .sub-menu.mobile-expanded,
-              .navbar li &gt; .sub-menu.mobile-expanded {
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
                 opacity: 1 !important;
                 visibility: visible !important;
                 pointer-events: auto !important;
@@ -879,39 +879,39 @@
               }
               
               /* Parent link - takes full width since toggle is absolute (not a flex child) */
-              .nav-menu li:has(.sub-menu) &gt; a,
-              nav li:has(.sub-menu) &gt; a,
-              .navbar li:has(.sub-menu) &gt; a,
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
                 flex: 1 !important;
                 min-width: 0 !important;
               }
               
               /* Normalize menu-group-title in mobile nav to match link alignment */
-              .nav-menu &gt; li &gt; .menu-group-title,
-              #navMenu &gt; li &gt; .menu-group-title {
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
                 padding: 0 !important;
                 line-height: inherit !important;
               }
               
               /* Submenu takes full width below parent */
-              .nav-menu li:has(.sub-menu) &gt; .sub-menu,
-              nav li:has(.sub-menu) &gt; .sub-menu,
-              .navbar li:has(.sub-menu) &gt; .sub-menu {
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
                 flex-basis: 100% !important;
                 width: 100% !important;
               }
               
               /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
-              .nav-menu li:has(.sub-menu) &gt; a .fa-chevron-down,
-              .nav-menu li:has(.sub-menu) &gt; a .fa-angle-down,
-              .nav-menu li:has(.sub-menu) &gt; a [class*="chevron"],
-              .nav-menu li:has(.sub-menu) &gt; a [class*="arrow"],
-              nav li:has(.sub-menu) &gt; a [class*="chevron"],
-              nav li:has(.sub-menu) &gt; a [class*="arrow"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="chevron"],
-              #navMenu li:has(.sub-menu) &gt; a [class*="arrow"] {
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
                 display: none !important;
                 visibility: hidden !important;
               }
@@ -966,10 +966,10 @@
             (function() {
               function initMobileMenuToggles() {
                 // Only run on mobile
-                if (window.innerWidth &gt; 768) {
+                if (window.innerWidth > 768) {
                   // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn =&gt; btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu =&gt; {
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
                     menu.classList.remove('mobile-expanded');
                   });
                   console.log('[MOBILE MENU] Desktop mode - cleanup done');
@@ -992,7 +992,7 @@
                   }
                   
                   const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope &gt; a') || li.querySelector(':scope &gt; .menu-group-title');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
                   
                   if (!submenu || !parentLink) return;
                   
@@ -1052,7 +1052,7 @@
               // This handles cases where the mobile menu is hidden initially
               const observer = new MutationObserver(function(mutations) {
                 mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' &amp;&amp; mutation.attributeName === 'class') {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
                     const target = mutation.target;
                     if (target.classList.contains('active') || target.style.display !== 'none') {
                       console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
@@ -1096,9 +1096,9 @@
         list-style: none;
         pointer-events: none;
       }
-      .nav-menu li:hover &gt; .sub-menu,
-      nav li:hover &gt; .sub-menu,
-      .navbar li:hover &gt; .sub-menu {
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -1144,7 +1144,7 @@ gtag('consent', 'default', {
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','AW-17733353102');</script>
 <!-- ZAPPY_INTEGRATION_END analytics:add_google_tag_manager -->
@@ -1258,12 +1258,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     // Check if background is transparent or rgba with 0 alpha
     const isTransparent = bgColor === 'transparent' || 
                          bgColor === 'rgba(0, 0, 0, 0)' ||
-                         (bgColor.startsWith('rgba') &amp;&amp; bgColor.includes(', 0)'));
+                         (bgColor.startsWith('rgba') && bgColor.includes(', 0)'));
     
     if (isTransparent) {
       // Check for background-image or gradient
       const bgImage = computedStyle.backgroundImage;
-      if (bgImage &amp;&amp; bgImage !== 'none') {
+      if (bgImage && bgImage !== 'none') {
         console.log('[Navbar] Navbar has background image/gradient, using dark text');
         bgColor = 'rgb(240, 240, 240)'; // Assume light background
       } else {
@@ -1276,7 +1276,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     
     // Calculate luminance to determine if background is light or dark
     const rgb = bgColor.match(/\d+/g);
-    if (rgb &amp;&amp; rgb.length &gt;= 3) {
+    if (rgb && rgb.length >= 3) {
       const r = parseInt(rgb[0]);
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
@@ -1412,7 +1412,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       // ONLY apply inline positioning styles on mobile viewport
       // On desktop, the CSS handles hiding these buttons with display: none
       // Inline styles were breaking desktop layout by overriding CSS
-      const isMobileViewport = window.innerWidth &lt;= 768;
+      const isMobileViewport = window.innerWidth <= 768;
       
       if (mobileToggle) {
         // Icon sizing applies to all viewports for consistency
@@ -1603,7 +1603,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       phoneBtn.addEventListener('click', function() {
         // Get phone number from placeholder in page or use default
         const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-        const phoneNumber = phoneLinks.length &gt; 0 
+        const phoneNumber = phoneLinks.length > 0 
           ? phoneLinks[0].getAttribute('href').replace('tel:', '')
           : '055-9932287';
         
@@ -1635,7 +1635,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
         מאור אחזקות — מומחי איטום
       </div>
 
-      <h1 class="rwi-headline" style=""><span style="color: #00d4ff !important">פתרונות איטום גגות<br>מקצועיים ומותאמים אישית&nbsp;&nbsp;</span><br></h1>
+      <h1 class="rwi-headline" ><span style="color: #00d4ff !important">פתרונות איטום גגות<br>מקצועיים ומותאמים אישית&nbsp;&nbsp;</span><br></h1>
 
       <p class="rwi-lead">אנו מתאימים את מערכת האיטום לסוג הגג, לתנאי העומס, לרמת החשיפה ולעמידות הנדרשת — כך שכל פרויקט מקבל את הפתרון המדויק ביותר לצרכיו.</p>
 
@@ -1663,7 +1663,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       <div class="rwi-image-frame">
         <div class="rwi-image-glow" aria-hidden="true"></div>
         <div class="rwi-image-border-accent" aria-hidden="true"></div>
-        <img alt="איטום גגות ביריעות ביטומניות — עבודה מקצועית של מאור אחזקות" class="rwi-main-image" width="600" height="420" src="/assets/site-roof-waterproofing-intro-image-1.webp" data-placeholder="roof-waterproofing-intro-image-1" data-context="Professional waterproofing contractor applying bituminous membrane on a flat concrete rooftop in Israel. Worker using a torch to heat and seal dark bituminous sheets in precise overlapping rows. Industrial urban rooftop setting, cinematic dark atmosphere, dramatic lighting from torch flame, professional waterproofing equipment visible. High contrast documentary-style photography." style="width: 100%; height: 100%; object-fit: cover; object-position: center" data-zappy-editable-image="true" data-element-type="image" data-element-id="img-1775787867506-ewa2qnn5j">
+        <img alt="איטום גגות ביריעות ביטומניות — עבודה מקצועית של מאור אחזקות" class="rwi-main-image" width="600" height="420" src="/assets/site-roof-waterproofing-intro-image-1.webp" data-placeholder="roof-waterproofing-intro-image-1" data-context="Professional waterproofing contractor applying bituminous membrane on a flat concrete rooftop in Israel. Worker using a torch to heat and seal dark bituminous sheets in precise overlapping rows. Industrial urban rooftop setting, cinematic dark atmosphere, dramatic lighting from torch flame, professional waterproofing equipment visible. High contrast documentary-style photography." style="width: 100%; height: 100%; object-fit: cover; object-position: center" data-element-type="image" data-element-id="img-1775787867506-ewa2qnn5j">
         <!-- Stat Chip -->
         <div class="rwi-stat-chip">
           <span class="rwi-stat-number">15+</span>
@@ -1689,7 +1689,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       <div class="rwc-divider-line"></div>
     </div>
 
-    <div class="rwc-grid zappy-preserve-css-grid" id="zappy-auto-grid-1779123848715-rtt0jw" data-zappy-auto-grid="true" data-original-item-width="302" data-original-gap="24px" style="--zappy-grid-cols: 301.997px 302.014px 301.997px 302.014px; grid-template-columns: 301.997px 302.014px 301.997px 302.014px; display: grid; align-items: stretch !important;" data-zappy-explicit-columns="true">
+    <div class="rwc-grid zappy-preserve-css-grid" id="zappy-auto-grid-1779123848715-rtt0jw" data-zappy-auto-grid="true" data-original-item-width="302" data-original-gap="24px" style="--zappy-grid-cols: repeat(4, minmax(0, 1fr)); grid-template-columns: repeat(4, minmax(0, 1fr)); display: grid; align-items: stretch !important;" data-zappy-explicit-columns="true">
 
       <article class="rwc-card" data-grid-item-index="0">
         <div class="rwc-card-icon">
@@ -1701,7 +1701,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
           </svg>
         </div>
         <div class="rwc-card-content">
-          <h3 style=""><a href="https://maor-ahzakot.co.il/blog/roof-waterproofing-yatzata-tzadik" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">איטום גגות בזפת חם</a></h3>
+          <h3 ><a href="https://maor-ahzakot.co.il/blog/roof-waterproofing-yatzata-tzadik" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">איטום גגות בזפת חם</a></h3>
           <p style="color: rgb(18, 20, 23) !important;">שיטת האיטום הקלאסית והאמינה ביותר לגגות בטון שטוחים. ציפוי בזפת חם יוצר שכבת הגנה עמידה ואטומה לחלוטין מפני חדירת מים ולחות.</p>
         </div>
       </article>
@@ -1777,7 +1777,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
           </svg>
         </div>
         <div class="rwc-card-content">
-          <h3 style=""><a href="https://maor-ahzakot.co.il/blog/balcony-roof-waterproofing-with-demolition" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">איטום גגות מרוצפים</a></h3>
+          <h3 ><a href="https://maor-ahzakot.co.il/blog/balcony-roof-waterproofing-with-demolition" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">איטום גגות מרוצפים</a></h3>
           <p style="color: rgb(18, 20, 23) !important;">פתרון מקצועי לאיטום גגות מרוצפים הכולל טיפול בפגיות, חיזוק מפשקים והגנה תת-ריצופית. מניעת חדירת מים מתחת לאריחים ושמירה על שלמות המבנה.</p>
         </div>
       </article>
@@ -1835,13 +1835,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
     <!-- Section Header -->
     <div class="rwp-header">
       <p><span class="rwp-label">שיטת העבודה שלנו</span>
-      </p><h2 class="rwp-title" style="">תהליך איטום גגות מקצועי —<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>מהאבחון ועד להגנה לטווח ארוך</h2>
+      </p><h2 class="rwp-title" ><span style="color: #00d4ff !important">תהליך איטום גגות מקצועי —<br>&nbsp; מהאבחון ועד להגנה לטווח ארוך&nbsp;</span>&nbsp;</h2>
       <p class="rwp-subtitle">כל פרויקט איטום גגות מרוצפים, גגות בטון, או גגות ביריעות ביטומניות מתנהל לפי שלבים מדויקים ומבוקרים, להבטחת תוצאה ללא פשרות.</p>
     </div>
 
     <!-- Image Strip -->
     <div class="rwp-image-strip">
-      <img data-placeholder="roof-waterproofing-process-image-1" data-context="Close-up cinematic strip of professional waterproofing work on a rooftop — showing torch-applied bituminous membrane being rolled out with a propane torch, with glowing embers and sealant texture visible, dramatic dark industrial atmosphere, precision craftsmanship, night or dusk lighting, graphite and cyan tones" width="1200" height="220" src="/assets/site-roof-waterproofing-process-image-1.webp" alt="איטום גגות מקצועי — תהליך הנחת יריעות ביטומניות" class="rwp-strip-img" data-element-type="image" data-element-id="img-1775787867506-zrmte0e55" style="">
+      <img data-placeholder="roof-waterproofing-process-image-1" data-context="Close-up cinematic strip of professional waterproofing work on a rooftop — showing torch-applied bituminous membrane being rolled out with a propane torch, with glowing embers and sealant texture visible, dramatic dark industrial atmosphere, precision craftsmanship, night or dusk lighting, graphite and cyan tones" width="1200" height="220" src="/assets/site-roof-waterproofing-process-image-1.webp" alt="איטום גגות מקצועי — תהליך הנחת יריעות ביטומניות" class="rwp-strip-img" data-element-type="image" data-element-id="img-1775787867506-zrmte0e55" >
       <div class="rwp-strip-overlay"></div>
       <div class="rwp-strip-glow"></div>
     </div>
@@ -1874,7 +1874,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
               </svg>
             </div>
             <h3 class="rwp-step-title">בדיקה ואבחון הגג</h3>
-            <p class="rwp-step-desc">סקר מקצועי של מצב הגג, זיהוי נקודות כשל, בדיקת מצב המצע, מיפוי סדקים, תפרים ונקודות ניקוז — לפני כל פעולה.</p>
+            <p class="rwp-step-desc" style="color: rgb(245, 247, 250) !important;">סקר מקצועי של מצב הגג, זיהוי נקודות כשל, בדיקת מצב המצע, מיפוי סדקים, תפרים ונקודות ניקוז — לפני כל פעולה.</p>
           </div>
         </article>
 
@@ -1893,7 +1893,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
               </svg>
             </div>
             <h3 class="rwp-step-title">הכנה ותיקון המצע</h3>
-            <p class="rwp-step-desc">ניקוי מעמיק, תיקון סדקים ותפרים, טיפול בנקודות ניקוז ופינות — הכנת המצע לקבלת מערכת האיטום בצורה מיטבית.</p>
+            <p class="rwp-step-desc" style="color: rgb(245, 247, 250) !important;">ניקוי מעמיק, תיקון סדקים ותפרים, טיפול בנקודות ניקוז ופינות — הכנת המצע לקבלת מערכת האיטום בצורה מיטבית.</p>
           </div>
         </article>
 
@@ -1912,7 +1912,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
               </svg>
             </div>
             <h3 class="rwp-step-title">התקנת מערכת האיטום</h3>
-            <p class="rwp-step-desc">הנחת יריעות ביטומניות, איטום בזפת חם, פוליאוריתן, אפוקסי או בטקל — בהתאם לסוג הגג והדרישות הספציפיות של הפרויקט.</p>
+            <p class="rwp-step-desc" style="color: rgb(245, 247, 250) !important;">הנחת יריעות ביטומניות, איטום בזפת חם, פוליאוריתן, אפוקסי או בטקל — בהתאם לסוג הגג והדרישות הספציפיות של הפרויקט.</p>
           </div>
         </article>
 
@@ -1931,7 +1931,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
               </svg>
             </div>
             <h3 class="rwp-step-title">גימור, פירוט והנחיות תחזוקה</h3>
-            <p class="rwp-step-desc">עבודות גימור מדויקות בפינות ובחיבורים, בדיקת אטימות סופית, וליווי מקצועי עם הנחיות לתחזוקה שתשמור על הגג לשנים.</p>
+            <p class="rwp-step-desc" style="color: rgb(245, 247, 250) !important;">עבודות גימור מדויקות בפינות ובחיבורים, בדיקת אטימות סופית, וליווי מקצועי עם הנחיות לתחזוקה שתשמור על הגג לשנים.</p>
           </div>
         </article>
 
@@ -1965,7 +1965,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       <!-- Row 1: Hot Tar -->
       <article class="rwm-row">
         <div class="rwm-row-image-col">
-          <img data-placeholder="roof-waterproofing-materials-image-1" data-context="Close-up of hot tar being applied on a flat concrete roof in Israel, professional worker spreading molten black tar with a squeegee, steam rising, industrial waterproofing work, dramatic lighting" width="420" height="280" src="/assets/site-roof-waterproofing-materials-image-1.webp" alt="איטום גגות בזפת חם" data-element-type="image" data-element-id="img-1777024365654-ovhtz5bi4" style="">
+          <img data-placeholder="roof-waterproofing-materials-image-1" data-context="Close-up of hot tar being applied on a flat concrete roof in Israel, professional worker spreading molten black tar with a squeegee, steam rising, industrial waterproofing work, dramatic lighting" width="420" height="280" src="/assets/site-roof-waterproofing-materials-image-1.webp" alt="איטום גגות בזפת חם" data-element-type="image" data-element-id="img-1777024365654-ovhtz5bi4" >
         </div>
         <div class="rwm-row-content">
           <div class="rwm-row-header">
@@ -1999,7 +1999,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       <!-- Row 2: Bituminous Membranes -->
       <article class="rwm-row">
         <div class="rwm-row-image-col">
-          <img data-placeholder="roof-waterproofing-materials-image-2" data-context="Professional roofer applying torch-applied bituminous waterproofing membrane on a rooftop in Israel, blue flame torch, rolled black membrane being unrolled, safety equipment, sunny day, professional construction" width="420" height="280" src="/assets/site-roof-waterproofing-materials-image-2.webp" alt="איטום גגות ביריעות ביטומניות" data-element-type="image" data-element-id="img-1777024365655-4igk78nwv" style="">
+          <img data-placeholder="roof-waterproofing-materials-image-2" data-context="Professional roofer applying torch-applied bituminous waterproofing membrane on a rooftop in Israel, blue flame torch, rolled black membrane being unrolled, safety equipment, sunny day, professional construction" width="420" height="280" src="/assets/site-roof-waterproofing-materials-image-2.webp" alt="איטום גגות ביריעות ביטומניות" data-element-type="image" data-element-id="img-1777024365655-4igk78nwv" >
         </div>
         <div class="rwm-row-content">
           <div class="rwm-row-header">
@@ -2013,7 +2013,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
             </div>
             <div class="rwm-attribute">
               <p><span class="rwm-attr-label">מתאים במיוחד</span>
-              </p><p class="rwm-attr-text" style=""><a href="https://maor-ahzakot.co.il/" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">איטום גגות</a> מרוצפים, גגות בטון בבניינים מגורים, גגות עם מורכבות גיאומטרית ומעברי צנרת.</p>
+              </p><p class="rwm-attr-text" ><a href="https://maor-ahzakot.co.il/" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">איטום גגות</a> מרוצפים, גגות בטון בבניינים מגורים, גגות עם מורכבות גיאומטרית ומעברי צנרת.</p>
             </div>
             <div class="rwm-attribute">
               <p class="zappy-editable"><span class="rwm-attr-label">הערת פרויקט</span>
@@ -2033,7 +2033,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       <!-- Row 3: Polyurethane & Epoxy -->
       <article class="rwm-row">
         <div class="rwm-row-image-col">
-          <img data-placeholder="roof-waterproofing-materials-image-3" data-context="Worker applying liquid polyurethane waterproofing coating on a rooftop with a roller, smooth gray-white seamless membrane surface, professional industrial application, Israel, clean modern roof" width="420" height="280" src="/assets/site-roof-waterproofing-materials-image-3.webp" alt="איטום גגות בפוליאורתן ואפוקסי" data-element-type="image" data-element-id="img-1777024365655-sqntvgb5q" style="">
+          <img data-placeholder="roof-waterproofing-materials-image-3" data-context="Worker applying liquid polyurethane waterproofing coating on a rooftop with a roller, smooth gray-white seamless membrane surface, professional industrial application, Israel, clean modern roof" width="420" height="280" src="/assets/site-roof-waterproofing-materials-image-3.webp" alt="איטום גגות בפוליאורתן ואפוקסי" data-element-type="image" data-element-id="img-1777024365655-sqntvgb5q" >
         </div>
         <div class="rwm-row-content">
           <div class="rwm-row-header">
@@ -2067,7 +2067,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       <!-- Row 4: Betokel + Insulation + Whitewash -->
       <article class="rwm-row">
         <div class="rwm-row-image-col">
-          <img data-placeholder="roof-waterproofing-materials-image-4" data-context="Freshly whitewashed flat rooftop in Israel with thermal insulation boards visible at edges, white reflective coating on concrete roof, professional renovation, bright sunlight, clean modern finish" width="420" height="280" src="/assets/site-roof-waterproofing-materials-image-4.webp" alt="בידוד תרמי, יציקת בטקל וסיוד גגות" data-element-type="image" data-element-id="img-1777024365655-tue4powu1" style="">
+          <img data-placeholder="roof-waterproofing-materials-image-4" data-context="Freshly whitewashed flat rooftop in Israel with thermal insulation boards visible at edges, white reflective coating on concrete roof, professional renovation, bright sunlight, clean modern finish" width="420" height="280" src="/assets/site-roof-waterproofing-materials-image-4.webp" alt="בידוד תרמי, יציקת בטקל וסיוד גגות" data-element-type="image" data-element-id="img-1777024365655-tue4powu1" >
         </div>
         <div class="rwm-row-content">
           <div class="rwm-row-header">
@@ -2121,7 +2121,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <div class="footer-logo-wrap">
-          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" style="">
+          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" >
         </div>
         <p class="footer-tagline">מומחים באיטום, שיפוץ ושיקום מבנים. עבודה מקצועית, אמינות מלאה, תוצאות שמחזיקות לאורך זמן.</p>
         <div class="footer-social">
@@ -2136,7 +2136,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
         <h3 class="footer-heading"><span class="heading-accent"></span>שירותים</h3>
         <ul class="footer-links">
           <li><a href="/roof-waterproofing"><i class="fas fa-chevron-left footer-link-icon"></i>איטום גגות</a></li>
-          <li><a href="/industrial-waterproofing" style=""><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>איטום תעשייתי ומבני</a></li>
+          <li><a href="/industrial-waterproofing" ><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>איטום תעשייתי ומבני</a></li>
           <li><a href="/renovation-fire-recovery"><i class="fas fa-chevron-left footer-link-icon"></i>שיפוץ ושיקום לאחר שריפה</a></li>
           <li><a href="/contact"><i class="fas fa-chevron-left footer-link-icon"></i>צור קשר</a></li>
         </ul>
@@ -2145,13 +2145,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
       <!-- Column 3: Contact Info -->
       <div class="footer-col footer-contact-col">
         <h3 class="footer-heading"><span class="heading-accent"></span>צור קשר</h3>
-        <ul class="footer-contact" style=""><li>
+        <ul class="footer-contact" ><li>
             <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1775639017054-lxsedrpr3" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="mailto:mwrdrwry@gmail.com">mwrdrwry@gmail.com</a></span>
           </li><li>
             <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1775639017055-3p3y17104" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="tel:055-9932287">055-9932287</a></span>
-          </li><li><a href="/" style=""><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
+          </li><li><a href="/" ><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
       </div>
 
       <!-- Column 4: CTA / Badge -->
@@ -2181,7 +2181,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
         <span class="legal-sep"></span>
         <a href="/accessibility">נגישות</a>
         <span class="legal-sep"></span>
-        <a href="https://zappy5.com" target="_blank" class="zappy-attribution" style="">נוצר באמצעות Zappy</a>
+        <a href="https://zappy5.com" target="_blank" class="zappy-attribution" >נוצר באמצעות Zappy</a>
       </div>
     </div>
 
