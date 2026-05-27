@@ -182,6 +182,10 @@ https://maor-ahzakot.co.il/copy
 ### Page
 https://maor-ahzakot.co.il/copy-2
 
+### סוגי מבנים
+https://maor-ahzakot.co.il/service-areas/building-types-coverage
+מאור אחזקות - שירותי איטום ושיקום לפי סוגי מבנים באזורי השירות
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -211,11 +215,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
-  - `phone` (tel, required)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 
