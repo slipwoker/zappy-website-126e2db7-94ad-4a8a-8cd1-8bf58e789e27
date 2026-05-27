@@ -1039,6 +1039,105 @@ document.querySelectorAll('.gallery-item').forEach(function(item) {
   });
 })();
 
+/* Added Component Script */
+(function () {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+
+  const nameInput = document.getElementById('contact-name');
+  const phoneInput = document.getElementById('contact-phone');
+  const nameError = document.getElementById('name-error');
+  const phoneError = document.getElementById('phone-error');
+  const successMsg = document.getElementById('contact-success');
+
+  function validateName(value) {
+    if (!value.trim()) return 'נא להכניס שם מלא';
+    if (value.trim().length < 2) return 'השם חייב להכיל לפחות 2 תווים';
+    return '';
+  }
+
+  function validatePhone(value) {
+    const cleaned = value.replace(/[\s\-]/g, '');
+    if (!cleaned) return 'נא להכניס מספר טלפון';
+    if (!/^0[0-9]{8,9}$/.test(cleaned)) return 'נא להכניס מספר טלפון תקין (לדוגמה: 050-1234567)';
+    return '';
+  }
+
+  function showError(input, errorEl, message) {
+    errorEl.textContent = message;
+    input.classList.add('invalid');
+    input.classList.remove('valid');
+    input.setAttribute('aria-invalid', 'true');
+    input.setAttribute('aria-describedby', errorEl.id);
+  }
+
+  function clearError(input, errorEl) {
+    errorEl.textContent = '';
+    input.classList.remove('invalid');
+    input.classList.add('valid');
+    input.setAttribute('aria-invalid', 'false');
+    input.removeAttribute('aria-describedby');
+  }
+
+  nameInput.addEventListener('blur', function () {
+    const err = validateName(this.value);
+    if (err) showError(this, nameError, err);
+    else clearError(this, nameError);
+  });
+
+  phoneInput.addEventListener('blur', function () {
+    const err = validatePhone(this.value);
+    if (err) showError(this, phoneError, err);
+    else clearError(this, phoneError);
+  });
+
+  nameInput.addEventListener('input', function () {
+    if (this.classList.contains('invalid')) {
+      const err = validateName(this.value);
+      if (!err) clearError(this, nameError);
+    }
+  });
+
+  phoneInput.addEventListener('input', function () {
+    if (this.classList.contains('invalid')) {
+      const err = validatePhone(this.value);
+      if (!err) clearError(this, phoneError);
+    }
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const nameErr = validateName(nameInput.value);
+    const phoneErr = validatePhone(phoneInput.value);
+
+    if (nameErr) showError(nameInput, nameError, nameErr);
+    else clearError(nameInput, nameError);
+
+    if (phoneErr) showError(phoneInput, phoneError, phoneErr);
+    else clearError(phoneInput, phoneError);
+
+    if (nameErr || phoneErr) return;
+
+    // Simulate form submission
+    const submitBtn = form.querySelector('.contact-submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+    submitBtn.style.cursor = 'not-allowed';
+
+    setTimeout(function () {
+      successMsg.classList.add('visible');
+      successMsg.setAttribute('aria-hidden', 'false');
+      form.reset();
+      nameInput.classList.remove('valid');
+      phoneInput.classList.remove('valid');
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '';
+      submitBtn.style.cursor = '';
+    }, 600);
+  });
+})();
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
