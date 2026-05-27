@@ -187,9 +187,6 @@ https://maor-ahzakot.co.il/service-areas/building-types-coverage
 https://maor-ahzakot.co.il/service-areas/occupied-buildings-work-coordination
 מאור אחזקות - עבודה בבניינים מאוכלסים באזורי השירות
 
-### TEST GEO - EchoAi
-https://maor-ahzakot.co.il/test-geo-echoai
-
 ### Page
 https://maor-ahzakot.co.il/test-geo-echoai-copy
 
