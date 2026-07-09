@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -161,26 +159,31 @@
       // Track button clicks (counted as actions)
       if (target.tagName === 'BUTTON' || target.closest('button')) {
         var button = target.tagName === 'BUTTON' ? target : target.closest('button');
-        trackEvent('click', {
+        var clickMeta = {
           element: 'button',
           text: button.textContent.trim().substring(0, 100),
           id: button.id || null,
           class: button.className || null
-        });
+        };
+        
+        trackEvent('click', clickMeta);
       }
       
       // Track link clicks (navigation - not counted as actions)
       else if (target.tagName === 'A' || target.closest('a')) {
         var link = target.tagName === 'A' ? target : target.closest('a');
-        trackEvent('navigation', {
+        var navMeta = {
           element: 'link',
           text: link.textContent.trim().substring(0, 100),
           href: link.href,
           external: link.hostname !== window.location.hostname
-        });
+        };
+        
+        trackEvent('navigation', navMeta);
       }
     }, true);
   }
+  
   
   // Track form submissions
   if (config.trackFormSubmissions) {
@@ -226,8 +229,6 @@
     <meta name="twitter:description" content="מאור אחזקות - איטום גג בחומר פוליאוריטני">
     <meta name="twitter:image" content="https://maor-ahzakot.co.il/assets/section-intro-polyurethane-roof-waterproofing-intro-image-1-og.jpg">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://maor-ahzakot.co.il#organization","name":"מאור אחזקות","url":"https://maor-ahzakot.co.il","description":"A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.","address":{"@type":"PostalAddress","streetAddress":"ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"mwrdrwry@gmail.com","telephone":"055-9932287"}]},{"@type":"WebSite","@id":"https://maor-ahzakot.co.il#website","url":"https://maor-ahzakot.co.il","name":"מאור אחזקות","publisher":{"@id":"https://maor-ahzakot.co.il#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://maor-ahzakot.co.il"},{"@type":"ListItem","position":2,"name":"Polyurethane Roof Waterproofing","item":"https://maor-ahzakot.co.il/polyurethane-roof-waterproofing"}]}]}</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
@@ -238,7 +239,7 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <!-- Cookie Consent -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    
     <!-- UserWay Accessibility Widget -->
     <script>
     (function(d){
@@ -2468,7 +2469,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     height: 200px;
   }
 }</style>
-    <link rel="stylesheet" href="/styles.css">
+    <style id="zappy-critical-above-fold-css">
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden;min-height:560px}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
+</style>
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/styles.css"></noscript>
+    
     <script>window.ZAPPY_WEBSITE_ID = "126e2db7-94ad-4a8a-8cd1-8bf58e789e27"; window.ZAPPY_API_BASE = "https://api.zappy5.com";</script>
 
     <style id="zappy-widget-visibility">
@@ -2531,9 +2538,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo">
+        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" decoding="async" width="35" height="35">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/roof-tarring" class="nav-link">זיפות</a></li><li><a href="/polyurethane-roof-waterproofing" class="nav-link">איטום פוליאוריטני</a></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan">איטום גגות בשפלה ובדרום גוש דן</a></li><li><a href="/service-areas/roof-waterproofing-eilat">איטום לגג באילת</a></li><li><a href="/service-areas/roof-waterproofing-beer-sheva">איטום גגות בבאר שבע</a></li><li><a href="/service-areas/building-types-coverage" class="nav-link">סוגי מבנים</a></li><li><a href="/service-areas/occupied-buildings-work-coordination" class="nav-link">תיאום עבודה</a></li></ul></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li><li><a href="/blog/roof-waterproofing-yatzata-tzadik">איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי</a></li><li><a href="/blog/balcony-roof-waterproofing-without-demolition">איטום גג מרפסת ללא פירוק: מתי זה אפשרי ומה חייבים לבדוק לפני</a></li><li><a href="/blog/balcony-roof-waterproofing-with-demolition">איטום גג מרפסת עם פירוק: מתי זה נדרש ואיך מבצעים נכון</a></li><li><a href="/blog/mold-and-condensation-treatment">טיפול בעובש ועיבוי: איך מזהים את מקור הבעיה ומה באמת פותר אותה</a></li><li><a href="/blog/roof-waterproofing-price-guide">מחירון איטום גגות: מה משפיע על המחיר ואיך משווים נכון בין הצעות</a></li><li><a href="/blog/shower-waterproofing">איטום מקלחת: מה חייבים לבצע נכון כדי למנוע רטיבות ונזקים נסתרים</a></li><li><a href="/blog/roof-tarring-yatzata-tzadik-quality-check">זיפות גגות "יצאת צדיק": איך לבדוק אם עבודת הזיפות באמת בוצעה נכון</a></li><li><a href="/blog/stairwell-renovation-after-fire">שיפוץ חדר מדרגות לאחר שריפה: סדר הפעולות הנכון לחזרה בטוחה לשימוש</a></li><li><a href="/water-leak-services" class="nav-link">דליפת מים בבית - סיבות, סימנים ואיך מטפלים בזה</a></li><li><a href="/roofing-and-waterproofing" class="nav-link">זיפות גגות  שיטות ועליות</a></li><li><a href="/blog/basement-wall-waterproofing" class="nav-link">איטום מרתף</a></li><li><a href="/blog/roof-penetrations-waterproofing" class="nav-link">מעברי צנרת</a></li><li><a href="/blog/parapet-and-roof-joint-waterproofing" class="nav-link">חיבורי גג</a></li><li><a href="/blog/smoke-soot-odor-removal-after-fire" class="nav-link">ריח עשן</a></li><li><a href="/blog/bituminous-membranes-warranty-years" class="nav-link">אחריות יריעות</a></li><li><a href="/blog/first-steps-after-apartment-fire" class="nav-link">אחרי שריפה</a></li><li><a href="/blog/old-tar-roof-upgrade-to-bituminous-membranes" class="nav-link">זיפות ישן</a></li></ul></li><li style="display: none !important;" class="zappy-hidden-menu-item"><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/exterior-building-renovation" class="nav-link">שיפוץ חוץ</a><ul class="sub-menu"><li><a href="/mold-removal-from-walls" class="nav-link">עובש</a></li><li><a href="/balcony-waterproofing">איטום מרפסות</a></li></ul></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li style="display: none !important;" class="zappy-hidden-menu-item"><a href="/copy">מומחים לאיטום גגות בתל אביב (copy)</a></li><li style="display: none !important;; display: none !important;" class="zappy-hidden-menu-item"><a href="/test-geo-echoai">TEST GEO - EchoAi</a></li></ul></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/roof-tarring" class="nav-link">זיפות</a></li><li><a href="/polyurethane-roof-waterproofing" class="nav-link">איטום פוליאוריטני</a></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan">איטום גגות בשפלה ובדרום גוש דן</a></li><li><a href="/service-areas/roof-waterproofing-eilat">איטום לגג באילת</a></li><li><a href="/service-areas/roof-waterproofing-beer-sheva">איטום גגות בבאר שבע</a></li><li><a href="/service-areas/building-types-coverage" class="nav-link">סוגי מבנים</a></li><li><a href="/service-areas/occupied-buildings-work-coordination" class="nav-link">תיאום עבודה</a></li></ul></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li><li><a href="/blog/roof-waterproofing-yatzata-tzadik">איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי</a></li><li><a href="/blog/balcony-roof-waterproofing-without-demolition">איטום גג מרפסת ללא פירוק: מתי זה אפשרי ומה חייבים לבדוק לפני</a></li><li><a href="/blog/balcony-roof-waterproofing-with-demolition">איטום גג מרפסת עם פירוק: מתי זה נדרש ואיך מבצעים נכון</a></li><li><a href="/blog/mold-and-condensation-treatment">טיפול בעובש ועיבוי: איך מזהים את מקור הבעיה ומה באמת פותר אותה</a></li><li><a href="/blog/roof-waterproofing-price-guide">מחירון איטום גגות: מה משפיע על המחיר ואיך משווים נכון בין הצעות</a></li><li><a href="/blog/shower-waterproofing">איטום מקלחת: מה חייבים לבצע נכון כדי למנוע רטיבות ונזקים נסתרים</a></li><li><a href="/blog/roof-tarring-yatzata-tzadik-quality-check">זיפות גגות "יצאת צדיק": איך לבדוק אם עבודת הזיפות באמת בוצעה נכון</a></li><li><a href="/blog/stairwell-renovation-after-fire">שיפוץ חדר מדרגות לאחר שריפה: סדר הפעולות הנכון לחזרה בטוחה לשימוש</a></li><li><a href="/water-leak-services" class="nav-link">דליפת מים בבית - סיבות, סימנים ואיך מטפלים בזה</a></li><li><a href="/roofing-and-waterproofing" class="nav-link">זיפות גגות  שיטות ועליות</a></li><li><a href="/blog/basement-wall-waterproofing" class="nav-link">איטום מרתף</a></li><li><a href="/blog/roof-penetrations-waterproofing" class="nav-link">מעברי צנרת</a></li><li><a href="/blog/parapet-and-roof-joint-waterproofing" class="nav-link">חיבורי גג</a></li><li><a href="/blog/smoke-soot-odor-removal-after-fire" class="nav-link">ריח עשן</a></li><li><a href="/blog/bituminous-membranes-warranty-years" class="nav-link">אחריות יריעות</a></li><li><a href="/blog/first-steps-after-apartment-fire" class="nav-link">אחרי שריפה</a></li><li><a href="/blog/old-tar-roof-upgrade-to-bituminous-membranes" class="nav-link">זיפות ישן</a></li></ul></li><li><a href="/exterior-building-renovation" class="nav-link">שיפוץ חוץ</a><ul class="sub-menu"><li><a href="/mold-removal-from-walls" class="nav-link">עובש</a></li><li><a href="/balcony-waterproofing">איטום מרפסות</a></li></ul></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li></ul></div>
 
     
 
@@ -2957,15 +2964,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <span class="pu-intro-label-text">מאור אחזקות · איטום מקצועי</span>
         </div>
 
-        <h1 class="pu-intro-h1" >איטום גג<br>&nbsp; בפוליאוריטן<br>  - פתרון חכם<br>לטווח ארוך&nbsp;&nbsp;</h1>
+        <h1 class="pu-intro-h1">איטום גג<br>&nbsp; בפוליאוריטן<br>  - פתרון חכם<br>לטווח ארוך&nbsp;&nbsp;</h1>
 
         <p class="pu-intro-lead">חומר הפוליאוריטן הנוזלי מספק שכבת איטום אלסטית, חלקה ועמידה המתאימה לכל סוגי הגגות. אנו מבצעים את העבודה ברמת גימור גבוהה, עם ערבויות ביצוע ואחריות מלאה על כל פרויקט.</p>
 
         <!-- Trust bar -->
         <div class="pu-intro-trust-bar">
-          <div class="pu-intro-trust-item" >
+          <div class="pu-intro-trust-item">
             <i class="fas fa-shield-alt pu-trust-icon" aria-hidden="true" data-element-type="icon" data-element-id="icon-1777302410131-ej099en82" data-icon-type="fontawesome" style="cursor: pointer;"></i>
-            <span >אחריות 6 שנים</span>
+            <span>אחריות 6 שנים</span>
           </div>
           <div class="pu-intro-trust-sep" aria-hidden="true"></div>
           <div class="pu-intro-trust-item">
@@ -2993,7 +3000,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           </div>
           <div class="pu-intro-adv-item" data-grid-item-index="1">
             <h3 class="pu-adv-title">עמידות UV</h3>
-            <p class="pu-adv-desc" >לא נסדק, לא מתקלף בידוד&nbsp; משמש</p>
+            <p class="pu-adv-desc">לא נסדק, לא מתקלף בידוד&nbsp; משמש</p>
           </div>
           <div class="pu-intro-adv-item" data-grid-item-index="2">
             <h3 class="pu-adv-title">יישום מהיר</h3>
@@ -3011,7 +3018,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <!-- Cyan corner glow line -->
           <div class="pu-intro-corner-glow" aria-hidden="true"></div>
           <div class="pu-intro-img-overlay" aria-hidden="true"></div>
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1777302410139-pb7kkzau1" data-element-type="image" data-zappy-zoom-wrapper-width="623px" data-zappy-zoom-wrapper-height="491px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 623px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 491px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-zoom-wrapper-align="center"><img data-context="Professional polyurethane liquid waterproofing applied on a flat concrete rooftop. The surface shows a smooth, glossy, light grey seamless membrane coating with a slight reflective sheen under bright daylight. A worker in safety gear is visible in the background applying the material with a roller. The scene conveys precision industrial waterproofing work in an urban Israeli setting." width="660" height="520" src="/assets/section-intro-polyurethane-roof-waterproofing-intro-image-1-1777302563516-dv6c2w.webp?v=1777302569772" alt="איטום גג בחומר פוליאוריטני – שכבת איטום חלקה ומבריקה על גג בטון שטוח" class="pu-intro-img" data-element-type="image" data-element-id="img-1777302410139-pb7kkzau1" style="object-position: 50% 50% !important; margin: 0px !important; position: absolute !important; left: -4.10509% !important; top: 0% !important; width: 108.21% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important" data-zappy-zoom="0.6" data-zappy-object-position="50% 50%" data-zappy-original-width="623" data-zappy-original-height="491"></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1777302410139-pb7kkzau1" data-element-type="image" data-zappy-zoom-wrapper-width="623px" data-zappy-zoom-wrapper-height="491px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 623px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 491px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-zoom-wrapper-align="center"><img data-context="Professional polyurethane liquid waterproofing applied on a flat concrete rooftop. The surface shows a smooth, glossy, light grey seamless membrane coating with a slight reflective sheen under bright daylight. A worker in safety gear is visible in the background applying the material with a roller. The scene conveys precision industrial waterproofing work in an urban Israeli setting." width="660" height="520" src="/assets/section-intro-polyurethane-roof-waterproofing-intro-image-1-1777302563516-dv6c2w.webp?v=1777302569772" alt="איטום גג בחומר פוליאוריטני – שכבת איטום חלקה ומבריקה על גג בטון שטוח" class="pu-intro-img" data-element-type="image" data-element-id="img-1777302410139-pb7kkzau1" style="object-position: 50% 50% !important; margin: 0px !important; position: absolute !important; left: -4.10509% !important; top: 0% !important; width: 108.21% !important; height: 100% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: fill !important" data-zappy-zoom="0.6" data-zappy-object-position="50% 50%" data-zappy-original-width="623" data-zappy-original-height="491" loading="lazy" decoding="async" fetchpriority="low"></div>
           <!-- Decorative tech badge -->
           <div class="pu-intro-tech-badge">
             <span class="pu-badge-num">100%</span>
@@ -3038,7 +3045,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="pu-benefits-header">
       <div class="pu-benefits-header-inner">
         <p><span class="pu-benefits-label" style="color: rgb(18, 20, 23) !important;">יתרונות הטכנולוגיה</span>
-        </p><h2 class="pu-benefits-title" ><span style="color: #00d4ff !important">ל<span>מה פוליאוריטן הוא הפתרון<br>המתקדם לאיטום גגות?&nbsp;&nbsp;</span></span><span style="color: #121417 !important"></span></h2>
+        </p><h2 class="pu-benefits-title"><span style="color: #00d4ff !important">ל<span>מה פוליאוריטן הוא הפתרון<br>המתקדם לאיטום גגות?&nbsp;&nbsp;</span></span><span style="color: #121417 !important"></span></h2>
         <p class="pu-benefits-subtitle" style="color: rgb(18, 20, 23) !important;">חומר פוליאוריטן נוזלי מציע ביצועים יוצאי דופן לאיטום גגות מורכבים — ממבנים תעשייתיים ועד מרפסות ביתיות. הנה מה שמבדיל אותו מכל פתרון אחר.</p>
       </div>
       <div class="pu-benefits-title-rule" aria-hidden="true"></div>
@@ -3278,12 +3285,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Left column: Visual Strip -->
       <div class="pu-visual-col">
         <div class="pu-img-wrap pu-img-top">
-          <img data-context="Close-up of professional workers cleaning and preparing a flat concrete rooftop surface before waterproofing application. Dark cinematic lighting, industrial setting, worker in safety gear using tools to remove old material, dust and debris visible, dramatic shadows, cold blue tones, professional construction environment." width="480" height="280" src="/assets/section-process-polyurethane-roof-waterproofing-process-image-1.webp" alt="הכנת תשתית גג לפני יישום איטום פוליאוריטן">
+          <img data-context="Close-up of professional workers cleaning and preparing a flat concrete rooftop surface before waterproofing application. Dark cinematic lighting, industrial setting, worker in safety gear using tools to remove old material, dust and debris visible, dramatic shadows, cold blue tones, professional construction environment." width="480" height="280" src="/assets/section-process-polyurethane-roof-waterproofing-process-image-1.webp" alt="הכנת תשתית גג לפני יישום איטום פוליאוריטן" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pu-img-overlay" aria-hidden="true"></div>
           <span class="pu-img-label">הכנת תשתית</span>
         </div>
         <div class="pu-img-wrap pu-img-bottom">
-          <img data-context="Professional waterproofing technician applying liquid polyurethane coating on a flat rooftop using a roller, creating a seamless glossy protective membrane. Dark dramatic lighting, wet reflective surface with cold cyan highlights, industrial rooftop environment, cinematic composition, high-end construction work." width="480" height="280" src="/assets/section-process-polyurethane-roof-waterproofing-process-image-2.webp" alt="יישום חומר פוליאוריטן על גג שטוח">
+          <img data-context="Professional waterproofing technician applying liquid polyurethane coating on a flat rooftop using a roller, creating a seamless glossy protective membrane. Dark dramatic lighting, wet reflective surface with cold cyan highlights, industrial rooftop environment, cinematic composition, high-end construction work." width="480" height="280" src="/assets/section-process-polyurethane-roof-waterproofing-process-image-2.webp" alt="יישום חומר פוליאוריטן על גג שטוח" loading="lazy" decoding="async" fetchpriority="low">
           <div class="pu-img-overlay" aria-hidden="true"></div>
           <span class="pu-img-label">יישום החומר</span>
         </div>
@@ -3487,7 +3494,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="spray-seal-header">
       <p><span class="spray-seal-badge">שירותי איטום מקצועי</span>
       </p><h2 class="spray-seal-title">איטום בהתזה</h2>
-      <p class="spray-seal-subtitle" >
+      <p class="spray-seal-subtitle">
         פתרון איטום מתקדם ועמיד לכל סוגי המשטחים — גגות, מרפסות, מחסנים ועוד.
         טכנולוגיית התזה מודרנית המבטיחה כיסוי מושלם, אטימות מלאה ועמידות לאורך שנים.
       </p>
@@ -3499,19 +3506,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Image Column -->
       <div class="spray-seal-image-col">
         <div class="spray-seal-img-wrapper">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1777312081804-789um7fgl" data-element-type="image" data-zappy-zoom-wrapper-width="590px" data-zappy-zoom-wrapper-height="309px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 590px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 309px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-spray-seal-hero-1777312125422-f6h7a1.webp?v=1777312127962" alt="איטום בהתזה - עבודה מקצועית על גג" class="spray-seal-main-img" data-placeholder="spray-seal-hero" data-context="Professional waterproofing spray application on a flat rooftop, worker in safety gear using spray equipment, industrial setting, Israel" data-element-type="image" data-element-id="img-1777312081804-789um7fgl" style="object-position: 50% 50% !important; margin: 0px !important; left: -1.5% !important; top: -4.94498% !important; width: 103% !important; height: 109.89% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important;" data-zappy-zoom="1.03" data-zappy-original-width="590" data-zappy-original-height="308.9930725097656" data-zappy-object-position="50% 50%"></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1777312081804-789um7fgl" data-element-type="image" data-zappy-zoom-wrapper-width="590px" data-zappy-zoom-wrapper-height="309px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 590px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 309px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-spray-seal-hero-1777312125422-f6h7a1.webp?v=1777312127962" alt="איטום בהתזה - עבודה מקצועית על גג" class="spray-seal-main-img" data-placeholder="spray-seal-hero" data-context="Professional waterproofing spray application on a flat rooftop, worker in safety gear using spray equipment, industrial setting, Israel" data-element-type="image" data-element-id="img-1777312081804-789um7fgl" style="object-position: 50% 50% !important; margin: 0px !important; left: -1.5% !important; top: -4.94498% !important; width: 103% !important; height: 109.89% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important;" data-zappy-zoom="1.03" data-zappy-original-width="590" data-zappy-original-height="308.9930725097656" data-zappy-object-position="50% 50%" decoding="async"></div>
           <div class="spray-seal-img-badge">
             <span class="spray-seal-img-badge-icon">✓</span>
             <span>עמידות מוכחת</span>
           </div>
         </div>
 
-        <div class="spray-seal-small-imgs zappy-preserve-css-grid" id="zappy-auto-grid-1777312082025-8bbwy2" data-zappy-auto-grid="true" data-original-item-width="279" data-original-gap="16px" style="--zappy-grid-cols: repeat(2, minmax(0, 1fr)); grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
+        <div class="spray-seal-small-imgs zappy-preserve-css-grid" id="zappy-auto-grid-1777312082025-8bbwy2" data-zappy-auto-grid="true" data-original-item-width="279" data-original-gap="16px" style="--zappy-grid-cols: repeat(auto-fit, minmax(min(100%, 279px), 1fr)); grid-template-columns: repeat(auto-fit, minmax(min(100%, 279px), 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
           <div class="spray-seal-small-img-wrap zappy-grid-item-media-only" data-grid-item-index="0" style="overflow: hidden !important; height: 153.212px !important;" data-zappy-original-height="153.21180725097656">
-            <div data-zappy-zoom-wrapper="true" data-element-id="img-1777312081804-nm08il94k" data-element-type="image" data-zappy-zoom-wrapper-width="279px" data-zappy-zoom-wrapper-height="151px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 279px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 151px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-spray-seal-flat-roof-1777312160803-121sib.webp?v=1777312163100" alt="איטום גג שטוח" class="spray-seal-small-img" data-placeholder="spray-seal-flat-roof" data-context="Close-up of spray waterproofing coating applied on flat concrete roof, smooth seamless finish, professional quality" data-element-type="image" data-element-id="img-1777312081804-nm08il94k" style="object-position: 50% 50% !important; width: 100% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; display: block !important; margin: 0px !important; left: 0% !important; top: 0% !important; max-height: none !important;" data-zappy-original-width="279" data-zappy-original-height="151" data-zappy-object-position="50% 50%" data-zappy-zoom="1"></div>
+            <div data-zappy-zoom-wrapper="true" data-element-id="img-1777312081804-nm08il94k" data-element-type="image" data-zappy-zoom-wrapper-width="279px" data-zappy-zoom-wrapper-height="151px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 279px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 151px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-spray-seal-flat-roof-1777312160803-121sib.webp?v=1777312163100" alt="איטום גג שטוח" class="spray-seal-small-img" data-placeholder="spray-seal-flat-roof" data-context="Close-up of spray waterproofing coating applied on flat concrete roof, smooth seamless finish, professional quality" data-element-type="image" data-element-id="img-1777312081804-nm08il94k" style="object-position: 50% 50% !important; width: 100% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; display: block !important; margin: 0px !important; left: 0% !important; top: 0% !important; max-height: none !important;" data-zappy-original-width="279" data-zappy-original-height="151" data-zappy-object-position="50% 50%" data-zappy-zoom="1" loading="lazy" decoding="async" fetchpriority="low"></div>
           </div>
           <div class="spray-seal-small-img-wrap zappy-grid-item-media-only" data-grid-item-index="1" style="overflow: hidden !important; height: 153.212px !important;" data-zappy-original-height="153.21180725097656">
-            <div data-zappy-zoom-wrapper="true" data-element-id="img-1777312081804-2r78xj0vo" data-element-type="image" data-zappy-zoom-wrapper-width="280px" data-zappy-zoom-wrapper-height="151px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 280px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 151px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-spray-seal-equipment-1777312284373-9q5bik.webp?v=1777312287130" alt="ציוד התזה מקצועי" class="spray-seal-small-img" data-placeholder="spray-seal-equipment" data-context="Professional spray waterproofing equipment and machinery, industrial spray gun, polyurethane foam application tools" data-element-type="image" data-element-id="img-1777312081804-2r78xj0vo" style="object-position: 50% 50% !important; width: 100% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; display: block !important; margin: 0px !important; left: 0% !important; top: 0% !important; max-height: none !important;" data-zappy-original-width="280" data-zappy-original-height="151" data-zappy-object-position="50% 50%" data-zappy-zoom="1"></div>
+            <div data-zappy-zoom-wrapper="true" data-element-id="img-1777312081804-2r78xj0vo" data-element-type="image" data-zappy-zoom-wrapper-width="280px" data-zappy-zoom-wrapper-height="151px" data-zappy-zoom-wrapper-width-mode="px" style="position: relative !important; overflow: hidden !important; width: 280px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 151px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img src="/assets/image-spray-seal-equipment-1777312284373-9q5bik.webp?v=1777312287130" alt="ציוד התזה מקצועי" class="spray-seal-small-img" data-placeholder="spray-seal-equipment" data-context="Professional spray waterproofing equipment and machinery, industrial spray gun, polyurethane foam application tools" data-element-type="image" data-element-id="img-1777312081804-2r78xj0vo" style="object-position: 50% 50% !important; width: 100% !important; height: 100% !important; object-fit: cover !important; max-width: none !important; display: block !important; margin: 0px !important; left: 0% !important; top: 0% !important; max-height: none !important;" data-zappy-original-width="280" data-zappy-original-height="151" data-zappy-object-position="50% 50%" data-zappy-zoom="1" loading="lazy" decoding="async" fetchpriority="low"></div>
           </div>
         </div>
       </div>
@@ -3565,7 +3572,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </ul>
 
         <!-- CTA -->
-        <div class="spray-seal-cta-wrap" >
+        <div class="spray-seal-cta-wrap">
           <a href="0587750472" class="spray-seal-btn-primary btn btn-primary" aria-label="התקשר לקבלת הצעת מחיר לאיטום בהתזה" data-element-type="button" data-element-id="btn-1777312081789-reh8k504o" data-native-element="true" style="outline: none; border-color: transparent !important; color: rgb(255, 255, 255) !important; background-color: transparent !important; background-image: linear-gradient(135deg, rgb(200, 255, 0), rgb(138, 230, 0)) !important;">
             קבל הצעת מחיר
           </a>
@@ -3610,7 +3617,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <div class="footer-logo-wrap">
-          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" >
+          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" decoding="async" width="35" height="35">
         </div>
         <p class="footer-tagline">מומחים באיטום, שיפוץ ושיקום מבנים. עבודה מקצועית, אמינות מלאה, תוצאות שמחזיקות לאורך זמן.</p>
         <div class="footer-social">
@@ -3625,7 +3632,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h3 class="footer-heading"><span class="heading-accent"></span>שירותים</h3>
         <ul class="footer-links">
           <li><a href="/roof-waterproofing"><i class="fas fa-chevron-left footer-link-icon"></i>איטום גגות</a></li>
-          <li><a href="/industrial-waterproofing" ><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>איטום תעשייתי ומבני</a></li>
+          <li><a href="/industrial-waterproofing"><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>איטום תעשייתי ומבני</a></li>
           <li><a href="/renovation-fire-recovery"><i class="fas fa-chevron-left footer-link-icon"></i>שיפוץ ושיקום לאחר שריפה</a></li>
           <li><a href="/contact"><i class="fas fa-chevron-left footer-link-icon"></i>צור קשר</a></li>
         </ul>
@@ -3634,13 +3641,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Column 3: Contact Info -->
       <div class="footer-col footer-contact-col">
         <h3 class="footer-heading"><span class="heading-accent"></span>צור קשר</h3>
-        <ul class="footer-contact" ><li>
+        <ul class="footer-contact"><li>
             <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1775639017054-lxsedrpr3" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="mailto:mwrdrwry@gmail.com">mwrdrwry@gmail.com</a></span>
           </li><li>
             <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1775639017055-3p3y17104" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="tel:055-9932287">055-9932287</a></span>
-          </li><li><a href="/" ><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
+          </li><li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
       </div>
 
       <!-- Column 4: CTA / Badge -->
@@ -3670,7 +3677,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="legal-sep"></span>
         <a href="/accessibility">נגישות</a>
         <span class="legal-sep"></span>
-        <a href="https://zappy5.com" target="_blank" class="zappy-attribution" >נוצר באמצעות Zappy</a>
+        <a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a>
       </div>
     </div>
 
@@ -3686,6 +3693,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script id="free_accessibility_plugin_script" src="https://accessibility.f-static.com/site/free-accessibility-plugin/accessibility.min.js?lan=he&amp;place=bottom-right&amp;distance=50" crossorigin="anonymous"></script>
 
     <script src="/script.js"></script>
+
+    <script id="zappy-font-awesome-loader">
+(function(){if(window.__zappyFontAwesomeLoader)return;window.__zappyFontAwesomeLoader=true;var href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';function load(){if(document.querySelector('link[href*="font-awesome"][href*="all.min.css"]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href=href;l.crossOrigin='anonymous';l.referrerPolicy='no-referrer';document.head.appendChild(l);}function schedule(){if('requestIdleCallback'in window){requestIdleCallback(load,{timeout:5000});}else{setTimeout(load,3500);}}['pointerdown','keydown','touchstart','mouseover'].forEach(function(evt){window.addEventListener(evt,load,{once:true,passive:true});});schedule();})();
+</script>
 
     <script id="zappy-mobile-submenu-script">
     (function() {
@@ -3934,5 +3945,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       else setTimeout(init,50);
     })();
     </script>
-</body>
-</html>
+</body></html>

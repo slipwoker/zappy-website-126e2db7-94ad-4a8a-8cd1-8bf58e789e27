@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
@@ -161,26 +159,31 @@
       // Track button clicks (counted as actions)
       if (target.tagName === 'BUTTON' || target.closest('button')) {
         var button = target.tagName === 'BUTTON' ? target : target.closest('button');
-        trackEvent('click', {
+        var clickMeta = {
           element: 'button',
           text: button.textContent.trim().substring(0, 100),
           id: button.id || null,
           class: button.className || null
-        });
+        };
+        
+        trackEvent('click', clickMeta);
       }
       
       // Track link clicks (navigation - not counted as actions)
       else if (target.tagName === 'A' || target.closest('a')) {
         var link = target.tagName === 'A' ? target : target.closest('a');
-        trackEvent('navigation', {
+        var navMeta = {
           element: 'link',
           text: link.textContent.trim().substring(0, 100),
           href: link.href,
           external: link.hostname !== window.location.hostname
-        });
+        };
+        
+        trackEvent('navigation', navMeta);
       }
     }, true);
   }
+  
   
   // Track form submissions
   if (config.trackFormSubmissions) {
@@ -224,8 +227,6 @@
     <meta name="twitter:title" content="איטום גגות בירושלים והסביבה">
     <meta name="twitter:description" content="איטום גגות בירושלים והסביבה — פתרונות מקצועיים לגגות שטוחים, מרוצפים וחניונים. מאור אחזקות: ניסיון של 15+ שנה, חומרים מובחרים ואחריות מלאה על כל עבודה.">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://maor-ahzakot.co.il#organization","name":"מאור אחזקות","url":"https://maor-ahzakot.co.il","description":"A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.","address":{"@type":"PostalAddress","streetAddress":"ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"mwrdrwry@gmail.com","telephone":"055-9932287"}]},{"@type":"WebSite","@id":"https://maor-ahzakot.co.il#website","url":"https://maor-ahzakot.co.il","name":"מאור אחזקות","publisher":{"@id":"https://maor-ahzakot.co.il#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://maor-ahzakot.co.il"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://maor-ahzakot.co.il/service-areas"},{"@type":"ListItem","position":3,"name":"Roof Waterproofing Jerusalem","item":"https://maor-ahzakot.co.il/service-areas/roof-waterproofing-jerusalem"}]}]}</script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
@@ -236,7 +237,7 @@
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
     <!-- Cookie Consent -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    
     <!-- UserWay Accessibility Widget -->
     <script>
     (function(d){
@@ -1719,7 +1720,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','AW-17733353102');</script>
 <!-- ZAPPY_INTEGRATION_END analytics:add_google_tag_manager -->
-    <link rel="stylesheet" href="/styles.css">
+    <style id="zappy-critical-above-fold-css">
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden;min-height:560px}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
+</style>
+    <link rel="preload" href="/styles.css" as="style">
+    <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="/styles.css"></noscript>
+    
     <script>window.ZAPPY_WEBSITE_ID = "126e2db7-94ad-4a8a-8cd1-8bf58e789e27"; window.ZAPPY_API_BASE = "https://api.zappy5.com";</script>
 
     <style id="zappy-widget-visibility">
@@ -1782,9 +1789,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
       <a href="/" class="logo-link">
-        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo">
+        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" decoding="async" width="35" height="35">
       </a>
-    </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/roof-tarring" class="nav-link">זיפות</a></li><li><a href="/polyurethane-roof-waterproofing" class="nav-link">איטום פוליאוריטני</a></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan">איטום גגות בשפלה ובדרום גוש דן</a></li><li><a href="/service-areas/roof-waterproofing-eilat">איטום לגג באילת</a></li><li><a href="/service-areas/roof-waterproofing-beer-sheva">איטום גגות בבאר שבע</a></li><li><a href="/service-areas/building-types-coverage" class="nav-link">סוגי מבנים</a></li><li><a href="/service-areas/occupied-buildings-work-coordination" class="nav-link">תיאום עבודה</a></li></ul></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li><li><a href="/blog/roof-waterproofing-yatzata-tzadik">איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי</a></li><li><a href="/blog/balcony-roof-waterproofing-without-demolition">איטום גג מרפסת ללא פירוק: מתי זה אפשרי ומה חייבים לבדוק לפני</a></li><li><a href="/blog/balcony-roof-waterproofing-with-demolition">איטום גג מרפסת עם פירוק: מתי זה נדרש ואיך מבצעים נכון</a></li><li><a href="/blog/mold-and-condensation-treatment">טיפול בעובש ועיבוי: איך מזהים את מקור הבעיה ומה באמת פותר אותה</a></li><li><a href="/blog/roof-waterproofing-price-guide">מחירון איטום גגות: מה משפיע על המחיר ואיך משווים נכון בין הצעות</a></li><li><a href="/blog/shower-waterproofing">איטום מקלחת: מה חייבים לבצע נכון כדי למנוע רטיבות ונזקים נסתרים</a></li><li><a href="/blog/roof-tarring-yatzata-tzadik-quality-check">זיפות גגות "יצאת צדיק": איך לבדוק אם עבודת הזיפות באמת בוצעה נכון</a></li><li><a href="/blog/stairwell-renovation-after-fire">שיפוץ חדר מדרגות לאחר שריפה: סדר הפעולות הנכון לחזרה בטוחה לשימוש</a></li><li><a href="/water-leak-services" class="nav-link">דליפת מים בבית - סיבות, סימנים ואיך מטפלים בזה</a></li><li><a href="/roofing-and-waterproofing" class="nav-link">זיפות גגות  שיטות ועליות</a></li><li><a href="/blog/basement-wall-waterproofing" class="nav-link">איטום מרתף</a></li><li><a href="/blog/roof-penetrations-waterproofing" class="nav-link">מעברי צנרת</a></li><li><a href="/blog/parapet-and-roof-joint-waterproofing" class="nav-link">חיבורי גג</a></li><li><a href="/blog/smoke-soot-odor-removal-after-fire" class="nav-link">ריח עשן</a></li><li><a href="/blog/bituminous-membranes-warranty-years" class="nav-link">אחריות יריעות</a></li><li><a href="/blog/first-steps-after-apartment-fire" class="nav-link">אחרי שריפה</a></li><li><a href="/blog/old-tar-roof-upgrade-to-bituminous-membranes" class="nav-link">זיפות ישן</a></li></ul></li><li style="display: none !important;" class="zappy-hidden-menu-item"><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/exterior-building-renovation" class="nav-link">שיפוץ חוץ</a><ul class="sub-menu"><li><a href="/mold-removal-from-walls" class="nav-link">עובש</a></li><li><a href="/balcony-waterproofing">איטום מרפסות</a></li></ul></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li style="display: none !important;" class="zappy-hidden-menu-item"><a href="/copy">מומחים לאיטום גגות בתל אביב (copy)</a></li><li style="display: none !important;; display: none !important;" class="zappy-hidden-menu-item"><a href="/test-geo-echoai">TEST GEO - EchoAi</a></li></ul></div>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/" data-i18n="nav-home">בית</a></li><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/roof-tarring" class="nav-link">זיפות</a></li><li><a href="/polyurethane-roof-waterproofing" class="nav-link">איטום פוליאוריטני</a></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום  גגות  במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan">איטום גגות בשפלה ובדרום גוש דן</a></li><li><a href="/service-areas/roof-waterproofing-eilat">איטום לגג באילת</a></li><li><a href="/service-areas/roof-waterproofing-beer-sheva">איטום גגות בבאר שבע</a></li><li><a href="/service-areas/building-types-coverage" class="nav-link">סוגי מבנים</a></li><li><a href="/service-areas/occupied-buildings-work-coordination" class="nav-link">תיאום עבודה</a></li></ul></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li><li><a href="/blog/roof-waterproofing-yatzata-tzadik">איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי</a></li><li><a href="/blog/balcony-roof-waterproofing-without-demolition">איטום גג מרפסת ללא פירוק: מתי זה אפשרי ומה חייבים לבדוק לפני</a></li><li><a href="/blog/balcony-roof-waterproofing-with-demolition">איטום גג מרפסת עם פירוק: מתי זה נדרש ואיך מבצעים נכון</a></li><li><a href="/blog/mold-and-condensation-treatment">טיפול בעובש ועיבוי: איך מזהים את מקור הבעיה ומה באמת פותר אותה</a></li><li><a href="/blog/roof-waterproofing-price-guide">מחירון איטום גגות: מה משפיע על המחיר ואיך משווים נכון בין הצעות</a></li><li><a href="/blog/shower-waterproofing">איטום מקלחת: מה חייבים לבצע נכון כדי למנוע רטיבות ונזקים נסתרים</a></li><li><a href="/blog/roof-tarring-yatzata-tzadik-quality-check">זיפות גגות "יצאת צדיק": איך לבדוק אם עבודת הזיפות באמת בוצעה נכון</a></li><li><a href="/blog/stairwell-renovation-after-fire">שיפוץ חדר מדרגות לאחר שריפה: סדר הפעולות הנכון לחזרה בטוחה לשימוש</a></li><li><a href="/water-leak-services" class="nav-link">דליפת מים בבית - סיבות, סימנים ואיך מטפלים בזה</a></li><li><a href="/roofing-and-waterproofing" class="nav-link">זיפות גגות  שיטות ועליות</a></li><li><a href="/blog/basement-wall-waterproofing" class="nav-link">איטום מרתף</a></li><li><a href="/blog/roof-penetrations-waterproofing" class="nav-link">מעברי צנרת</a></li><li><a href="/blog/parapet-and-roof-joint-waterproofing" class="nav-link">חיבורי גג</a></li><li><a href="/blog/smoke-soot-odor-removal-after-fire" class="nav-link">ריח עשן</a></li><li><a href="/blog/bituminous-membranes-warranty-years" class="nav-link">אחריות יריעות</a></li><li><a href="/blog/first-steps-after-apartment-fire" class="nav-link">אחרי שריפה</a></li><li><a href="/blog/old-tar-roof-upgrade-to-bituminous-membranes" class="nav-link">זיפות ישן</a></li></ul></li><li><a href="/exterior-building-renovation" class="nav-link">שיפוץ חוץ</a><ul class="sub-menu"><li><a href="/mold-removal-from-walls" class="nav-link">עובש</a></li><li><a href="/balcony-waterproofing">איטום מרפסות</a></li></ul></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li></ul></div>
 
     
 
@@ -2201,7 +2208,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <span class="sarwji-eyebrow-line"></span>
           <span class="sarwji-eyebrow-text">מאור אחזקות — מומחי איטום</span>
         </div>
-        <h1 class="sarwji-h1" >איטום גגות בירושלים<br>&nbsp; והסביבה&nbsp;&nbsp;</h1>
+        <h1 class="sarwji-h1">איטום גגות בירושלים<br>&nbsp; והסביבה&nbsp;&nbsp;</h1>
         <p class="sarwji-body">פתרונות איטום מקצועיים לגגות מבנים, מרפסות ומבני תעשייה — בירושלים, מבשרת ציון, מודיעין ובכל אזור המרכז. עבודה מדויקת, חומרים מהמדרגה הראשונה, ואחריות מלאה על כל פרויקט.</p>
         <div class="sarwji-cta-row">
           <a href="/contact" class="sarwji-btn-primary" data-element-type="button" data-element-id="btn-1775639609318-e4g7n0oru" data-native-element="true">צור קשר עכשיו</a>
@@ -2213,7 +2220,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="sarwji-image-col">
         <div class="sarwji-image-frame">
           <div class="sarwji-image-overlay"></div>
-          <img data-context="Professional waterproofing crew applying torch-applied bituminous membrane on a flat rooftop in Jerusalem, Israel. Workers in safety gear with propane torches, dark asphalt membrane rolls visible, urban Jerusalem skyline with stone buildings in background, dramatic late afternoon light, industrial and precise atmosphere" width="600" height="400" src="/assets/section-intro-service-areas-roof-waterproofing-jerusalem-intro-image-1.webp" alt="פועלי איטום מקצועיים מבצעים עבודות איטום גג בירושלים" data-element-type="image" data-element-id="img-1775639609325-ne90athkf">
+          <img data-context="Professional waterproofing crew applying torch-applied bituminous membrane on a flat rooftop in Jerusalem, Israel. Workers in safety gear with propane torches, dark asphalt membrane rolls visible, urban Jerusalem skyline with stone buildings in background, dramatic late afternoon light, industrial and precise atmosphere" width="600" height="400" src="/assets/section-intro-service-areas-roof-waterproofing-jerusalem-intro-image-1.webp" alt="פועלי איטום מקצועיים מבצעים עבודות איטום גג בירושלים" data-element-type="image" data-element-id="img-1775639609325-ne90athkf" loading="lazy" decoding="async" fetchpriority="low">
           <div class="sarwji-image-caption">
             <i class="fa fa-shield-alt" aria-hidden="true" data-element-type="icon" data-element-id="icon-1775639609324-drmvq2qlb" data-icon-type="fontawesome"></i>
             <span>פרויקט איטום גג — ירושלים</span>
@@ -2229,16 +2236,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div class="sarwji-chip-divider" aria-hidden="true"></div>
       
       <div class="sarwji-chip-divider" aria-hidden="true"></div>
-      <div class="sarwji-chip" >
+      <div class="sarwji-chip">
         <span style="font-size: 11px;"><b>&nbsp;</b></span>
       </div>
       <div class="sarwji-chip-divider" aria-hidden="true"></div>
-      <div class="sarwji-chip" >
+      <div class="sarwji-chip">
         <i class="fa fa-map-marker-alt" aria-hidden="true" style="cursor: pointer;"></i>
-        <span >ישראל</span>
+        <span>ישראל</span>
       </div>
       <div class="sarwji-chip-divider" aria-hidden="true"></div>
-      <div class="sarwji-chip" >
+      <div class="sarwji-chip">
         <span><span style="font-size: 11px; text-wrap-mode: wrap;"><b>&nbsp;</b></span></span>
       </div>
     </div>
@@ -2324,7 +2331,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     <!-- Hero Image -->
     <div class="roof-article-hero-img-wrap">
-      <div data-zappy-zoom-wrapper="true" data-element-id="img-1775575045810-7x8do5tur" data-element-type="image" data-zappy-zoom-wrapper-width="860px" data-zappy-zoom-wrapper-height="388px" data-zappy-zoom-wrapper-width-mode="full" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: absolute !important; overflow: hidden !important; width: 100% !important; max-width: none !important; margin-left: 0px !important; margin-right: 0px !important; height: 100% !important; display: block !important; top: 0px !important; left: 0px !important; z-index: 1 !important;" data-zappy-zoom-wrapper-align="center"><img src="/assets/image-roof-sealing-jerusalem-hero-1775576242698-2q4esn.webp?v=1775576244920" alt="איטום גגות בירושלים — מאור אחזקות" data-placeholder="roof-sealing-jerusalem-hero" data-context="Professional rooftop waterproofing work in Jerusalem, workers applying sealant on a flat roof with Jerusalem stone buildings in background, sunny day" class="roof-article-hero-img" data-element-type="image" data-element-id="img-1775575045810-7x8do5tur" data-zappy-zoom="1.02" data-zappy-original-width="859.9921875" data-zappy-original-height="387.984375" data-zappy-object-position="55% 60%" style="object-position: 55% 60% !important; margin: 0px !important; position: absolute !important; left: -1.1% !important; top: -17205.3% !important; width: 102% !important; height: 28775.4% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important"></div>
+      <div data-zappy-zoom-wrapper="true" data-element-id="img-1775575045810-7x8do5tur" data-element-type="image" data-zappy-zoom-wrapper-width="860px" data-zappy-zoom-wrapper-height="388px" data-zappy-zoom-wrapper-width-mode="full" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" style="position: absolute !important; overflow: hidden !important; width: 100% !important; max-width: none !important; margin-left: 0px !important; margin-right: 0px !important; height: 100% !important; display: block !important; top: 0px !important; left: 0px !important; z-index: 1 !important;" data-zappy-zoom-wrapper-align="center"><img src="/assets/image-roof-sealing-jerusalem-hero-1775576242698-2q4esn.webp?v=1775576244920" alt="איטום גגות בירושלים — מאור אחזקות" data-placeholder="roof-sealing-jerusalem-hero" data-context="Professional rooftop waterproofing work in Jerusalem, workers applying sealant on a flat roof with Jerusalem stone buildings in background, sunny day" class="roof-article-hero-img" data-element-type="image" data-element-id="img-1775575045810-7x8do5tur" data-zappy-zoom="1.02" data-zappy-original-width="859.9921875" data-zappy-original-height="387.984375" data-zappy-object-position="55% 60%" style="object-position: 55% 60% !important; margin: 0px !important; position: absolute !important; left: -1.1% !important; top: -17205.3% !important; width: 102% !important; height: 28775.4% !important; max-width: none !important; max-height: none !important; display: block !important; object-fit: cover !important" decoding="async"></div>
       <div class="roof-article-hero-badge">מאור אחזקות — מומחי איטום</div>
     </div>
 
@@ -2335,7 +2342,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p><span class="roof-article-tag">מדריך מקצועי</span>
         </p><h1 class="roof-article-title">איטום גגות בירושלים — כל מה שצריך לדעת</h1>
         <p class="roof-article-subtitle">הגנה מקצועית על הנכס שלך מפני רטיבות, דליפות ונזקי מים — עם ניסיון של שנים בשטח</p>
-        <div class="roof-article-meta" >
+        <div class="roof-article-meta">
           <span class="roof-article-meta-item">
             <svg class="roof-meta-icon" viewBox="0 0 24 24" aria-hidden="true" style="cursor: pointer;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"></path></svg>
             זמן קריאה: 3 דקות
@@ -2380,7 +2387,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Right Column: Title, Paragraph, Coverage List -->
       <div class="sa-right-col" data-grid-item-index="0">
         <p><small class="sa-label">אזורי שירות</small>
-        </p><h2 class="sa-heading" >איטום גגות בירושלים<br>&nbsp; והסביבה הקרובה&nbsp;&nbsp;</h2>
+        </p><h2 class="sa-heading">איטום גגות בירושלים<br>&nbsp; והסביבה הקרובה&nbsp;&nbsp;</h2>
         <p class="sa-intro">מאור אחזקות מעניקה שירותי איטום גגות, הגנה מבנית וחידוש לאחר שריפה לאורך כל אזור ירושלים והערים הסמוכות. הניסיון שלנו בפרויקטים מגוונים — ממבנים מגורים ועד מפעלים ומבני תעשייה — מאפשר לנו להגיע לכל אתר עם הפתרון המדויק לצרכיו.</p>
 
         <ul class="sa-coverage-list">
@@ -2517,7 +2524,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="roof-article-body">
       <!-- Image -->
       <div class="roof-article-image-wrap">
-        <img alt="Workers in safety gear clean a fire-damaged room, scraping walls and shoveling debris for restoration." class="roof-article-img" src="/assets/ai-section-1776338449070-0-1eaacdd9.webp" data-context="ai-generated-section" data-placeholder="Click to upload new image">
+        <img alt="Workers in safety gear clean a fire-damaged room, scraping walls and shoveling debris for restoration." class="roof-article-img" src="/assets/ai-section-1776338449070-0-1eaacdd9.webp" data-context="ai-generated-section" data-placeholder="Click to upload new image" loading="lazy" decoding="async" fetchpriority="low">
         <div class="roof-article-img-caption">צוות המומחים שלנו בעבודה — איטום מקצועי ואמין</div>
       </div>
 
@@ -2599,7 +2606,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Column 1: Company Info -->
       <div class="footer-col footer-brand">
         <div class="footer-logo-wrap">
-          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" >
+          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" decoding="async" width="35" height="35">
         </div>
         <p class="footer-tagline">מומחים באיטום, שיפוץ ושיקום מבנים. עבודה מקצועית, אמינות מלאה, תוצאות שמחזיקות לאורך זמן.</p>
         <div class="footer-social">
@@ -2614,7 +2621,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <h3 class="footer-heading"><span class="heading-accent"></span>שירותים</h3>
         <ul class="footer-links">
           <li><a href="/roof-waterproofing"><i class="fas fa-chevron-left footer-link-icon"></i>איטום גגות</a></li>
-          <li><a href="/industrial-waterproofing" ><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>איטום תעשייתי ומבני</a></li>
+          <li><a href="/industrial-waterproofing"><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>איטום תעשייתי ומבני</a></li>
           <li><a href="/renovation-fire-recovery"><i class="fas fa-chevron-left footer-link-icon"></i>שיפוץ ושיקום לאחר שריפה</a></li>
           <li><a href="/contact"><i class="fas fa-chevron-left footer-link-icon"></i>צור קשר</a></li>
         </ul>
@@ -2623,13 +2630,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <!-- Column 3: Contact Info -->
       <div class="footer-col footer-contact-col">
         <h3 class="footer-heading"><span class="heading-accent"></span>צור קשר</h3>
-        <ul class="footer-contact" ><li>
+        <ul class="footer-contact"><li>
             <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1775639017054-lxsedrpr3" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="mailto:mwrdrwry@gmail.com">mwrdrwry@gmail.com</a></span>
           </li><li>
             <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1775639017055-3p3y17104" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text"><a href="tel:055-9932287">055-9932287</a></span>
-          </li><li><a href="/" ><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
+          </li><li><a href="/"><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span class="contact-text" style="display: inline !important;">ישראל</span></a></li></ul>
       </div>
 
       <!-- Column 4: CTA / Badge -->
@@ -2659,7 +2666,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <span class="legal-sep"></span>
         <a href="/accessibility">נגישות</a>
         <span class="legal-sep"></span>
-        <a href="https://zappy5.com" target="_blank" class="zappy-attribution" >נוצר באמצעות Zappy</a>
+        <a href="https://zappy5.com" target="_blank" class="zappy-attribution">נוצר באמצעות Zappy</a>
       </div>
     </div>
 
@@ -2675,6 +2682,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script id="free_accessibility_plugin_script" src="https://accessibility.f-static.com/site/free-accessibility-plugin/accessibility.min.js?lan=he&amp;place=bottom-right&amp;distance=50" crossorigin="anonymous"></script>
 
     <script src="/script.js"></script>
+
+    <script id="zappy-font-awesome-loader">
+(function(){if(window.__zappyFontAwesomeLoader)return;window.__zappyFontAwesomeLoader=true;var href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';function load(){if(document.querySelector('link[href*="font-awesome"][href*="all.min.css"]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href=href;l.crossOrigin='anonymous';l.referrerPolicy='no-referrer';document.head.appendChild(l);}function schedule(){if('requestIdleCallback'in window){requestIdleCallback(load,{timeout:5000});}else{setTimeout(load,3500);}}['pointerdown','keydown','touchstart','mouseover'].forEach(function(evt){window.addEventListener(evt,load,{once:true,passive:true});});schedule();})();
+</script>
 
     <script id="zappy-mobile-submenu-script">
     (function() {
@@ -2923,5 +2934,4 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       else setTimeout(init,50);
     })();
     </script>
-</body>
-</html>
+</body></html>
