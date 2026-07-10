@@ -1161,6 +1161,31 @@ document.querySelectorAll('.maor-video-card__play-btn').forEach(btn => {
   });
 });
 
+/* Added Component Script */
+document.addEventListener('DOMContentLoaded', function () {
+  const faqItems = document.querySelectorAll('.spackle-faq-item');
+
+  faqItems.forEach(function (item) {
+    const questionBtn = item.querySelector('.spackle-faq-question');
+
+    questionBtn.addEventListener('click', function () {
+      const isActive = item.classList.contains('active');
+
+      // Close all
+      faqItems.forEach(function (otherItem) {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.spackle-faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      // Open clicked (if not already open)
+      if (!isActive) {
+        item.classList.add('active');
+        questionBtn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+});
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){

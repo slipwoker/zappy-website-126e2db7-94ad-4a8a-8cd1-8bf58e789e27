@@ -23066,6 +23066,336 @@ nav.navbar .sub-menu li a {
     height: 20px;
   }
 }
+
+/* Added Component Styles */
+.spackle-section {
+  background: #0a0a14;
+  padding: 80px 20px 90px;
+  direction: rtl;
+  font-family: system-ui, sans-serif;
+  color: #f0f0f5;
+}
+
+.spackle-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.spackle-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.spackle-badge {
+  display: inline-block;
+  background: rgba(200, 255, 0, 0.12);
+  color: #C8FF00;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.spackle-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+.spackle-subtitle {
+  font-size: 1.15rem;
+  color: #b0b0c0;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Grid */
+.spackle-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 70px;
+}
+
+.spackle-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 255, 0, 0.15);
+  border-radius: 16px;
+  padding: 32px 20px 28px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.spackle-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  border-color: rgba(200, 255, 0, 0.4);
+}
+
+.spackle-card-icon {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.spackle-icon-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.spackle-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px;
+}
+
+.spackle-card-text {
+  font-size: 0.95rem;
+  color: #a0a0b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Showcase */
+.spackle-showcase {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(200, 255, 0, 0.12);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 70px;
+}
+
+.spackle-showcase-image {
+  flex: 0 0 45%;
+}
+
+.spackle-showcase-img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+}
+
+.spackle-showcase-content {
+  flex: 1;
+}
+
+.spackle-showcase-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 16px;
+}
+
+.spackle-showcase-text {
+  font-size: 1rem;
+  color: #c0c0d0;
+  line-height: 1.75;
+  margin: 0 0 20px;
+}
+
+.spackle-showcase-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.spackle-showcase-list li {
+  position: relative;
+  padding-right: 24px;
+  margin-bottom: 10px;
+  color: #d0d0e0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.spackle-showcase-list li::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  border-radius: 50%;
+}
+
+.spackle-cta {
+  display: inline-block;
+  background: var(--gradient-primary, linear-gradient(90deg, #C8FF00 0%, #8AE600 100%));
+  color: #0a0a14;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 18px rgba(200, 255, 0, 0.3);
+}
+
+.spackle-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(200, 255, 0, 0.45);
+}
+
+.spackle-cta:focus-visible {
+  outline: 3px solid #C8FF00;
+  outline-offset: 3px;
+}
+
+/* FAQ */
+.spackle-faq {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.spackle-faq-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 32px;
+}
+
+.spackle-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.spackle-faq-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(200, 255, 0, 0.2);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.spackle-faq-item:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.spackle-faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 20px 24px;
+  cursor: pointer;
+  font-family: system-ui, sans-serif;
+  text-align: right;
+  transition: background 0.25s ease;
+}
+
+.spackle-faq-question:hover {
+  background: rgba(200, 255, 0, 0.06);
+}
+
+.spackle-faq-question:focus-visible {
+  outline: 2px solid #C8FF00;
+  outline-offset: -2px;
+}
+
+.spackle-faq-chevron {
+  font-size: 0.8rem;
+  transition: transform 0.35s ease;
+  flex-shrink: 0;
+  margin-right: 16px;
+  color: #C8FF00;
+}
+
+.spackle-faq-item.active .spackle-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.spackle-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, padding 0.3s ease;
+}
+
+.spackle-faq-item.active .spackle-faq-answer {
+  max-height: 500px;
+  opacity: 1;
+  padding: 0 24px 20px;
+}
+
+.spackle-faq-answer-inner {
+  border-right: 3px solid #C8FF00;
+  padding-right: 16px;
+  color: #c0c0d0;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.spackle-faq-answer-inner p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .spackle-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .spackle-showcase {
+    flex-direction: column;
+    gap: 30px;
+    padding: 28px;
+  }
+  .spackle-showcase-image {
+    flex: 0 0 100%;
+  }
+  .spackle-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .spackle-section {
+    padding: 50px 16px 60px;
+  }
+  .spackle-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .spackle-title {
+    font-size: 1.6rem;
+  }
+  .spackle-subtitle {
+    font-size: 1rem;
+  }
+  .spackle-showcase {
+    padding: 20px;
+  }
+  .spackle-showcase-title {
+    font-size: 1.35rem;
+  }
+  .spackle-faq-question {
+    font-size: 1rem;
+    padding: 16px 18px;
+  }
+  .spackle-faq-item.active .spackle-faq-answer {
+    padding: 0 18px 16px;
+  }
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
