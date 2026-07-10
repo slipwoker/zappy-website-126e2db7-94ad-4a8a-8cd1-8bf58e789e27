@@ -1,4 +1,4 @@
-# מאור אחזקות — Generative Engine Optimization Map
+# מאור — Generative Engine Optimization Map
 
 > A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.
 
@@ -212,10 +212,9 @@ Information about WCAG compliance and accessibility features.
 
 ## How to Contact Us
 
-- Email: mwrdrwry@gmail.com
-- Phone: 055-9932287
+- Email: dmaor75@gmail.com
+- Phone: 0559932287
 - Phone (tel): tel:0559932287
-- Address: ישראל
 
 ### Contact form
 - URL: https://maor-ahzakot.co.il/roof-waterproofing-tel-aviv
@@ -233,7 +232,7 @@ Information about WCAG compliance and accessibility features.
 
 # Business Context (for LLM understanding)
 
-## About מאור אחזקות
+## About מאור
 A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.
 
 ## Services/Products
