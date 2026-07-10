@@ -1186,6 +1186,35 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+/* Added Component Script */
+(function() {
+  const faqItems = document.querySelectorAll('.mold-faq-item');
+
+  faqItems.forEach(function(item) {
+    const button = item.querySelector('.mold-faq-question');
+    if (!button) return;
+
+    button.addEventListener('click', function() {
+      const isActive = item.classList.contains('active');
+
+      // Close all items
+      faqItems.forEach(function(otherItem) {
+        otherItem.classList.remove('active');
+        const otherButton = otherItem.querySelector('.mold-faq-question');
+        if (otherButton) {
+          otherButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle clicked item
+      if (!isActive) {
+        item.classList.add('active');
+        button.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
