@@ -25685,12 +25685,12 @@ Description: מאור אחזקות - מאור צביעת דירות, בתים ו
 
 ---
 
-## איטום מאגר מים | מאור אחזקות
+## איטום מאגר מים
 
 URL: https://maor-ahzakot.co.il/water-reservoir-waterproofing
-Description: מאור - איטום מאגר מים | מאור אחזקות
+Description: איטום מאגר מים
 
-מאור אחזקות
+איטום מאגר מים
 
 
 
