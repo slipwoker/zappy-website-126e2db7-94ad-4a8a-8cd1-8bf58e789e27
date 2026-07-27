@@ -198,8 +198,8 @@ https://maor-ahzakot.co.il/apartment-house-stairwell-painting
 https://maor-ahzakot.co.il/water-reservoir-waterproofing
 מאור - איטום מאגר מים | מאור אחזקות
 
-### ניקוי תעלות אוויר ומערכות מיזוג | מאור אחזקות
-https://maor-ahzakot.co.il/air-duct-cleaning
+### Air Duct Cleaning & HVAC Systems
+https://maor-ahzakot.co.il/air-duct-cleaning-hvac-systems
 Professional air duct cleaning and HVAC system maintenance by Maor Holdings. Advanced technologies, improved air quality, and energy savings for residential, office, and industrial buildings.
 
 ## Legal & Policy
@@ -233,7 +233,7 @@ Information about WCAG compliance and accessibility features.
   - `name` (text, required)
   - `email` (email, required)
   - `phone` (tel, required)
-  - `message` (textarea)
+  - `message` (textarea, required)
   - `privacy_consent` (checkbox, required)
 
 ---
