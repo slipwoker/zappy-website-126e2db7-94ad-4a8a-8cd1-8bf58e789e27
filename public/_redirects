@@ -1,5 +1,5 @@
 # Clean URL redirects for Render static hosting
-# Generated: 2026-08-10T17:51:48.595Z
+# Generated: 2026-08-10T17:53:04.919Z
 # NOTE: Render uses render.yaml for routing, not _redirects (that is Netlify)
 # This file is kept for reference only
 
@@ -38,7 +38,6 @@
 /blog/roof-tarring-yatzata-tzadik-quality-check  /blog/roof-tarring-yatzata-tzadik-quality-check.html  200!
 /blog/stairwell-renovation-after-fire  /blog/stairwell-renovation-after-fire.html  200!
 /thank-you  /thank-you.html  200!
-/contact  /contact.html  200!
 /water-leak-services  /water-leak-services.html  200!
 /roofing-and-waterproofing  /roofing-and-waterproofing.html  200!
 /blog/basement-wall-waterproofing  /blog/basement-wall-waterproofing.html  200!
@@ -46,6 +45,7 @@
 /blog/parapet-and-roof-joint-waterproofing  /blog/parapet-and-roof-joint-waterproofing.html  200!
 /blog/smoke-soot-odor-removal-after-fire  /blog/smoke-soot-odor-removal-after-fire.html  200!
 /blog/bituminous-membranes-warranty-years  /blog/bituminous-membranes-warranty-years.html  200!
+/roof-sealant-materials  /roof-sealant-materials.html  200!
 /blog/first-steps-after-apartment-fire  /blog/first-steps-after-apartment-fire.html  200!
 /blog/old-tar-roof-upgrade-to-bituminous-membranes  /blog/old-tar-roof-upgrade-to-bituminous-membranes.html  200!
 /copy  /copy.html  200!
@@ -55,7 +55,7 @@
 /apartment-house-stairwell-painting  /apartment-house-stairwell-painting.html  200!
 /water-reservoir-waterproofing  /water-reservoir-waterproofing.html  200!
 /air-duct-cleaning-hvac-systems  /air-duct-cleaning-hvac-systems.html  200!
-/roof-sealant-materials  /roof-sealant-materials.html  200!
+/contact  /contact.html  200!
 
 # Legal pages - redirect old .html URLs to friendly URLs
 /privacy.html  /privacy  301
