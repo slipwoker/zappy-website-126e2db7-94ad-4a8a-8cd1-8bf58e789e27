@@ -202,6 +202,9 @@ https://maor-ahzakot.co.il/water-reservoir-waterproofing
 https://maor-ahzakot.co.il/air-duct-cleaning-hvac-systems
 Professional air duct cleaning and HVAC system maintenance by Maor Holdings. Advanced technologies, improved air quality, and energy savings for residential, office, and industrial buildings.
 
+### Page
+https://maor-ahzakot.co.il/roof-sealing-materials-guide
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -230,11 +233,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
-  - `phone` (tel, required)
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
   - `message` (textarea)
-  - `privacy_consent` (checkbox, required)
+  - `privacy_consent` (checkbox)
 
 ---
 
