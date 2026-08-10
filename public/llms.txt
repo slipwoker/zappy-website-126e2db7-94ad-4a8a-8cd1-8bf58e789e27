@@ -203,7 +203,7 @@ https://maor-ahzakot.co.il/air-duct-cleaning-hvac-systems
 Professional air duct cleaning and HVAC system maintenance by Maor Holdings. Advanced technologies, improved air quality, and energy savings for residential, office, and industrial buildings.
 
 ### חומרי איטום לגגות - מה כדאי להכיר לפני שבוחרים
-https://maor-ahzakot.co.il/roof-sealing-materials-guide
+https://maor-ahzakot.co.il/roof-sealant-materials
 מאור אחזקות – מומחים לאיטום גגות ביריעות ביטומניות, זפת חם, פוליאוריתן ואפוקסי. שיפוץ ושיקום מבנים לאחר שריפה. 15+ שנות ניסיון, 500+ פרויקטים ברחבי ישראל. קבלו הצעת מחיר חינם!
 
 ## Legal & Policy
@@ -234,11 +234,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text)
-  - `email` (email)
-  - `phone` (tel)
-  - `message` (textarea)
-  - `privacy_consent` (checkbox)
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel, required)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
