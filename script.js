@@ -1262,6 +1262,116 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 })();
 
+/* ZAPPY_CUSTOM_JS_START:78840ccf08c8 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  var grid = document.querySelector('.blog-grid-layout');
+  if (!grid) return;
+
+  var secondary = grid.querySelector('.blog-grid-secondary');
+  if (!secondary) return;
+
+  var cards = Array.prototype.slice.call(secondary.querySelectorAll('.blog-card'));
+  if (cards.length === 0) return;
+
+  var PER_PAGE = 9;
+  var totalPages = Math.max(1, Math.ceil(cards.length / PER_PAGE));
+  if (totalPages <= 1) return;
+
+  var current = 1;
+
+  // Hide all cards, show only current page
+  function render() {
+    var start = (current - 1) * PER_PAGE;
+    var end = start + PER_PAGE;
+    cards.forEach(function (card, i) {
+      card.style.display = (i >= start && i < end) ? '' : 'none';
+    });
+    // Update button states
+    var btns = pagination.querySelectorAll('.pagination-btn');
+    btns.forEach(function (btn) {
+      var p = parseInt(btn.getAttribute('data-page'), 10);
+      if (!isNaN(p)) {
+        btn.classList.toggle('active', p === current);
+      }
+    });
+    var prev = pagination.querySelector('.pagination-prev');
+    var next = pagination.querySelector('.pagination-next');
+    if (prev) prev.classList.toggle('disabled', current === 1);
+    if (next) next.classList.toggle('disabled', current === totalPages);
+    // Scroll to top of grid
+    var section = grid.closest('.blog-blog-grid-section');
+    if (section && section.getBoundingClientRect().top < 0) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    updateLabels();
+  }
+
+  function updateLabels() {
+    var prev = pagination.querySelector('.pagination-prev');
+    var next = pagination.querySelector('.pagination-next');
+    if (prev) prev.textContent = 'הקודם';
+    if (next) next.textContent = 'הבא';
+  }
+
+  // Build pagination container
+  var pagination = document.createElement('nav');
+  pagination.className = 'blog-pagination';
+  pagination.setAttribute('aria-label', 'ניווט עמודים');
+
+  // Prev button
+  var prevBtn = document.createElement('button');
+  prevBtn.type = 'button';
+  prevBtn.className = 'pagination-btn pagination-prev';
+  prevBtn.textContent = 'הקודם';
+  prevBtn.addEventListener('click', function () {
+    if (current > 1) { current--; render(); }
+  });
+  pagination.appendChild(prevBtn);
+
+  // Page number buttons
+  for (var p = 1; p <= totalPages; p++) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'pagination-btn pagination-num';
+    btn.setAttribute('data-page', String(p));
+    btn.textContent = String(p);
+    btn.setAttribute('aria-label', 'עמוד ' + p);
+    btn.addEventListener('click', (function (page) {
+      return function () { current = page; render(); };
+    })(p));
+    pagination.appendChild(btn);
+  }
+
+  // Next button
+  var nextBtn = document.createElement('button');
+  nextBtn.type = 'button';
+  nextBtn.className = 'pagination-btn pagination-next';
+  nextBtn.textContent = 'הבא';
+  nextBtn.addEventListener('click', function () {
+    if (current < totalPages) { current++; render(); }
+  });
+  pagination.appendChild(nextBtn);
+
+  // Insert after the grid layout
+  grid.parentNode.insertBefore(pagination, grid.nextSibling);
+
+  render();
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:78840ccf08c8 */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
