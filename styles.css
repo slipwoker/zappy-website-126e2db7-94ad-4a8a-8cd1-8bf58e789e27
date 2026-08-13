@@ -24340,9 +24340,9 @@ nav.navbar .sub-menu li a {
   height: 44px;
   padding: 0 16px;
   border-radius: 8px;
-  border: 1px solid var(--border-light);
-  background: var(--surface);
-  color: var(--text-dark);
+  border: 1px solid var(--border-dark);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-light);
   font-weight: 600;
   font-size: 15px;
   cursor: pointer;
@@ -24353,7 +24353,7 @@ nav.navbar .sub-menu li a {
 .blog-blog-grid-section .pagination-btn:hover {
   border-color: var(--primary);
   color: var(--primary);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .blog-blog-grid-section .pagination-btn.active {
