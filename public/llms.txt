@@ -209,9 +209,6 @@ https://maor-ahzakot.co.il/contact
 ### Page
 https://maor-ahzakot.co.il/roof-tarring-price-factors
 
-### איטום גגות בערד
-https://maor-ahzakot.co.il/roof-sealing-in-arad
-
 ## Legal & Policy
 
 ### Privacy Policy
@@ -243,7 +240,7 @@ Information about WCAG compliance and accessibility features.
   - `name` (text, required)
   - `email` (email, required)
   - `phone` (tel, required)
-  - `message` (textarea, required)
+  - `message` (textarea)
   - `privacy_consent` (checkbox, required)
 
 ---
