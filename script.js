@@ -1373,6 +1373,11 @@ document.addEventListener('DOMContentLoaded', function () {
 /* ZAPPY_CUSTOM_JS_END:78840ccf08c8 */
 
 
+/* Added Component Script */
+// No JavaScript required for this static section.
+// Placeholder for future interactivity if needed.
+
+
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
   try {
