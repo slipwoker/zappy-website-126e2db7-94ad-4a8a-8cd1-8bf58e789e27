@@ -245,6 +245,10 @@ https://maor-ahzakot.co.il/blog/concrete-roof-waterproofing
 https://maor-ahzakot.co.il/service-areas/waterproofing-contractor
 מאור איטום - קבלן איטום מקצועי לעבודות גגות, מעטפת ושיקום מבנים
 
+### ראשון לציון
+https://maor-ahzakot.co.il/service-areas/waterproofing-contractor-rishon-lezion
+מאור איטום - קבלן איטום בראשון לציון | מאור אחזקות
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -273,11 +277,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
-  - `phone` (tel, required)
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
   - `message` (textarea)
-  - `privacy_consent` (checkbox, required)
+  - `privacy_consent` (checkbox)
 
 ---
 
