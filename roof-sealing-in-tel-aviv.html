@@ -1280,15 +1280,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','AW-17733353102');</script>
 <!-- ZAPPY_INTEGRATION_END analytics:add_google_tag_manager -->
   
+
+
 <style data-zappy-section-v2-css="true">
 /* V2 Regenerated Section CSS */
 .roof-Sealing-In-Tel-Aviv-layout-section {
   background-color: #090B10;
-  background-image: radial-gradient(circle at 15% 20%, rgba(255,255,255,0.04) 0 1px, transparent 2px), radial-gradient(circle at 85% 15%, rgba(0,184,255,0.06) 0 1px, transparent 2px), radial-gradient(circle at 75% 85%, rgba(255,255,255,0.03) 0 1px, transparent 2px), linear-gradient(180deg, #0B0E14 0%, #090B10 100%);
+  background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 0 2px, transparent 3px), radial-gradient(circle at 80% 10%, rgba(255,180,64,0.08) 0 2px, transparent 3px), radial-gradient(circle at 70% 75%, rgba(0,184,255,0.06) 0 2px, transparent 3px);
   color: var(--text-light);
   padding: 120px 16px 80px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   font-family: 'Inter', 'Heebo', sans-serif;
 }
 
@@ -1301,485 +1303,337 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .roof-Sealing-In-Tel-Aviv-layout-section__container {
   max-width: 1200px;
   margin: 0 auto;
-  position: relative;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
-/* Intro */
-.roof-Sealing-In-Tel-Aviv-layout-section__intro {
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  color: var(--text-light);
-  margin: 0 0 24px;
-  text-align: right;
-  position: relative;
-  display: inline-block;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__title::after {
-  content: '';
-  position: absolute;
-  bottom: -12px;
-  right: 0;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary), transparent);
-  border-radius: 2px;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__title-rule {
-  position: absolute;
-  top: -20px;
-  right: 0;
-  width: 180px;
-  height: 1px;
-  background: rgba(255,255,255,0.12);
-  pointer-events: none;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__subtitle {
-  font-size: 18px;
-  line-height: 1.8;
-  color: var(--text-light);
-  text-align: right;
-  max-width: 800px;
-  margin: 0;
-  opacity: 0.92;
-}
-
-/* Guide */
-.roof-Sealing-In-Tel-Aviv-layout-section__guide {
-  background: rgba(16,21,28,0.68);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 0;
-  padding: 32px;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__guide::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--primary), transparent);
-  opacity: 0.6;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__guide-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-light);
-  margin: 0 0 16px;
-  text-align: right;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__guide-text {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-light);
-  text-align: right;
-  margin: 0 0 16px;
-  opacity: 0.9;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__guide-text:last-child {
-  margin-bottom: 0;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__guide-text strong {
-  color: var(--secondary);
-  font-weight: 700;
-}
-
-/* Grid */
-.roof-Sealing-In-Tel-Aviv-layout-section__grid {
+/* Article Header */
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-bottom: 60px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
   direction: rtl;
 }
 
-.roof-Sealing-In-Tel-Aviv-layout-section__card {
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header__eyebrow {
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  align-self: flex-start;
+  border: 1px solid var(--border-dark);
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header__title {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header__intro p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header__media {
+  margin: 0;
+  position: relative;
   background: #11161D;
-  border-radius: 0;
   border: 1px solid rgba(255,255,255,0.12);
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  padding: 28px;
-  position: relative;
+  padding: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 3/2;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header__caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgba(9, 11, 16, 0.85);
+  color: var(--text-light);
+  font-size: 12px;
+  padding: 8px 16px;
+  margin: 0;
+}
+
+/* Reading Guide */
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-reading-guide {
+  background: #11161D;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  direction: rtl;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-reading-guide h3 {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-reading-guide p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-reading-guide__tip {
+  border-top: 1px solid var(--border-dark);
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Signs Grid */
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-signs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  direction: rtl;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-sign-card {
+  background: #11161D;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   min-width: 0;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.roof-Sealing-In-Tel-Aviv-layout-section__card:hover {
-  border-color: var(--primary);
-  box-shadow: 0 0 24px rgba(0,212,255,0.15), 0 10px 30px rgba(0,0,0,0.3);
-  transform: translateY(-4px);
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__card-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  background: linear-gradient(135deg, #006DFF 0%, #00C8FF 100%);
-  color: #0B0E14;
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-sign-card__number {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.25rem;
+  font-size: 48px;
   font-weight: 900;
-  border-radius: 0;
-  margin-bottom: 16px;
+  color: rgba(0, 212, 255, 0.25);
+  line-height: 1;
 }
 
-.roof-Sealing-In-Tel-Aviv-layout-section__card-title {
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-sign-card h3 {
   font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.375rem;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-sign-card__section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-sign-card__section strong {
+  color: var(--text-light);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-sign-card__section p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-sign-card__section--warning strong {
+  color: var(--secondary);
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-sign-card__section--warning p {
+  color: var(--text-muted);
+}
+
+/* Process Section */
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-process-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  direction: rtl;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-process-section h2,
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-contractor-section h2,
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-faq-section h2,
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-summary-section h2,
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-about-site-section h2 {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.3;
   color: var(--text-light);
-  margin: 0 0 12px;
-  text-align: right;
+  margin: 0;
 }
 
-.roof-Sealing-In-Tel-Aviv-layout-section__card-text {
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  direction: rtl;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-process-step {
+  background: rgba(16, 21, 28, 0.68);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-process-step__num {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-process-step h3 {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-process-step p {
+  color: var(--text-muted);
   font-size: 16px;
   line-height: 1.7;
-  color: var(--text-light);
-  text-align: right;
   margin: 0;
-  opacity: 0.88;
 }
 
-.roof-Sealing-In-Tel-Aviv-layout-section__card-text strong {
-  color: var(--primary);
+/* Contractor Section */
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-contractor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  direction: rtl;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-contractor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  direction: rtl;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-contractor-item {
+  background: #11161D;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-contractor-item strong {
+  color: var(--text-light);
+  font-size: 18px;
   font-weight: 700;
 }
 
-/* Process */
-.roof-Sealing-In-Tel-Aviv-layout-section__process {
-  margin-bottom: 60px;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__process-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-light);
-  margin: 0 0 24px;
-  text-align: right;
-  position: relative;
-  display: inline-block;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__process-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  right: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--primary);
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__process-list {
-  list-style: none;
-  padding: 0;
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-contractor-item p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.7;
   margin: 0;
+}
+
+/* FAQ Section */
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-faq-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  direction: rtl;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-faq-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  counter-reset: process-counter;
 }
 
-.roof-Sealing-In-Tel-Aviv-layout-section__process-item {
-  background: rgba(16,21,28,0.68);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 0;
-  padding: 20px 24px;
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-faq-item {
+  background: #11161D;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-faq-item h3 {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-faq-item p {
+  color: var(--text-muted);
   font-size: 16px;
   line-height: 1.7;
-  color: var(--text-light);
-  text-align: right;
-  position: relative;
-  counter-increment: process-counter;
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__process-item::before {
-  content: counter(process-counter);
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  background: rgba(0,212,255,0.15);
-  border: 1px solid var(--primary);
-  color: var(--primary);
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-weight: 900;
-  font-size: 0.875rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0;
-  margin-top: 2px;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__process-item strong {
-  color: var(--secondary);
-  font-weight: 700;
-}
-
-/* Choose */
-.roof-Sealing-In-Tel-Aviv-layout-section__choose {
-  margin-bottom: 60px;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__choose-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-light);
-  margin: 0 0 24px;
-  text-align: right;
-  position: relative;
-  display: inline-block;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__choose-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  right: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--primary);
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__choose-list {
-  list-style: none;
-  padding: 0;
   margin: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Summary & About Site */
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-summary-section,
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-about-site-section {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
   direction: rtl;
 }
 
-.roof-Sealing-In-Tel-Aviv-layout-section__choose-item {
-  background: rgba(16,21,28,0.68);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 0;
-  padding: 20px 24px;
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-summary-section p,
+.roof-Sealing-In-Tel-Aviv-layout-section .roof-about-site-section p {
+  color: var(--text-muted);
   font-size: 16px;
   line-height: 1.7;
-  color: var(--text-light);
-  text-align: right;
-  min-width: 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__choose-item::before {
-  content: '✓';
-  flex-shrink: 0;
-  color: var(--secondary);
-  font-weight: 900;
-  font-size: 1.1rem;
-  line-height: 1.7;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__choose-item strong {
-  color: var(--primary);
-  font-weight: 700;
-}
-
-/* FAQ */
-.roof-Sealing-In-Tel-Aviv-layout-section__faq {
-  margin-bottom: 60px;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__faq-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-light);
-  margin: 0 0 24px;
-  text-align: right;
-  position: relative;
-  display: inline-block;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__faq-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  right: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--primary);
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__faq-item {
-  background: #11161D;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 0;
-  padding: 24px;
-  margin-bottom: 16px;
-  transition: border-color 0.25s ease;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__faq-item:hover {
-  border-color: var(--primary);
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__faq-item:last-child {
-  margin-bottom: 0;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__faq-question {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 1.375rem;
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--text-light);
-  margin: 0 0 8px;
-  text-align: right;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__faq-answer {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-light);
-  text-align: right;
   margin: 0;
-  opacity: 0.88;
-}
-
-/* Summary */
-.roof-Sealing-In-Tel-Aviv-layout-section__summary {
-  margin-bottom: 60px;
-  background: rgba(16,21,28,0.68);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 0;
-  padding: 32px;
-  position: relative;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__summary::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--secondary), transparent);
-  opacity: 0.6;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__summary-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-light);
-  margin: 0 0 16px;
-  text-align: right;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__summary-text {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-light);
-  text-align: right;
-  margin: 0;
-  opacity: 0.9;
-}
-
-/* About */
-.roof-Sealing-In-Tel-Aviv-layout-section__about {
-  margin-bottom: 0;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__about-title {
-  font-family: 'Space Grotesk', 'Assistant', sans-serif;
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.2;
-  color: var(--text-light);
-  margin: 0 0 16px;
-  text-align: right;
-  position: relative;
-  display: inline-block;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__about-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  right: 0;
-  width: 60px;
-  height: 3px;
-  background: var(--primary);
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section__about-text {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--text-light);
-  text-align: right;
-  margin: 0;
-  opacity: 0.9;
-  max-width: 800px;
-}
-
-/* Decorative angled outline */
-.roof-Sealing-In-Tel-Aviv-layout-section::before {
-  content: '';
-  position: absolute;
-  bottom: 40px;
-  left: -40px;
-  width: 320px;
-  height: 120px;
-  border: 1px solid rgba(255,255,255,0.12);
-  transform: skewX(-15deg);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.roof-Sealing-In-Tel-Aviv-layout-section::after {
-  content: '';
-  position: absolute;
-  top: 120px;
-  right: -60px;
-  width: 200px;
-  height: 200px;
-  border: 1px solid rgba(0,212,255,0.08);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
 }
 
 /* Responsive */
@@ -1788,88 +1642,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     padding: 100px 16px 60px;
   }
 
-  .roof-Sealing-In-Tel-Aviv-layout-section__title {
-    font-size: 2.2rem;
+  .roof-Sealing-In-Tel-Aviv-layout-section__container {
+    gap: 40px;
   }
 
-  .roof-Sealing-In-Tel-Aviv-layout-section__subtitle {
-    font-size: 16px;
-  }
-
-  .roof-Sealing-In-Tel-Aviv-layout-section__guide,
-  .roof-Sealing-In-Tel-Aviv-layout-section__summary {
-    padding: 20px 16px;
-  }
-
-  .roof-Sealing-In-Tel-Aviv-layout-section__grid {
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header {
     grid-template-columns: 1fr !important;
-    gap: 16px;
+    gap: 24px;
   }
 
-  .roof-Sealing-In-Tel-Aviv-layout-section__card {
-    padding: 20px 16px;
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-article-header__title {
+    font-size: 36px;
   }
 
-  .roof-Sealing-In-Tel-Aviv-layout-section__card-title {
-    font-size: 1.25rem;
-  }
-
-  .roof-Sealing-In-Tel-Aviv-layout-section__process-title,
-  .roof-Sealing-In-Tel-Aviv-layout-section__choose-title,
-  .roof-Sealing-In-Tel-Aviv-layout-section__faq-title,
-  .roof-Sealing-In-Tel-Aviv-layout-section__summary-title,
-  .roof-Sealing-In-Tel-Aviv-layout-section__about-title {
-    font-size: 1.6rem;
-  }
-
-  .roof-Sealing-In-Tel-Aviv-layout-section__process-item {
-    padding: 16px;
-    gap: 12px;
-  }
-
-  .roof-Sealing-In-Tel-Aviv-layout-section__choose-list {
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-signs-grid {
     grid-template-columns: 1fr !important;
-    gap: 12px;
   }
 
-  .roof-Sealing-In-Tel-Aviv-layout-section__choose-item {
-    padding: 16px;
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-process-grid {
+    grid-template-columns: 1fr !important;
   }
 
-  .roof-Sealing-In-Tel-Aviv-layout-section__faq-item {
-    padding: 16px;
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-contractor-grid {
+    grid-template-columns: 1fr !important;
   }
 
-  .roof-Sealing-In-Tel-Aviv-layout-section__faq-question {
-    font-size: 1.15rem;
-  }
-
-  .roof-Sealing-In-Tel-Aviv-layout-section::before {
-    width: 160px;
-    height: 60px;
-    bottom: 20px;
-    left: -20px;
-  }
-
-  .roof-Sealing-In-Tel-Aviv-layout-section::after {
-    width: 100px;
-    height: 100px;
-    top: 80px;
-    right: -30px;
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-sign-card,
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-process-step,
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-contractor-item,
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-faq-item {
+    padding: 20px;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .roof-Sealing-In-Tel-Aviv-layout-section__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .roof-Sealing-In-Tel-Aviv-layout-section__choose-list {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .roof-Sealing-In-Tel-Aviv-layout-section .roof-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* ZAPPY_POSTGEN_GUARD_SECTION_HEADER:Roof-Sealing-In-Tel-Aviv-layout */
+[data-layout-spec="Roof-Sealing-In-Tel-Aviv-layout"] > header {
+  max-width: min(92vw, 60ch) !important;
+  margin-inline: auto !important;
+  padding-inline: 16px;
+  text-align: center !important;
+}
+[data-layout-spec="Roof-Sealing-In-Tel-Aviv-layout"] > header > * { margin-inline: auto !important; max-width: 100% !important; }
+
 </style>
     <style id="zappy-critical-above-fold-css">
 html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none;margin:0;padding:0}.navbar a,.nav-menu a,#navMenu a,.navbar .nav-links a{color:inherit;text-decoration:none}.navbar .sub-menu,.nav-menu .sub-menu,#navMenu .sub-menu{display:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.zappy-preview-empty-store-cta{display:none!important;visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}.zappy-catalog-menu{background:var(--surface-color,var(--surface,linear-gradient(135deg,#f8f9fa 0%,#fff 100%)));border-bottom:1px solid var(--border-color,#e5e7eb);padding:0;position:sticky;top:0;z-index:90}.zappy-catalog-menu[dir=rtl],.zappy-catalog-menu.rtl{direction:rtl}.zappy-catalog-menu[dir=ltr],.zappy-catalog-menu.ltr{direction:ltr}.catalog-menu-container{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 24px;overflow:visible}.catalog-menu-categories,.catalog-menu-list{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:0;padding:0;list-style:none}.catalog-menu-item{display:inline-flex;align-items:center;padding:8px 16px;font-size:14px;font-weight:500;color:var(--text-color,var(--text,#374151));text-decoration:none;border-radius:20px;white-space:nowrap}.catalog-menu-all{background:var(--primary-color,var(--primary,#111));color:var(--text-light,#fff)!important}.catalog-menu-parent{position:relative;display:inline-flex;align-items:center}.catalog-menu-trigger{display:inline-flex;align-items:center;gap:6px}.catalog-menu-chevron{flex-shrink:0}.catalog-menu-parent>.sub-menu{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden}.hero-section,.index-hero-section{min-height:560px}section[data-hero-type*="fullscreen"]{min-height:100vh}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"],section[data-hero-type*="fullscreen"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
@@ -2403,135 +2223,228 @@ body:has(.zappy-announcement-bar) main > section[class*="hero"]:first-of-type {
 </script>
   
   <main>
-      <section class="roof-Sealing-In-Tel-Aviv-layout-section" data-layout-spec="Roof-Sealing-In-Tel-Aviv-layout" dir="rtl" data-zappy-section="true" id="layout-1794065314061">
+      <section class="roof-Sealing-In-Tel-Aviv-layout-section" data-layout-spec="Roof-Sealing-In-Tel-Aviv-layout" data-zappy-section="true" id="layout-1794065314061">
   <div class="roof-Sealing-In-Tel-Aviv-layout-section__container">
-    <div class="roof-Sealing-In-Tel-Aviv-layout-section__intro">
-      <div class="roof-Sealing-In-Tel-Aviv-layout-section__title-rule" aria-hidden="true"></div>
-      <h1 class="roof-Sealing-In-Tel-Aviv-layout-section__title">איטום גג בתל אביב</h1>
-      <p class="roof-Sealing-In-Tel-Aviv-layout-section__subtitle">תל אביב נראית כמו עיר שמש, אבל מי שמנהל בניין או דירה בעיר יודע שהגג חוטף כמעט הכול, שמש חזקה רוב השנה, לחות גבוהה מהים, רוחות שמביאות אבק ומלחים, ובחורף גם סופות קצרות אך אלימות. השילוב הזה יוצר בלאי מואץ של שכבות האיטום ושל כל פרט קטן על הגג, נקודת חיבור, מרזב, פתחי אוורור, מעקות, דודי שמש ומערכות מיזוג. לכן, גם אם "עשו איטום לפני כמה שנים", זה לא אומר שהמערכת עדיין עובדת כמו ביום הראשון. המטרה של המדריך הזה היא לתת לך רשימת בדיקה ברורה, טופ 10 סימנים שהגג בתל אביב צריך איטום מחדש, ומה עושים נכון בכל מקרה, כדי לעצור נזילות לפני שהן הופכות לנזק יקר.</p>
-    </div>
-
-    <div class="roof-Sealing-In-Tel-Aviv-layout-section__guide">
-      <h2 class="roof-Sealing-In-Tel-Aviv-layout-section__guide-title">איך לקרוא את המאמר</h2>
-      <p class="roof-Sealing-In-Tel-Aviv-layout-section__guide-text">זהו מאמר מסוג נקודות או טיפים. בכל סעיף תמצא, מה הסימן, למה הוא מסוכן, איך אפשר לבדוק בשטח בצורה סבירה, ומה הפעולה הנכונה, כולל טעויות נפוצות שכדאי להימנע מהן. אם אתה ועד בית, בעל דירה בבניין משותף, או מנהל נכס, זה ייתן לך תהליך עבודה מסודר. אם אתה מחפש לצמצם עלויות, חשוב להבין, בדיקת שורש הבעיה זולה בהרבה מתיקוני טיח, צבע, פרקטים וריהוט אחרי הצפה.</p>
-      <p class="roof-Sealing-In-Tel-Aviv-layout-section__guide-text"><strong>טיפ לפני שמתחילים:</strong> בתל אביב איטום גגות הוא עניין דינמי. מומלץ לתעד כל בדיקה עם תמונות, תאריך ומיקום. התיעוד עוזר לאתר קצב החמרה, לבנות תכנית עבודה, ולהשוות הצעות מחיר לפי מצב אמיתי.</p>
-    </div>
-
-    <div class="roof-Sealing-In-Tel-Aviv-layout-section__grid">
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">1</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">כתמי רטיבות בתקרה או בקירות העליונים</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה רואים:</strong> כתמים צהובים או חומים על התקרה, התקלפות צבע, נפיחות בטיח, ולעיתים סימני "מפה" שמתפשטים לאחר כל גשם. <strong>למה זה סימן חזק:</strong> רטיבות שמגיעה מלמעלה לרוב קשורה לכשל באיטום הגג, בכשל סביב חדירה לגג, או בניקוז. גם אם הכתם קטן, מי הגשם מחפשים מסלול ועשויים להתפשט מתחת לשכבות. <strong>איך לבדוק נכון:</strong> בדקו האם הכתם מתגבר אחרי גשם, האם הוא קרוב לקירות חיצוניים, לפיר מעלית, לחדר מדרגות, או לקו שבו יש על הגג דוד או מזגן. אם יש אפשרות, עלו לגג וחפשו באותו אזור סדקים, קילופים או שלוליות עומדות. <strong>איך לפעול נכון:</strong> לא להסתפק בצבע נגד עובש. יש לבצע איתור מקור, לעיתים בעזרת הצפה מבוקרת או מכשור למדידת לחות. לאחר איתור נקודת הכשל, מתקנים את האיטום באזור, ולאחר ייבוש מלא מטפלים בתקרה. <strong>טעויות נפוצות:</strong> תיקון קוסמטי בפנים לפני טיפול חיצוני, או שימוש בחומרים אקריליים פנימיים על הגג, שאינם עמידים לעמידת מים.</p>
-      </article>
-
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">2</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">עובש, ריח טחב או קילופי צבע, במיוחד אחרי חורף</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה רואים:</strong> נקודות שחורות בפינות תקרה וקיר, ריח טחב בחדרים סמוכים לגג, קילופי צבע חוזרים, גם אם לא רואים כתם מים ברור. <strong>למה זה סימן חשוב:</strong> לעיתים מים חודרים בכמות קטנה אך קבועה, ומתאדים לאט בגלל לחות גבוהה בעיר. התוצאה היא לחות כלואה שמייצרת עובש ופוגעת באיכות האוויר. <strong>איך לבדוק נכון:</strong> בדקו אם התופעה מופיעה בעיקר בקומה העליונה או בחדרי מדרגות. בדקו האם יש בידוד רטוב על הגג, או שכבות ישנות שסופגות מים. לפעמים הבעיה היא חדירה מסביב לפרטים ולא מהשטח המרכזי. <strong>איך לפעול נכון:</strong> לבצע בדיקת איטום וניקוז, לאתר נקודות חדירה, ולתכנן חידוש איטום בהתאם למבנה הקיים. במקביל, לשפר אוורור פנימי זמני עד לפתרון קבוע. <strong>טעויות נפוצות:</strong> שימוש רק בחומר נגד עובש, בלי לעצור מקור לחות, או סגירה אטומה של אזור רטוב שמגדילה את הבעיה.</p>
-      </article>
-
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">3</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">שלוליות עומדות על הגג יותר מ 48 שעות אחרי גשם</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה רואים:</strong> מים עומדים באזורים קבועים, במיוחד ליד קירות, סביב מתקנים, או במרכז הגג. <strong>למה זה מסוכן:</strong> עמידת מים מאיצה כשלי איטום. ביטומן מתעייף מהר יותר, יריעות נשחקות בתפרים, וחומרים לא מתאימים מתחילים להתנתק. בתל אביב, מים עומדים גם צוברים מלחים ולכלוך שמחמירים בלאי. <strong>איך לבדוק נכון:</strong> אחרי אירוע גשם, תעדו את מיקומי השלוליות. בדקו מסלול ניקוז, שיפועים, והאם יש סתימות במרזבים. אם הגג מרוצף, חפשו אזורים ששקועים. <strong>איך לפעול נכון:</strong> במקרים רבים צריך לשלב תיקון שיפועים או יצירת ניקוז משופר יחד עם חידוש איטום. אם יש כשל נקודתי סביב מרזב, מתקנים את הפרט. אם השלוליות רבות, נדרשת תכנית כוללת. <strong>טעויות נפוצות:</strong> מריחת חומר "איטום" על שלוליות בלי לטפל בשיפועים, או פתיחת מרזב עצמי שמותירה חיבור לא תקני.</p>
-      </article>
-
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">4</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">סדקים, התכווצות או התקלפות בשכבת האיטום</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה רואים:</strong> סדקים דקים כמו שערות, סדקים רחבים, אזורים שהחומר בהם התכווץ ונפרד מהתשתית, חלקים שהתקלפו, התרוממו או התרופפו. <strong>למה זה קורה בתל אביב:</strong> השמש מחממת את הגג, בלילה הגג מתקרר, ונוצרת תנועה תרמית יומית. לחות ורוחות ים מוסיפות מאמץ. עם השנים שכבות מתייבשות ומאבדות גמישות. <strong>איך לבדוק נכון:</strong> חפשו במיוחד ליד מפגשי קיר רצפה, בפינות, ובתפרי יריעות. אם מדובר בגג מרוצף, בדקו אם יש סדקים ברובה או תנועה באריחים שמרמזת על מים מתחת. <strong>איך לפעול נכון:</strong> אם הסדק נקודתי, ניתן לבצע תיקון פרטני עם חומר מתאים ושכבת חיזוק. אם יש ריבוי סדקים או התיישנות כללית, עדיף חידוש איטום מלא או שכבה חדשה מעל קיימת לפי מצב השטח. <strong>טעויות נפוצות:</strong> לשפוך חומר צמיגי על סדקים בלי הכנת תשתית, או לבצע תיקון על תשתית רטובה, מה שיוצר התנתקות מהירה.</p>
-      </article>
-
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">5</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">כשל סביב חדירות לגג, דודי שמש, מזגנים, אנטנות, צנרת</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה רואים:</strong> רטיבות סביב נקודת חדירה, סדקים סביב בסיסי מתקנים, חורים קטנים ליד ברגים, או איטום שהתנתק מהצינור או מהמעמד. <strong>למה זה סימן נפוץ:</strong> רוב הנזילות אינן מגיעות מהמרכז הפתוח של הגג, אלא מפרטים. בתל אביב יש הרבה מתקנים על הגג, ומתקינים רבים לא מחזירים איטום תקני אחרי עבודה. <strong>איך לבדוק נכון:</strong> עקבו אחרי כל צינור או כבל שנכנס לגג. בדקו אם יש שרוול תקין, ואם יש חיזוקים, רולקות וחתיכות חיבור. בדקו גם אם יש תנועה של המתקן שגורמת לקריעת שכבת האיטום. <strong>איך לפעול נכון:</strong> לאטום פרטים לפי שיטה מקצועית, לעיתים עם יריעות, לעיתים עם מערכת משחתית מתאימה ובד חיזוק. חשוב לשלב ביצוע נכון של "חצאית" סביב חדירה ולוודא ניקוז תקין בסביבתה. <strong>טעויות נפוצות:</strong> שימוש בסיליקון ביתי, או סגירה זמנית עם קצף, חומרים אלה אינם מערכת איטום לגג.</p>
-      </article>
-
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">6</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">בעיות במרזבים, קולטנים וניקוז, הצפות קטנות, או מים שחוזרים פנימה</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה רואים:</strong> הצטברות לכלוך סביב קולטנים, מרזב שמוציא מים לאט, רעשים של "גרגור", מים שמציפים ליד פתח ניקוז, או סימני זרימה שחוזרת לכיוון קירות. <strong>למה זה מסוכן:</strong> ניקוז לקוי גורם לעמידת מים ולחדירה דרך נקודות חלשות. בנוסף, מים שמצטברים ליד פתחי ניקוז יכולים לחדור דרך חיבור לא תקין של היריעה לקולטן. <strong>איך לבדוק נכון:</strong> בצעו בדיקה לפני החורף ואחרי אירועי רוחות שמביאים עלים ופסולת. אפשר לשפוך מים נקיים בכמות מבוקרת ולוודא זרימה רציפה. אם יש גג עם כמה מפלסים, בדקו את מעבר המים בין מפלסים. <strong>איך לפעול נכון:</strong> ניקוי מקצועי, תיקון קולטנים, החלפת חלקים פגומים, ולעיתים התקנת רשתות או מסננים. אם החיבור בין האיטום לקולטן לא תקין, משחזרים את הפרט בצורה מלאה ולא רק מסביב. <strong>טעויות נפוצות:</strong> לפתוח סתימה עם ציוד לא מתאים שקרע את האיטום סביב הקולטן, או להשאיר שיפוע שמוביל מים לכיוון דלת יציאה לגג.</p>
-      </article>
-
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">7</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">התנתקות רולקות ומפגשי קיר, רצפה ומעקות</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה רואים:</strong> באזור החיבור בין משטח הגג לקיר המעקה יש קילוף, חריץ או התרוממות של חומר. לפעמים רואים "פס" של איטום שנפתח או התנתק בקו ישר. <strong>למה זה קורה:</strong> מפגשי קיר רצפה הם אזור תנועה, יש שם פינות, סדקים קטנים, ועומס תרמי. בלי רולקה תקינה וחיבור נכון, מים נכנסים מאחורי השכבה ומטיילים לאורך הקיר. <strong>איך לבדוק נכון:</strong> עברו עם מבט וצילום סביב כל היקף הגג. בדקו גם סביב חדרי מדרגות ויציאות לגג. אם יש על המעקה חיפוי אבן או טיח מתפורר, זה יכול לרמז על חדירה מאזור המפגש. <strong>איך לפעול נכון:</strong> לתקן או לבנות מחדש רולקה, לחדש את האיטום במפגש עם שכבות חיזוק, ולהעלות איטום לגובה תקני בהתאם למבנה. לעיתים נדרש גם כובע מעקה או שיקום טיח חוץ. <strong>טעויות נפוצות:</strong> תיקון נקודתי בלי טיפול לאורך קטע שלם, או השארת מפגש חד במקום פינה מעוגלת שמפזרת מאמץ.</p>
-      </article>
-
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">8</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">אריחים מתנדנדים, רובה מתפוררת, או סימני מלח בגג מרוצף</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה רואים:</strong> אריחים שמרגישים חלולים מתחת, רובה שיוצאת בקלות, כתמי מלח לבנים בקצוות, או שינויי גוון שמופיעים אחרי גשם. <strong>למה זה עלול להעיד על בעיית איטום:</strong> בגגות מרוצפים יש שכבת איטום מתחת לריצוף. אם מים חודרים דרך הריצוף ונשארים זמן רב, הם מחפשים יציאות, יוצרים מלחים, ומחלישים את שכבות ההדבקה. זה לא אומר תמיד שהאיטום קרע, אבל זה סימן שמצריך בדיקה. <strong>איך לבדוק נכון:</strong> בדקו היכן הבעיה מופיעה, ליד ניקוזים, ליד קירות, או באזורי שלוליות. בדיקת הצפה לא תמיד מתאימה בגג מרוצף. לעיתים נדרש איתור נזילות מקצועי. <strong>איך לפעול נכון:</strong> אם יש כשל באיטום מתחת לריצוף, הפתרון הוא תיקון מקומי עם פתיחת ריצוף באזור, או פרויקט חידוש כולל. חשוב להחזיר שכבות בדיוק, שיפועים, מרזבים, ואיטום תקני לפני סגירת ריצוף. <strong>טעויות נפוצות:</strong> להחליף רק אריחים או למלא רובה מחדש בלי לבדוק מים כלואים, או לאטום על ריצוף עם חומר לא מתאים שמחליק ונסדק.</p>
-      </article>
-
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">9</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">ירידה בבידוד תרמי, בקיץ חם יותר ובחורף קר יותר, בגלל בידוד רטוב</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה מרגישים:</strong> הדירה בקומה העליונה מתחממת יותר מהרגיל, מזגן עובד קשה, או בחורף יש תחושת קור מהתקרה למרות חימום. <strong>למה זה קשור לאיטום:</strong> כשמים חודרים לשכבות, במיוחד אם יש שכבת בידוד, היא יכולה להירטב ולאבד יכולת בידוד. מים כלואים גם מגבירים נזקי עובש ותשתיות. <strong>איך לבדוק נכון:</strong> אם יש גג עם בידוד, בדקו האם יש נקודות כיפוף, שקיעות, או אזורים שבהם שכבות נראות רטובות. בחלק מהמקרים מצלמה תרמית יכולה להראות הפרשי טמפרטורה שמעידים על רטיבות. <strong>איך לפעול נכון:</strong> לתכנן חידוש איטום יחד עם שיקום בידוד, כולל בחירת מערכת שתואמת לתנאי תל אביב, עמידות UV, ושילוב שכבת הגנה נכונה. לפעמים נכון לשלב גם פתרון "גג קר" או שכבת הגנה מחזירת קרינה. <strong>טעויות נפוצות:</strong> להוסיף עוד שכבות מעל בידוד רטוב בלי לייבש ולשקם, מה שיוצר "מלכודת מים" שממשיכה להזיק.</p>
-      </article>
-
-      <article class="roof-Sealing-In-Tel-Aviv-layout-section__card">
-        <span class="roof-Sealing-In-Tel-Aviv-layout-section__card-number" style="color: #FFFFFF !important">10</span>
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__card-title">עברו 7 עד 12 שנים מאז האיטום האחרון, או שאין תיעוד ברור</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__card-text"><strong>מה זה אומר:</strong> גם אם אין נזילה גלויה, מערכת איטום מזדקנת. בתל אביב הבלאי לעיתים מהיר יותר בגלל שמש, מליחות, וזיהום אוויר. אם אין תיעוד, קשה לדעת איכות ביצוע וחומרים. <strong>למה זה סימן מעשי:</strong> רוב הכשלים מתחילים קטנים. חידוש יזום לפני נזילה חוסך כסף ועוגמת נפש. בנוסף, קל יותר לעבוד בקיץ כשיבש, מאשר באמצע החורף כשנכנסים מים. <strong>איך לבדוק נכון:</strong> חפשו חשבוניות, אחריות, שם קבלן, סוג חומר, ותמונות לפני ואחרי. עלו לגג, בדקו בלאי כללי, תפרים, פרטים וניקוז. אם קיימת אחריות, בדקו תנאים ומה נדרש לשימור. <strong>איך לפעול נכון:</strong> להזמין בדיקת מצב, לקבל המלצה מקצועית האם מספיקה תחזוקה ותיקונים נקודתיים, או שיש צורך בחידוש שכבה מלאה. כדאי לבצע זאת לפני תחילת העונה הגשומה. <strong>טעויות נפוצות:</strong> להמתין ל"גשם שיבדוק", או להסתמך על ניחוש במקום בדיקה מקצועית ותכנון עבודה.</p>
-      </article>
-    </div>
-
-    <div class="roof-Sealing-In-Tel-Aviv-layout-section__process">
-      <h2 class="roof-Sealing-In-Tel-Aviv-layout-section__process-title">איך לפעול נכון, תהליך עבודה מומלץ שלב אחר שלב</h2>
-      <ol class="roof-Sealing-In-Tel-Aviv-layout-section__process-list">
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__process-item"><strong>שלב 1, אבחון:</strong> מתחילים בסיור גג, צילום ותיעוד, בדיקת מרזבים וקולטנים, בדיקת פרטים וחדירות, ותיאום עם הדיירים לגבי היסטוריית תקלות. האבחון צריך להבדיל בין כשל איטום, כשל ניקוז, וסדקי מעטפת בקירות החוץ.</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__process-item"><strong>שלב 2, החלטה על סוג טיפול:</strong> אם הכשל נקודתי וצעיר, לעיתים תיקון מקומי מספיק. אם יש בלאי רחב, כשל חוזר, או שכבות לא מתאימות, נכון לתכנן איטום מחדש. בגג מרוצף, ייתכן שיידרשו פתיחה נקודתית או פתרון כולל.</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__process-item"><strong>שלב 3, תכנון פרטים:</strong> כל פריט חייב לקבל פתרון, מפגשי קיר, רולקות, קולטנים, חדירות, מעקות, פתחים, ושכבות הגנה. זה מה שמבדיל בין עבודה שמחזיקה שנים לבין תיקון זמני.</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__process-item"><strong>שלב 4, הכנת תשתית:</strong> ניקוי יסודי, ייבוש, תיקון שיפועים היכן שצריך, הסרת חומרים רופפים, וטיפול בסדקים. בתל אביב חשוב במיוחד להסיר שכבות אבק ומלחים כדי לשפר היצמדות.</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__process-item"><strong>שלב 5, ביצוע איטום:</strong> ביצוע לפי מערכת נבחרת ובתנאי מזג אוויר מתאימים. עבודה איכותית כוללת הקפדה על תפרים, עליות לקירות, וחיבורי ניקוז.</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__process-item"><strong>שלב 6, בדיקות איכות:</strong> בדיקת הצפה מבוקרת כשמתאים, בדיקות חזותיות, ווידוא זרימת מים לניקוז, ותיעוד סופי. חשוב לקבל מסמך אחריות ברור ומה הוא כולל.</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__process-item"><strong>שלב 7, תחזוקה שנתית:</strong> ניקוי מרזבים לפני חורף, בדיקה אחרי סערות, והימנעות מהנחת ציוד חד על שכבת האיטום. בתל אביב, תחזוקה שוטפת מפחיתה משמעותית קריאות חירום.</li>
-      </ol>
-    </div>
-
-    <div class="roof-Sealing-In-Tel-Aviv-layout-section__choose">
-      <h2 class="roof-Sealing-In-Tel-Aviv-layout-section__choose-title">איך לבחור נכון קבלן איטום בתל אביב</h2>
-      <ul class="roof-Sealing-In-Tel-Aviv-layout-section__choose-list">
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__choose-item"><strong>בדוק ניסיון ספציפי בעיר:</strong> להתמודד עם מליחות, רוחות, ופרטי בנייני דירות ישנים וחדשים.</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__choose-item"><strong>דרוש פירוט חומרים ושיטה:</strong> הצעת מחיר טובה מציינת מערכת, הכנות תשתית, טיפול בפרטים, וניקוז. לא רק "איטום גג קומפלט".</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__choose-item"><strong>שאל על טיפול בניקוז ושיפועים:</strong> אם מתעלמים משיפועים, גם איטום חדש יסבול.</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__choose-item"><strong>אחריות כתובה:</strong> מה משך האחריות, על מה היא חלה, ומה מחייב תחזוקה מצד הלקוח.</li>
-        <li class="roof-Sealing-In-Tel-Aviv-layout-section__choose-item"><strong>תיעוד לפני ואחרי:</strong> תמונות של פרטים, קולטנים, עליות קיר, וסגירות מסודרות הם כלי בקרה חשוב.</li>
-      </ul>
-    </div>
-
-    <div class="roof-Sealing-In-Tel-Aviv-layout-section__faq">
-      <h2 class="roof-Sealing-In-Tel-Aviv-layout-section__faq-title">שאלות נפוצות, בקצרה</h2>
-      <div class="roof-Sealing-In-Tel-Aviv-layout-section__faq-item">
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__faq-question">האם כל כתם בתקרה אומר שצריך איטום מחדש מלא?</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__faq-answer">לא תמיד. לפעמים מדובר בכשל נקודתי בפרט או בניקוז. אבל אסור להתעלם, כי כתם הוא סימן לחדירת מים קיימת.</p>
+    
+    <!-- Article Header -->
+    <header class="roof-article-header">
+      <div class="roof-article-header__content">
+        <span class="roof-article-header__eyebrow">מדריך מקצועי</span>
+        <h1 class="roof-article-header__title">איטום גג בתל אביב</h1>
+        <div class="roof-article-header__intro">
+          <p>תל אביב נראית כמו עיר שמש, אבל מי שמנהל בניין או דירה בעיר יודע שהגג חוטף כמעט הכול, שמש חזקה רוב השנה, לחות גבוהה מהים, רוחות שמביאות אבק ומלחים, ובחורף גם סופות קצרות אך אלימות. השילוב הזה יוצר בלאי מואץ של שכבות האיטום ושל כל פרט קטן על הגג, נקודת חיבור, מרזב, פתחי אוורור, מעקות, דודי שמש ומערכות מיזוג. לכן, גם אם "עשו איטום לפני כמה שנים", זה לא אומר שהמערכת עדיין עובדת כמו ביום הראשון. המטרה של המדריך הזה היא לתת לך רשימת בדיקה ברורה, טופ 10 סימנים שהגג בתל אביב צריך איטום מחדש, ומה עושים נכון בכל מקרה, כדי לעצור נזילות לפני שהן הופכות לנזק יקר.</p>
+        </div>
       </div>
-      <div class="roof-Sealing-In-Tel-Aviv-layout-section__faq-item">
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__faq-question">מתי הזמן הטוב ביותר לבצע איטום בתל אביב?</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__faq-answer">לרוב בקיץ ובתחילת הסתיו, כשהגג יבש וניתן להכין תשתית בצורה נכונה.</p>
+      <figure class="roof-article-header__media">
+        <img alt="איטום גג בתל אביב - עבודת איטום מקצועית על גג בניין בעיר" data-placeholder="roof-Sealing-In-Tel-Aviv-layout-image-1" data-context="Cinematic night-time view of a Tel Aviv rooftop with waterproofing membrane application, glowing city skyline in background, dark industrial atmosphere with blue and green accent lighting" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+        <figcaption class="roof-article-header__caption">בדיקת שטח מקיפה היא הצעד הראשון לאיטום נכון</figcaption>
+      </figure>
+    </header>
+
+    <!-- Reading Guide -->
+    <aside class="roof-reading-guide">
+      <h3>איך לקרוא את המאמר</h3>
+      <p>זהו מאמר מסוג נקודות או טיפים. בכל סעיף תמצא, מה הסימן, למה הוא מסוכן, איך אפשר לבדוק בשטח בצורה סבירה, ומה הפעולה הנכונה, כולל טעויות נפוצות שכדאי להימנע מהן. אם אתה ועד בית, בעל דירה בבניין משותף, או מנהל נכס, זה ייתן לך תהליך עבודה מסודר. אם אתה מחפש לצמצם עלויות, חשוב להבין, בדיקת שורש הבעיה זולה בהרבה מתיקוני טיח, צבע, פרקטים וריהוט אחרי הצפה.</p>
+      <div class="roof-reading-guide__tip">
+        <h3>טיפ לפני שמתחילים</h3>
+        <p>בתל אביב איטום גגות הוא עניין דינמי. מומלץ לתעד כל בדיקה עם תמונות, תאריך ומיקום. התיעוד עוזר לאתר קצב החמרה, לבנות תכנית עבודה, ולהשוות הצעות מחיר לפי מצב אמיתי.</p>
       </div>
-      <div class="roof-Sealing-In-Tel-Aviv-layout-section__faq-item">
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__faq-question">האם אפשר לבצע תיקון עצמי?</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__faq-answer">תיקונים קטנים יכולים לעזור זמנית, אבל ללא אבחון ובלי התאמת חומרים, הסיכון לכשל חוזר גבוה. בגגות משותפים עדיף לפעול מסודר עם ועד הבית וקבלן.</p>
-      </div>
-      <div class="roof-Sealing-In-Tel-Aviv-layout-section__faq-item">
-        <h3 class="roof-Sealing-In-Tel-Aviv-layout-section__faq-question">מה חשוב יותר, החומר או הביצוע?</h3>
-        <p class="roof-Sealing-In-Tel-Aviv-layout-section__faq-answer">שניהם. חומר טוב עם ביצוע חלש ייכשל, וחומר לא מתאים, גם עם ביצוע טוב, לא יחזיק בתנאי הגג.</p>
+    </aside>
+
+    <!-- Top 10 Signs Grid -->
+    <div class="roof-signs-grid">
+      
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">01</span>
+        <h3>כתמי רטיבות בתקרה או בקירות העליונים</h3>
+        <div class="roof-sign-card__section"><strong>מה רואים</strong><p>כתמים צהובים או חומים על התקרה, התקלפות צבע, נפיחות בטיח, ולעיתים סימני "מפה" שמתפשטים לאחר כל גשם.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה סימן חזק</strong><p>רטיבות שמגיעה מלמעלה לרוב קשורה לכשל באיטום הגג, בכשל סביב חדירה לגג, או בניקוז. גם אם הכתם קטן, מי הגשם מחפשים מסלול ועשויים להתפשט מתחת לשכבות.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>בדקו האם הכתם מתגבר אחרי גשם, האם הוא קרוב לקירות חיצוניים, לפיר מעלית, לחדר מדרגות, או לקו שבו יש על הגג דוד או מזגן. אם יש אפשרות, עלו לגג וחפשו באותו אזור סדקים, קילופים או שלוליות עומדות.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>לא להסתפק בצבע נגד עובש. יש לבצע איתור מקור, לעיתים בעזרת הצפה מבוקרת או מכשור למדידת לחות. לאחר איתור נקודת הכשל, מתקנים את האיטום באזור, ולאחר ייבוש מלא מטפלים בתקרה.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>תיקון קוסמטי בפנים לפני טיפול חיצוני, או שימוש בחומרים אקריליים פנימיים על הגג, שאינם עמידים לעמידת מים.</p></div>
+      </article>
+
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">02</span>
+        <h3>עובש, ריח טחב או קילופי צבע, במיוחד אחרי חורף</h3>
+        <div class="roof-sign-card__section"><strong>מה רואים</strong><p>נקודות שחורות בפינות תקרה וקיר, ריח טחב בחדרים סמוכים לגג, קילופי צבע חוזרים, גם אם לא רואים כתם מים ברור.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה סימן חשוב</strong><p>לעיתים מים חודרים בכמות קטנה אך קבועה, ומתאדים לאט בגלל לחות גבוהה בעיר. התוצאה היא לחות כלואה שמייצרת עובש ופוגעת באיכות האוויר.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>בדקו אם התופעה מופיעה בעיקר בקומה העליונה או בחדרי מדרגות. בדקו האם יש בידוד רטוב על הגג, או שכבות ישנות שסופגות מים. לפעמים הבעיה היא חדירה מסביב לפרטים ולא מהשטח המרכזי.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>לבצע בדיקת איטום וניקוז, לאתר נקודות חדירה, ולתכנן חידוש איטום בהתאם למבנה הקיים. במקביל, לשפר אוורור פנימי זמני עד לפתרון קבוע.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>שימוש רק בחומר נגד עובש, בלי לעצור מקור לחות, או סגירה אטומה של אזור רטוב שמגדילה את הבעיה.</p></div>
+      </article>
+
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">03</span>
+        <h3>שלוליות עומדות על הגג יותר מ 48 שעות אחרי גשם</h3>
+        <div class="roof-sign-card__section"><strong>מה רואים</strong><p>מים עומדים באזורים קבועים, במיוחד ליד קירות, סביב מתקנים, או במרכז הגג.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה מסוכן</strong><p>עמידת מים מאיצה כשלי איטום. ביטומן מתעייף מהר יותר, יריעות נשחקות בתפרים, וחומרים לא מתאימים מתחילים להתנתק. בתל אביב, מים עומדים גם צוברים מלחים ולכלוך שמחמירים בלאי.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>אחרי אירוע גשם, תעדו את מיקומי השלוליות. בדקו מסלול ניקוז, שיפועים, והאם יש סתימות במרזבים. אם הגג מרוצף, חפשו אזורים ששקועים.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>במקרים רבים צריך לשלב תיקון שיפועים או יצירת ניקוז משופר יחד עם חידוש איטום. אם יש כשל נקודתי סביב מרזב, מתקנים את הפרט. אם השלוליות רבות, נדרשת תכנית כוללת.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>מריחת חומר "איטום" על שלוליות בלי לטפל בשיפועים, או פתיחת מרזב עצמי שמותירה חיבור לא תקני.</p></div>
+      </article>
+
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">04</span>
+        <h3>סדקים, התכווצות או התקלפות בשכבת האיטום</h3>
+        <div class="roof-sign-card__section"><strong>מה רואים</strong><p>סדקים דקים כמו שערות, סדקים רחבים, אזורים שהחומר בהם התכווץ ונפרד מהתשתית, חלקים שהתקלפו, התרוממו או התרופפו.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה קורה בתל אביב</strong><p>השמש מחממת את הגג, בלילה הגג מתקרר, ונוצרת תנועה תרמית יומית. לחות ורוחות ים מוסיפות מאמץ. עם השנים שכבות מתייבשות ומאבדות גמישות.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>חפשו במיוחד ליד מפגשי קיר רצפה, בפינות, ובתפרי יריעות. אם מדובר בגג מרוצף, בדקו אם יש סדקים ברובה או תנועה באריחים שמרמזת על מים מתחת.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>אם הסדק נקודתי, ניתן לבצע תיקון פרטני עם חומר מתאים ושכבת חיזוק. אם יש ריבוי סדקים או התיישנות כללית, עדיף חידוש איטום מלא או שכבה חדשה מעל קיימת לפי מצב השטח.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>לשפוך חומר צמיגי על סדקים בלי הכנת תשתית, או לבצע תיקון על תשתית רטובה, מה שיוצר התנתקות מהירה.</p></div>
+      </article>
+
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">05</span>
+        <h3>כשל סביב חדירות לגג, דודי שמש, מזגנים, אנטנות, צנרת</h3>
+        <div class="roof-sign-card__section"><strong>מה רואים</strong><p>רטיבות סביב נקודת חדירה, סדקים סביב בסיסי מתקנים, חורים קטנים ליד ברגים, או איטום שהתנתק מהצינור או מהמעמד.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה סימן נפוץ</strong><p>רוב הנזילות אינן מגיעות מהמרכז הפתוח של הגג, אלא מפרטים. בתל אביב יש הרבה מתקנים על הגג, ומתקינים רבים לא מחזירים איטום תקני אחרי עבודה.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>עקבו אחרי כל צינור או כבל שנכנס לגג. בדקו אם יש שרוול תקין, ואם יש חיזוקים, רולקות וחתיכות חיבור. בדקו גם אם יש תנועה של המתקן שגורמת לקריעת שכבת האיטום.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>לאטום פרטים לפי שיטה מקצועית, לעיתים עם יריעות, לעיתים עם מערכת משחתית מתאימה ובד חיזוק. חשוב לשלב ביצוע נכון של "חצאית" סביב חדירה ולוודא ניקוז תקין בסביבתה.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>שימוש בסיליקון ביתי, או סגירה זמנית עם קצף, חומרים אלה אינם מערכת איטום לגג.</p></div>
+      </article>
+
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">06</span>
+        <h3>בעיות במרזבים, קולטנים וניקוז, הצפות קטנות, או מים שחוזרים פנימה</h3>
+        <div class="roof-sign-card__section"><strong>מה רואים</strong><p>הצטברות לכלוך סביב קולטנים, מרזב שמוציא מים לאט, רעשים של "גרגור", מים שמציפים ליד פתח ניקוז, או סימני זרימה שחוזרת לכיוון קירות.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה מסוכן</strong><p>ניקוז לקוי גורם לעמידת מים ולחדירה דרך נקודות חלשות. בנוסף, מים שמצטברים ליד פתחי ניקוז יכולים לחדור דרך חיבור לא תקין של היריעה לקולטן.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>בצעו בדיקה לפני החורף ואחרי אירועי רוחות שמביאים עלים ופסולת. אפשר לשפוך מים נקיים בכמות מבוקרת ולוודא זרימה רציפה. אם יש גג עם כמה מפלסים, בדקו את מעבר המים בין מפלסים.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>ניקוי מקצועי, תיקון קולטנים, החלפת חלקים פגומים, ולעיתים התקנת רשתות או מסננים. אם החיבור בין האיטום לקולטן לא תקין, משחזרים את הפרט בצורה מלאה ולא רק מסביב.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>לפתוח סתימה עם ציוד לא מתאים שקרע את האיטום סביב הקולטן, או להשאיר שיפוע שמוביל מים לכיוון דלת יציאה לגג.</p></div>
+      </article>
+
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">07</span>
+        <h3>התנתקות רולקות ומפגשי קיר, רצפה ומעקות</h3>
+        <div class="roof-sign-card__section"><strong>מה רואים</strong><p>באזור החיבור בין משטח הגג לקיר המעקה יש קילוף, חריץ או התרוממות של חומר. לפעמים רואים "פס" של איטום שנפתח או התנתק בקו ישר.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה קורה</strong><p>מפגשי קיר רצפה הם אזור תנועה, יש שם פינות, סדקים קטנים, ועומס תרמי. בלי רולקה תקינה וחיבור נכון, מים נכנסים מאחורי השכבה ומטיילים לאורך הקיר.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>עברו עם מבט וצילום סביב כל היקף הגג. בדקו גם סביב חדרי מדרגות ויציאות לגג. אם יש על המעקה חיפוי אבן או טיח מתפורר, זה יכול לרמז על חדירה מאזור המפגש.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>לתקן או לבנות מחדש רולקה, לחדש את האיטום במפגש עם שכבות חיזוק, ולהעלות איטום לגובה תקני בהתאם למבנה. לעיתים נדרש גם כובע מעקה או שיקום טיח חוץ.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>תיקון נקודתי בלי טיפול לאורך קטע שלם, או השארת מפגש חד במקום פינה מעוגלת שמפזרת מאמץ.</p></div>
+      </article>
+
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">08</span>
+        <h3>אריחים מתנדנדים, רובה מתפוררת, או סימני מלח בגג מרוצף</h3>
+        <div class="roof-sign-card__section"><strong>מה רואים</strong><p>אריחים שמרגישים חלולים מתחת, רובה שיוצאת בקלות, כתמי מלח לבנים בקצוות, או שינויי גוון שמופיעים אחרי גשם.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה עלול להעיד על בעיית איטום</strong><p>בגגות מרוצפים יש שכבת איטום מתחת לריצוף. אם מים חודרים דרך הריצוף ונשארים זמן רב, הם מחפשים יציאות, יוצרים מלחים, ומחלישים את שכבות ההדבקה. זה לא אומר תמיד שהאיטום קרע, אבל זה סימן שמצריך בדיקה.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>בדקו היכן הבעיה מופיעה, ליד ניקוזים, ליד קירות, או באזורי שלוליות. בדיקת הצפה לא תמיד מתאימה בגג מרוצף. לעיתים נדרש איתור נזילות מקצועי.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>אם יש כשל באיטום מתחת לריצוף, הפתרון הוא תיקון מקומי עם פתיחת ריצוף באזור, או פרויקט חידוש כולל. חשוב להחזיר שכבות בדיוק, שיפועים, מרזבים, ואיטום תקני לפני סגירת ריצוף.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>להחליף רק אריחים או למלא רובה מחדש בלי לבדוק מים כלואים, או לאטום על ריצוף עם חומר לא מתאים שמחליק ונסדק.</p></div>
+      </article>
+
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">09</span>
+        <h3>ירידה בבידוד תרמי, בקיץ חם יותר ובחורף קר יותר, בגלל בידוד רטוב</h3>
+        <div class="roof-sign-card__section"><strong>מה מרגישים</strong><p>הדירה בקומה העליונה מתחממת יותר מהרגיל, מזגן עובד קשה, או בחורף יש תחושת קור מהתקרה למרות חימום.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה קשור לאיטום</strong><p>כשמים חודרים לשכבות, במיוחד אם יש שכבת בידוד, היא יכולה להירטב ולאבד יכולת בידוד. מים כלואים גם מגבירים נזקי עובש ותשתיות.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>אם יש גג עם בידוד, בדקו האם יש נקודות כיפוף, שקיעות, או אזורים שבהם שכבות נראות רטובות. בחלק מהמקרים מצלמה תרמית יכולה להראות הפרשי טמפרטורה שמעידים על רטיבות.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>לתכנן חידוש איטום יחד עם שיקום בידוד, כולל בחירת מערכת שתואמת לתנאי תל אביב, עמידות UV, ושילוב שכבת הגנה נכונה. לפעמים נכון לשלב גם פתרון "גג קר" או שכבת הגנה מחזירת קרינה.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>להוסיף עוד שכבות מעל בידוד רטוב בלי לייבש ולשקם, מה שיוצר "מלכודת מים" שממשיכה להזיק.</p></div>
+      </article>
+
+      <article class="roof-sign-card">
+        <span class="roof-sign-card__number">10</span>
+        <h3>עברו 7 עד 12 שנים מאז האיטום האחרון, או שאין תיעוד ברור</h3>
+        <div class="roof-sign-card__section"><strong>מה זה אומר</strong><p>גם אם אין נזילה גלויה, מערכת איטום מזדקנת. בתל אביב הבלאי לעיתים מהיר יותר בגלל שמש, מליחות, וזיהום אוויר. אם אין תיעוד, קשה לדעת איכות ביצוע וחומרים.</p></div>
+        <div class="roof-sign-card__section"><strong>למה זה סימן מעשי</strong><p>רוב הכשלים מתחילים קטנים. חידוש יזום לפני נזילה חוסך כסף ועוגמת נפש. בנוסף, קל יותר לעבוד בקיץ כשיבש, מאשר באמצע החורף כשנכנסים מים.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לבדוק נכון</strong><p>חפשו חשבוניות, אחריות, שם קבלן, סוג חומר, ותמונות לפני ואחרי. עלו לגג, בדקו בלאי כללי, תפרים, פרטים וניקוז. אם קיימת אחריות, בדקו תנאים ומה נדרש לשימור.</p></div>
+        <div class="roof-sign-card__section"><strong>איך לפעול נכון</strong><p>להזמין בדיקת מצב, לקבל המלצה מקצועית האם מספיקה תחזוקה ותיקונים נקודתיים, או שיש צורך בחידוש שכבה מלאה. כדאי לבצע זאת לפני תחילת העונה הגשומה.</p></div>
+        <div class="roof-sign-card__section roof-sign-card__section--warning"><strong>טעויות נפוצות</strong><p>להמתין ל"גשם שיבדוק", או להסתמך על ניחוש במקום בדיקה מקצועית ותכנון עבודה.</p></div>
+      </article>
+
+    </div>
+
+    <!-- Work Process -->
+    <div class="roof-process-section">
+      <h2>איך לפעול נכון, תהליך עבודה מומלץ שלב אחר שלב</h2>
+      <div class="roof-process-grid">
+        <div class="roof-process-step">
+          <span class="roof-process-step__num">1</span>
+          <h3>שלב 1, אבחון</h3>
+          <p>מתחילים בסיור גג, צילום ותיעוד, בדיקת מרזבים וקולטנים, בדיקת פרטים וחדירות, ותיאום עם הדיירים לגבי היסטוריית תקלות. האבחון צריך להבדיל בין כשל איטום, כשל ניקוז, וסדקי מעטפת בקירות החוץ.</p>
+        </div>
+        <div class="roof-process-step">
+          <span class="roof-process-step__num">2</span>
+          <h3>שלב 2, החלטה על סוג טיפול</h3>
+          <p>אם הכשל נקודתי וצעיר, לעיתים תיקון מקומי מספיק. אם יש בלאי רחב, כשל חוזר, או שכבות לא מתאימות, נכון לתכנן איטום מחדש. בגג מרוצף, ייתכן שיידרשו פתיחה נקודתית או פתרון כולל.</p>
+        </div>
+        <div class="roof-process-step">
+          <span class="roof-process-step__num">3</span>
+          <h3>שלב 3, תכנון פרטים</h3>
+          <p>כל פריט חייב לקבל פתרון, מפגשי קיר, רולקות, קולטנים, חדירות, מעקות, פתחים, ושכבות הגנה. זה מה שמבדיל בין עבודה שמחזיקה שנים לבין תיקון זמני.</p>
+        </div>
+        <div class="roof-process-step">
+          <span class="roof-process-step__num">4</span>
+          <h3>שלב 4, הכנת תשתית</h3>
+          <p>ניקוי יסודי, ייבוש, תיקון שיפועים היכן שצריך, הסרת חומרים רופפים, וטיפול בסדקים. בתל אביב חשוב במיוחד להסיר שכבות אבק ומלחים כדי לשפר היצמדות.</p>
+        </div>
+        <div class="roof-process-step">
+          <span class="roof-process-step__num">5</span>
+          <h3>שלב 5, ביצוע איטום</h3>
+          <p>ביצוע לפי מערכת נבחרת ובתנאי מזג אוויר מתאימים. עבודה איכותית כוללת הקפדה על תפרים, עליות לקירות, וחיבורי ניקוז.</p>
+        </div>
+        <div class="roof-process-step">
+          <span class="roof-process-step__num">6</span>
+          <h3>שלב 6, בדיקות איכות</h3>
+          <p>בדיקת הצפה מבוקרת כשמתאים, בדיקות חזותיות, ווידוא זרימת מים לניקוז, ותיעוד סופי. חשוב לקבל מסמך אחריות ברור ומה הוא כולל.</p>
+        </div>
+        <div class="roof-process-step">
+          <span class="roof-process-step__num">7</span>
+          <h3>שלב 7, תחזוקה שנתית</h3>
+          <p>ניקוי מרזבים לפני חורף, בדיקה אחרי סערות, והימנעות מהנחת ציוד חד על שכבת האיטום. בתל אביב, תחזוקה שוטפת מפחיתה משמעותית קריאות חירום.</p>
+        </div>
       </div>
     </div>
 
-    <div class="roof-Sealing-In-Tel-Aviv-layout-section__summary">
-      <h2 class="roof-Sealing-In-Tel-Aviv-layout-section__summary-title">סיכום</h2>
-      <p class="roof-Sealing-In-Tel-Aviv-layout-section__summary-text">אם זיהית אפילו אחד מהסימנים ברשימה, במיוחד רטיבות פנימית, שלוליות עומדות, סדקים בשכבה או בעיות ניקוז, יש סיכוי טוב שהגג בתל אביב מתקרב לנקודת כשל. פעולה נכונה היא לא "למרוח משהו" אלא לאבחן, להבין האם הבעיה נקודתית או מערכתית, לטפל בפרטים ובניקוז, ולתעד הכול. כך שומרים על ערך הנכס, על בריאות הדיירים, ועל שקט נפשי בחורף.</p>
+    <!-- Choosing Contractor -->
+    <div class="roof-contractor-section">
+      <h2>איך לבחור נכון קבלן איטום בתל אביב</h2>
+      <div class="roof-contractor-grid">
+        <div class="roof-contractor-item"><strong>בדוק ניסיון ספציפי בעיר</strong><p>להתמודד עם מליחות, רוחות, ופרטי בנייני דירות ישנים וחדשים.</p></div>
+        <div class="roof-contractor-item"><strong>דרוש פירוט חומרים ושיטה</strong><p>הצעת מחיר טובה מציינת מערכת, הכנות תשתית, טיפול בפרטים, וניקוז. לא רק "איטום גג קומפלט".</p></div>
+        <div class="roof-contractor-item"><strong>שאל על טיפול בניקוז ושיפועים</strong><p>אם מתעלמים משיפועים, גם איטום חדש יסבול.</p></div>
+        <div class="roof-contractor-item"><strong>אחריות כתובה</strong><p>מה משך האחריות, על מה היא חלה, ומה מחייב תחזוקה מצד הלקוח.</p></div>
+        <div class="roof-contractor-item"><strong>תיעוד לפני ואחרי</strong><p>תמונות של פרטים, קולטנים, עליות קיר, וסגירות מסודרות הם כלי בקרה חשוב.</p></div>
+      </div>
     </div>
 
-    <div class="roof-Sealing-In-Tel-Aviv-layout-section__about">
-      <h2 class="roof-Sealing-In-Tel-Aviv-layout-section__about-title">על האתר, המרכז הישראלי לאיטום גגות</h2>
-      <p class="roof-Sealing-In-Tel-Aviv-layout-section__about-text">האתר "המרכז הישראלי לאיטום גגות" עוסק בפתרונות איטום ושיפוצים, עם דגש על אבחון מקצועי, טיפול בפרטים, וניהול עבודה מסודר בבניינים בעיר ובסביבה. אם צריך, ניתן לתאם בדיקת מצב ולבנות תכנית פעולה שמתאימה לסוג הגג, למבנה, ולתקציב.</p>
+    <!-- FAQ -->
+    <div class="roof-faq-section">
+      <h2>שאלות נפוצות, בקצרה</h2>
+      <div class="roof-faq-list">
+        <div class="roof-faq-item">
+          <h3>האם כל כתם בתקרה אומר שצריך איטום מחדש מלא?</h3>
+          <p>לא תמיד. לפעמים מדובר בכשל נקודתי בפרט או בניקוז. אבל אסור להתעלם, כי כתם הוא סימן לחדירת מים קיימת.</p>
+        </div>
+        <div class="roof-faq-item">
+          <h3>מתי הזמן הטוב ביותר לבצע איטום בתל אביב?</h3>
+          <p>לרוב בקיץ ובתחילת הסתיו, כשהגג יבש וניתן להכין תשתית בצורה נכונה.</p>
+        </div>
+        <div class="roof-faq-item">
+          <h3>האם אפשר לבצע תיקון עצמי?</h3>
+          <p>תיקונים קטנים יכולים לעזור זמנית, אבל ללא אבחון ובלי התאמת חומרים, הסיכון לכשל חוזר גבוה. בגגות משותפים עדיף לפעול מסודר עם ועד הבית וקבלן.</p>
+        </div>
+        <div class="roof-faq-item">
+          <h3>מה חשוב יותר, החומר או הביצוע?</h3>
+          <p>שניהם. חומר טוב עם ביצוע חלש ייכשל, וחומר לא מתאים, גם עם ביצוע טוב, לא יחזיק בתנאי הגג.</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Summary -->
+    <div class="roof-summary-section">
+      <h2>סיכום</h2>
+      <p>אם זיהית אפילו אחד מהסימנים ברשימה, במיוחד רטיבות פנימית, שלוליות עומדות, סדקים בשכבה או בעיות ניקוז, יש סיכוי טוב שהגג בתל אביב מתקרב לנקודת כשל. פעולה נכונה היא לא "למרוח משהו" אלא לאבחן, להבין האם הבעיה נקודתית או מערכתית, לטפל בפרטים ובניקוז, ולתעד הכול. כך שומרים על ערך הנכס, על בריאות הדיירים, ועל שקט נפשי בחורף.</p>
+    </div>
+
+    <!-- About Site -->
+    <div class="roof-about-site-section">
+      <h2>על האתר, המרכז הישראלי לאיטום גגות</h2>
+      <p>האתר "המרכז הישראלי לאיטום גגות" עוסק בפתרונות איטום ושיפוצים, עם דגש על אבחון מקצועי, טיפול בפרטים, וניהול עבודה מסודר בבניינים בעיר ובסביבה. אם צריך, ניתן לתאם בדיקת מצב ולבנות תכנית פעולה שמתאימה לסוג הגג, למבנה, ולתקציב.</p>
+    </div>
+
   </div>
 </section>
     </main>
