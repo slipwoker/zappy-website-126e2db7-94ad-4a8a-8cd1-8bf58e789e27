@@ -311,6 +311,26 @@ https://maor-ahzakot.co.il/roof-waterproofing-in-jerusalem
 ### Page
 https://maor-ahzakot.co.il/roof-sealing-in-mevaseret-zion
 
+### הבלוג המקצועי של מאור אחזקות
+https://maor-ahzakot.co.il/blog-825075
+מאור איטום - הבלוג המקצועי של מאור אחזקות
+
+### סימנים
+https://maor-ahzakot.co.il/blog/early-waterproofing-warning-signs
+מדריך לזיהוי מוקדם של כשלי איטום בגג, בקירות ובחיבורים לפני שהבעיה הופכת לנזק רחב ויקר.
+
+### שיטות
+https://maor-ahzakot.co.il/blog/bituminous-membranes-vs-tarring-guide
+השוואה מקצועית בין יריעות ביטומניות לזיפות גגות, כולל התאמה לפי מצב הגג, תקציב, תחזוקה ואורך חיים צפוי.
+
+### שיקום
+https://maor-ahzakot.co.il/blog/water-damage-building-recovery-steps
+מה עושים לאחר הצפה, חדירת מים או רטיבות ממושכת, ואיך מונעים נזק מתמשך למבנה, לטיח, לריצוף ולמערכות הפנימיות.
+
+### תחזוקה
+https://maor-ahzakot.co.il/blog/preventive-envelope-maintenance-before-winter
+רשימת בדיקות מקצועית לגג, מרפסות, קירות חוץ, פתחים ומרזבים שיכולה למנוע חדירות מים בעונת הגשמים.
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -342,7 +362,7 @@ Information about WCAG compliance and accessibility features.
   - `name` (text, required)
   - `email` (email, required)
   - `phone` (tel, required)
-  - `message` (textarea)
+  - `message` (textarea, required)
   - `privacy_consent` (checkbox, required)
 
 ---
