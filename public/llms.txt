@@ -311,6 +311,9 @@ https://maor-ahzakot.co.il/roof-waterproofing-in-jerusalem
 ### Page
 https://maor-ahzakot.co.il/roof-sealing-in-mevaseret-zion
 
+### Page
+https://maor-ahzakot.co.il/air-duct-cleaning-hvac-systems-copy
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -339,11 +342,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text)
-  - `email` (email)
-  - `phone` (tel)
-  - `message` (textarea)
-  - `privacy_consent` (checkbox)
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel, required)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
 
 ---
 
