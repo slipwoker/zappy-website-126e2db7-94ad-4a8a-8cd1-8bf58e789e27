@@ -150,7 +150,6 @@ Description: מאור אחזקות – מומחים לאיטום גגות ביר
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -1052,7 +1051,6 @@ Description: שירותי איטום גגות מקצועיים ביריעות ב
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -1827,7 +1825,6 @@ Description: איטום תעשייתי מקצועי לחניונים תת-קרק
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -2587,7 +2584,6 @@ Description: זיפות גגות בזפת חם – שיטת האיטום הקל�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -3562,7 +3558,6 @@ Description: מאור אחזקות - איטום גג בחומר פוליאורי
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -4477,7 +4472,6 @@ Description: מדיניות הפרטיות שלנו - כיצד אנו אוספי
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -4816,7 +4810,6 @@ Description: הצהרת הנגישות שלנו - מחויבותנו לנגיש�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -5164,7 +5157,6 @@ Description: תנאי השימוש באתר - הזכויות והחובות של
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -5563,7 +5555,6 @@ Description: קראו מה אומרים הלקוחות שלנו על שירות�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -6094,7 +6085,6 @@ Description: מאמרים ומדריכים מקצועיים על איטום גג
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -7031,7 +7021,6 @@ Description: מדריך מקצועי לבדיקת גג שטוח לפני עונ�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -7404,7 +7393,6 @@ Description: איך מבדילים בין פגם קוסמטי רגיל לבין 
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -7789,7 +7777,6 @@ Description: סקירה מקצועית על שימוש במערכות פוליא
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -8168,7 +8155,6 @@ Description: מה קורה לבטון כשמים חודרים לאורך זמן,
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -8549,7 +8535,6 @@ Description: מאור אחזקות - איטום גגות "יצאת צדיק": א
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -8920,7 +8905,6 @@ Description: מאור אחזקות - איטום גג מרפסת ללא פירו�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -9320,7 +9304,6 @@ Description: מאור אחזקות - איטום גג מרפסת עם פירוק:
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -9717,7 +9700,6 @@ Description: מאור אחזקות - טיפול בעובש ועיבוי: איך 
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -10091,7 +10073,6 @@ Description: מאור אחזקות - מחירון איטום גגות: מה מש
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -10477,7 +10458,6 @@ Description: מאור אחזקות - איטום מקלחת: מה חייבים ל
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -11228,7 +11208,6 @@ Description: מאור אחזקות - זיפות גגות "יצאת צדיק": א
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -11616,7 +11595,6 @@ Description: מאור אחזקות - שיפוץ חדר מדרגות לאחר ש�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -11969,7 +11947,6 @@ URL: https://maor-ahzakot.co.il/water-leak-services
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -12221,7 +12198,6 @@ URL: https://maor-ahzakot.co.il/roofing-and-waterproofing
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -12494,7 +12470,6 @@ Description: מאור אחזקות - איטום קירות מרתף: איך מו
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -12879,7 +12854,6 @@ Description: מאור אחזקות - איטום סביב דודי שמש, מזג
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -13256,7 +13230,6 @@ Description: מאור אחזקות - איטום חיבורי קיר-גג ומע�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -13628,7 +13601,6 @@ Description: מאור אחזקות - איך נפתרים מריח של עשן ו
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -14038,7 +14010,6 @@ Description: מאור אחזקות - האם חברת איטום נותנת אח�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -14414,7 +14385,6 @@ Description: מאור אחזקות – מומחים לאיטום גגות ביר
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -14805,7 +14775,6 @@ Description: מאור אחזקות - מה עושים קודם כל מיד לאח
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -15185,7 +15154,6 @@ Description: מאור אחזקות - גג עם זיפות ישן: מתי עדי�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -15582,7 +15550,6 @@ Description: מאור אחזקות פועלת בכל רחבי ישראל: תל �
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -16292,7 +16259,6 @@ Description: מומחים לאיטום גגות בתל אביב והסביבה �
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -16993,7 +16959,6 @@ Description: איטום גגות בנתניה והסביבה — פתרונות 
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -17569,7 +17534,6 @@ Description: מאור אחזקות - איטום ואחזקת מעטפת למבנ
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -18155,7 +18119,6 @@ Description: איטום גגות בירושלים והסביבה — פתרונ�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -18815,7 +18778,6 @@ Description: איטום גגות בחיפה והקריות — שירות מקצ
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -19433,7 +19395,6 @@ Description: איטום גגות בשפלה ובדרום גוש דן — פתר�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -19835,7 +19796,6 @@ Description: איטום גגות באילת — פתרונות עמידים לת
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -20674,7 +20634,6 @@ Description: איטום גגות בבאר שבע והנגב — פתרונות �
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -21231,7 +21190,6 @@ Description: שיקום מלא של דירות ומבנים לאחר נזקי ש
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -21272,275 +21230,7 @@ Description: שיקום מלא של דירות ומבנים לאחר נזקי ש
 מאור אחזקות מתמחה בשיפוץ דירות ומבנים לאחר נזקי שריפה ומים, עם ניסיון רב בטיפול במשטחים פגועים, תיקון ליקויי לחות  עובש ופיח  ביצוע שכבות גמר מקצועיות — הכול תחת אחריות אחת ותהליך ביצוע אחד.
 
 
-- טיפול מלא במשטחים שרופים ופגועי חום
-- איטום גגות ביריעות ביטומניות ופוליאורתן לאחר שריפה
-- תיקון נזקי עשן, פיח ולחות בקירות ותקרות
-- יציקת בטקל, סיוד וגמר שיפוץ דירות מלא
-- ביצוע אחיד ואחריות מלאה מהאבחון ועד הגמר
-
-
-
-
-לקבלת הצעת מחיר
-דברו איתנו
-
-
-
-
-
-
-
-
-
-
-
-שיקום מוסמך ומבוטח
-
-
-
-
-
-
-
-
-15+
-שנות ניסיון
-
-
-
-500+
-פרויקטים בוצעו
-
-
-
-100%
-אחריות על הביצוע
-
-
-
-
-
-
-
-
-
-
-
-
-
-שיקום מוסמך ומבוטח
-
-
-
-
-שיפוץ ושיקום לאחר שריפה
-
-# מחזירים את הנכס  לחיים — מהר, מקצועי ומוסמך
-
-
-שריפה משאירה מאחוריה נזקים מבניים, עשן, פיח ולחות חודרת. מאור אחזקות מתמחה בשיקום מלא של דירות, בניינים ומבנים תעשייתיים לאחר שריפה — כולל ניקוי, שיפוץ, איטום ושיקום מבני מלא.
-
-
-הצוות שלנו פועל במהירות ובמקצועיות, עם ליווי מלא מול חברות הביטוח ועמידה בכל תקני הבנייה. אנחנו לא רק מתקנים — אנחנו מחזירים את הנכס שלכם לרמה גבוהה יותר ממה שהייתה לפני.
-
-
-
-
-
-
-
-עבודה מול ביטוח
-ליווי מלא מול חברת הביטוח וכיסוי התביעה
-
-
-
-
-
-
-
-זמן תגובה מהיר
-הגעה לשטח תוך 24 שעות מרגע הפנייה
-
-
-
-
-
-לקבלת הצעת מחיר
-דברו איתנו
-
-
-
-
-
-
-
-
-15+
-שנות ניסיון
-
-
-
-
-
-
-
-
-
-
-
-
-תהליך השיקום
-
-## ארבעה שלבים לשיקום מלא לאחר שריפה
-
-
-מהערכת הנזק ועד לגמר נקי ומוכן לשימוש — אנחנו מלווים כל פרויקט בצורה מסודרת, מקצועית ויסודית.
-
-
-
-
-
-
-01
-
-
-
-
-
-### הערכת נזק ואבחון מקצועי
-
-
-בשלב הראשון מגיעים אנשי המקצוע שלנו לאתר, בוחנים את היקף הנזק שנגרם בשריפה, מזהים את האזורים הפגועים ומגבשים תוכנית שיקום מדויקת ומותאמת לצרכי הנכס.
-
-
-
-
-
-02
-
-
-
-
-
-### פינוי שכבות פגועות והכנת המשטח
-
-
-מסירים את כל החומרים השרופים, הפגועים והרוויים בעשן — כולל ריצוף, טיח, בידוד ושכבות איטום ישנות. הכנת המשטח לעבודה היא הבסיס לכל שיקום איכותי ועמיד לאורך זמן.
-
-
-
-
-
-03
-
-
-
-
-
-### איטום, סגירת סדקים ותיקון מבני
-
-
-בשלב הקריטי הזה מטפלים בכל נקודות החדירה, הסדקים, ואזורי הרטיבות שנחשפו בשריפה. מבצעים איטום מקצועי עם יריעות ביטומניות, פוליאוריתן או אפוקסי — בהתאם לסוג המשטח ורמת הנזק.
-
-
-
-
-
-
-
-
-04
-
-
-
-
-
-### שחזור גמר ומסירה מוכנה לשימוש
-
-
-השלב האחרון כולל שיפוץ דירות לאחר שריפה עם שחזור גמר מלא — סיוד, טיח, ריצוף ועבודות גמר לפי תקן גבוה. הנכס נמסר נקי, מוגן ומוכן לאכלוס מחדש.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-שיפוץ ושיקום מקצועי
-
-## שיפוץ דירות לאחר שריפה — חידוש מלא מהיסוד
-
-
-נזקי שריפה מחייבים תגובה מקצועית, מהירה ומקיפה. אנחנו במאור אחזקות מספקים פתרון שלם לשיקום הנכס — מפינוי הפסולת ועד גמר מושלם — עם דגש על איכות חומרים, עמידות לטווח ארוך והגנה מפני נזקי לחות עתידיים. כל עבודה מבוצעת בסטנדרטים גבוהים ובליווי מלא לאורך כל שלבי הפרויקט.
-
-
-
-15+
-שנות ניסיון
-
-
-
-500+
-פרויקטים הושלמו
-
-
-
-100%
-אחריות על העבודה
-
-
-
-
-
-
-
-
-איכות מובטחת
-
-
-
-
-
-
-
-
-
-
-### תחומי השיפוץ שלנו
-
-
-שלושה עמודי תווך לשיקום נכס מושלם ועמיד
-
-
-
-
-
-
-
-
-
-
-
-
-### חידוש פנים לאחר נזק
-
-
-שיקום מלא של חדרים שנפגעו מעשן, חום וכיבוי — כולל פינוי חומרים שרופים, ניקוי מבני, שיפוץ דירות לאחר שריפה עם ריצוף, טיח, צבע וגמר. כל שכבה מוחלפת לפי הצורך לשמירה על בטיחות ועמידות.
-
-
-- פינוי ושיקום מבני מלא
+- עבודה מול ביטוח ליווי מלא מול חברת הביטוח וכיסוי התביעה זמן תגובה מהיר הגעה לשטח תוך 24 שעות מרגע הפנייה לקבלת הצעת מחיר דברו איתנו 15+ שנות ניסיון תהליך השיקום ## ארבעה שלבים לשיקום מלא לאחר שריפה מהערכת הנזק ועד לגמר נקי ומוכן לשימוש — אנחנו מלווים כל פרויקט בצורה מסודרת, מקצועית ויסודית. 01 ### הערכת נזק ואבחון מקצועי בשלב הראשון מגיעים אנשי המקצוע שלנו לאתר, בוחנים את היקף הנזק שנגרם בשריפה, מזהים את האזורים הפגועים ומגבשים תוכנית שיקום מדויקת ומותאמת לצרכי הנכס. 02 ### פינוי שכבות פגועות והכנת המשטח מסירים את כל החומרים השרופים, הפגועים והרוויים בעשן — כולל ריצוף, טיח, בידוד ושכבות איטום ישנות. הכנת המשטח לעבודה היא הבסיס לכל שיקום איכותי ועמיד לאורך זמן. 03 ### איטום, סגירת סדקים ותיקון מבני בשלב הקריטי הזה מטפלים בכל נקודות החדירה, הסדקים, ואזורי הרטיבות שנחשפו בשריפה. מבצעים איטום מקצועי עם יריעות ביטומניות, פוליאוריתן או אפוקסי — בהתאם לסוג המשטח ורמת הנזק. 04 ### שחזור גמר ומסירה מוכנה לשימוש השלב האחרון כולל שיפוץ דירות לאחר שריפה עם שחזור גמר מלא — סיוד, טיח, ריצוף ועבודות גמר לפי תקן גבוה. הנכס נמסר נקי, מוגן ומוכן לאכלוס מחדש. שיפוץ ושיקום מקצועי ## שיפוץ דירות לאחר שריפה — חידוש מלא מהיסוד נזקי שריפה מחייבים תגובה מקצועית, מהירה ומקיפה. אנחנו במאור אחזקות מספקים פתרון שלם לשיקום הנכס — מפינוי הפסולת ועד גמר מושלם — עם דגש על איכות חומרים, עמידות לטווח ארוך והגנה מפני נזקי לחות עתידיים. כל עבודה מבוצעת בסטנדרטים גבוהים ובליווי מלא לאורך כל שלבי הפרויקט. 15+ שנות ניסיון 500+ פרויקטים הושלמו 100% אחריות על העבודה איכות מובטחת ### תחומי השיפוץ שלנו שלושה עמודי תווך לשיקום נכס מושלם ועמיד ### חידוש פנים לאחר נזק שיקום מלא של חדרים שנפגעו מעשן, חום וכיבוי — כולל פינוי חומרים שרופים, ניקוי מבני, שיפוץ דירות לאחר שריפה עם ריצוף, טיח, צבע וגמר. כל שכבה מוחלפת לפי הצורך לשמירה על בטיחות ועמידות. פינוי ושיקום מבני מלא
 
 - ריצוף, חיפוי וגמר איכותי
 
@@ -22260,7 +21950,6 @@ Description: מאור אחזקות - שיפוץ בניין חיצוני, צבי�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -23149,7 +22838,6 @@ Description: מאור אחזקות - ניקוי עובש והורדת עובש �
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -23931,7 +23619,6 @@ Description: מאור אחזקות - איטום מרפסות
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -24793,7 +24480,6 @@ Description: תודה שפנית למאור אחזקות — מומחים באי
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -25157,7 +24843,6 @@ URL: https://maor-ahzakot.co.il/copy
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -25410,7 +25095,6 @@ Description: מאור אחזקות - שירותי איטום ושיקום לפי
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -25997,7 +25681,6 @@ URL: https://maor-ahzakot.co.il/test-geo-echoai
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -26248,7 +25931,6 @@ Description: מאור אחזקות - מאור צביעת דירות, בתים ו
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -27219,7 +26901,6 @@ Description: מאור - איטום מאגר מים | מאור אחזקות
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -27815,7 +27496,6 @@ Description: Professional air duct cleaning and HVAC system maintenance by Maor 
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -28413,7 +28093,6 @@ Description: צרו קשר עם מאור אחזקות לייעוץ חינם וה
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -28909,7 +28588,6 @@ URL: https://maor-ahzakot.co.il/roof-tarring-price-factors
 - צור קשר
 - זיפות גגות מחיר - הגורמים שקובעים כמה תשלמו בסוף
 - עמוד חדש
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -29295,7 +28973,6 @@ Description: מאור אחזקות - איטום גגות בערד: מה חשוב
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -29675,7 +29352,6 @@ Description: מאור אחזקות - איטום גגות יצאת צדיק: צ׳
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -30040,7 +29716,6 @@ Description: מאור אחזקות - איטום גג בהתזה: מתי השיט
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -30411,7 +30086,6 @@ Description: מאור אחזקות - שאלות ותשובות לגבי איטו
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -30779,7 +30453,6 @@ Description: מאור אחזקות - שאלות ותשובות על זיפות �
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -31138,7 +30811,6 @@ Description: מאור איטום - שאלות ותשובות על איטום ג�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -31510,7 +31182,6 @@ Description: מאור איטום - איטום גג איסכורית: מה חשו
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -31881,7 +31552,6 @@ Description: מאור איטום - איטום חלונות ופתחים: למה 
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -32248,7 +31918,6 @@ Description: מאור איטום - איטום גג בטון: מה חשוב לב�
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -32627,7 +32296,6 @@ Description: מאור איטום - קבלן איטום מקצועי לעבודו
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -32869,7 +32537,6 @@ URL: https://maor-ahzakot.co.il/roof-sealing-in-beer-sheva
 - צור קשר
 - איטום גג בבאר שבע
 - עמוד חדש
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -33137,7 +32804,6 @@ Description: מאור איטום - למה צריך לאטום גג בהתזה: �
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -33516,7 +33182,6 @@ Description: מאור איטום - למה צריך לאטום גג בזפת חם
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -33898,7 +33563,6 @@ Description: מאור איטום - איטום מרפסת: למה לפעמים ח
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -34268,7 +33932,6 @@ Description: מאור איטום - איטום מרפסת ללא פירוק: שא
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -34680,7 +34343,6 @@ Description: מאור איטום - שיפוץ דירה לאחר שריפה: אי
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -35033,7 +34695,6 @@ URL: https://maor-ahzakot.co.il/new-page-1793876225248
 - Air Duct Cleaning & HVAC Systems
 - צור קשר
 - עמוד חדש
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -35447,7 +35108,6 @@ Description: מאור איטום - איטום גגות שאלות ותשובות
 - Air Duct Cleaning & HVAC Systems
 - עמוד חדש
 - צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -35792,7 +35452,6 @@ URL: https://maor-ahzakot.co.il/roof-tarring-services
 - עמוד חדש
 - צור קשר
 - זיפות גגות יצאת צדיק, המדריך המקצועי לבחירה נכונה של קבלן ואיטום שמחזיק שנים
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -36045,7 +35704,6 @@ URL: https://maor-ahzakot.co.il/roof-sealing-in-modiin
 - עמוד חדש
 - צור קשר
 - איטום גגות במודיעין
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -36631,7 +36289,6 @@ URL: https://maor-ahzakot.co.il/roof-sealing-in-jerusalem
 - עמוד חדש
 - צור קשר
 - איטום גג בירושלים
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -36994,7 +36651,6 @@ URL: https://maor-ahzakot.co.il/10-typym-lbchyrt-kbln-aytvm-ggvt-brashvn-ltsyvn
 - עמוד חדש
 - צור קשר
 - 10 טיפים לבחירת קבלן איטום גגות בראשון לציון
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -37565,7 +37221,6 @@ URL: https://maor-ahzakot.co.il/roof-sealing-in-tel-aviv
 - עמוד חדש
 - צור קשר
 - איטום גג בתל אביב
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -38436,7 +38091,6 @@ URL: https://maor-ahzakot.co.il/roof-waterproofing-in-tel-aviv
 - עמוד חדש
 - צור קשר
 - זיפות גגות בתל אביב
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -38812,7 +38466,6 @@ URL: https://maor-ahzakot.co.il/roof-waterproofing-in-rehovot
 - עמוד חדש
 - צור קשר
 - איטום גגות ברחובות
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -39226,7 +38879,6 @@ URL: https://maor-ahzakot.co.il/roof-sealing-faqs-in-rehovot
 - עמוד חדש
 - צור קשר
 - שאלות ותשובות על זיפות גגות ברחובות: כל מה שצריך לדעת
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -39708,7 +39360,6 @@ URL: https://maor-ahzakot.co.il/roof-sealing-in-rishon-lezion
 - עמוד חדש
 - צור קשר
 - איטום גג בראשון לציון
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -40078,7 +39729,6 @@ URL: https://maor-ahzakot.co.il/roof-waterproofing-in-modiin
 - עמוד חדש
 - צור קשר
 - זיפות גגות במודיעין
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -40534,7 +40184,6 @@ URL: https://maor-ahzakot.co.il/roof-waterproofing-in-jerusalem
 - עמוד חדש
 - צור קשר
 - איטום גגות בירושלים
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -40844,7 +40493,6 @@ URL: https://maor-ahzakot.co.il/roof-sealing-in-mevaseret-zion
 - עמוד חדש
 - צור קשר
 - איטום גג במבשרת ציון
-- Air Duct Cleaning & HVAC Systems (copy)
 
 
 
@@ -40941,625 +40589,6 @@ URL: https://maor-ahzakot.co.il/roof-sealing-in-mevaseret-zion
 
 3-5
 שנות עמידות ממוצעות לזיפות
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-מומחים באיטום, שיפוץ ושיקום מבנים. עבודה מקצועית, אמינות מלאה, תוצאות שמחזיקות לאורך זמן.
-
-
-
-
-
-
-
-
-
-
-
-### שירותים
-
-
-- איטום גגות
-
-- איטום תעשייתי ומבני
-
-- שיפוץ ושיקום לאחר שריפה
-
-- צור קשר
-
-
-
-
-
-
-
-### צור קשר
-
-- dmaor75@gmail.com
-- 055- 9932287
--
-
-
-
-
-
-
-### זמינים עבורך
-
-
-
-
-מוכנים לקחת את הפרויקט שלך לשלב הבא?
-
-
-קבל הצעת מחיר
-
-
-
-
-
-
-
-
-
-
-
-© 2026 מאור אחזקות. כל הזכויות שמורות.
-
-
-מדיניות פרטיות
-
-תנאי שימוש
-
-נגישות
-
-נוצר באמצעות Zappy
-
----
-
-## https://maor-ahzakot.co.il/air-duct-cleaning-hvac-systems-copy
-
-URL: https://maor-ahzakot.co.il/air-duct-cleaning-hvac-systems-copy
-
-מאור איטום
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- איטום גגות
-- איטום תעשייתי ומבני
-- זיפות
-- איטום פוליאוריטני
-- המלצות
-- הבלוגבדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים
-- סימני אזהרה לחדירת מים בקירות חוץ
-- איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא
-- שיקום בטון אחרי רטיבות ממושכת
-- איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי
-- איטום גג מרפסת ללא פירוק: מתי זה אפשרי ומה חייבים לבדוק לפני
-- איטום גג מרפסת עם פירוק: מתי זה נדרש ואיך מבצעים נכון
-- טיפול בעובש ועיבוי: איך מזהים את מקור הבעיה ומה באמת פותר אותה
-- מחירון איטום גגות: מה משפיע על המחיר ואיך משווים נכון בין הצעות
-- איטום מקלחת: מה חייבים לבצע נכון כדי למנוע רטיבות ונזקים נסתרים
-- זיפות גגות "יצאת צדיק": איך לבדוק אם עבודת הזיפות באמת בוצעה נכון
-- שיפוץ חדר מדרגות לאחר שריפה: סדר הפעולות הנכון לחזרה בטוחה לשימוש
-- דליפת מים בבית - סיבות, סימנים ואיך מטפלים בזה
-- זיפות גגות שיטות ועליות
-- איטום קירות מרתף: איך מונעים חדירת מים ולחות מהיסוד
-- איטום סביב דודי שמש, מזגנים ומעברי צנרת בגג: הנקודות הקטנות שגורמות לנזילות גדולות
-- איטום חיבורי קיר-גג ומעקות: למה דווקא שם מתחילות נזילות רבות
-- איך נפתרים מריח של עשן ופיח שנשאר בדירה אחרי שריפה
-- האם חברת איטום נותנת אחריות על עבודת יריעות ביטומניות ולכמה שנים
-- חומרי איטום לגגות - מה כדאי להכיר לפני שבוחרים
-- מה עושים קודם כל מיד לאחר שריפה בדירה
-- גג עם זיפות ישן: מתי עדיף לעבור ליריעות ביטומניות ומתי לא
-- זיפות גגות מחיר - הגורמים שקובעים כמה תשלמו בסוף
-- איטום בערד
-- צ׳ק ליסט
-- איטום בהתזה
-- שאלות בהתזה
-- זיפות FAQ
-- שאלות יריעות
-- גג איסכורית
-- איטום חלונות
-- גג בטון
-- התזה
-- זפת חם
-- פירוק ריצוף
-- שאלות מרפסת
-- שיקום דירה
-- שאלות איטום
-- זיפות גגות יצאת צדיק, המדריך המקצועי לבחירה נכונה של קבלן ואיטום שמחזיק שנים
-- איטום גגות במודיעין
-- איטום גג בירושלים
-- 10 טיפים לבחירת קבלן איטום גגות בראשון לציון
-- אזוריםמומחים לאיטום גגות בתל אביב
-- איטום גגות בנתניה
-- איטום גגות במרכז ובשרון
-- איטום גגות בירושלים והסביבה
-- איטום גגות בחיפה והקריות
-- איטום גגות בשפלה ובדרום גוש דן
-- איטום לגג באילת
-- איטום גגות בבאר שבע
-- שירותי איטום ושיקום לפי סוגי מבנים באזורי השירות
-- קבלן איטום
-- איטום גג בתל אביב
-- זיפות גגות בתל אביב
-- איטום גגות ברחובות
-- שאלות ותשובות על זיפות גגות ברחובות: כל מה שצריך לדעת
-- איטום גג בראשון לציון
-- זיפות גגות במודיעין
-- איטום גגות בירושלים
-- איטום גג במבשרת ציון
-- שיפוץ ושיקום לאחר שריפה
-- שיפוץ חוץניקוי עובש והורדת עובש בקירות
-- איטום מרפסות
-- איטום גג בבאר שבע
-- מומחים לאיטום גגות בתל אביב (copy)
-- TEST GEO - EchoAi
-- צביעה
-- מאגרי מים
-- Air Duct Cleaning & HVAC Systems
-- עמוד חדש
-- צור קשר
-- Air Duct Cleaning & HVAC Systems (copy)
-
-
-
-
-
-צור קשר
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Professional Cleaning & Sealing Services
-
-
-
-# Air Duct Cleaning & HVAC Systems
-
-
-
-We specialize in thorough cleaning of air ducts and HVAC systems using the most advanced technologies. Our professional team ensures improved air quality, energy savings, and prevention of future system malfunctions. Whether for a private home, office, or industrial facility – we are here to provide you with a cleaner and healthier environment.
-
-
-
-
-Contact Us Now
-
-
-
-Discover Our Services
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Air Duct Cleaning & HVAC Systems
-
-
-
-Over time, HVAC systems accumulate dust, dirt, and contaminants that damage air quality and system performance. Maor Holdings' expert team provides thorough and professional air duct cleaning services, using advanced technologies to restore clean and healthy air to your building.
-
-
-
-
-
-
-
-
-
-
-
-
-### Air Duct Cleaning
-
-
-Thorough cleaning of the air duct system using advanced suction and vacuum equipment, removing dust, mold, and contaminants to ensure optimal airflow throughout every space.
-
-
-
-
-
-
-
-
-
-### Vent & Diffuser Cleaning
-
-
-Targeted treatment of ventilation openings and diffusers, removing dust and dirt buildup that causes blockages and uneven air distribution, for immediate improvement in thermal comfort.
-
-
-
-
-
-
-
-
-
-### Dust & Dirt Buildup Treatment
-
-
-Complete removal of dust, soot, and dirt deposits accumulated throughout the duct system, preventing bacteria and fungi growth and significantly improving air quality.
-
-
-
-
-
-
-
-
-
-### Post-Renovation & Fire Cleanup
-
-
-Dedicated service for cleaning air ducts after renovation, construction, or fire events, removing soot residue, construction dust, and pungent odors absorbed into the HVAC system.
-
-
-
-
-
-
-
-
-
-### Airflow Improvement
-
-
-Balancing and testing airflow across all system outlets, fixing blockages, and improving energy performance, leading to significant savings in the building's electricity consumption.
-
-
-
-
-
-
-
-
-
-### Commercial & Office Maintenance
-
-
-Custom periodic maintenance plans for offices, malls, and industrial buildings, including cleaning, disinfection, and integrity checks to maintain a healthy and clean work environment.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Professional Air Duct Cleaning Process
-
-
-Maor Holdings' expert team operates with a systematic and controlled method for thorough cleaning of air ducts and HVAC systems. We adapt our work process to the type of building, system scope, and contamination level, using advanced suction equipment and specialized disinfectants to achieve optimal air quality in your space.
-
-
-
-
-
-
-Work adapted to building type: residential, offices, industrial, and commercial
-
-
-
-Control
-
-
-
-
-
-
-- 01 ### Initial System Inspection Visual scan and mapping of duct pathways to locate dirt, mold, and abnormal moisture hotspots.
-
-- 02 ### Controlled Disassembly of Diffusers & Grilles Careful removal of endpoint components for full access to the duct interior without damaging ceilings or walls.
-
-- 03 ### Industrial Suction & Duct Cleaning Using an industrial negative-pressure suction system to remove dust, contaminants, and particles accumulated over time.
-
-- 04 ### Cleaning Supply & Return Vents Thorough disinfection of supply and return vents, including filter replacement as needed to ensure proper airflow.
-
-- 05 ### Airflow Testing & Clean Finish Final system calibration, airflow strength measurement in every room, and returning the area to a clean and tidy state with no residue.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Air Duct Cleaning & HVAC Systems
-
-
-We perform thorough and comprehensive cleaning of air ducts and HVAC systems using advanced technologies, ensuring a clean, healthy, and more efficient working and living environment.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Dust & Odor Reduction
-
-
-Air duct cleaning removes accumulations of dust, dirt, and contaminants that cause unpleasant odors, significantly improving the sense of cleanliness throughout the space.
-
-
-
-
-
-
-### Improved Air Quality
-
-
-We treat bacteria, mold, and allergens that accumulate in the system, ensuring clean and healthier air for home residents or office workers.
-
-
-
-
-
-
-### Preventive System Maintenance
-
-
-Routine cleaning prevents costly breakdowns, extends system lifespan, and improves energy efficiency, resulting in significant savings on electricity costs.
-
-
-
-
-
-
-### Post-Renovation & Smoke Damage
-
-
-After renovation, construction, or smoke events, we perform deep cleaning to remove construction dust residue and soot, restoring the system to full and safe operation.
-
-
-
-
-
-
-
-
-
-
-
-## Frequently Asked Questions About Air Duct Cleaning
-
-
-Everything you need to know before ordering professional cleaning services for your HVAC system
-
-
-
-
-
-
-### How often should air ducts be cleaned?
-
-
-It is recommended to clean air ducts every two to three years in residential buildings, and more frequently in commercial or industrial buildings. Regular maintenance ensures optimal air quality and prevents contaminant buildup.
-
-
-
-
-### Is duct cleaning suitable after renovation?
-
-
-Absolutely. After renovation, dust particles, drywall, and construction material residue often remain in the system. Thorough cleaning removes all residue and restores the system to full and clean operation.
-
-
-
-
-### Do the ducts need to be dismantled for cleaning?
-
-
-No. We use advanced equipment for in-system cleaning without needing to dismantle the ducts. This method preserves system integrity and significantly shortens work time.
-
-
-
-
-### Can work be performed in an occupied building?
-
-
-Yes. The Maor Holdings team performs the work with minimal disruption to daily life. We maintain transparency, cleanliness throughout the work, and full coordination with the client throughout the entire process.
-
-
-
-
-### Does duct cleaning solve odor and mold problems?
-
-
-Professional duct cleaning removes odor sources and organic contaminants. In cases of mold, we incorporate specialized disinfectants approved for use in HVAC systems that prevent regrowth.
-
-
-
-
-### When should I call a professional for an inspection?
-
-
-If you notice a decline in air quality, unusual noises from the system, rapid dust accumulation, or an increase in energy consumption – it is recommended to schedule a professional inspection. Early diagnosis saves costly breakdowns down the line.
-
-
-
-
-
-
-
-
-Professional Inspection
-
-## It's Time to Breathe Truly Clean Air
-
-
-Our team of experts will arrive at your location with advanced equipment for a thorough inspection of your air ducts and HVAC systems. We will identify the issues, deep clean, and ensure your system is operating at peak performance. Leave your details and we'll get back to you today.
-
-
-Schedule a Professional Inspection
-Or call now:  055-9932287
 
 
 
