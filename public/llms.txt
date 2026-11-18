@@ -331,6 +331,9 @@ https://maor-ahzakot.co.il/blog/water-damage-building-recovery-steps
 https://maor-ahzakot.co.il/blog/preventive-envelope-maintenance-before-winter
 רשימת בדיקות מקצועית לגג, מרפסות, קירות חוץ, פתחים ומרזבים שיכולה למנוע חדירות מים בעונת הגשמים.
 
+### Page
+https://maor-ahzakot.co.il/roof-sealing-beer-sheva
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -359,11 +362,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
-  - `phone` (tel, required)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 
