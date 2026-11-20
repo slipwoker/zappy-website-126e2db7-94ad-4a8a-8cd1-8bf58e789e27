@@ -340,6 +340,10 @@ https://maor-ahzakot.co.il/roof-tarring-in-beer-sheva
 ### Page
 https://maor-ahzakot.co.il/roof-tarring-cost
 
+### שיקום שריפה
+https://maor-ahzakot.co.il/blog-825075/building-renovation-after-fire
+מאור איטום - שיפוץ בניין לאחר שריפה: איך מחזירים את המבנה לשימוש בטוח
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -368,11 +372,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
-  - `phone` (tel, required)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 
