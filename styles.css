@@ -24691,6 +24691,98 @@ nav.navbar .sub-menu li a {
 .s-50-blog-article-section .article-container { border-radius: 20px !important; }
 .s-50-blog-article-section .article-container { padding: 48px !important; }
 
+
+.blog-building-roof-tarring-questions-answers-blog-article-section {
+  padding-top: 0 !important;
+}
+
+#blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-container {
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+#blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-topbar {
+  max-width: 860px !important;
+  margin: 0 auto 24px !important;
+  padding: 24px 16px 0 !important;
+}
+
+#blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-hero-figure {
+  margin: 0 !important;
+  width: 100% !important;
+  aspect-ratio: auto !important;
+  height: 78vh !important;
+  min-height: 480px !important;
+  max-height: 820px !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  position: relative !important;
+}
+
+#blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-hero-image {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+.blog-building-roof-tarring-questions-answers-blog-article-header {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 860px !important;
+  margin: 0 auto !important;
+  padding: 0 24px 48px !important;
+}
+
+.blog-building-roof-tarring-questions-answers-blog-article-header .blog-building-roof-tarring-questions-answers-blog-article-title {
+  color: #ffffff !important;
+  font-size: clamp(2rem, 4.5vw, 3.5rem) !important;
+  text-align: right !important;
+}
+
+.blog-building-roof-tarring-questions-answers-blog-article-header .blog-building-roof-tarring-questions-answers-blog-article-meta {
+  color: rgba(245,247,250,0.9) !important;
+}
+
+.blog-building-roof-tarring-questions-answers-blog-article-header .blog-building-roof-tarring-questions-answers-blog-article-meta span {
+  color: #F5F7FA !important;
+}
+
+.blog-building-roof-tarring-questions-answers-blog-article-header .blog-building-roof-tarring-questions-answers-blog-article-meta-divider {
+  background-color: rgba(245,247,250,0.5) !important;
+}
+
+#blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-share-top {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+#blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-share-label {
+  color: #F5F7FA !important;
+}
+
+#blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-share-icon {
+  border-color: rgba(245,247,250,0.5) !important;
+  color: #F5F7FA !important;
+  background: rgba(3,5,9,0.35) !important;
+}
+
+#blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-body, #blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-bottom-share, #blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-bottom-back {
+  max-width: 860px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+@media (max-width: 768px) {
+#blog-building-roof-tarring-questions-answers-blog-article-section .blog-building-roof-tarring-questions-answers-blog-article-hero-figure {
+  height: 62vh !important;
+  min-height: 380px !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,
