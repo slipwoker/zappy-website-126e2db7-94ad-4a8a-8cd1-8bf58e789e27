@@ -352,6 +352,10 @@ https://maor-ahzakot.co.il/blog-825075/shelter-renovation-after-fire
 https://maor-ahzakot.co.il/blog-825075/50-questions-apartment-fire-renovation
 מאור איטום - 50 שאלות ותשובות על שיפוץ דירה לאחר שריפה ומה עושים
 
+### איטום גגות
+https://maor-ahzakot.co.il/blog-825075/50-questions-roof-waterproofing
+מאור איטום - 50 שאלות ותשובות על איטום גגות
+
 ## Legal & Policy
 
 ### Privacy Policy
@@ -380,11 +384,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text, required)
-  - `email` (email, required)
-  - `phone` (tel, required)
-  - `message` (textarea, required)
-  - `privacy_consent` (checkbox, required)
+  - `name` (text)
+  - `email` (email)
+  - `phone` (tel)
+  - `message` (textarea)
+  - `privacy_consent` (checkbox)
 
 ---
 
