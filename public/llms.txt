@@ -268,8 +268,8 @@ https://maor-ahzakot.co.il/blog/balcony-waterproofing-without-demolition-faq
 https://maor-ahzakot.co.il/blog/apartment-renovation-after-fire
 מאור איטום - שיפוץ דירה לאחר שריפה: איך מחזירים את הבית למצב בטוח וראוי למגורים
 
-### Page
-https://maor-ahzakot.co.il/new-page-1793876225248
+### זיפות גגות בבניין משותף
+https://maor-ahzakot.co.il/roof-sealing-in-condominiums
 
 ### שאלות איטום
 https://maor-ahzakot.co.il/blog/roof-waterproofing-general-faq
@@ -368,11 +368,11 @@ Information about WCAG compliance and accessibility features.
 - Method: POST
 - Content-Type: application/json
 - Fields:
-  - `name` (text)
-  - `email` (email)
-  - `phone` (tel)
-  - `message` (textarea)
-  - `privacy_consent` (checkbox)
+  - `name` (text, required)
+  - `email` (email, required)
+  - `phone` (tel, required)
+  - `message` (textarea, required)
+  - `privacy_consent` (checkbox, required)
 
 ---
 

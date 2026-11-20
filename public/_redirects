@@ -1,5 +1,5 @@
 # Clean URL redirects for Render static hosting
-# Generated: 2026-11-20T09:51:30.935Z
+# Generated: 2026-11-20T09:57:37.388Z
 # NOTE: Render uses render.yaml for routing, not _redirects (that is Netlify)
 # This file is kept for reference only
 
@@ -72,7 +72,7 @@
 /blog/balcony-waterproofing-why-remove-tiles  /blog/balcony-waterproofing-why-remove-tiles.html  200!
 /blog/balcony-waterproofing-without-demolition-faq  /blog/balcony-waterproofing-without-demolition-faq.html  200!
 /blog/apartment-renovation-after-fire  /blog/apartment-renovation-after-fire.html  200!
-/new-page-1793876225248  /new-page-1793876225248.html  200!
+/roof-sealing-in-condominiums  /roof-sealing-in-condominiums.html  200!
 /blog/roof-waterproofing-general-faq  /blog/roof-waterproofing-general-faq.html  200!
 /roof-tarring-services  /roof-tarring-services.html  200!
 /roof-sealing-in-modiin  /roof-sealing-in-modiin.html  200!
