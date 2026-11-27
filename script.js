@@ -1433,6 +1433,41 @@ try {
 } catch (e) {
   if (typeof console !== 'undefined' && console.error) console.error('[Zappy] Added component script failed', e);
 }
+/* ZAPPY_CUSTOM_JS_START:022f5b7cfbf3 */
+(function () {
+  function __zappyCustomInit() {
+    try {
+// Optimize image loading for mobile speed
+(function () {
+  var imgs = document.querySelectorAll('img');
+
+  imgs.forEach(function (img) {
+    // Skip the hero background (must load immediately)
+    var isHero = img.classList.contains('index-hero-bg-img') ||
+                 img.hasAttribute('data-hero-bg') ||
+                 (img.closest && img.closest('.index-hero-bg'));
+    if (isHero) {
+      if (!img.hasAttribute('loading')) img.setAttribute('loading', 'eager');
+      if (img.hasAttribute('decoding')) img.removeAttribute('decoding');
+      return;
+    }
+
+    // Below-fold / decorative images load lazily
+    if (!img.hasAttribute('loading')) img.setAttribute('loading', 'lazy');
+    if (!img.hasAttribute('decoding')) img.setAttribute('decoding', 'async');
+  });
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:022f5b7cfbf3 */
 
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
