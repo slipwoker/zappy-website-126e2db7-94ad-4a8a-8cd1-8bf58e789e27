@@ -176,10 +176,6 @@ https://maor-ahzakot.co.il/balcony-waterproofing
 https://maor-ahzakot.co.il/thank-you
 תודה שפנית למאור אחזקות – מומחים באיטום גגות ושיפוץ מבנים. נציג שלנו יחזור אליכם בהקדם עם פרטים ומחיר מותאם לפרויקט שלכם.
 
-### איטום גגות בתל אביב – מאור אחזקות
-https://maor-ahzakot.co.il/copy
-מומחים לאיטום גגות בתל אביב והסביבה — יריעות ביטומניות, זפת חם ופוליאורטן. מאור אחזקות עם אחריות מלאה. לייעוץ חינם: 055-9932287.
-
 ### איטום לפי סוגי מבנים | מאור אחזקות
 https://maor-ahzakot.co.il/service-areas/building-types-coverage
 מאור אחזקות - שירותי איטום ושיקום לפי סוגי מבנים באזורי השירות
@@ -195,10 +191,6 @@ https://maor-ahzakot.co.il/apartment-house-stairwell-painting
 ### איטום מאגר מים | מאור אחזקות
 https://maor-ahzakot.co.il/water-reservoir-waterproofing
 מאור - איטום מאגר מים | מאור אחזקות
-
-### Air Duct Cleaning & HVAC Systems | Maor Holdings
-https://maor-ahzakot.co.il/air-duct-cleaning-hvac-systems
-Professional air duct cleaning and HVAC system maintenance by Maor Holdings. Advanced technologies, improved air quality, and energy savings for residential, office, and industrial buildings.
 
 ### צור קשר – מאור אחזקות | ייעוץ חינם
 https://maor-ahzakot.co.il/contact
@@ -286,8 +278,8 @@ https://maor-ahzakot.co.il/roof-sealing-in-modiin
 ### Page
 https://maor-ahzakot.co.il/roof-sealing-in-jerusalem
 
-### Page
-https://maor-ahzakot.co.il/10-typym-lbchyrt-kbln-aytvm-ggvt-brashvn-ltsyvn
+### 10 טיפים לבחירת קבלן איטום גגות בראשון לציון
+https://maor-ahzakot.co.il/10-tips-choosing-roof-waterproofing-contractor-rishon-lezion
 
 ### Page
 https://maor-ahzakot.co.il/roof-sealing-in-tel-aviv
@@ -405,7 +397,7 @@ Information about WCAG compliance and accessibility features.
   - `name` (text, required)
   - `email` (email, required)
   - `phone` (tel, required)
-  - `message` (textarea, required)
+  - `message` (textarea)
   - `privacy_consent` (checkbox, required)
 
 ---

@@ -1,0 +1,2657 @@
+<!DOCTYPE html><html lang="he" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Generated Website</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Zappy Analytics -->
+<script>
+(function() {
+  'use strict';
+  
+  // Configuration
+  var config = {
+    websiteId: '126e2db7-94ad-4a8a-8cd1-8bf58e789e27',
+    apiUrl: 'https://api.zappy5.com/api/analytics/track',
+    sessionDuration: 30 * 60 * 1000, // 30 minutes
+    visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
+    trackPageViews: true,
+    trackClicks: true,
+    trackFormSubmissions: true
+  };
+  
+  // Generate or retrieve persistent visitor ID (30 days)
+  function getVisitorId() {
+    var visitorKey = 'zappy_visitor_' + config.websiteId;
+    var visitor = null;
+    
+    try {
+      visitor = localStorage.getItem(visitorKey);
+      if (visitor) {
+        var visitorData = JSON.parse(visitor);
+        var now = Date.now();
+        
+        // Check if visitor ID is still valid (30 days)
+        if (now - visitorData.created < config.visitorDuration) {
+          // Update last seen timestamp
+          visitorData.lastSeen = now;
+          localStorage.setItem(visitorKey, JSON.stringify(visitorData));
+          return visitorData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: LocalStorage not available');
+    }
+    
+    // Generate new visitor ID
+    var newVisitorId = 'zv_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      localStorage.setItem(visitorKey, JSON.stringify({
+        id: newVisitorId,
+        created: Date.now(),
+        lastSeen: Date.now()
+      }));
+    } catch (e) {
+      // Continue without local storage
+    }
+    
+    return newVisitorId;
+  }
+  
+  // Generate or retrieve session ID (30 minutes)
+  function getSessionId() {
+    var sessionKey = 'zappy_session_' + config.websiteId;
+    var session = null;
+    
+    try {
+      session = sessionStorage.getItem(sessionKey);
+      if (session) {
+        var sessionData = JSON.parse(session);
+        var now = Date.now();
+        
+        // Check if session is still valid
+        if (now - sessionData.timestamp < config.sessionDuration) {
+          // Update timestamp
+          sessionData.timestamp = now;
+          sessionStorage.setItem(sessionKey, JSON.stringify(sessionData));
+          return sessionData.id;
+        }
+      }
+    } catch (e) {
+      console.warn('Zappy Analytics: SessionStorage not available');
+    }
+    
+    // Generate new session ID
+    var newSessionId = 'zs_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    try {
+      sessionStorage.setItem(sessionKey, JSON.stringify({
+        id: newSessionId,
+        timestamp: Date.now()
+      }));
+    } catch (e) {
+      // Continue without session storage
+    }
+    
+    return newSessionId;
+  }
+  
+  var visitorId = getVisitorId();
+  var sessionId = getSessionId();
+  
+  // Track an event
+  function trackEvent(eventType, data) {
+    data = data || {};
+    
+    var eventData = {
+      website_id: config.websiteId,
+      event_type: eventType,
+      page_path: window.location.pathname,
+      referrer: document.referrer || 'direct',
+      visitor_id: visitorId,
+      session_id: sessionId,
+      metadata: data
+    };
+    
+    // Use sendBeacon if available (better for page unload events)
+    if (navigator.sendBeacon) {
+      var blob = new Blob([JSON.stringify(eventData)], { type: 'application/json' });
+      navigator.sendBeacon(config.apiUrl, blob);
+    } else {
+      // Fallback to fetch
+      fetch(config.apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData),
+        keepalive: true
+      }).catch(function(error) {
+        console.warn('Zappy Analytics: Failed to track event', error);
+      });
+    }
+  }
+  
+  // Track page view
+  if (config.trackPageViews) {
+    trackEvent('pageview', {
+      title: document.title,
+      url: window.location.href
+    });
+  }
+  
+  // Track clicks on important elements
+  if (config.trackClicks) {
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      
+      // Track button clicks (counted as actions)
+      if (target.tagName === 'BUTTON' || target.closest('button')) {
+        var button = target.tagName === 'BUTTON' ? target : target.closest('button');
+        var clickMeta = {
+          element: 'button',
+          text: button.textContent.trim().substring(0, 100),
+          id: button.id || null,
+          class: button.className || null
+        };
+        
+        trackEvent('click', clickMeta);
+      }
+      
+      // Track link clicks (navigation - not counted as actions)
+      else if (target.tagName === 'A' || target.closest('a')) {
+        var link = target.tagName === 'A' ? target : target.closest('a');
+        var navMeta = {
+          element: 'link',
+          text: link.textContent.trim().substring(0, 100),
+          href: link.href,
+          external: link.hostname !== window.location.hostname
+        };
+        
+        trackEvent('navigation', navMeta);
+      }
+    }, true);
+  }
+  
+  
+  // Track form submissions
+  if (config.trackFormSubmissions) {
+    document.addEventListener('submit', function(e) {
+      var form = e.target;
+      
+      trackEvent('form_submit', {
+        form_id: form.id || null,
+        form_name: form.name || null,
+        form_action: form.action || null,
+        form_method: form.method || 'GET'
+      });
+    }, true);
+  }
+  
+  // Track time on page (send on page unload)
+  var pageLoadTime = Date.now();
+  
+  window.addEventListener('beforeunload', function() {
+    var timeOnPage = Math.floor((Date.now() - pageLoadTime) / 1000); // in seconds
+    
+    trackEvent('page_unload', {
+      time_on_page: timeOnPage,
+      page_path: window.location.pathname
+    });
+  });
+  
+  // Expose tracking function globally for custom events
+  window.zappyAnalytics = {
+    track: trackEvent,
+    getVisitorId: function() { return visitorId; },
+    getSessionId: function() { return sessionId; }
+  };
+  
+})();
+</script>
+<!-- End Zappy Analytics -->
+<!-- Zappy Marketing Events -->
+<script>
+(function() {
+  'use strict';
+  if (window.zappyFireMarketingEvent) return;
+
+  var ECOM_MODE = "";
+  var IS_CATALOG = false;
+  var IS_FULL = false;
+  var DIRECT_GA = false;
+  var DIRECT_META = false;
+  var GA_SEND_TO = "";
+
+  var ECOM_ALIAS = {
+    begin_checkout: 'checkout_started',
+    purchase: 'checkout_complete',
+    add_to_cart: 'add_to_cart',
+    view_product: 'view_product'
+  };
+
+  function pagePath() {
+    try {
+      if (window.ZAPPY_CONFIG && window.ZAPPY_CONFIG.currentPagePath) {
+        return window.ZAPPY_CONFIG.currentPagePath;
+      }
+    } catch (e) {}
+    try { return window.location.pathname || '/'; } catch (e2) { return '/'; }
+  }
+
+  function normalizeItems(meta) {
+    meta = meta || {};
+    var raw = meta.items || meta.cartItems || meta.cart_items || meta.lineItems || [];
+    if (!Array.isArray(raw)) raw = [];
+    var out = [];
+    for (var i = 0; i < raw.length; i++) {
+      var item = raw[i];
+      if (!item || typeof item !== 'object') continue;
+      var id = String(item.item_id || item.productId || item.product_id || item.id || '').trim();
+      var name = String(item.item_name || item.productName || item.product_name || item.name || '').trim();
+      var price = parseFloat(item.price != null ? item.price : (item.unitPrice != null ? item.unitPrice : 0)) || 0;
+      var quantity = Math.max(1, parseInt(item.quantity != null ? item.quantity : (item.qty != null ? item.qty : 1), 10) || 1);
+      if (!id && !name) continue;
+      out.push({ item_id: id || name, item_name: name || id, price: price, quantity: quantity });
+    }
+    return out;
+  }
+
+  function buildGa4Params(eventId, meta) {
+    meta = meta || {};
+    var items = normalizeItems(meta);
+    var value = parseFloat(meta.value != null ? meta.value : (meta.total != null ? meta.total : 0)) || 0;
+    var currency = String(meta.currency || 'USD').toUpperCase();
+
+    if (eventId === 'checkout_complete') {
+      return {
+        transaction_id: String(meta.transaction_id || meta.orderId || meta.order_id || meta.orderNumber || '') || undefined,
+        value: value,
+        currency: currency,
+        items: items
+      };
+    }
+    if (eventId === 'checkout_started') {
+      return { value: value, currency: currency, items: items };
+    }
+    if (eventId === 'add_to_cart') {
+      var atcItems = items.length ? items : [{
+        item_id: String(meta.productId || meta.product_id || ''),
+        item_name: String(meta.productName || meta.product_name || ''),
+        price: parseFloat(meta.value != null ? meta.value : (meta.price != null ? meta.price : 0)) || 0,
+        quantity: parseInt(meta.quantity != null ? meta.quantity : 1, 10) || 1
+      }].filter(function(x) { return x.item_id || x.item_name; });
+      return {
+        value: value || (atcItems[0] ? atcItems[0].price * atcItems[0].quantity : 0),
+        currency: currency,
+        items: atcItems
+      };
+    }
+    if (eventId === 'view_product') {
+      var vpItems = items.length ? items : [{
+        item_id: String(meta.productId || meta.product_id || ''),
+        item_name: String(meta.productName || meta.product_name || ''),
+        price: parseFloat(meta.price != null ? meta.price : (meta.value != null ? meta.value : 0)) || 0,
+        quantity: 1
+      }].filter(function(x) { return x.item_id || x.item_name; });
+      return {
+        currency: currency,
+        value: value || (vpItems[0] ? vpItems[0].price : 0),
+        items: vpItems
+      };
+    }
+    if (eventId === 'whatsapp_click' || eventId === 'phone_click') {
+      return { method: eventId === 'whatsapp_click' ? 'whatsapp' : 'phone', page_path: meta.pagePath || pagePath() };
+    }
+    if (eventId === 'contact_form_submitted' || eventId === 'product_inquiry') {
+      return { page_path: meta.pagePath || pagePath() };
+    }
+    return meta;
+  }
+
+  function buildMetaParams(eventId, meta) {
+    meta = meta || {};
+    var items = normalizeItems(meta);
+    var value = parseFloat(meta.value != null ? meta.value : (meta.total != null ? meta.total : 0)) || 0;
+    var currency = String(meta.currency || 'USD').toUpperCase();
+    var contentIds = [];
+    var numItems = 0;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].item_id) contentIds.push(items[i].item_id);
+      numItems += items[i].quantity || 1;
+    }
+
+    if (eventId === 'checkout_complete') {
+      return {
+        value: value,
+        currency: currency,
+        content_ids: contentIds.length ? contentIds : undefined,
+        content_type: 'product',
+        num_items: numItems || undefined,
+        order_id: String(meta.order_id || meta.orderId || meta.transaction_id || meta.orderNumber || '') || undefined
+      };
+    }
+    if (eventId === 'checkout_started') {
+      return {
+        value: value,
+        currency: currency,
+        content_ids: contentIds.length ? contentIds : undefined,
+        content_type: 'product',
+        num_items: numItems || parseInt(meta.itemCount != null ? meta.itemCount : 0, 10) || undefined
+      };
+    }
+    if (eventId === 'add_to_cart') {
+      var id = String(meta.productId || meta.product_id || contentIds[0] || '');
+      return {
+        value: value || (items[0] ? items[0].price * items[0].quantity : 0),
+        currency: currency,
+        content_ids: id ? [id] : (contentIds.length ? contentIds : undefined),
+        content_type: 'product',
+        content_name: meta.productName || meta.product_name || (items[0] && items[0].item_name),
+        num_items: parseInt(meta.quantity != null ? meta.quantity : (numItems || 1), 10) || 1
+      };
+    }
+    if (eventId === 'view_product') {
+      var vid = String(meta.productId || meta.product_id || contentIds[0] || '');
+      return {
+        value: value || parseFloat(meta.price != null ? meta.price : 0) || 0,
+        currency: currency,
+        content_ids: vid ? [vid] : (contentIds.length ? contentIds : undefined),
+        content_type: 'product',
+        content_name: meta.productName || meta.product_name || (items[0] && items[0].item_name)
+      };
+    }
+    if (eventId === 'whatsapp_click' || eventId === 'phone_click') {
+      return {
+        content_name: eventId === 'whatsapp_click' ? 'WhatsApp' : 'Phone',
+        content_category: 'contact'
+      };
+    }
+    if (eventId === 'contact_form_submitted' || eventId === 'product_inquiry') {
+      return {
+        content_name: eventId === 'product_inquiry' ? 'Product inquiry' : 'Contact form',
+        content_category: meta.productName || meta.product_name || undefined
+      };
+    }
+    return meta;
+  }
+
+  var PLATFORM = {
+    whatsapp_click: { ga4: 'contact', meta: 'Contact', gtm: 'whatsapp_click', ecom: false },
+    phone_click: { ga4: 'contact', meta: 'Contact', gtm: 'phone_click', ecom: false },
+    contact_form_submitted: { ga4: 'generate_lead', meta: 'Lead', gtm: 'contact_form_submitted', ecom: false },
+    checkout_started: { ga4: 'begin_checkout', meta: 'InitiateCheckout', gtm: 'begin_checkout', ecom: true },
+    checkout_complete: { ga4: 'purchase', meta: 'Purchase', gtm: 'purchase', ecom: true },
+    product_inquiry: { ga4: 'generate_lead', meta: 'Lead', gtm: 'product_inquiry', ecom: false },
+    add_to_cart: { ga4: 'add_to_cart', meta: 'AddToCart', gtm: 'add_to_cart', ecom: true },
+    view_product: { ga4: 'view_item', meta: 'ViewContent', gtm: 'view_item', ecom: true }
+  };
+
+  function purchaseDedupKey(orderId) {
+    return 'zappy_purchase_fired_' + String(orderId || '');
+  }
+
+  function purchaseMetaDedupKey(orderId) {
+    return 'zappy_purchase_meta_fired_' + String(orderId || '');
+  }
+
+  function alreadyFiredPurchase(orderId) {
+    if (!orderId) return false;
+    try {
+      return window.sessionStorage.getItem(purchaseDedupKey(orderId)) === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markPurchaseFired(orderId) {
+    if (!orderId) return;
+    try { window.sessionStorage.setItem(purchaseDedupKey(orderId), '1'); } catch (e) {}
+  }
+
+  function alreadyFiredPurchaseMeta(orderId) {
+    if (!orderId) return false;
+    try {
+      return window.sessionStorage.getItem(purchaseMetaDedupKey(orderId)) === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markPurchaseMetaFired(orderId) {
+    if (!orderId) return;
+    try { window.sessionStorage.setItem(purchaseMetaDedupKey(orderId), '1'); } catch (e) {}
+  }
+
+  function getPendingMetaEvents() {
+    try {
+      if (!Array.isArray(window.__zappyPendingMetaEvents)) {
+        window.__zappyPendingMetaEvents = [];
+      }
+      return window.__zappyPendingMetaEvents;
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function enqueueMetaEvent(eventName, params, orderId) {
+    var q = getPendingMetaEvents();
+    if (orderId) {
+      for (var i = 0; i < q.length; i++) {
+        if (q[i] && q[i].orderId === orderId && q[i].eventName === eventName) return;
+      }
+    }
+    q.push({ eventName: eventName, params: params || {}, orderId: orderId || null });
+  }
+
+  /**
+   * Live sites replace the eager Meta snippet with a consent-gated lazy
+   * loader. Payment providers bounce the shopper back to /order-success
+   * before CookieConsent hydrates, so confirm-order used to fire Purchase
+   * while window.fbq was still undefined — then sessionStorage blocked a
+   * retry. Queue until fbq exists, then flush.
+   */
+  function flushPendingMetaEvents() {
+    if (typeof window.fbq !== 'function') return;
+    var q = getPendingMetaEvents().slice();
+    try { window.__zappyPendingMetaEvents = []; } catch (e) {}
+    for (var i = 0; i < q.length; i++) {
+      var item = q[i];
+      if (!item || !item.eventName) continue;
+      if (item.orderId && alreadyFiredPurchaseMeta(item.orderId)) continue;
+      try {
+        window.fbq('track', item.eventName, item.params || {});
+        if (item.orderId) markPurchaseMetaFired(item.orderId);
+      } catch (e2) {}
+    }
+  }
+  window.zappyFlushPendingMetaEvents = flushPendingMetaEvents;
+
+  if (DIRECT_META) {
+    var metaFlushAttempts = 0;
+    var metaFlushTimer = setInterval(function() {
+      metaFlushAttempts++;
+      flushPendingMetaEvents();
+      var pendingLen = 0;
+      try { pendingLen = (window.__zappyPendingMetaEvents || []).length; } catch (e) {}
+      if ((pendingLen === 0 && typeof window.fbq === 'function') || metaFlushAttempts > 60) {
+        clearInterval(metaFlushTimer);
+      }
+    }, 500);
+  }
+
+  /**
+   * Fire a marketing event to first-party analytics + GA4/GTM/Meta when present.
+   * @param {string} eventName marketing ID or ecommerce alias
+   * @param {object} [metadata]
+   * @param {{ skipFirstParty?: boolean }} [opts]
+   */
+  window.zappyFireMarketingEvent = function(eventName, metadata, opts) {
+    try {
+      opts = opts || {};
+      metadata = metadata || {};
+      var eventId = ECOM_ALIAS[eventName] || eventName;
+      var plat = PLATFORM[eventId];
+      if (!plat) return;
+
+      if (!metadata.pagePath && !metadata.page_path) {
+        metadata.pagePath = pagePath();
+      }
+
+      var oid = '';
+      var purchaseAlreadySent = false;
+      var purchaseMetaAlreadySent = false;
+      if (eventId === 'checkout_complete') {
+        oid = String(metadata.orderId || metadata.order_id || metadata.transaction_id || '');
+        purchaseAlreadySent = !!(oid && alreadyFiredPurchase(oid));
+        purchaseMetaAlreadySent = !!(oid && alreadyFiredPurchaseMeta(oid));
+        if (purchaseAlreadySent && purchaseMetaAlreadySent) return;
+      }
+
+      // First-party (skip when already tracked via zappyTrackEcomAnalytics path
+      // that opts out, or when caller already recorded under a different name)
+      if (!opts.skipFirstParty && !purchaseAlreadySent) {
+        try {
+          if (window.zappyAnalytics && typeof window.zappyAnalytics.track === 'function') {
+            window.zappyAnalytics.track(eventId, metadata);
+          }
+        } catch (e1) {}
+      }
+
+      // GTM / dataLayer — platform-standard ecommerce event names.
+      // Always push. A bare gtag.js snippet ignores plain event objects;
+      // a GTM container is what turns them into GA4/Ads hits.
+      if (!purchaseAlreadySent) {
+        try {
+          window.dataLayer = window.dataLayer || [];
+          if (plat.ecom) {
+            var ga4ForGtm = buildGa4Params(eventId, metadata);
+            var ecommerce = {};
+            if (ga4ForGtm.transaction_id) ecommerce.transaction_id = ga4ForGtm.transaction_id;
+            if (ga4ForGtm.value != null) ecommerce.value = ga4ForGtm.value;
+            if (ga4ForGtm.currency) ecommerce.currency = ga4ForGtm.currency;
+            if (ga4ForGtm.items) ecommerce.items = ga4ForGtm.items;
+            // Clear first so GTM does not merge this hit with the previous ecommerce object.
+            window.dataLayer.push({ ecommerce: null });
+            window.dataLayer.push({ event: plat.gtm, ecommerce: ecommerce });
+            // Secondary Zappy-specific trigger for merchants who want it
+            if (eventId === 'checkout_complete' || eventId === 'checkout_started') {
+              window.dataLayer.push({ ecommerce: null });
+              window.dataLayer.push({ event: eventId, ecommerce: ecommerce });
+            }
+          } else {
+            var dl = { event: plat.gtm };
+            for (var k in metadata) {
+              if (Object.prototype.hasOwnProperty.call(metadata, k)) dl[k] = metadata[k];
+            }
+            window.dataLayer.push(dl);
+          }
+        } catch (e2) {}
+
+        // Direct Google Analytics snippet only. GTM also defines window.gtag;
+        // calling it then sends the same event again to every Google tag the
+        // container loaded. send_to keeps a direct GA install off those tags
+        // when the merchant also has GTM.
+        if (DIRECT_GA) {
+          try {
+            if (typeof window.gtag === 'function') {
+              var gaParams = buildGa4Params(eventId, metadata);
+              if (GA_SEND_TO && gaParams && typeof gaParams === 'object') {
+                var gaCopy = {};
+                for (var gk in gaParams) {
+                  if (Object.prototype.hasOwnProperty.call(gaParams, gk)) gaCopy[gk] = gaParams[gk];
+                }
+                gaCopy.send_to = GA_SEND_TO;
+                gaParams = gaCopy;
+              }
+              window.gtag('event', plat.ga4, gaParams);
+            }
+          } catch (e3) {}
+        }
+
+        if (oid) markPurchaseFired(oid);
+      }
+
+      // Meta Pixel — only the Zappy pixel integration. A pixel pasted inside
+      // GTM already initializes fbq; calling it from here would double-count.
+      // Live sites lazy-load fbq after marketing consent. If the stub is not
+      // defined yet, queue and flush when the pixel arrives.
+      if (DIRECT_META) {
+        try {
+          if (purchaseMetaAlreadySent) {
+            // already delivered to Meta
+          } else {
+            var metaParams = buildMetaParams(eventId, metadata);
+            if (typeof window.fbq === 'function') {
+              window.fbq('track', plat.meta, metaParams);
+              if (oid) markPurchaseMetaFired(oid);
+            } else {
+              enqueueMetaEvent(plat.meta, metaParams, eventId === 'checkout_complete' ? oid : null);
+            }
+          }
+        } catch (e4) {}
+      }
+    } catch (err) {}
+  };
+
+  // ---- Click listeners (capture) ----
+  var recent = Object.create(null);
+  function dedupe(key) {
+    var now = Date.now();
+    if (recent[key] && now - recent[key] < 800) return true;
+    recent[key] = now;
+    return false;
+  }
+
+  function closest(el, selector) {
+    if (!el) return null;
+    if (el.closest) return el.closest(selector);
+    return null;
+  }
+
+  function findAnchor(el) {
+    var node = el;
+    while (node && node !== document) {
+      if (node.tagName === 'A') return node;
+      node = node.parentElement;
+    }
+    return null;
+  }
+
+  function isWhatsAppHref(href) {
+    if (!href) return false;
+    var h = String(href).toLowerCase();
+    return h.indexOf('wa.me/') !== -1 ||
+      h.indexOf('api.whatsapp.com') !== -1 ||
+      h.indexOf('whatsapp.com/send') !== -1 ||
+      h.indexOf('whatsapp:') === 0;
+  }
+
+  document.addEventListener('click', function(e) {
+    try {
+      var target = e.target;
+      if (!target) return;
+
+      // WhatsApp
+      var waFloat = closest(target, '.whatsapp-float, a.whatsapp-float, [data-zappy-whatsapp]');
+      var anchor = findAnchor(target);
+      var href = (anchor && anchor.href) || '';
+      if (waFloat || (anchor && isWhatsAppHref(href))) {
+        if (!dedupe('wa:' + href)) {
+          var waSource = waFloat ? 'float' : 'link';
+          window.zappyFireMarketingEvent('whatsapp_click', {
+            source: waSource,
+            href: href || null,
+            pagePath: pagePath()
+          });
+        }
+        return;
+      }
+
+      // Phone
+      var phoneBtn = closest(target, '.phone-header-btn, .nav-phone-btn, .call-btn, [data-zappy-phone]');
+      var telHref = '';
+      if (anchor && anchor.href && String(anchor.href).toLowerCase().indexOf('tel:') === 0) {
+        telHref = anchor.href;
+      } else if (phoneBtn && phoneBtn.href && String(phoneBtn.href).toLowerCase().indexOf('tel:') === 0) {
+        telHref = phoneBtn.href;
+      }
+      if (phoneBtn || telHref) {
+        var phone = '';
+        if (telHref) {
+          phone = String(telHref).replace(/^tel:/i, '').trim();
+        }
+        if (!dedupe('tel:' + (phone || (phoneBtn && phoneBtn.id) || 'btn'))) {
+          window.zappyFireMarketingEvent('phone_click', {
+            source: phoneBtn ? 'button' : 'link',
+            phone: phone || null,
+            href: telHref || null,
+            pagePath: pagePath()
+          });
+        }
+        return;
+      }
+
+      // Catalog / product inquiry
+      if (IS_CATALOG || IS_FULL) {
+        var inq = closest(target, '.card-inquiry-btn, #zappy-pdp-inquiry-btn, a.inquiry-btn');
+        if (inq) {
+          if (!dedupe('inq:' + (inq.id || inq.className))) {
+            var product = window.currentProduct || null;
+            var productId = (inq.getAttribute && inq.getAttribute('data-product-id')) ||
+              (product && product.id) || null;
+            var productName = (inq.getAttribute && inq.getAttribute('data-product-name')) ||
+              (product && product.name) || null;
+            var channel = 'contact_page';
+            var inqHref = (inq.tagName === 'A' && inq.href) ? inq.href : '';
+            if (inqHref && String(inqHref).toLowerCase().indexOf('mailto:') === 0) channel = 'mailto';
+            window.zappyFireMarketingEvent('product_inquiry', {
+              source: inq.id === 'zappy-pdp-inquiry-btn' ? 'pdp' : 'card',
+              productId: productId,
+              productName: productName,
+              channel: channel,
+              pagePath: pagePath()
+            });
+          }
+        }
+      }
+    } catch (err) {}
+  }, true);
+})();
+</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://maor-ahzakot.co.il#organization","name":"מאור אחזקות","url":"https://maor-ahzakot.co.il","description":"A professional waterproofing and renovation company offering a comprehensive range of services including hot tar roofing, bituminous membrane waterproofing, polyurethane and epoxy roof sealing, concrete and tiled roof waterproofing, factory and parking lot waterproofing, balcony sealing, thermal insulation, Betokel casting, whitewashing, and post-fire renovation and apartment renovations. The business covers both residential and industrial projects with a wide variety of waterproofing solutions.","contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"dmaor75@gmail.com","telephone":"0559932287"}]},{"@type":"WebSite","@id":"https://maor-ahzakot.co.il#website","url":"https://maor-ahzakot.co.il","name":"מאור אחזקות","publisher":{"@id":"https://maor-ahzakot.co.il#organization"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://maor-ahzakot.co.il"},{"@type":"ListItem","position":2,"name":"10 Tips Choosing Roof Waterproofing Contractor Rishon Lezion","item":"https://maor-ahzakot.co.il/10-tips-choosing-roof-waterproofing-contractor-rishon-lezion"}]}]}</script>
+    <meta property="og:url" content="https://maor-ahzakot.co.il/10-tips-choosing-roof-waterproofing-contractor-rishon-lezion">
+    <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
+  
+  
+  
+  
+  
+  
+  <meta property="og:image:width" content="1920">
+  <meta property="og:image:height" content="1080">
+  <link rel="canonical" href="https://maor-ahzakot.co.il/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "מאור אחזקות",
+    "description": "מומחים לאיטום גגות ביריעות ביטומניות, זפת חם, פוליאוריתן ואפוקסי. שיפוץ ושיקום מבנים לאחר שריפה.",
+    "telephone": "055-9932287",
+    "email": "dmaor75@gmail.com",
+    "url": "https://maor-ahzakot.co.il",
+    "areaServed": "IL",
+    "priceRange": "₪₪",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  }
+  </script>
+  
+  <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
+    
+    <!-- UserWay Accessibility Widget -->
+    <script>
+    (function(d){
+      var s = d.createElement("script");
+      s.setAttribute("data-widget_layout", "full");
+      s.setAttribute("data-account", "1iM7WNeDQ2");
+      s.setAttribute("src", "https://cdn.userway.org/widget.js");
+      (d.body || d.head).appendChild(s);
+    })(document)
+    </script>
+    <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+
+          <style id="zappy-cta-mobile-style">
+            /* Hide CTA list item on desktop (tablets and up) */
+            @media (min-width: 769px) {
+              .nav-cta-item-mobile {
+                display: none !important;
+              }
+            }
+            /* Show CTA list item on mobile */
+            @media (max-width: 768px) {
+              .nav-cta-item-mobile {
+                display: list-item !important;
+              }
+            }
+          </style>
+        
+          <style id="zappy-nested-menu-style">
+            /* Desktop only: vertically center nav items */
+            @media (min-width: 769px) {
+              .nav-menu,
+              #navMenu {
+                align-items: center !important;
+              }
+            }
+            
+            /* Menu Group styling (non-clickable parent) - TOP LEVEL ONLY with ultra-specific selector */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+            }
+            
+            /* Desktop: show submenu on Menu Group hover */
+            li:has(.menu-group-title):hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when hovering */
+            }
+            
+            /* Hide menu items marked as hidden (overrides hover states) */
+            .zappy-hidden-menu-item,
+            li:has(.menu-group-title):hover > .sub-menu .zappy-hidden-menu-item {
+              display: none !important;
+              opacity: 0 !important;
+              visibility: hidden !important;
+              pointer-events: none !important;
+            }
+            
+            /* Keep submenu visible when hovering over the submenu itself */
+            .sub-menu:hover {
+              opacity: 1 !important;
+              visibility: visible !important;
+              pointer-events: auto !important;
+            }
+            
+            /* Nested dropdown menu styles - using more specific selectors */
+            .nav-menu .sub-menu,
+            nav .sub-menu,
+            .navbar .sub-menu {
+              display: block !important; /* Ensure submenu is in the DOM */
+              position: absolute !important;
+              top: 100%;
+              left: 0;
+              right: auto;
+              min-width: 200px;
+              background: white;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              border-radius: 8px;
+              padding: 8px 0;
+              margin-top: 0px; /* Remove gap to prevent hover loss */
+              opacity: 0 !important;
+              visibility: hidden !important;
+              transform: translateY(-10px);
+              transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+              z-index: 1000;
+              list-style: none;
+              pointer-events: none; /* Prevent interaction when hidden */
+            }
+            
+            /* RTL (Hebrew/Arabic) submenu positioning - align to right instead of left */
+            [dir="rtl"] .nav-menu .sub-menu,
+            [dir="rtl"] nav .sub-menu,
+            [dir="rtl"] .navbar .sub-menu,
+            html[lang="he"] .nav-menu .sub-menu,
+            html[lang="he"] nav .sub-menu,
+            html[lang="he"] .navbar .sub-menu,
+            html[lang="ar"] .nav-menu .sub-menu,
+            html[lang="ar"] nav .sub-menu,
+            html[lang="ar"] .navbar .sub-menu {
+              left: auto;
+              right: 0;
+            }
+            
+            /* Show submenu on parent hover - more specific selectors */
+            .nav-menu li:hover > .sub-menu,
+            nav li:hover > .sub-menu,
+            .navbar li:hover > .sub-menu {
+              opacity: 1 !important;
+              visibility: visible !important;
+              transform: translateY(0) !important;
+              pointer-events: auto !important; /* Enable interaction when visible */
+            }
+            
+            /* Parent item must be relatively positioned */
+            .nav-menu li:has(.sub-menu),
+            nav li:has(.sub-menu),
+            .navbar li:has(.sub-menu) {
+              position: relative;
+            }
+            
+            /* Style for submenu items */
+            .sub-menu li {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            
+            .sub-menu a,
+            .sub-menu .menu-group-title {
+              display: block !important;
+              padding: 10px 12px !important;
+              color: #333 !important;
+              font-weight: 600 !important;
+              text-decoration: none;
+              transition: background-color 0.2s;
+              white-space: nowrap;
+              cursor: default;
+            }
+            
+            .sub-menu a:hover {
+              background-color: #f5f5f5;
+            }
+            
+            /* CRITICAL: Override submenu styles for TOP-LEVEL Menu Groups only - must come AFTER submenu styles */
+            .nav-menu > li > .menu-group-title,
+            #navMenu > li > .menu-group-title {
+              display: inline-block !important;
+              padding: 0.5rem 1rem !important;
+              color: var(--nav-color) !important;
+              font-weight: 500 !important;
+              line-height: 1.7 !important;
+              cursor: default !important;
+              user-select: none !important;
+              vertical-align: middle !important;
+              text-decoration: none !important;
+              margin: 0 !important;
+              transition: color 0.3s ease !important;
+            }
+            
+            .nav-menu > li > .menu-group-title:hover,
+            #navMenu > li > .menu-group-title:hover {
+              color: var(--nav-hover-color) !important;
+              background-color: transparent !important;
+            }
+            
+            /* On mobile, show nested menus as expandable accordion */
+            @media (max-width: 768px) {
+              /* Mobile submenu styling */
+              .nav-menu .sub-menu,
+              nav .sub-menu,
+              .navbar .sub-menu {
+                position: static !important;
+                transform: none !important;
+                box-shadow: none !important;
+                background: transparent !important;
+                margin-top: 0 !important;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
+                padding: 0 !important;
+                border-radius: 0 !important;
+              }
+              
+              /* Expanded state */
+              .sub-menu.mobile-expanded {
+                max-height: 500px !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                padding: 8px 0 8px 16px !important;
+              }
+              
+              /* RTL padding adjustment */
+              [dir="rtl"] .sub-menu.mobile-expanded,
+              html[lang="he"] .sub-menu.mobile-expanded,
+              html[lang="ar"] .sub-menu.mobile-expanded {
+                padding: 8px 16px 8px 0 !important;
+              }
+              
+              /* Disable hover behavior on mobile */
+              .nav-menu li:hover > .sub-menu,
+              nav li:hover > .sub-menu,
+              .navbar li:hover > .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+              }
+              
+              /* Enable visibility for expanded submenus */
+              .nav-menu li > .sub-menu.mobile-expanded,
+              nav li > .sub-menu.mobile-expanded,
+              .navbar li > .sub-menu.mobile-expanded {
+                opacity: 1 !important;
+                visibility: visible !important;
+                pointer-events: auto !important;
+              }
+              
+              .sub-menu a {
+                padding: 10px 0 !important;
+                display: block !important;
+                font-size: 14px !important;
+              }
+              
+              .sub-menu a:hover {
+                background-color: transparent !important;
+              }
+              
+              /* Parent item wrapper - flex layout with relative positioning for absolute toggle */
+              .nav-menu li:has(.sub-menu),
+              nav li:has(.sub-menu),
+              .navbar li:has(.sub-menu) {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                align-items: center !important;
+                position: relative !important;
+                min-height: 44px !important;
+              }
+              
+              /* Parent link - takes full width since toggle is absolute (not a flex child) */
+              .nav-menu li:has(.sub-menu) > a,
+              nav li:has(.sub-menu) > a,
+              .navbar li:has(.sub-menu) > a,
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                flex: 1 !important;
+                min-width: 0 !important;
+              }
+              
+              /* Normalize menu-group-title in mobile nav to match link alignment */
+              .nav-menu > li > .menu-group-title,
+              #navMenu > li > .menu-group-title {
+                padding: 0 !important;
+                line-height: inherit !important;
+              }
+              
+              /* Submenu takes full width below parent */
+              .nav-menu li:has(.sub-menu) > .sub-menu,
+              nav li:has(.sub-menu) > .sub-menu,
+              .navbar li:has(.sub-menu) > .sub-menu {
+                flex-basis: 100% !important;
+                width: 100% !important;
+              }
+              
+              /* HIDE EXISTING CHEVRONS/ARROWS from cloned sites to prevent duplicates */
+              .nav-menu li:has(.sub-menu) > a .fa-chevron-down,
+              .nav-menu li:has(.sub-menu) > a .fa-angle-down,
+              .nav-menu li:has(.sub-menu) > a [class*="chevron"],
+              .nav-menu li:has(.sub-menu) > a [class*="arrow"],
+              nav li:has(.sub-menu) > a [class*="chevron"],
+              nav li:has(.sub-menu) > a [class*="arrow"],
+              #navMenu li:has(.sub-menu) > a [class*="chevron"],
+              #navMenu li:has(.sub-menu) > a [class*="arrow"] {
+                display: none !important;
+                visibility: hidden !important;
+              }
+              
+              /* Toggle arrow button - flex child that stretches to match nav-link height */
+              .mobile-submenu-toggle {
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                width: 44px !important;
+                height: auto !important;
+                background: transparent !important;
+                border: none !important;
+                cursor: pointer !important;
+                padding: 0 !important;
+                margin: 0 !important;
+                position: static !important;
+                flex-shrink: 0 !important;
+                align-self: stretch !important;
+                z-index: 2 !important;
+                -webkit-tap-highlight-color: transparent;
+              }
+              
+              .mobile-submenu-toggle::after {
+                content: '' !important;
+                display: block !important;
+                width: 0 !important;
+                height: 0 !important;
+                border-left: 6px solid transparent !important;
+                border-right: 6px solid transparent !important;
+                border-top: 7px solid currentColor !important;
+                transition: transform 0.3s ease !important;
+              }
+              
+              /* Rotate arrow when expanded */
+              .mobile-submenu-toggle.expanded::after {
+                transform: rotate(180deg) !important;
+              }
+            }
+            
+            /* Hide toggle button on desktop */
+            @media (min-width: 769px) {
+              .mobile-submenu-toggle {
+                display: none !important;
+              }
+            }
+          </style>
+          
+          <script id="zappy-mobile-menu-script">
+            // Mobile menu toggle for nested submenus (including Menu Groups)
+            // Uses separate toggle button - link navigates, arrow toggles submenu
+            (function() {
+              function initMobileMenuToggles() {
+                // Only run on mobile
+                if (window.innerWidth > 768) {
+                  // Remove any toggle buttons on desktop
+                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
+                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
+                    menu.classList.remove('mobile-expanded');
+                  });
+                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
+                  return;
+                }
+                
+                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
+                
+                // Find all parent menu items (items with .sub-menu)
+                const menuItemsWithSubmenus = document.querySelectorAll(
+                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
+                );
+                
+                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
+                
+                menuItemsWithSubmenus.forEach(function(li) {
+                  // Skip if already has toggle button
+                  if (li.querySelector('.mobile-submenu-toggle')) {
+                    return;
+                  }
+                  
+                  const submenu = li.querySelector('.sub-menu');
+                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
+                  
+                  if (!submenu || !parentLink) return;
+                  
+                  // Create toggle button
+                  const toggleBtn = document.createElement('button');
+                  toggleBtn.className = 'mobile-submenu-toggle';
+                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+                  toggleBtn.setAttribute('type', 'button');
+
+                  // Insert toggle button after the link
+                  parentLink.insertAdjacentElement('afterend', toggleBtn);
+                  
+                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
+                  
+                  // Handle toggle button click - only toggles submenu
+                  toggleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isExpanded = submenu.classList.contains('mobile-expanded');
+                    
+                    // Close all other submenus first
+                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+                      if (menu !== submenu) {
+                        menu.classList.remove('mobile-expanded');
+                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
+                        if (otherToggle) otherToggle.classList.remove('expanded');
+                      }
+                    });
+                    
+                    // Toggle this submenu
+                    submenu.classList.toggle('mobile-expanded');
+                    toggleBtn.classList.toggle('expanded');
+                    
+                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
+                  });
+                  
+                  // Parent link navigates normally - no preventDefault
+                });
+              }
+              
+              // Initialize on DOM load
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
+              } else {
+                initMobileMenuToggles();
+              }
+              
+              // Re-initialize on window resize (but use debounce to avoid too many calls)
+              let resizeTimer;
+              window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(initMobileMenuToggles, 250);
+              });
+              
+              // Also initialize when mobile menu becomes visible
+              // This handles cases where the mobile menu is hidden initially
+              const observer = new MutationObserver(function(mutations) {
+                mutations.forEach(function(mutation) {
+                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                    const target = mutation.target;
+                    if (target.classList.contains('active') || target.style.display !== 'none') {
+                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
+                      setTimeout(initMobileMenuToggles, 100);
+                    }
+                  }
+                });
+              });
+              
+              // Observe mobile menu containers
+              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
+              mobileMenus.forEach(function(menu) {
+                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+              });
+            })();
+          </script>
+        <style>
+      /* Dropdown sub-menu styles (AI-generated page) */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style>    <!-- ZAPPY_INTEGRATION_START analytics:add_google_tag_manager -->
+<!-- Google Consent Mode v2 (default) -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied',
+  'wait_for_update': 500
+});
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','AW-17733353102');</script>
+<!-- ZAPPY_INTEGRATION_END analytics:add_google_tag_manager -->
+  
+<style data-zappy-section-v2-css="true">
+/* V2 Regenerated Section CSS */
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section {
+  background-color: #090B10;
+  background-image: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05) 0 2px, transparent 3px), radial-gradient(circle at 80% 10%, rgba(255,180,64,0.08) 0 2px, transparent 3px), radial-gradient(circle at 70% 75%, rgba(0,184,255,0.06) 0 2px, transparent 3px);
+  color: var(--text-light);
+  padding: 100px 16px 80px;
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+  font-family: 'Inter', 'Heebo', sans-serif;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Section Header */
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-section-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-section-label {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  padding: 8px 20px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-main-title {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--text-light);
+  max-width: 900px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-section-rule {
+  width: 180px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), transparent);
+  margin: 0 auto 32px;
+  border-radius: 2px;
+  box-shadow: 0 0 24px rgba(0, 212, 255, 0.4);
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-intro-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 800px;
+  margin: 0 auto 16px;
+  text-align: center;
+}
+
+/* Tips Grid */
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-card {
+  background: #11161D;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  padding: 32px;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.38);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-number {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(0, 212, 255, 0.15);
+  line-height: 1;
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-title {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--text-light);
+  text-align: right;
+  margin-bottom: 4px;
+  padding-left: 40px;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-subtitle {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--secondary);
+  text-align: right;
+  margin-top: 8px;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  text-align: right;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-list li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: right;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--primary);
+  border-radius: 50%;
+  margin-top: 8px;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.5);
+}
+
+/* Comparison, Questions, Summary Sections */
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-comparison-section,
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-questions-section,
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-summary-section {
+  background: rgba(16, 21, 28, 0.68);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 40px;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-comparison-title,
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-questions-title,
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-summary-title {
+  font-family: 'Space Grotesk', 'Assistant', sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  color: var(--text-light);
+  text-align: right;
+  margin-bottom: 8px;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-comparison-title {
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 12px;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-questions-title {
+  color: var(--secondary);
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-summary-title {
+  color: var(--primary);
+}
+
+/* Image Wrapper */
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-image-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.38);
+  overflow: hidden;
+  position: relative;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-image-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section {
+    padding: 100px 16px 60px;
+  }
+
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-content-container {
+    gap: 40px;
+  }
+
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-main-title {
+    font-size: 2.2rem;
+  }
+
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tips-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+  }
+
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-card {
+    padding: 24px;
+  }
+
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-number {
+    font-size: 2.5rem;
+    top: 12px;
+    left: 16px;
+  }
+
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tip-title {
+    font-size: 1.3rem;
+    padding-left: 32px;
+  }
+
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-comparison-section,
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-questions-section,
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-summary-section {
+    padding: 24px;
+  }
+
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-comparison-title,
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-questions-title,
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-summary-title {
+    font-size: 1.6rem;
+  }
+
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-intro-text {
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section .s-10-tips-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+</style>
+    <style id="zappy-critical-above-fold-css">
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none;margin:0;padding:0}.navbar a,.nav-menu a,#navMenu a,.navbar .nav-links a{color:inherit;text-decoration:none}.navbar .sub-menu,.nav-menu .sub-menu,#navMenu .sub-menu{display:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.zappy-preview-empty-store-cta{display:none!important;visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}.zappy-catalog-menu{background:var(--surface-color,var(--surface,linear-gradient(135deg,#f8f9fa 0%,#fff 100%)));border-bottom:1px solid var(--border-color,#e5e7eb);padding:0;position:sticky;top:0;z-index:90}.zappy-catalog-menu[dir=rtl],.zappy-catalog-menu.rtl{direction:rtl}.zappy-catalog-menu[dir=ltr],.zappy-catalog-menu.ltr{direction:ltr}.catalog-menu-container{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 24px;overflow:visible}.catalog-menu-categories,.catalog-menu-list{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:0;padding:0;list-style:none}.catalog-menu-item{display:inline-flex;align-items:center;padding:8px 16px;font-size:14px;font-weight:500;color:var(--text-color,var(--text,#374151));text-decoration:none;border-radius:20px;white-space:nowrap}.catalog-menu-all{background:var(--primary-color,var(--primary,#111));color:var(--text-light,#fff)!important}.catalog-menu-parent{position:relative;display:inline-flex;align-items:center}.catalog-menu-trigger{display:inline-flex;align-items:center;gap:6px}.catalog-menu-chevron{flex-shrink:0}.catalog-menu-parent>.sub-menu{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden}.hero-section,.index-hero-section{min-height:560px}section[data-hero-type*="fullscreen"]{min-height:100vh}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"],section[data-hero-type*="fullscreen"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
+
+
+/* ZAPPY_ANNOUNCEMENT_HEADER_OFFSET_CSS_V3 */
+:root {
+  --zappy-header-stack-height: calc(var(--zappy-announcement-height, 40px) + var(--header-height, 72px));
+}
+body:has(.zappy-announcement-bar) nav.navbar:not(.zappy-catalog-menu),
+body:has(.zappy-announcement-bar) header.navbar,
+body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-search-panel) {
+  top: var(--zappy-announcement-height, 40px) !important;
+}
+/* First-paint: pull fullscreen heroes behind the fixed announcement+nav so a
+   transparent --nav-bg does not flash the cream body strip (live FOUC that
+   preview never showed because preview injects the same underlap eagerly). */
+body:has(.zappy-announcement-bar) section[data-hero-type^="fullscreen"],
+body:has(.zappy-announcement-bar) .index-hero-section,
+body:has(.zappy-announcement-bar) main > section[class*="hero"]:first-of-type {
+  margin-top: calc(-1 * var(--zappy-header-stack-height)) !important;
+  padding-top: calc(var(--zappy-header-stack-height)) !important;
+}
+
+
+
+/* ZAPPY_CONTENT_ALIGNMENT_FIRST_PAINT_CSS_V1 */
+[data-zappy-content-align] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+[data-zappy-content-align^="top-"] { justify-content: flex-start !important; }
+[data-zappy-content-align^="upper-"],
+[data-zappy-content-align^="center-"],
+[data-zappy-content-align^="lower-"] { justify-content: center !important; }
+[data-zappy-content-align^="bottom-"] { justify-content: flex-end !important; }
+[data-zappy-content-align$="-left"],
+[data-zappy-content-align$="-mid-left"] {
+  align-items: flex-start !important;
+  text-align: start !important;
+}
+[data-zappy-content-align$="-center"] {
+  align-items: center !important;
+  text-align: center !important;
+}
+[data-zappy-content-align$="-right"],
+[data-zappy-content-align$="-mid-right"] {
+  align-items: flex-end !important;
+  text-align: end !important;
+}
+[data-zappy-content-align] [data-zappy-align-target] {
+  margin-left: auto;
+  margin-right: auto;
+}
+[data-zappy-content-align$="-center"] [data-zappy-align-target],
+[data-zappy-content-align$="-center"] [data-zappy-align-target] > * {
+  text-align: center !important;
+}
+
+</style>
+    <link rel="stylesheet" href="/styles.css">
+    <script>window.ZAPPY_WEBSITE_ID = "126e2db7-94ad-4a8a-8cd1-8bf58e789e27"; window.ZAPPY_API_BASE = "https://api.zappy5.com";</script>
+
+    <style id="zappy-widget-visibility">
+      html[dir="rtl"] .whatsapp-float { right: 20px !important; left: auto !important; }
+      html[dir="ltr"] .whatsapp-float, html:not([dir]) .whatsapp-float { left: 20px !important; right: auto !important; }
+      html[dir="rtl"] #mic-access-tool-general-button, html[dir="rtl"] .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="rtl"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="rtl"] ._access-icon { left: 20px !important; right: auto !important; }
+      html[dir="ltr"] #mic-access-tool-general-button, html[dir="ltr"] .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool .mic-access-tool-general-button,
+      html[dir="ltr"] #mic-init-access-tool #mic-access-tool-general-button,
+      html[dir="ltr"] ._access-icon,
+      html:not([dir]) #mic-access-tool-general-button, html:not([dir]) .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool .mic-access-tool-general-button,
+      html:not([dir]) #mic-init-access-tool #mic-access-tool-general-button,
+      html:not([dir]) ._access-icon { right: 20px !important; left: auto !important; }
+      @media (max-width: 768px) { .whatsapp-float { display: flex !important; } }
+      @media (min-width: 769px) { .whatsapp-float { display: flex !important; } }
+      @media (max-width: 768px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
+      }
+      @media (min-width: 769px) {
+        #mic-access-tool-general-button, .mic-access-tool-general-button,
+        #mic-init-access-tool .mic-access-tool-general-button, #mic-init-access-tool #mic-access-tool-general-button,
+        ._access-icon, #mic-access-tool-box, .mic-access-tool-box,
+        #mic-init-access-tool #mic-access-tool-box, div[id*="mic-access-tool-box"], ._access-menu {
+          display: none !important; visibility: hidden !important; opacity: 0 !important; pointer-events: none !important;
+        }
+      }
+    </style>
+</head>
+<body>
+
+    <!-- ZAPPY_INTEGRATION_START analytics:add_google_tag_manager -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=AW-17733353102" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- ZAPPY_INTEGRATION_END analytics:add_google_tag_manager -->
+  <nav class="navbar" dir="rtl">
+  <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+    <svg style="display:block !important" class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </svg>
+    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none !important">
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    </svg>
+  </button>
+
+  <button class="phone-header-btn" data-phone="0559932287" aria-label="Call">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+    </svg>
+  </button>
+
+  <div class="nav-container">
+    <div class="nav-right-group"><div class="nav-brand">
+      <a href="/" class="logo-link">
+        <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" decoding="async" width="35" height="35">
+      </a>
+    </div><ul class="nav-menu" id="navMenu"><li><a href="/roof-waterproofing">איטום גגות</a></li><li><a href="/industrial-waterproofing">איטום תעשייתי ומבני</a></li><li><a href="/roof-tarring" class="nav-link">זיפות גגות</a></li><li><a href="/polyurethane-roof-waterproofing" class="nav-link">איטום פוליאוריטני</a></li><li><a href="/testimonials" class="nav-link">המלצות</a></li><li><a href="/blog" class="nav-link">הבלוג</a><ul class="sub-menu"><li><a href="/blog/roof-inspection-before-winter">בדיקת גג לפני החורף: מה בודקים כדי למנוע חדירת מים</a></li><li><a href="/blog/exterior-walls-water-warning-signs">סימני אזהרה לחדירת מים בקירות חוץ</a></li><li><a href="/blog/polyurethane-waterproofing-when-to-use">איטום פוליאוריטני: מתי הוא פתרון נכון ומתי לא</a></li><li><a href="/blog/concrete-repair-after-long-term-moisture">שיקום בטון אחרי רטיבות ממושכת</a></li><li><a href="/blog/roof-waterproofing-yatzata-tzadik">איטום גגות "יצאת צדיק": איך בוחרים קבלן אמין ומקצועי</a></li><li><a href="/blog/balcony-roof-waterproofing-without-demolition">איטום גג מרפסת ללא פירוק: מתי זה אפשרי ומה חייבים לבדוק לפני</a></li><li><a href="/blog/balcony-roof-waterproofing-with-demolition">איטום גג מרפסת עם פירוק: מתי זה נדרש ואיך מבצעים נכון</a></li><li><a href="/blog/mold-and-condensation-treatment">טיפול בעובש ועיבוי: איך מזהים את מקור הבעיה ומה באמת פותר אותה</a></li><li><a href="/blog/roof-waterproofing-price-guide">מחירון איטום גגות: מה משפיע על המחיר ואיך משווים נכון בין הצעות</a></li><li><a href="/blog/shower-waterproofing">איטום מקלחת: מה חייבים לבצע נכון כדי למנוע רטיבות ונזקים נסתרים</a></li><li><a href="/blog/roof-tarring-yatzata-tzadik-quality-check">זיפות גגות "יצאת צדיק": איך לבדוק אם עבודת הזיפות באמת בוצעה נכון</a></li><li><a href="/blog/stairwell-renovation-after-fire">שיפוץ חדר מדרגות לאחר שריפה: סדר הפעולות הנכון לחזרה בטוחה לשימוש</a></li><li><a href="/water-leak-services">דליפת מים בבית - סיבות, סימנים ואיך מטפלים בזה</a></li><li><a href="/roofing-and-waterproofing">זיפות גגות – שיטות ועלויות</a></li><li><a href="/blog/basement-wall-waterproofing">איטום קירות מרתף: איך מונעים חדירת מים ולחות מהיסוד</a></li><li><a href="/blog/roof-penetrations-waterproofing">איטום סביב דודי שמש, מזגנים ומעברי צנרת בגג: הנקודות הקטנות שגורמות לנזילות גדולות</a></li><li><a href="/blog/parapet-and-roof-joint-waterproofing">איטום חיבורי קיר-גג ומעקות: למה דווקא שם מתחילות נזילות רבות</a></li><li><a href="/blog/smoke-soot-odor-removal-after-fire">איך נפתרים מריח של עשן ופיח שנשאר בדירה אחרי שריפה</a></li><li><a href="/blog/bituminous-membranes-warranty-years">האם חברת איטום נותנת אחריות על עבודת יריעות ביטומניות ולכמה שנים</a></li><li><a href="/roof-sealant-materials">חומרי איטום לגגות - מה כדאי להכיר לפני שבוחרים</a></li><li><a href="/blog/first-steps-after-apartment-fire">מה עושים קודם כל מיד לאחר שריפה בדירה</a></li><li><a href="/blog/old-tar-roof-upgrade-to-bituminous-membranes">גג עם זיפות ישן: מתי עדיף לעבור ליריעות ביטומניות ומתי לא</a></li><li><a href="/roof-tarring-price-factors" class="nav-link">זיפות גגות מחיר - הגורמים שקובעים כמה תשלמו בסוף</a></li><li><a href="/blog/roof-waterproofing-arad" class="nav-link">איטום בערד</a></li><li><a href="/blog/roof-waterproofing-tzadik-quality-checklist" class="nav-link">צ׳ק ליסט לאיטום גגות</a></li><li><a href="/blog/spray-applied-roof-waterproofing" class="nav-link">איטום גגות בהתזה</a></li><li><a href="/blog/spray-roof-waterproofing-faq" class="nav-link">שאלות על איטום בהתזה</a></li><li><a href="/blog/roof-tarring-faq" class="nav-link">שאלות ותשובות על זיפות</a></li><li><a href="/blog/bituminous-roof-waterproofing-faq" class="nav-link">שאלות על יריעות ביטומניות</a></li><li><a href="/blog/iscorit-roof-waterproofing" class="nav-link">איטום גג איסכורית</a></li><li><a href="/blog/window-opening-waterproofing" class="nav-link">איטום חלונות ופתחים</a></li><li><a href="/blog/concrete-roof-waterproofing" class="nav-link">איטום גג בטון</a></li><li><a href="/blog/spray-roof-waterproofing-pros-cons" class="nav-link">איטום בהתזה: יתרונות וחסרונות</a></li><li><a href="/blog/hot-tar-roof-waterproofing-pros-cons" class="nav-link">זפת חם: יתרונות וחסרונות</a></li><li><a href="/blog/balcony-waterproofing-why-remove-tiles" class="nav-link">למה מפרקים ריצוף לפני איטום</a></li><li><a href="/blog/balcony-waterproofing-without-demolition-faq" class="nav-link">שאלות על איטום מרפסת</a></li><li><a href="/blog/apartment-renovation-after-fire" class="nav-link">שיקום דירה לאחר שריפה</a></li><li><a href="/blog/roof-waterproofing-general-faq" class="nav-link">שאלות נפוצות על איטום</a></li><li><a href="/roof-tarring-services" class="nav-link">בחירת קבלן זיפות נכון</a></li><li><a href="/roof-sealing-in-modiin" class="nav-link">איטום גגות במודיעין</a></li><li><a href="/roof-sealing-in-jerusalem" class="nav-link">איטום גג בירושלים</a></li><li><a href="/10-tips-choosing-roof-waterproofing-contractor-rishon-lezion" class="nav-link">10 טיפים לבחירת קבלן איטום גגות בראשון לציון</a></li><li><a href="/blog/building-roof-tarring-questions-answers" class="nav-link">זיפות גגות בבניין משותף</a></li></ul></li><li><a href="/service-areas" class="nav-link">אזורים</a><ul class="sub-menu"><li><a href="/roof-waterproofing-tel-aviv">מומחים לאיטום גגות בתל אביב</a></li><li><a href="/service-areas/roof-waterproofing-netanya">איטום גגות בנתניה</a></li><li><a href="/roof-waterproofing-services">איטום גגות במרכז ובשרון</a></li><li><a href="/service-areas/roof-waterproofing-jerusalem">איטום גגות בירושלים והסביבה</a></li><li><a href="/service-areas/roof-waterproofing-haifa-krayot">איטום גגות בחיפה והקריות</a></li><li><a href="/service-areas/roof-waterproofing-shefela-south-gush-dan">איטום גגות בשפלה ובדרום גוש דן</a></li><li><a href="/service-areas/roof-waterproofing-eilat">איטום לגג באילת</a></li><li><a href="/service-areas/roof-waterproofing-beer-sheva">איטום גגות בבאר שבע</a></li><li><a href="/service-areas/building-types-coverage">שירותי איטום ושיקום לפי סוגי מבנים באזורי השירות</a></li><li><a href="/service-areas/waterproofing-contractor" class="nav-link">קבלן איטום</a></li><li><a href="/roof-sealing-in-tel-aviv" class="nav-link">איטום גג בתל אביב</a></li><li><a href="/roof-waterproofing-in-tel-aviv" class="nav-link">זיפות גגות בתל אביב</a></li><li><a href="/roof-waterproofing-in-rehovot" class="nav-link">איטום גגות ברחובות</a></li><li><a href="/roof-sealing-faqs-in-rehovot" class="nav-link">שאלות ותשובות על זיפות גגות ברחובות: כל מה שצריך לדעת</a></li><li><a href="/roof-sealing-in-rishon-lezion" class="nav-link">איטום גג בראשון לציון</a></li><li><a href="/roof-waterproofing-in-modiin" class="nav-link">זיפות גגות במודיעין</a></li><li><a href="/roof-waterproofing-in-jerusalem" class="nav-link">איטום גגות בירושלים</a></li><li><a href="/roof-sealing-in-mevaseret-zion" class="nav-link">איטום גג במבשרת ציון</a></li><li><a href="/roof-sealing-beer-sheva" class="nav-link">איטום לגג באר שבע</a></li><li><a href="/roof-tarring-in-beer-sheva" class="nav-link">זיפות לגג בבאר שבע</a></li></ul></li><li><a href="/renovation-fire-recovery">שיפוץ ושיקום לאחר שריפה</a></li><li><a href="/exterior-building-renovation" class="nav-link">שיפוץ חוץ</a><ul class="sub-menu"><li><a href="/mold-removal-from-walls">ניקוי עובש והורדת עובש בקירות</a></li><li><a href="/balcony-waterproofing">איטום מרפסות</a></li><li><a href="/roof-sealing-in-beer-sheva" class="nav-link">איטום גג בבאר שבע</a></li></ul></li><li><a href="/apartment-house-stairwell-painting" class="nav-link">צביעת מבנים</a></li><li><a href="/water-reservoir-waterproofing" class="nav-link">איטום מאגרי מים</a></li><li><a href="/roof-sealing-in-condominiums" class="nav-link">זיפות גגות בבניין משותף</a></li><li class="nav-cta-item-mobile"><a href="/contact">צור קשר</a></li><li><a href="/maor-holdings-professional-guide" class="nav-link">המדריך המקצועי של מאור אחזקות</a><ul class="sub-menu"><li><a href="/blog/early-waterproofing-warning-signs" class="nav-link">סימני אזהרה לאיטום</a></li><li><a href="/blog/bituminous-membranes-vs-tarring-guide" class="nav-link">שיטות איטום: יריעות מול זיפות</a></li><li><a href="/blog/water-damage-building-recovery-steps" class="nav-link">שיקום מבנה מנזקי מים</a></li><li><a href="/blog/preventive-envelope-maintenance-before-winter" class="nav-link">תחזוקה לפני החורף</a></li><li><a href="/roof-tarring-cost" class="nav-link">מחיר זיפות גגות</a></li><li><a href="/blog-825075/building-renovation-after-fire" class="nav-link">שיקום שריפה</a></li><li><a href="/blog-825075/shelter-renovation-after-fire" class="nav-link">שיפוץ מקלט</a></li><li><a href="/blog-825075/50-questions-apartment-fire-renovation" class="nav-link">50 שאלות על שיפוץ לאחר שריפה</a></li><li><a href="/blog-825075/50-questions-roof-waterproofing" class="nav-link">50 שאלות על איטום גגות</a></li><li><a href="/blog-825075/hot-tar-roof-waterproofing-contractor-israel" class="nav-link">קבלן זיפות גגות</a></li><li><a href="/blog-825075/best-roof-waterproofing-contractors-israel" class="nav-link">קבלני איטום בישראל</a></li><li><a href="/blog-825075/bituminous-roof-waterproofing-cost-per-sqm" class="nav-link">מחיר יריעות ביטומניות למ״ר</a></li></ul></li></ul></div>
+
+    
+
+    <div class="nav-cta-container">
+      <a href="/contact" class="nav-cta-btn">צור קשר</a>
+    </div>
+  </div>
+</nav>
+<script>
+
+// Navbar Mobile Menu Toggle and Contrast Fix
+(function() {
+  // Use 'load' event instead of 'DOMContentLoaded' to ensure we run AFTER all other scripts
+  window.addEventListener('load', function() {
+    
+    // FIX MOBILE BUTTON CONTRAST
+    // Detect navbar background color and apply contrasting color to mobile buttons
+    const navbar = document.querySelector('.navbar, nav, header');
+    if (!navbar) {
+      console.log('[Navbar] Navbar element not found');
+      return;
+    }
+    
+    // DECLARE VARIABLES EARLY to avoid Temporal Dead Zone errors
+    // These are used in multiple places below
+    let mobileToggle = document.getElementById('mobileToggle') ||
+                       document.querySelector('.mobile-toggle') ||
+                       document.querySelector('.hamburger') ||
+                       document.querySelector('.hamburger-menu') ||
+                       document.querySelector('.menu-toggle') ||
+                       document.querySelector('.burger-menu') ||
+                       document.querySelector('[aria-label="Menu"]') ||
+                       document.querySelector('[aria-label="תפריט"]');
+    
+    const phoneBtn = document.querySelector('.phone-header-btn');
+    
+    const computedStyle = window.getComputedStyle(navbar);
+    let bgColor = computedStyle.backgroundColor;
+    
+    console.log('[Navbar] Initial navbar background:', bgColor);
+    
+    // Check if background is transparent or rgba with 0 alpha
+    const isTransparent = bgColor === 'transparent' || 
+                         bgColor === 'rgba(0, 0, 0, 0)' ||
+                         (bgColor.startsWith('rgba') && bgColor.includes(', 0)'));
+    
+    if (isTransparent) {
+      // Check for background-image or gradient
+      const bgImage = computedStyle.backgroundImage;
+      if (bgImage && bgImage !== 'none') {
+        console.log('[Navbar] Navbar has background image/gradient, using dark text');
+        bgColor = 'rgb(240, 240, 240)'; // Assume light background
+      } else {
+        // Transparent navbar - check body background
+        const bodyBg = window.getComputedStyle(document.body).backgroundColor;
+        console.log('[Navbar] Navbar transparent, using body background:', bodyBg);
+        bgColor = bodyBg;
+      }
+    }
+    
+    // Calculate luminance to determine if background is light or dark
+    const rgb = bgColor.match(/\d+/g);
+    if (rgb && rgb.length >= 3) {
+      const r = parseInt(rgb[0]);
+      const g = parseInt(rgb[1]);
+      const b = parseInt(rgb[2]);
+      const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+      
+      // Mobile button colors are set by Claude's AI-generated CSS (same as .nav-menu a)
+      // No dynamic color overrides needed - colors come from the generated navbar CSS
+      console.log('[Navbar] Mobile button colors preserved from Claude CSS (luminance:', luminance.toFixed(2) + ')');
+      
+      // FIX ICON SIZES - Ensure SVGs are properly sized and visible
+      // INJECT CRITICAL CSS TO OVERRIDE ANY CONFLICTING RULES
+      const criticalCSS = document.createElement('style');
+      criticalCSS.id = 'zappy-mobile-nav-fix';
+      const htmlLang = document.documentElement.lang || 'en';
+      const htmlDir = document.documentElement.dir || 'ltr';
+      // Check both dir attribute AND lang for RTL detection
+      // dir="rtl" is the most reliable indicator
+      const isRTL = htmlDir === 'rtl' || htmlLang === 'he' || htmlLang === 'ar';
+      
+      criticalCSS.textContent = `
+        /* Hide mobile buttons on desktop, show only on mobile */
+        @media (min-width: 769px) {
+          .mobile-toggle,
+          .phone-header-btn {
+            display: none !important;
+          }
+        }
+        
+        /* Show and position mobile buttons correctly on mobile */
+        @media (max-width: 768px) {
+          .mobile-toggle,
+          .phone-header-btn {
+            position: absolute !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            z-index: 1001 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 36px !important;
+            height: 36px !important;
+            border-radius: 50% !important;
+            border: none !important;
+            cursor: pointer !important;
+            padding: 6px !important;
+            background: none !important;
+            color: var(--nav-text, var(--text-light)) !important;
+          }
+          
+          /* LTR positioning (default): hamburger LEFT, phone RIGHT */
+          html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .mobile-toggle,
+          html[dir="ltr"] .mobile-toggle {
+            left: 12px !important;
+            right: auto !important;
+          }
+          html:not([dir="rtl"]):not([lang="he"]):not([lang="ar"]) .phone-header-btn,
+          html[dir="ltr"] .phone-header-btn {
+            right: 12px !important;
+            left: auto !important;
+          }
+          
+          /* RTL positioning: hamburger RIGHT, phone LEFT */
+          html[dir="rtl"] .mobile-toggle,
+          html[lang="he"] .mobile-toggle,
+          html[lang="ar"] .mobile-toggle {
+            right: 12px !important;
+            left: auto !important;
+          }
+          html[dir="rtl"] .phone-header-btn,
+          html[lang="he"] .phone-header-btn,
+          html[lang="ar"] .phone-header-btn {
+            left: 12px !important;
+            right: auto !important;
+          }
+          
+          /* CRITICAL: Ensure nav-container has min-height on mobile */
+          /* All children are positioned absolutely/fixed on mobile, so height:auto collapses to 0 */
+          .nav-container {
+            min-height: 70px !important;
+            position: relative !important;
+          }
+          
+          /* Ensure SVG icons are properly sized and inherit color */
+          .mobile-toggle svg,
+          .phone-header-btn svg {
+            width: 24px !important;
+            height: 24px !important;
+            /* Don't force display - let JavaScript control hamburger/close toggle */
+          }
+          
+          /* Reset nav-cta-container on mobile - remove desktop box-shadow/padding */
+          /* that creates a visible ghost box when CTA button is hidden */
+          .nav-cta-container {
+            box-shadow: none !important;
+            padding: 0 !important;
+          }
+          
+          /* Hide nav-cta-container entirely on mobile when there's no lang-switcher */
+          /* (only the CTA button is inside, and it's hidden on mobile) */
+          .nav-cta-container:not(:has(.lang-switcher)) {
+            display: none !important;
+          }
+          
+          /* CRITICAL: Prevent hero image fade gradient from bleeding over headline text */
+          /* The .image-fade-gradient has bottom: -30px (extends below parent) */
+          /* On mobile stacked layout, this overlaps the h1 text below the image */
+          .hero-image-column {
+            overflow: hidden !important;
+          }
+          .image-fade-gradient {
+            bottom: 0 !important;
+          }
+          
+          /* Hide desktop language switcher on mobile - hamburger menu handles it */
+          /* High specificity to override stored CSS */
+          .lang-switcher,
+          .nav-cta-container .lang-switcher,
+          .nav-container .lang-switcher,
+          .navbar .lang-switcher,
+          .navbar .nav-cta-container .lang-switcher {
+            display: none !important;
+          }
+        }
+      `;
+      
+      // Remove existing fix if present and inject new one
+      const existing = document.getElementById('zappy-mobile-nav-fix');
+      if (existing) existing.remove();
+      document.head.appendChild(criticalCSS);
+      
+      console.log('[Navbar] Critical CSS injected for mobile nav positioning');
+      
+      // ONLY apply inline positioning styles on mobile viewport
+      // On desktop, the CSS handles hiding these buttons with display: none
+      // Inline styles were breaking desktop layout by overriding CSS
+      const isMobileViewport = window.innerWidth <= 768;
+      
+      if (mobileToggle) {
+        // Icon sizing applies to all viewports for consistency
+        const hamburgerIcon = mobileToggle.querySelector('.hamburger-icon');
+        const closeIcon = mobileToggle.querySelector('.close-icon');
+        
+        if (hamburgerIcon) {
+          hamburgerIcon.style.setProperty('width', '24px', 'important');
+          hamburgerIcon.style.setProperty('height', '24px', 'important');
+          hamburgerIcon.style.setProperty('display', 'block', 'important'); // Show hamburger by default
+        }
+        if (closeIcon) {
+          closeIcon.style.setProperty('width', '24px', 'important');
+          closeIcon.style.setProperty('height', '24px', 'important');
+          closeIcon.style.setProperty('display', 'none', 'important'); // Hide close icon by default
+        }
+        
+        // ONLY set positioning inline styles on mobile
+        if (isMobileViewport) {
+          mobileToggle.style.setProperty('position', 'absolute', 'important');
+          mobileToggle.style.setProperty('top', '50%', 'important');
+          mobileToggle.style.setProperty('transform', 'translateY(-50%)', 'important');
+          mobileToggle.style.setProperty('z-index', '1001', 'important');
+          
+          // Clear any inline left/right so CSS can take over based on html[dir]
+          mobileToggle.style.removeProperty('left');
+          mobileToggle.style.removeProperty('right');
+          
+          console.log('[Navbar] Mobile toggle positioning applied (mobile viewport)');
+        } else {
+          // On desktop, clear any positioning styles to let CSS handle it
+          mobileToggle.style.removeProperty('position');
+          mobileToggle.style.removeProperty('top');
+          mobileToggle.style.removeProperty('transform');
+          mobileToggle.style.removeProperty('z-index');
+          mobileToggle.style.removeProperty('left');
+          mobileToggle.style.removeProperty('right');
+          console.log('[Navbar] Desktop viewport - cleared mobile toggle inline positioning');
+        }
+      }
+      
+      if (phoneBtn) {
+        // Icon sizing applies to all viewports
+        const phoneIcon = phoneBtn.querySelector('svg');
+        if (phoneIcon) {
+          phoneIcon.style.width = '24px';
+          phoneIcon.style.height = '24px';
+          phoneIcon.setAttribute('width', '24');
+          phoneIcon.setAttribute('height', '24');
+        }
+        
+        // ONLY set positioning inline styles on mobile
+        if (isMobileViewport) {
+          phoneBtn.style.setProperty('position', 'absolute', 'important');
+          phoneBtn.style.setProperty('top', '50%', 'important');
+          phoneBtn.style.setProperty('transform', 'translateY(-50%)', 'important');
+          phoneBtn.style.setProperty('z-index', '1001', 'important');
+          
+          // Clear any inline left/right so CSS can take over based on html[dir]
+          phoneBtn.style.removeProperty('left');
+          phoneBtn.style.removeProperty('right');
+          
+          console.log('[Navbar] Phone button positioning applied (mobile viewport)');
+        } else {
+          // On desktop, clear any positioning styles to let CSS handle it
+          phoneBtn.style.removeProperty('position');
+          phoneBtn.style.removeProperty('top');
+          phoneBtn.style.removeProperty('transform');
+          phoneBtn.style.removeProperty('z-index');
+          phoneBtn.style.removeProperty('left');
+          phoneBtn.style.removeProperty('right');
+          console.log('[Navbar] Desktop viewport - cleared phone button inline positioning');
+        }
+      }
+    } else {
+      console.log('[Navbar] Could not parse background color:', bgColor);
+    }
+    
+    // MOBILE MENU TOGGLE
+    // Re-query in case DOM changed (mobileToggle already declared at top of function)
+    mobileToggle = document.getElementById('mobileToggle') ||
+                   document.querySelector('.mobile-toggle') ||
+                   document.querySelector('.hamburger') ||
+                   document.querySelector('.hamburger-menu') ||
+                   document.querySelector('.menu-toggle') ||
+                   document.querySelector('.burger-menu') ||
+                   document.querySelector('[aria-label="Menu"]') ||
+                   document.querySelector('[aria-label="תפריט"]');
+    
+    // EXPANDED SEARCH: Find nav menu by ID or class
+    const navMenu = document.getElementById('navMenu') ||
+                  document.querySelector('.nav-menu') ||
+                  document.querySelector('.nav-links') ||
+                  document.querySelector('nav ul:not(.submenu)');
+    
+    if (!mobileToggle || !navMenu) {
+      console.log('[Navbar] Mobile toggle or menu not found:', { toggle: !!mobileToggle, menu: !!navMenu });
+      return;
+    }
+    
+    // Ensure navMenu has ID for CSS targeting
+    if (!navMenu.id) {
+      navMenu.id = 'navMenu';
+    }
+    
+    console.log('[Navbar] Initializing mobile menu...');
+    
+    // Remove any existing event listeners by cloning the button
+    const newToggle = mobileToggle.cloneNode(true);
+    mobileToggle.parentNode.replaceChild(newToggle, mobileToggle);
+    
+    // Toggle menu on button click - use newToggle now
+    newToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      const hamburgerIcon = this.querySelector('.hamburger-icon');
+      const closeIcon = this.querySelector('.close-icon');
+      const isActive = navMenu.classList.contains('active');
+      
+      if (isActive) {
+        // Close menu
+        navMenu.classList.remove('active');
+        if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important');
+        if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important');
+        document.body.style.overflow = '';
+        console.log('[Navbar] Menu closed');
+      } else {
+        // Open menu
+        navMenu.classList.add('active');
+        if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'none', 'important');
+        if (closeIcon) closeIcon.style.setProperty('display', 'block', 'important');
+        document.body.style.overflow = 'hidden';
+        console.log('[Navbar] Menu opened');
+      }
+    });
+    
+    // Close menu when clicking nav links (but NOT dropdown toggles)
+    const navLinks = navMenu.querySelectorAll('a');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        // Don't close if it's a dropdown child (unless it's a real navigation link)
+        if (this.getAttribute('href') === '#') return;
+        
+        const hamburgerIcon = newToggle.querySelector('.hamburger-icon');
+        const closeIcon = newToggle.querySelector('.close-icon');
+        
+        navMenu.classList.remove('active');
+        if (hamburgerIcon) hamburgerIcon.style.setProperty('display', 'block', 'important');
+        if (closeIcon) closeIcon.style.setProperty('display', 'none', 'important');
+        document.body.style.overflow = '';
+        console.log('[Navbar] Menu closed (link clicked)');
+      });
+    });
+    
+    // DROPDOWN MENU TOGGLE (for mobile and touch devices)
+    var dropdownToggles = navMenu.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var parent = this.closest('.nav-dropdown');
+        if (!parent) return;
+        
+        // Close other open dropdowns at the same level
+        var siblings = parent.parentNode.querySelectorAll('.nav-dropdown.open');
+        siblings.forEach(function(sib) {
+          if (sib !== parent) sib.classList.remove('open');
+        });
+        
+        parent.classList.toggle('open');
+        console.log('[Navbar] Dropdown toggled:', parent.classList.contains('open') ? 'open' : 'closed');
+      });
+    });
+    
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.nav-dropdown')) {
+        var openDropdowns = document.querySelectorAll('.nav-dropdown.open');
+        openDropdowns.forEach(function(dd) { dd.classList.remove('open'); });
+      }
+    });
+    
+    console.log('[Navbar] Dropdown handlers initialized for ' + dropdownToggles.length + ' dropdowns');
+    
+    // Phone button functionality (phoneBtn already declared at top of function)
+    if (phoneBtn) {
+      phoneBtn.addEventListener('click', function() {
+        // Get phone number from placeholder in page or use default
+        const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+        const phoneNumber = phoneLinks.length > 0 
+          ? phoneLinks[0].getAttribute('href').replace('tel:', '')
+          : '055-9932287';
+        
+        window.location.href = 'tel:' + phoneNumber;
+        console.log('[Navbar] Phone button clicked');
+      });
+    }
+    
+    console.log('[Navbar] Mobile menu initialized successfully');
+    
+    // WhatsApp visibility is now controlled via CSS (siteSettings)
+  });
+})();
+
+</script>
+  
+  <main>
+      <section class="s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-section" data-layout-spec="10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout" dir="rtl" data-zappy-section="true" id="layout-1794064199448">
+  <div class="s-10-content-container">
+    <!-- Section Header -->
+    <div class="s-10-section-header">
+      <p><span class="s-10-section-label">מדריך מקצועי</span>
+      </p><h1 class="s-10-main-title">מאור אחזקות</h1>
+      <div class="s-10-section-rule" aria-hidden="true"></div>
+      <p class="s-10-intro-text" style=""><a href="https://itum-gagot.co.il/" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">
+        איטום גג</a> הוא אחת העבודות החשובות ביותר בתחזוקת בניין, בית פרטי או מבנה מסחרי. בראשון לציון, עיר עם בנייה מגוונת, גגות שטוחים, גגות רעפים, מרפסות מרוצפות ומערכות סולאריות, בחירה נכונה של קבלן איטום יכולה לחסוך נזקי רטיבות, עובש, קילופי צבע, פגיעה בבידוד התרמי ואף נזקים לתשתיות חשמל ותקרה.
+      </p>
+      <p class="s-10-intro-text">
+        הבעיה היא שרוב התקלות לא מופיעות ביום העבודה עצמו, אלא בחורף הראשון, או דווקא אחרי שתי עונות, כשכבר קשה לדעת האם הבעיה היא בחומר, בביצוע, בהכנה, או בתחזוקה. לכן חשוב לבחור קבלן איטום גגות בראשון לציון בצורה שיטתית, לבדוק מסמכים, להבין שיטות, להשוות הצעות, ולהגדיר ציפיות ברורות לגבי אחריות ותנאים.
+      </p>
+      <p class="s-10-intro-text" style="">
+        לפניכם 10 טיפים מעשיים שיסייעו לכם לבחור <a href="https://itum-gagot.co.il/" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">קבלן איטום גגות בראשון לציון</a>, עם דגש על איכות, שקיפות ועלות נכונה לאורך זמן. הטיפים מתאימים גם לוועדי בתים וגם לבעלי בתים פרטיים, ולמי שמחפש פתרון זמני וגם למי שרוצה איטום מלא לשנים קדימה.
+      </p>
+    </div>
+
+    <!-- Tips Grid -->
+    <div class="s-10-tips-grid zappy-preserve-css-grid" id="zappy-auto-grid-1794064668769-d8kxxv" data-zappy-auto-grid="true" data-original-item-width="584" data-original-gap="32px" style="display: grid; --zappy-grid-cols: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); align-items: stretch !important;" data-zappy-explicit-columns="true">
+      <!-- Tip 1 -->
+      <article class="s-10-tip-card" data-grid-item-index="0">
+        <div class="s-10-tip-number">1</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">ודאו שהקבלן מתמחה באיטום גגות, ולא רק בשיפוצים כלליים</h2>
+          <p class="s-10-tip-text">
+            בשוק השיפוצים יש בעלי מקצוע רבים שמציעים גם איטום, אבל איטום גגות הוא מקצוע בפני עצמו. גג שטוח עם יריעות ביטומניות דורש דיוק בפרטים, גג עם שיפועים דורש תכנון ניקוז, וגג עם ריצוף דורש הבנה בשכבות, רובה, שיפועים ואיטום תת רצפתי. קבלן שמגיע מעולם השיפוצים יכול להיות מצוין, אבל חשוב לבדוק שיש לו ניסיון אמיתי באיטום ולא רק ניסיון כללי בצבע ושיפוצים.
+          </p>
+          <h3 class="s-10-tip-subtitle">מה לבדוק בפועל.</h3>
+          <ul class="s-10-tip-list">
+            <li>כמה עבודות איטום גגות הוא ביצע בשנה האחרונה, ולא רק לפני כמה שנים.</li>
+            <li>באילו שיטות איטום הוא עובד, יריעות, זפת, פוליאוריטן, אקרילי, או שילובים.</li>
+            <li>האם הוא יודע להסביר מתי לא מומלץ להשתמש בחומר מסוים, למשל חומר אקרילי במקומות עם מים עומדים.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tip 2 -->
+      <article class="s-10-tip-card" data-grid-item-index="1">
+        <div class="s-10-tip-number">2</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">דרשו אבחון מסודר של מצב הגג לפני הצעת מחיר</h2>
+          <p class="s-10-tip-text">
+            הצעת מחיר טובה מתחילה באבחון נכון. אם קבלן נותן הצעת מחיר בטלפון על סמך גודל גג משוער, זו נורת אזהרה. בראשון לציון יש הרבה גגות ישנים עם שכבות איטום מצטברות, תיקונים נקודתיים, תעלות ניקוז סתומות, ודודי שמש ומזגנים שמפריעים לפריסה אחידה. בלי בדיקה בשטח, קשה להעריך מה באמת צריך.
+          </p>
+          <p class="s-10-tip-text">
+            אבחון מקצועי כולל הסתכלות על נקודות תורפה, חיבורים, ספים, מפגשי קירות, קולטי ניקוז, סדקים, ואזורי שלוליות. לעיתים האיטום הוא רק סימפטום, והבעיה היא שיפועים לא נכונים או ניקוז לקוי.
+          </p>
+          <ul class="s-10-tip-list">
+            <li>בקשו שהקבלן יסמן לכם על הגג איפה לדעתו הבעיה, ולא רק יגיד באופן כללי שיש רטיבות.</li>
+            <li>בדקו האם הוא מתייחס לפרטים כמו צנרת עוברת, מעקות, בסיסי דודים ופתחי שירות.</li>
+            <li>וודאו שההצעה כוללת שלבי הכנה, ניקוי, פריימר, עבודת איטום, והגנות לפי צורך.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tip 3 -->
+      <article class="s-10-tip-card" data-grid-item-index="2">
+        <div class="s-10-tip-number">3</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">בקשו פירוט שיטת האיטום וחומרי האיטום, כולל מותגים ומפרטים</h2>
+          <p class="s-10-tip-text">
+            לא מספיק לשמוע משפט כמו נעשה יריעות או נמרח חומר איטום. אתם צריכים פירוט כתוב של המערכת. איטום גג הוא מערכת שכבות, והחומר הנכון תלוי במצב הקיים, בניקוז, בשיפועים, בהימצאות ריצוף, ובתנועה תרמית.
+          </p>
+          <p class="s-10-tip-text">
+            לדוגמה, יריעות ביטומניות איכותיות דורשות תשתית יציבה, שיפועים תקינים, הלחמות מדויקות, רולקות במפגש קיר רצפה, וטיפול מקצועי בפרטים סביב קולט. זפת חמה דורשת עובי מתאים, רשת חיזוק במקומות רגישים, וסיוד בזמן הנכון. פוליאוריטן נוזלי יכול להיות פתרון מצוין, אבל רק עם הכנה נכונה ועובי מדויק, ולעיתים עם שכבת הגנה מפני שמש.
+          </p>
+          <ul class="s-10-tip-list">
+            <li>בקשו שם יצרן ודגם חומר, ולא רק סוג כללי.</li>
+            <li>בקשו לציין עובי, מספר שכבות, סוג פריימר, וסוג שכבת הגנה אם קיימת.</li>
+            <li>בקשו שרטוט מילולי של פרטי קצה, למשל עלייה לקיר, טיפול במעקה, וסביב חדירות.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tip 4 -->
+      <article class="s-10-tip-card" data-grid-item-index="3">
+        <div class="s-10-tip-number">4</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">אל תוותרו על נושא הניקוז, שיפועים, וקולטים</h2>
+          <p class="s-10-tip-text">
+            הרבה רטיבויות הן תוצאה של מים עומדים ולא של כשל חומר. ראשון לציון כוללת אזורים עם גגות שטוחים רחבים, וגגות של בניינים משותפים שבהם הקולט קטן, סתום או נמוך. אם נשארת שלולית קבועה, כל איטום נשחק מהר יותר, ובמיוחד חומרים אקריליים שאינם מיועדים לעמידה ממושכת במים.
+          </p>
+          <p class="s-10-tip-text">
+            קבלן איטום טוב יתייחס לניקוז כחלק מהמערכת, לא כתוספת. לפעמים נדרש לפתוח קולט, להחליף סל רשת, להוסיף קולט, לבצע שיפועים עם בטקל, או לשפר את מעבר המים באזורי מפגש.
+          </p>
+          <ul class="s-10-tip-list">
+            <li>שאלו את הקבלן מה מצב הקולטים, ומה הוא ממליץ לעשות כדי למנוע סתימות.</li>
+            <li>בקשו שיציין אם קיימות שלוליות, ומה הפתרון שלהן, ולא רק ציפוי מעל.</li>
+            <li>וודאו שיש תכנון לניקוז גם סביב מתקנים, כמו מזגן מרכזי או מערכת סולארית.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tip 5 -->
+      <article class="s-10-tip-card" data-grid-item-index="4">
+        <div class="s-10-tip-number">5</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">בקשו לראות עבודות דומות בראשון לציון, עם המלצות אמיתיות</h2>
+          <p class="s-10-tip-text">
+            ניסיון מקומי חשוב. בעיר יש מגוון סוגי מבנים, מבנים ותיקים עם גגות מורכבים, שכונות חדשות עם מרפסות וגגות טכניים, ומבנים מסחריים עם שטחים גדולים. קבלן שעבד באזור מכיר את הבעיות החוזרות, למשל חדירות סביב תעלות מיזוג, בעיות בפרטי מעקה, ואיטום מרפסות מרוצפות.
+          </p>
+          <p class="s-10-tip-text">
+            המלצות הן לא רק ציון גבוה, אלא הוכחה שאנשים קיבלו שירות ואחריות לאורך זמן. עדיף לקבל ממליצים מעבודות שבוצעו לפני חורף אחד לפחות, כך אפשר לדעת האם האיטום מחזיק.
+          </p>
+          <ul class="s-10-tip-list">
+            <li>בקשו 2 עד 3 אנשי קשר לעבודות דומות בגודל ובסוג הגג שלכם.</li>
+            <li>שאלו את הממליץ איך היה התיאום, ניקיון, עמידה בזמנים, ומה קרה אם הייתה תקלה.</li>
+            <li>אם אפשר, בקשו לראות תמונות לפני ואחרי, כולל תקריבים של פרטים כמו קצה יריעה וקולט.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tip 6 -->
+      <article class="s-10-tip-card" data-grid-item-index="5">
+        <div class="s-10-tip-number">6</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">בדקו ביטוח, בטיחות, ועבודה בגובה</h2>
+          <p class="s-10-tip-text">
+            איטום גגות מערב עבודה בגובה, לעיתים על קצוות גג, ליד מעקות נמוכים, עם ציוד חם כמו מבער או זפת, ועם חומרים כימיים. האחריות שלכם כבעלי הנכס כוללת גם אחריות על בטיחות באתר. קבלן רציני יגיע עם ביטוח מתאים, ציוד מגן, ונהלי עבודה מסודרים.
+          </p>
+          <p class="s-10-tip-text">
+            בבניינים משותפים יש גם היבט של נזקים לצד שלישי, למשל נפילת חומר על רכוש, חסימת חדר מדרגות, או פגיעה ברכב בחניה. חשוב לוודא שיש כיסוי ביטוחי.
+          </p>
+          <ul class="s-10-tip-list">
+            <li>בקשו אישור ביטוח אחריות צד ג, ואחריות מעבידים אם יש צוות עובדים.</li>
+            <li>שאלו מי מבצע בפועל את העבודה, הקבלן עצמו או צוות מזדמן.</li>
+            <li>וודאו שיש פתרון בטיחותי להעלאת חומרים, ולא סחיבה מסוכנת בחדר מדרגות.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tip 7 -->
+      <article class="s-10-tip-card" data-grid-item-index="6">
+        <div class="s-10-tip-number">7</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">קבלו הצעת מחיר מפורטת, עם כמויות, הכנות, ופינוי פסולת</h2>
+          <p class="s-10-tip-text">
+            הצעת מחיר כללית מדי גורמת לויכוחים בהמשך. באיטום, ההכנות הן חלק גדול מהאיכות והעלות. ניקוי יסודי, פירוק שכבות רופפות, תיקוני טיח ורולקות, ייבוש, פריימר, והגנות, כל אלה חייבים להיות כתובים. אחרת אתם עלולים לגלות שבמחיר לא כלול פירוק, או לא כלול טיפול בסדקים, או לא כלול פינוי.
+          </p>
+          <p class="s-10-tip-text">
+            בנוסף, בראשון לציון יש מקרים שבהם נדרש לתאם פינוי פסולת, או להוריד חומרים דרך מעלית שירות, או לעבוד בשעות מסוימות כדי לא להפריע לדיירים. ככל שההצעה מפורטת יותר, הסיכוי להפתעות קטן.
+          </p>
+          <ul class="s-10-tip-list">
+            <li>הקפידו שההצעה תכלול שטח במטרים, או פירוט אזורים, גג, מרפסת, חדר מדרגות, גגון.</li>
+            <li>בקשו פירוט של מה כלול ומה לא כלול, כולל פירוק שכבות ישנות, תיקוני שיפועים, והתקנת קולט חדש.</li>
+            <li>וודאו שהמחיר כולל ניקיון בסיום ופינוי אריזות, יריעות ישנות, שאריות זפת, או פסולת.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tip 8 -->
+      <article class="s-10-tip-card" data-grid-item-index="7">
+        <div class="s-10-tip-number">8</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">הגדירו אחריות בכתב, כולל מה היא מכסה ומה התנאים</h2>
+          <p class="s-10-tip-text">
+            אחריות אמיתית היא אחריות כתובה, עם שנים מוגדרות, תחומי כיסוי ותנאים ברורים. חשוב להבין שאחריות באיטום תלויה גם בתחזוקה ובשימוש. למשל, אם מתקינים דודים חדשים ועושים קידוחים בגג ללא תיאום, האחריות עלולה להיפגע. מצד שני, קבלן איכותי לא ינסה להתחמק מאחריות בגלל תירוץ קטן, אלא יגדיר מראש כללים הגיוניים.
+          </p>
+          <p class="s-10-tip-text">
+            חשוב גם לוודא למי פונים במקרה תקלה, תוך כמה זמן מגיעים לבדיקה, והאם יש עלות ביקור. במבנים משותפים כדאי לוודא שהאחריות רשומה על שם ועד הבית או הבניין, ולא רק על אדם פרטי.
+          </p>
+          <ul class="s-10-tip-list">
+            <li>בקשו לציין את משך האחריות עבור כל שיטה, למשל יריעות מול חומר נוזלי.</li>
+            <li>בקשו מסמך שמפרט מה נחשב תקלה באיטום, ומה נחשב נזק חיצוני.</li>
+            <li>סכמו מראש כיצד מתבצעת קריאת שירות, זמני תגובה, ומה נדרש מכם לספק, למשל גישה לגג.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tip 9 -->
+      <article class="s-10-tip-card" data-grid-item-index="8">
+        <div class="s-10-tip-number">9</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">שימו לב לפרטים הקטנים, רולקות, ספים, חיבורים, וחדירות</h2>
+          <p class="s-10-tip-text">
+            איטום טוב נמדד בפרטים. רוב הכשלים אינם באמצע משטח הגג, אלא במפגשים. מפגש קיר רצפה, עלייה על מעקה, סביב בסיסי דודים, סביב צינורות, סביב אנטנות, סביב נקז, ובמעבר בין אזורים. גם אם יריעה איכותית נפרסה יפה, פרט לא נכון בקצה יכניס מים.
+          </p>
+          <p class="s-10-tip-text">
+            קבלן מקצועי יקדיש זמן לפרטים, ויבנה אותם לפי כללי מקצוע, עם רולקה תקינה, חיזוקים, והדבקה מלאה. הוא גם יסביר לכם מה הוא עושה ולמה, ולא ימהר לסגור.
+          </p>
+          <ul class="s-10-tip-list">
+            <li>בקשו לראות דוגמה לפרט עלייה לקיר, כולל גובה עלייה, והאם יש פסי סיום מסודרים.</li>
+            <li>שאלו איך מטפלים בחדירות, האם מפרקים ומרכיבים מחדש חלקים, או מנסים לאטום מסביב בלבד.</li>
+            <li>וודאו שיש טיפול מיוחד באזורי סדקים, מפגשי בטון וטיח, ומעבר בין חומרים שונים.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Tip 10 -->
+      <article class="s-10-tip-card" data-grid-item-index="9">
+        <div class="s-10-tip-number">10</div>
+        <div class="s-10-tip-content">
+          <h2 class="s-10-tip-title">תכננו את העיתוי, תנאי מזג אוויר, ולוח זמנים ריאלי</h2>
+          <p class="s-10-tip-text">
+            איטום לא עושים בלחץ רגע לפני גשם, ולא כשיש לחות גבוהה שמונעת ייבוש, ולא כשהגג מלא ציוד שמפריע. בראשון לציון, כמו בכל אזור המרכז, מזג האוויר יכול להשתנות, וחומרים מסוימים דורשים חלון יבש כדי להתקבע נכון. קבלן שמציע לבצע הכל ביום אחד, בלי להתייחס לזמני ייבוש, עלול לפגוע באיכות.
+          </p>
+          <p class="s-10-tip-text">
+            לוח זמנים נכון כולל זמן להכנות, זמן לביצוע שכבות, זמן לייבוש, וזמן לבדיקות. במבנים משותפים זה כולל גם תיאום עם הדיירים. בנוסף, אם יש עבודות נוספות, כמו צבע בחדר מדרגות או שיפוץ קטן על הגג, כדאי לתאם סדר עבודה נכון כדי לא לפגוע באיטום החדש.
+          </p>
+          <ul class="s-10-tip-list">
+            <li>בקשו לוח זמנים כתוב, עם שלבי עבודה, ולא רק תאריך התחלה.</li>
+            <li>שאלו באילו תנאים הקבלן מפסיק עבודה, גשם, רוח חזקה, לחות גבוהה, או גג רטוב.</li>
+            <li>וודאו שיש בדיקה בסיום, למשל הצפה מבוקרת במקומות מתאימים, או בדיקת פרטים וניקוז.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+
+    <!-- Comparison Section -->
+    <div class="s-10-comparison-section">
+      <h2 class="s-10-comparison-title">איך להשוות בין הצעות מחיר בלי ליפול למלכודת של מחיר נמוך</h2>
+      <p class="s-10-tip-text">
+        אחרי שאוספים 2 עד 3 הצעות, חשוב להשוות תפוחים לתפוחים. הצעה זולה יכולה להיראות משתלמת, אבל אם היא לא כוללת הכנות, פירוק שכבות רופפות, תיקון שיפועים, טיפול בניקוז, או אחריות אמיתית, העלות האמיתית תופיע אחרי החורף בדמות תיקונים, רטיבות, וצבע מתקלף. לעומת זאת, הצעה יקרה לא תמיד מעידה על איכות, לפעמים מדובר פשוט בתמחור יתר.
+      </p>
+      <p class="s-10-tip-text">
+        השוואה חכמה מתבססת על מפרט, לא רק על סכום.
+      </p>
+      <ul class="s-10-tip-list">
+        <li data-grid-item-index="0">השוו את סוג החומר ומספר השכבות, ואת אופן הטיפול בפרטים.</li>
+        <li data-grid-item-index="1">השוו אחריות כתובה, משך האחריות, ותנאים.</li>
+        <li data-grid-item-index="2">השוו מה כלול בניקיון, פינוי פסולת, ותיאומים נדרשים מול ועד בית או דיירים.</li>
+      </ul>
+    </div>
+
+    <!-- Questions Section -->
+    <div class="s-10-questions-section">
+      <h2 class="s-10-questions-title">שאלות שכדאי לשאול את הקבלן בפגישה על הגג</h2>
+      <p class="s-10-tip-text">
+        כדי להפוך את הבחירה לברורה, כדאי להגיע עם רשימת שאלות קצרה. קבלן מקצועי יענה בסבלנות ויבהיר את כל השלבים.
+      </p>
+      <ul class="s-10-tip-list">
+        <li data-grid-item-index="0">מה הבעיה העיקרית לדעתך, והאם יש יותר מנקודת כשל אחת.</li>
+        <li data-grid-item-index="1">מה השיטה המומלצת כאן, ולמה לא שיטה אחרת.</li>
+        <li data-grid-item-index="2">איך מטפלים בקולט הניקוז, ובמה אתה ממליץ לשפר.</li>
+        <li data-grid-item-index="3">מה נדרש להכין לפני תחילת העבודה, פינוי ציוד, ניתוק מזגנים, גישה לחשמל ומים.</li>
+        <li data-grid-item-index="4">מהם זמני הייבוש, ומתי אפשר להחזיר שימוש מלא בגג.</li>
+        <li data-grid-item-index="5">מה מסלול הקריאה במקרה שיש בעיה בחורף, וכמה מהר אתה מגיע.</li>
+      </ul>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="s-10-summary-section">
+      <h2 class="s-10-summary-title">סיכום</h2>
+      <p class="s-10-tip-text" style="">
+        בחירת <a href="https://maor-ahzakot.co.il/roof-waterproofing" target="_blank" rel="noopener noreferrer" style="color: rgb(0, 212, 255); text-decoration: underline; cursor: pointer;">קבלן איטום גגות בראשון לציון</a> היא החלטה שמגנה על הבית, על ערך הנכס ועל איכות החיים. איטום נכון הוא תוצאה של אבחון מדויק, שיטת עבודה מתאימה, חומרי איכות, תשומת לב לפרטים, ותיעוד ברור של אחריות. כשבודקים התמחות, ניסיון, הצעת מחיר מפורטת, ביטוחים, ניקוז, ותנאי ביצוע, מצמצמים כמעט לחלוטין את הסיכון לתקלות חוזרות.
+      </p>
+      <p class="s-10-tip-text">
+        אם אתם מתלבטים בין כמה בעלי מקצוע, מומלץ לבחור בזה שמסביר את התהליך בצורה שקופה, מציג מפרט כתוב, מראה עבודות דומות, ומוכן להגדיר אחריות ברורה. כך תוכלו לעבור את החורף בראש שקט, וליהנות מגג יבש לאורך שנים.
+      </p>
+    </div>
+
+    <!-- Image Placeholder -->
+    <div class="s-10-image-wrapper">
+      <div data-zappy-zoom-wrapper="true" data-element-id="img-1794064668715-1gcnrmpy6" data-element-type="image" data-zappy-zoom-wrapper-width="600px" data-zappy-zoom-wrapper-height="464px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 600px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 464px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img data-placeholder="s-10-Typym-Lbchyrt-Kbln-Aytvm-Ggvt-Brashvn-Ltsyvn-layout-image-1" data-context="A professional waterproofing contractor in a dark, cinematic scene, applying a torch-on bituminous membrane to a flat roof at night. The scene is illuminated by the torch flame with a subtle blue glow, highlighting the precision of the work. The background shows the city skyline of Rishon LeZion in the distance." width="600" height="400" src="/assets/image-s-10-typym-lbchyrt-kbln-aytvm-ggvt-brashvn-ltsyvn--1794064703710-rzfzhq.webp?v=1794064706624" alt="קבלן איטום גגות מבצע עבודת איטום יריעות ביטומניות על גג בראשון לציון" style="min-width: 200px; min-height: 150px; border-radius: 8px; object-position: 42% 52% !important; object-fit: cover !important; width: 142.552% !important; height: 103% !important; max-width: none !important; display: block !important; margin: 0px !important; left: -17.8716% !important; top: -1.56% !important; max-height: none !important; position: absolute !important" data-element-type="image" data-element-id="img-1794064668715-1gcnrmpy6" data-zappy-object-position="42% 52%" data-zappy-zoom="1.03" loading="lazy" decoding="async" fetchpriority="low"></div>
+    </div>
+  </div>
+</section>
+    </main>
+  
+  <footer class="site-footer" dir="rtl">
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <!-- Column 1: Company Info -->
+      <div class="footer-col footer-brand">
+        <div class="footer-logo-wrap">
+          <img src="/assets/business-logo.webp" alt="מאור אחזקות" class="logo" data-element-type="image" data-element-id="img-1775639017057-v1djme1q1" data-zappy-footer-image="true" style="" decoding="async" width="35" height="35">
+        </div>
+        <p class="footer-tagline">מומחים באיטום, שיפוץ ושיקום מבנים. עבודה מקצועית, אמינות מלאה, תוצאות שמחזיקות לאורך זמן.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/MAOR058/?locale=he_IL" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://tiktok.com/@dysz21ypokbt" aria-label="TikTok" data-element-type="link" data-element-id="element-ai-1795798039110-tk8m2x"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="Instagram" style="display:none !important;"><i class="fab fa-instagram" data-element-type="icon" data-element-id="icon-1775639017054-gk94id9g0" data-icon-type="fontawesome"></i></a>
+          <a href="https://wa.me/972559932287" aria-label="WhatsApp"><i class="fab fa-whatsapp" data-element-type="icon" data-element-id="icon-1775639017054-6vorc5jtc" data-icon-type="fontawesome"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="footer-col footer-links-col">
+        <h3 class="footer-heading"><span class="heading-accent"></span>שירותים</h3>
+        <ul class="footer-links">
+          <li><a href="/roof-waterproofing"><i class="fas fa-chevron-left footer-link-icon"></i>איטום גגות</a></li>
+          <li><a href="/industrial-waterproofing" style=""><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>איטום תעשייתי ומבני</a></li>
+          <li><a href="/renovation-fire-recovery" style=""><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>שיפוץ ושיקום לאחר שריפה</a></li>
+          <li><a href="/contact" style=""><i class="fas fa-chevron-left footer-link-icon" style="cursor: pointer;"></i>צור קשר</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact Info -->
+      <div class="footer-col footer-contact-col">
+        <h3 class="footer-heading"><span class="heading-accent"></span>צור קשר</h3>
+        <ul class="footer-contact" style=""><li>
+            <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1775639017054-lxsedrpr3" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
+            <span class="contact-text"><a href="mailto:dmaor75@gmail.com" style=""><span>dmaor75@gmail.com</span></a></span>
+          </li><li>
+            <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1775639017055-3p3y17104" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
+            <span class="contact-text"><a href="tel:055-9932287">055- 9932287</a></span>
+          </li><li><a href="/" style=""><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span></a><a href="/" style="background-color: rgb(10, 12, 14); display: inline !important;"><span style="font-size: 14px;">&nbsp;</span></a></li></ul>
+      </div>
+
+      <!-- Column 4: CTA / Badge -->
+      <div class="footer-col footer-cta-col">
+        <h3 class="footer-heading"><span class="heading-accent"></span>זמינים עבורך</h3>
+        <div class="footer-cta-box">
+          <div class="cta-icon-wrap"><i class="fas fa-hard-hat" data-element-type="icon" data-element-id="icon-1775639017055-vdh35m7w4" data-icon-type="fontawesome"></i></div>
+          <p class="cta-text">מוכנים לקחת את הפרויקט שלך לשלב הבא?</p>
+          <p><a href="/contact" class="cta-btn" data-element-type="button" data-element-id="btn-1775639017047-prc64la9o" data-native-element="true" style="color: rgb(18, 20, 23) !important;">קבל הצעת מחיר</a>
+        </p></div>
+      </div>
+
+    </div>
+
+    <!-- Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        <span>© 2026 מאור אחזקות. כל הזכויות שמורות.</span>
+      </div>
+      <div class="footer-legal">
+        <a href="/privacy">מדיניות פרטיות</a>
+        <span class="legal-sep"></span>
+        <a href="/terms">תנאי שימוש</a>
+        <span class="legal-sep"></span>
+        <a href="/accessibility">נגישות</a>
+        <span class="legal-sep"></span>
+        <a href="https://zappy5.com" target="_blank" class="zappy-attribution" style="">נוצר באמצעות Zappy</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+  
+  <a href="https://wa.me/0559932287" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <div data-integration="accessibility:toolbar"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script id="free_accessibility_plugin_script" src="https://accessibility.f-static.com/site/free-accessibility-plugin/accessibility.min.js?lan=he&amp;place=bottom-left&amp;distance=50" crossorigin="anonymous"></script>
+
+    <script src="/script.js"></script>
+
+    <script id="zappy-font-awesome-loader">
+(function(){if(window.__zappyFontAwesomeLoader)return;window.__zappyFontAwesomeLoader=true;var href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';function load(){if(document.querySelector('link[href*="font-awesome"][href*="all.min.css"]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href=href;l.crossOrigin='anonymous';l.referrerPolicy='no-referrer';document.head.appendChild(l);}function schedule(){if('requestIdleCallback'in window){requestIdleCallback(load,{timeout:5000});}else{setTimeout(load,3500);}}['pointerdown','keydown','touchstart','mouseover'].forEach(function(evt){window.addEventListener(evt,load,{once:true,passive:true});});schedule();})();
+</script>
+
+    <script id="zappy-mobile-submenu-script">
+    (function() {
+      function initMobileSubmenuToggles() {
+        if (window.innerWidth > 768) {
+          document.querySelectorAll('.mobile-submenu-toggle').forEach(function(btn) { btn.remove(); });
+          document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) { menu.classList.remove('mobile-expanded'); });
+          return;
+        }
+        var items = document.querySelectorAll('.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)');
+        items.forEach(function(li) {
+          if (li.querySelector('.mobile-submenu-toggle')) return;
+          var submenu = li.querySelector('.sub-menu');
+          var parentLink = li.querySelector(':scope > a');
+          if (!submenu || !parentLink) return;
+          var toggleBtn = document.createElement('button');
+          toggleBtn.className = 'mobile-submenu-toggle';
+          toggleBtn.setAttribute('aria-label', 'Toggle submenu');
+          toggleBtn.setAttribute('type', 'button');
+          parentLink.insertAdjacentElement('afterend', toggleBtn);
+          toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault(); e.stopPropagation();
+            document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
+              if (menu !== submenu) { menu.classList.remove('mobile-expanded'); var t = menu.parentElement.querySelector('.mobile-submenu-toggle'); if(t) t.classList.remove('expanded'); }
+            });
+            submenu.classList.toggle('mobile-expanded');
+            toggleBtn.classList.toggle('expanded');
+          });
+        });
+      }
+      if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
+      else { initMobileSubmenuToggles(); }
+      var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
+    })();
+    </script>
+
+    <script>
+    (function(){
+      var _applied=false;
+      function _isHeroBg(w){var img=w.querySelector('img');if(img&&(img.getAttribute('data-hero-bg')==='true'||img.getAttribute('data-hero-background')==='true'))return true;var p=(w.style.position||'').replace(/\s*!important\s*/g,'').trim();var ww=(w.style.width||'').replace(/\s*!important\s*/g,'').trim();var hh=(w.style.height||'').replace(/\s*!important\s*/g,'').trim();return p==='absolute'&&ww==='100%'&&hh==='100%';}
+      function fixDesktopWrappers(){
+        // No-op: desktop wrapper restoration is handled by ZAPPY_PUBLISHED_ZOOM_WRAPPER_RUNTIME
+        // in script.js (restoreWrapperDimensions). The old inflation logic here was expanding
+        // small wrappers (e.g. 139px logo wrappers) to their parent width, conflicting with
+        // the correct stored dimensions.
+      }
+      function _parsePos(s){var x=50,y=50;try{var m=(s||'').match(/(-?d+(?:.d+)?)%s+(-?d+(?:.d+)?)%/);if(m){x=parseFloat(m[1]);y=parseFloat(m[2]);}}catch(e){}if(!isFinite(x))x=50;if(!isFinite(y))y=50;return{x:Math.max(0,Math.min(100,x)),y:Math.max(0,Math.min(100,y))};}
+      function _coverPct(iA,cA){if(!isFinite(iA)||iA<=0||!isFinite(cA)||cA<=0)return{w:100,h:100};if(iA>=cA)return{w:(iA/cA)*100,h:100};return{w:100,h:(cA/iA)*100};}
+      function applyMobile(){
+        if(_applied)return;_applied=true;
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          if(_isHeroBg(w))return;
+          var cw=w.style.getPropertyValue('width');
+          var _sW=parseFloat(w.getAttribute('data-zappy-zoom-wrapper-width'))||0;
+          var _sH=parseFloat(w.getAttribute('data-zappy-zoom-wrapper-height'))||0;
+          if(!cw&&!(_sW>0&&_sH>0))return;
+          if(!w._zappyDesktop)w._zappyDesktop={wStyle:w.getAttribute('style')};
+          var img=w.querySelector('img');
+          if(!img)return;
+          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
+          var mobileZoomStr=img.getAttribute('data-zappy-mobile-zoom');
+          var mobileZoom=parseFloat(mobileZoomStr);
+          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
+          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
+          var parentOvf=w.parentElement?((w.parentElement.style.overflow||'')+(window.getComputedStyle(w.parentElement).overflow||'')).trim():'';
+          var inConstrainedParent=parentOvf.indexOf('hidden')!==-1||parentOvf.indexOf('clip')!==-1;
+          if(inConstrainedParent){
+            w.style.setProperty('max-width','100%','important');
+          }else{
+            w.style.setProperty('width','100%','important');
+            w.style.setProperty('max-width','100%','important');
+          }
+          if(mobileSrc)img.src=mobileSrc;
+          function _applyZoomCrop(_img,_w,_ePos,_eZoom){
+            var rect=_w.getBoundingClientRect();
+            if(!rect||!rect.width||!rect.height)return;
+            var nW=_img.naturalWidth||0,nH=_img.naturalHeight||0;
+            if(!(nW>0&&nH>0))return;
+            var iA=nW/nH,cA=rect.width/rect.height;
+            var cv=_coverPct(iA,cA);
+            var wP=100,hP=100;
+            if(_eZoom>=1){wP=cv.w*_eZoom;hP=cv.h*_eZoom;}
+            else{var t2=(_eZoom-0.5)/0.5;if(!isFinite(t2))t2=0;t2=Math.max(0,Math.min(1,t2));wP=100+t2*(cv.w-100);hP=100+t2*(cv.h-100);}
+            var p2=_parsePos(_ePos);
+            var lP=(100-wP)*(p2.x/100);
+            var tP=(100-hP)*(p2.y/100);
+            _img.style.setProperty('position','absolute','important');
+            _img.style.setProperty('left',lP+'%','important');
+            _img.style.setProperty('top',tP+'%','important');
+            _img.style.setProperty('width',wP+'%','important');
+            _img.style.setProperty('height',hP+'%','important');
+            _img.style.setProperty('max-width','none','important');
+            _img.style.setProperty('max-height','none','important');
+            _img.style.setProperty('display','block','important');
+            _img.style.setProperty('object-fit',_eZoom<1?'fill':'cover','important');
+            _img.style.setProperty('transform','none','important');
+            _img.style.setProperty('margin','0','important');
+          }
+          if(_sW>0&&_sH>0){
+            var effZoom=(isFinite(mobileZoom)&&mobileZoom>0)?mobileZoom:(parseFloat(img.getAttribute('data-zappy-zoom'))||1);
+            var effPos=mobilePos||img.getAttribute('data-zappy-object-position')||img.style.objectPosition||'50% 50%';
+            w.style.setProperty('overflow','hidden','important');
+            w.style.setProperty('position','relative','important');
+            w.style.setProperty('width','100%','important');
+            w.style.setProperty('max-width','100%','important');
+            if(_sW>0&&_sH>0){w.style.setProperty('padding-bottom','0','important');w.style.setProperty('aspect-ratio',_sW+'/'+_sH,'important');w.style.setProperty('height','auto','important');}
+            _applyZoomCrop(img,w,effPos,effZoom);
+            if(!(img.complete&&img.naturalWidth>0)){
+              (function(_i,_w2,_p,_z){_i.addEventListener('load',function _ol(){_i.removeEventListener('load',_ol);try{_applyZoomCrop(_i,_w2,_p,_z);}catch(e){}});
+              })(img,w,effPos,effZoom);
+            }
+          }else{
+            if(!inConstrainedParent)w.style.setProperty('height','auto','important');
+            img.style.setProperty('position','relative','important');
+            img.style.setProperty('width','100%','important');
+            img.style.setProperty('height','auto','important');
+            img.style.setProperty('max-width','100%','important');
+            img.style.setProperty('max-height',inConstrainedParent?'none':'400px','important');
+            img.style.setProperty('object-fit','cover','important');
+            img.style.setProperty('left','0','important');
+            img.style.setProperty('top','0','important');
+            img.style.setProperty('transform','none','important');
+          }
+        });
+        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
+          var zw=img.closest('[data-zappy-zoom-wrapper="true"]');
+          if(zw&&!_isHeroBg(zw))return;
+          if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};
+          var mobileSrc=img.getAttribute('data-zappy-mobile-src');
+          var mobilePos=img.getAttribute('data-zappy-mobile-object-position');
+          var mobileZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));
+          if(mobileSrc)img.src=mobileSrc;
+          if(mobilePos)img.style.setProperty('object-position',mobilePos,'important');
+          if(mobileZoom>1){
+            img.style.setProperty('transform','scale('+mobileZoom+')','important');
+            img.style.setProperty('transform-origin',mobilePos||'50% 50%','important');
+            var p=img.parentElement;
+            if(p)p.style.setProperty('overflow','hidden','important');
+          }
+        });
+      }
+      function revertDesktop(){
+        if(!_applied)return;_applied=false;
+        document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){
+          if(w._zappyDesktop&&w._zappyDesktop.wStyle!=null){w.setAttribute('style',w._zappyDesktop.wStyle);}
+          var img=w.querySelector('img');
+          if(img&&img._zappyDesktop){
+            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
+            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
+            else img.removeAttribute('style');
+          }
+        });
+        document.querySelectorAll('img[data-zappy-mobile-src],img[data-zappy-mobile-object-position],img[data-zappy-mobile-zoom]').forEach(function(img){
+          var zw=img.closest('[data-zappy-zoom-wrapper="true"]');
+          if(zw&&!_isHeroBg(zw))return;
+          if(img._zappyDesktop){
+            if(img._zappyDesktop.src!=null)img.setAttribute('src',img._zappyDesktop.src);
+            if(img._zappyDesktop.style!=null)img.setAttribute('style',img._zappyDesktop.style);
+            else img.removeAttribute('style');
+          }
+        });
+        _fixHeroBgWrappers();
+        fixDesktopWrappers();
+      }
+      function _fixHeroBgWrappers(){var isMob=window.innerWidth<=768;document.querySelectorAll('[data-zappy-zoom-wrapper="true"]').forEach(function(w){if(!_isHeroBg(w))return;w.style.setProperty('position','absolute','important');w.style.setProperty('top','0','important');w.style.setProperty('left','0','important');w.style.setProperty('width','100%','important');w.style.setProperty('height','100%','important');w.style.setProperty('max-width','none','important');w.style.setProperty('overflow','hidden','important');w.setAttribute('data-zappy-zoom-wrapper-width-mode','full');var img=w.querySelector('img');if(img){img.style.setProperty('width','100%','important');img.style.setProperty('height','100%','important');img.style.setProperty('object-fit','cover','important');img.style.setProperty('position','relative','important');img.style.setProperty('top','0','important');img.style.setProperty('left','0','important');img.style.setProperty('max-width','none','important');img.style.setProperty('max-height','none','important');img.style.setProperty('display','block','important');if(isMob){var mSrc=img.getAttribute('data-zappy-mobile-src');var mPos=img.getAttribute('data-zappy-mobile-object-position');var mZoom=parseFloat(img.getAttribute('data-zappy-mobile-zoom'));if(mSrc){if(!img._zappyDesktop)img._zappyDesktop={src:img.getAttribute('src'),style:img.getAttribute('style')};img.src=mSrc;}if(mPos)img.style.setProperty('object-position',mPos,'important');if(mZoom>1){img.style.setProperty('transform','scale('+mZoom+')','important');img.style.setProperty('transform-origin',mPos||'50% 50%','important');}}}});}
+      function init(){
+        _fixHeroBgWrappers();
+        var mq=window.matchMedia('(max-width:768px)');
+        function onChange(e){if(e.matches)applyMobile();else revertDesktop();}
+        if(mq.matches)applyMobile();
+        else fixDesktopWrappers();
+        try{mq.addEventListener('change',onChange);}catch(e){mq.addListener(onChange);}
+      }
+      if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);
+      else setTimeout(init,50);
+    })();
+    </script>
+</body></html>
