@@ -1469,6 +1469,116 @@ try {
 })();
 /* ZAPPY_CUSTOM_JS_END:022f5b7cfbf3 */
 
+/* ZAPPY_CUSTOM_JS_START:ffd8bca27eca */
+(function () {
+  function __zappyCustomInit() {
+    try {
+(function () {
+  // === TASK 1: Remove orphaned blog article items from the nav menu ===
+  // These are <li> items directly under #navMenu whose <a> points to a /blog/... or
+  // other article page, sitting after the "הבלוג" link. We remove every direct-child
+  // <li> whose anchor href matches an article pattern (not a top-level menu page).
+  var nav = document.querySelector('#navMenu');
+  if (nav) {
+    // Legitimate top-level menu pages (keep these)
+    var keep = ['/roof-waterproofing','/industrial-waterproofing','/roof-tarring',
+      '/polyurethane-roof-waterproofing','/testimonials','/blog','/service-areas',
+      '/renovation-fire-recovery','/exterior-building-renovation','/apartment-house-stairwell-painting',
+      '/water-reservoir-waterproofing','/roof-sealing-in-condominiums','/contact',
+      '/maor-holdings-professional-guide'];
+    var orphanMarkers = nav.querySelectorAll('[data-zappy-orphan-start]');
+    orphanMarkers.forEach(function (m) { m.remove(); });
+
+    var topItems = nav.querySelectorAll(':scope > li');
+    topItems.forEach(function (li) {
+      var a = li.querySelector(':scope > a');
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      var isArticle = href.indexOf('/blog/') === 0;
+      var isSub = href === '/water-leak-services' || href === '/roofing-and-waterproofing' ||
+                   href === '/roof-sealant-materials' || href === '/roof-tarring-price-factors' ||
+                   href === '/roof-tarring-services' || href === '/roof-sealing-in-modiin' ||
+                   href === '/roof-sealing-in-jerusalem' || href === '/roof-sealing-in-tel-aviv' ||
+                   href === '/roof-waterproofing-in-tel-aviv' || href === '/roof-waterproofing-in-rehovot' ||
+                   href === '/roof-sealing-faqs-in-rehovot' || href === '/roof-sealing-in-rishon-lezion' ||
+                   href === '/roof-waterproofing-in-modiin' || href === '/roof-waterproofing-in-jerusalem' ||
+                   href === '/roof-sealing-in-mevaseret-zion' || href === '/roof-sealing-beer-sheva' ||
+                   href === '/roof-tarring-in-beer-sheva' || href === '/roof-sealing-in-beer-sheva' ||
+                   href === '/10-tips-choosing-roof-waterproofing-contractor-rishon-lezion' ||
+                   href === '/roof-tarring-cost';
+      if (isArticle || isSub) {
+        li.remove();
+      }
+    });
+  }
+
+  // === TASK 2: Build 4 clear categories on the blog page ===
+  // Only run on the /blog page
+  if (window.location.pathname === '/blog') {
+    // Collect every blog article card link from the grid
+    var cards = document.querySelectorAll('.blog-grid-secondary .blog-card, .blog-card--regular, .blog-card--featured');
+    var cats = {
+      'roof':   { title: 'איטום גגות — יריעות, זפת והתזה', items: [] },
+      'balcony':{ title: 'איטום מרפסות, מקלחות וקירות', items: [] },
+      'price':  { title: 'מחירונים וטיפים לבחירת קבלן', items: [] },
+      'fire':   { title: 'שיקום מבנים לאחר שריפה ונזקי מים', items: [] }
+    };
+
+    cards.forEach(function (card) {
+      var a = card.querySelector('h3 a, .blog-card-title a');
+      var href = a ? a.getAttribute('href') : null;
+      var title = a ? a.textContent.trim() : null;
+      if (!href || !title) return;
+      var h = href;
+      var cat = 'roof';
+      if (/balcony|shower|window|exterior-walls|basement-wall|mold|parapet|penetrations/.test(h)) cat = 'balcony';
+      else if (/price|cost|yatzata-tzadik|contractor|tips|choose|choosing|warranty|quality-checklist|tarring-yatzata|roof-sealant|tarring-price/.test(h)) cat = 'price';
+      else if (/fire|smoke|soot|stairwell|water-damage|concrete-repair|recovery/.test(h)) cat = 'fire';
+      cats[cat].items.push({ href: href, title: title });
+    });
+
+    // Build the category UI and replace the grid with it
+    var grid = document.querySelector('.blog-grid-container');
+    if (grid) {
+      var wrap = document.createElement('div');
+      wrap.className = 'zappy-blog-categories';
+      wrap.setAttribute('dir', 'rtl');
+      var html = '';
+      Object.keys(cats).forEach(function (key) {
+        var c = cats[key];
+        if (!c.items.length) return;
+        html += '<section class="zappy-blog-cat" data-cat="' + key + '">';
+        html += '<h3 class="zappy-blog-cat-title">' + c.title + '</h3>';
+        html += '<ul class="zappy-blog-cat-list">';
+        c.items.forEach(function (it) {
+          html += '<li><a href="' + it.href + '">' + it.title + '</a></li>';
+        });
+        html += '</ul></section>';
+      });
+      wrap.innerHTML = html;
+
+      // Insert the categories above the featured grid, keeping the featured article
+      var header = grid.querySelector('.blog-grid-header');
+      var layout = grid.querySelector('.blog-grid-layout');
+      var before = layout || header;
+      if (before && before.parentNode) {
+        before.parentNode.insertBefore(wrap, before);
+      }
+    }
+  }
+})();
+    } catch (e) {
+      if (typeof console !== 'undefined' && console.warn) { console.warn('[zappy-custom-js]', e); }
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', __zappyCustomInit);
+  } else {
+    __zappyCustomInit();
+  }
+})();
+/* ZAPPY_CUSTOM_JS_END:ffd8bca27eca */
+
 
 /* ZAPPY_PUBLISHED_LIGHTBOX_RUNTIME */
 (function(){
