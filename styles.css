@@ -24983,6 +24983,51 @@ nav.navbar .sub-menu li a {
     font-size: 13.5px;
   }
 }
+
+@media (max-width: 768px) {
+.nav-menu.active,
+  html[lang="he"] body .navbar #navMenu.active,
+  html[dir="rtl"] body .navbar #navMenu.active {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+}
+
+@media (max-width: 768px) {
+.navbar #navMenu, html[lang="he"] body .navbar #navMenu, html[dir="rtl"] body .navbar #navMenu {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+}
+
+@media (max-width: 768px) {
+#navMenu > li:has(a[href*="/blog/"]),
+  #navMenu > li:has(a[href*="/blog-825075/"]),
+  #navMenu > li:has(a[href*="/service-areas/"]) {
+  display: none !important;
+}
+}
+
+@media (max-width: 768px) {
+#navMenu > li:has(a[href*="/blog/"]),
+  #navMenu > li:has(a[href*="/blog-825075/"]),
+  #navMenu > li:has(a[href*="/roof-sealing-"]),
+  #navMenu > li:has(a[href*="/roof-waterproofing-in-"]),
+  #navMenu > li:has(a[href*="/10-tips-"]),
+  #navMenu > li:has(a[href="/water-leak-services"]),
+  #navMenu > li:has(a[href="/roofing-and-waterproofing"]),
+  #navMenu > li:has(a[href="/roof-sealant-materials"]),
+  #navMenu > li:has(a[href="/roof-tarring-price-factors"]),
+  #navMenu > li:has(a[href="/roof-tarring-services"]) {
+  display: none !important;
+}
+}
+
+@media (max-width: 768px) {
+#navMenu > li:nth-child(n+8) {
+  display: none !important;
+}
+}
 /* mobile-submenu-overflow-fix */
 @media (max-width: 768px) {
   .navbar .sub-menu.mobile-expanded,

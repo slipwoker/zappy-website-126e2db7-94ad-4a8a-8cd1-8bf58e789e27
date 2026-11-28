@@ -26,9 +26,9 @@ https://maor-ahzakot.co.il/roof-tarring
 https://maor-ahzakot.co.il/polyurethane-roof-waterproofing
 מאור אחזקות - איטום גג בחומר פוליאוריטני
 
-### המלצות לקוחות | מאור אחזקות
+### המלצות לקוחות – מאור אחזקות | איטום גגות ושיפוץ
 https://maor-ahzakot.co.il/testimonials
-קראו מה אומרים הלקוחות שלנו על שירותי האיטום והשיפוץ של מאור אחזקות. עשרות המלצות אמיתיות על איכות העבודה, המקצועיות והאמינות שלנו.
+לקוחות ממליצים על מאור אחזקות: איטום גגות, זיפות, שיפוץ ושיקום מבנים. עבודה מקצועית עם אחריות בכתב.
 
 ### הבלוג של מאור אחזקות | מדריכים מקצועיים לאיטום גגות, זיפות ושיפוץ מבנים
 https://maor-ahzakot.co.il/blog
@@ -397,7 +397,7 @@ Information about WCAG compliance and accessibility features.
   - `name` (text, required)
   - `email` (email, required)
   - `phone` (tel, required)
-  - `message` (textarea, required)
+  - `message` (textarea)
   - `privacy_consent` (checkbox, required)
 
 ---
